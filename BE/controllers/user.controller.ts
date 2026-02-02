@@ -46,12 +46,12 @@ export const UserController = {
         success: true, 
         message: "Login successful",
         token,
-        user: {
+        
           userId: user.userId,
           email: user.email,
           displayName: user.displayName,
           role: user.role
-        }
+        
       });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });

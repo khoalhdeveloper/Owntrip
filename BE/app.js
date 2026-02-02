@@ -22,18 +22,16 @@ app.use('/api/users', userRoutes);
 
 
 app.use(function(req, res, next) {
-  next(createError(404));
+  res.status(404).json({ success: false, message: 'Route not found' });
 });
 
 
 app.use(function(err, req, res, next) {
- 
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
- 
-  res.status(err.status || 500);
-  res.render('error');
+  res.status(err.status || 500).json({
+    success: false,
+    message: err.message,
+    error: req.app.get('env') === 'development' ? err : {}
+  });
 });
 
 module.exports = app;

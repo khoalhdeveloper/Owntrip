@@ -6,9 +6,8 @@ const router = Router();
 
 router.post('/register', UserController.register);
 
-
-router.get('/:id', UserController.getProfile);
-
 router.post('/login', UserController.login);
+
+router.get('/myProfile/:id', UserController.getProfile);
 
 module.exports = router;
