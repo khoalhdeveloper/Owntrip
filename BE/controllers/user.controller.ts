@@ -139,39 +139,33 @@ export const UserController = {
     }
   },
   loginwithgoogle: async (req: Request, res: Response) => {
-    try {
-      const { email, displayName } = req.body;
-      let user = await User.findOne({ email });
-      if (!user) {
-        user = new User({ email, displayName, password: Math.random().toString(36).slice(-8) });        
-        await user.save();
-      }
+  try {
+    const { email, displayName, avatar } = req.body;
+    let user = await User.findOne({ email });
 
-      const token = jwt.sign(
-        { userId: user.userId, email: user.email, role: user.role },
-        process.env.JWT_SECRET!,
-        { expiresIn: '1d' }
-      );
+    if (!user) {
       
-      res.json({ 
-        success: true, 
-        message: "Login with Google successful",
-        token,
-        
-          userId: user.userId,
-          email: user.email,
-          displayName: user.displayName,
-          role: user.role
-        
-      });
-    } catch (error: any) {
-      res.status(500).json({ success: false, message: error.message });
+      user = new User({ 
+        email, 
+        displayName, 
+        avatar,
+        isVerified: true, 
+        password: await bcrypt.hash(Math.random().toString(36), 10) 
+      });        
+      await user.save();
     }
 
+    const token = jwt.sign(
+      { userId: user.userId, email: user.email, role: user.role },
+      process.env.JWT_SECRET!,
+      { expiresIn: '1d' }
+    );
     
-
-  
-  },
+    res.json({ success: true, token, userId: user.userId });
+  } catch (error: any) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+},
   updateProfile: async (req: Request, res: Response) => {
     try {
       
@@ -204,5 +198,6 @@ export const UserController = {
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
     }
-  }
+  },
+
 };
