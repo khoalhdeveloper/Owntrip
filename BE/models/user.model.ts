@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 import { IUser } from '../interfaces/user.interface';
 import { generateCustomId } from '../utils/idGenerator';
 import bcrypt from 'bcrypt';
-import { version } from 'node:os';
+
 
 const userSchema = new Schema<IUser>({
   userId: { type: String, unique: true },
@@ -11,7 +11,10 @@ const userSchema = new Schema<IUser>({
   displayName: { type: String, required: true },
   balance: { type: Number, default: 0 },
   points: { type: Number, default: 0 },
-  role: { type: String, enum: ['user', 'admin'], default: 'user' }
+  role: { type: String, enum: ['user', 'admin'], default: 'user' },
+  otp: { type: String },
+  otpExpires: { type: Date },
+  isVerified: { type: Boolean, default: false }
 }, { timestamps: true, versionKey: false });
 
 
