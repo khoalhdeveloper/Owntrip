@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateOTP, getOTPExpiration } from '../utils/otpGenerator';
 import { sendEmailTemplate } from '../utils/emailService';
-import { verify } from 'node:crypto';
+
 
 
 export const UserController = {
