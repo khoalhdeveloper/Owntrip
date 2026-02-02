@@ -94,13 +94,33 @@ export const UserController = {
   },
   updateProfile: async (req: Request, res: Response) => {
     try {
+      
+      const { password, balance, points, ...allowedUpdates } = req.body;
+      
       const user = await User.findOneAndUpdate(
         { userId: req.params.id },
-        req.body,
+        allowedUpdates,
         { new: true }
       ).select('-password');
       if (!user) return res.status(404).json({ message: "User not found" });
       res.json({ success: true, message: "Profile updated successfully"});
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+  updatePassword: async (req: Request, res: Response) => {
+    try {
+      const { oldPassword, newPassword } = req.body;
+      const user = await User.findOne({ userId: req.params.id });
+      if (!user) return res.status(404).json({ message: "User not found" });
+      const isMatch = await bcrypt.compare(oldPassword, user.password!);
+      if (!isMatch) {
+        return res.status(400).json({ success: false, message: "Old password is incorrect" });
+      }
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      user.password = hashedPassword;
+      await user.save();
+      res.json({ success: true, message: "Password updated successfully" });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
     }

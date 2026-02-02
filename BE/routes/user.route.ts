@@ -12,4 +12,6 @@ router.get('/myProfile/:id', UserController.getProfile);
 
 router.put('/updateProfile/:id', UserController.updateProfile);
 
+router.put('/updatePassword/:id', UserController.updatePassword);
+
 module.exports = router;
