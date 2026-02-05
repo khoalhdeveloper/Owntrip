@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/user.route');
-
+const hotelRoutes = require('./routes/hotel.route');
 
 var app = express();
 connectDB();
@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/users', userRoutes);
+app.use('/api/hotels', hotelRoutes);
 
 
 
