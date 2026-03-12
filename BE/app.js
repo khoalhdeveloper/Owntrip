@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/user.route');
 const hotelRoutes = require('./routes/hotel.route');
@@ -12,9 +13,27 @@ const inventoryRoutes = require('./routes/inventory.route');
 
 var app = express();
 connectDB();
+const allowedOrigins = [
+  'http://localhost:8080',
+  'http://localhost:3000',
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+];
+
+
+app.use(cors({
+  origin: (origin, callback) => {
+   
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
