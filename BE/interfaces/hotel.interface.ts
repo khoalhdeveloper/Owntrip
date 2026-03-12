@@ -27,6 +27,7 @@ export interface IHotel extends Document {
     count: number;       // 6.065 bài đánh giá
     cleanliness: number;
     service: number;
+    facilities: number;
     valueForMoney: number;
   };
   tags: string[];        // ["Bán chạy nhất", "2024"]

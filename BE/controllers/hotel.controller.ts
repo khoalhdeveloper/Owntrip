@@ -3,6 +3,23 @@ import Hotel from '../models/hotel.model';
 import RoomInventory from '../models/roomInventory.model';
 import Review from '../models/review.model';
 
+// Helper function: Tạo mảng các ngày trong khoảng thời gian
+const getDatesInRange = (startDate: Date, endDate: Date): Date[] => {
+  const dates: Date[] = [];
+  let currentDate = new Date(startDate);
+  currentDate.setHours(0, 0, 0, 0);
+  
+  const end = new Date(endDate);
+  end.setHours(0, 0, 0, 0);
+  
+  while (currentDate < end) {
+    dates.push(new Date(currentDate));
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  return dates;
+};
+
 export const HotelController = {
   /**
    * Lấy toàn bộ dữ liệu trang chi tiết khách sạn (Agoda Style)
@@ -119,7 +136,7 @@ export const HotelController = {
   },
   createHotel: async (req: Request, res: Response) => {
     try {
-      const { name, starRating, address, images, description, rooms, tags } = req.body;
+      const { name, starRating, address, images, description, rooms, tags, inventorySetup } = req.body;
 
       // 1. Kiểm tra dữ liệu đầu vào cơ bản
       if (!name || !address || !address.fullAddress) {
@@ -151,10 +168,40 @@ export const HotelController = {
       // 3. Lưu vào Database
       const savedHotel = await newHotel.save();
 
+      // 4. Tự động tạo Inventory nếu có inventorySetup
+      let totalInventoryRecords = 0;
+      if (inventorySetup && inventorySetup.length > 0) {
+        for (const setup of inventorySetup) {
+          if (setup.start && setup.end && setup.roomTypeId && setup.total && setup.price) {
+            const dates = getDatesInRange(new Date(setup.start), new Date(setup.end));
+            const inventoryEntries = dates.map(date => {
+              // Dynamic pricing: Cuối tuần +20%
+              const dayOfWeek = date.getDay();
+              const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+              const finalPrice = isWeekend ? Math.floor(setup.price * 1.2) : setup.price;
+
+              return {
+                hotelId: savedHotel.hotelId,
+                roomTypeId: setup.roomTypeId,
+                date,
+                totalInventory: setup.total,
+                priceAtDate: finalPrice,
+                bookedCount: 0,
+                status: 'available'
+              };
+            });
+            
+            await RoomInventory.insertMany(inventoryEntries);
+            totalInventoryRecords += inventoryEntries.length;
+          }
+        }
+      }
+
       res.status(201).json({
         success: true,
         message: "Thêm khách sạn thành công!",
-        hotelId: savedHotel.hotelId
+        hotelId: savedHotel.hotelId,
+        inventoryCreated: totalInventoryRecords
       });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
