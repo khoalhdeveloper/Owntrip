@@ -13,23 +13,9 @@ const inventoryRoutes = require('./routes/inventory.route');
 
 var app = express();
 connectDB();
-const allowedOrigins = [
-  'http://localhost:8080',
-  'http://localhost:3000',
-
-];
-
 
 app.use(cors({
-  origin: (origin, callback) => {
-   
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      return callback(null, true);
-    }
-
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin: true,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
