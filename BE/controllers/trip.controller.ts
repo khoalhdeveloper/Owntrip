@@ -1,8 +1,13 @@
-import { Response } from "express";
+import { Request, Response } from "express";
 import Trip from "../models/trip.model";
 import PlanDay from "../models/planDay.model";
 import PlanPlace from "../models/planPlace.model";
 import { AuthRequest } from "../middlewares/auth.middleware";
+import {
+  findProvinceImageByDestination,
+  getProvinceImages,
+  normalizeText
+} from "../utils/provinceImages";
 
 export const createTrip = async (req: AuthRequest, res: Response) => {
 
@@ -10,7 +15,7 @@ export const createTrip = async (req: AuthRequest, res: Response) => {
 
     const userId = req.user?.userId;
 
-    const { title, destination, startDate, endDate, description } = req.body;
+    const { title, destination, startDate, endDate, description, isPublished } = req.body;
 
     const start = new Date(startDate);
     const end = new Date(endDate);
@@ -21,14 +26,19 @@ export const createTrip = async (req: AuthRequest, res: Response) => {
         (1000 * 60 * 60 * 24)
       ) + 1;
 
+    const matchedProvince = findProvinceImageByDestination(destination);
+
     const trip = await Trip.create({
       userId,
       title,
       destination,
+      province: matchedProvince?.province,
+      provinceImage: matchedProvince?.imageUrl,
       startDate,
       endDate,
       totalDays,
-      description
+      description,
+      isPublished: Boolean(isPublished)
     });
 
     const days = [];
@@ -139,5 +149,208 @@ export const getMyTrips = async (req: AuthRequest, res: Response) => {
       message: "Get trips failed"
     });
 
+  }
+};
+
+export const getProvinceImageCatalog = async (req: Request, res: Response) => {
+  try {
+    const { q } = req.query;
+    const normalizedQ = q ? normalizeText(String(q)) : "";
+
+    const provinces = getProvinceImages().filter((item) => {
+      if (!normalizedQ) {
+        return true;
+      }
+
+      return (
+        normalizeText(item.province).includes(normalizedQ) ||
+        item.keywords.some((keyword) => keyword.includes(normalizedQ))
+      );
+    });
+
+    return res.json({
+      success: true,
+      total: provinces.length,
+      provinces
+    });
+  } catch (error) {
+    console.error("Get province images error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Get province images failed"
+    });
+  }
+};
+
+export const updateTrip = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    const { tripId } = req.params;
+    const { title, destination, startDate, endDate, description, isPublished } = req.body;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized"
+      });
+    }
+
+    const trip = await Trip.findOne({ _id: tripId, userId });
+
+    if (!trip) {
+      return res.status(404).json({
+        success: false,
+        message: "Trip not found or you do not have permission"
+      });
+    }
+
+    if (title !== undefined) {
+      trip.title = title;
+    }
+
+    if (description !== undefined) {
+      trip.description = description;
+    }
+
+    if (typeof isPublished === "boolean") {
+      trip.isPublished = isPublished;
+    }
+
+    if (destination !== undefined) {
+      trip.destination = destination;
+      const matchedProvince = findProvinceImageByDestination(destination);
+      trip.province = matchedProvince?.province;
+      trip.provinceImage = matchedProvince?.imageUrl;
+    }
+
+    const nextStartDate = startDate ? new Date(startDate) : new Date(trip.startDate);
+    const nextEndDate = endDate ? new Date(endDate) : new Date(trip.endDate);
+
+    if (Number.isNaN(nextStartDate.getTime()) || Number.isNaN(nextEndDate.getTime())) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid startDate or endDate"
+      });
+    }
+
+    if (nextEndDate.getTime() < nextStartDate.getTime()) {
+      return res.status(400).json({
+        success: false,
+        message: "endDate must be greater than or equal to startDate"
+      });
+    }
+
+    trip.startDate = nextStartDate;
+    trip.endDate = nextEndDate;
+    trip.totalDays =
+      Math.ceil(
+        (nextEndDate.getTime() - nextStartDate.getTime()) /
+        (1000 * 60 * 60 * 24)
+      ) + 1;
+
+    await trip.save();
+
+    return res.json({
+      success: true,
+      message: "Trip updated successfully",
+      trip
+    });
+  } catch (error) {
+    console.error("Update trip error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Update trip failed"
+    });
+  }
+};
+
+export const getPublishedTrips = async (req: Request, res: Response) => {
+  try {
+    const { limit, page, destination } = req.query;
+
+    const parsedLimit = Number(limit);
+    const parsedPage = Number(page);
+    const pageSize = Number.isFinite(parsedLimit)
+      ? Math.min(Math.max(Math.floor(parsedLimit), 1), 50)
+      : 20;
+    const currentPage = Number.isFinite(parsedPage)
+      ? Math.max(Math.floor(parsedPage), 1)
+      : 1;
+
+    const filters: any = { isPublished: true };
+
+    if (destination) {
+      filters.destination = { $regex: destination as string, $options: "i" };
+    }
+
+    const [trips, total] = await Promise.all([
+      Trip.find(filters)
+        .sort({ createdAt: -1 })
+        .skip((currentPage - 1) * pageSize)
+        .limit(pageSize),
+      Trip.countDocuments(filters)
+    ]);
+
+    return res.json({
+      success: true,
+      page: currentPage,
+      limit: pageSize,
+      total,
+      totalPages: Math.ceil(total / pageSize),
+      trips
+    });
+  } catch (error) {
+    console.error("Get published trips error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Get published trips failed"
+    });
+  }
+};
+
+export const updateTripPublishStatus = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    const { tripId } = req.params;
+    const { isPublished } = req.body;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized"
+      });
+    }
+
+    if (typeof isPublished !== "boolean") {
+      return res.status(400).json({
+        success: false,
+        message: "isPublished must be boolean"
+      });
+    }
+
+    const trip = await Trip.findOneAndUpdate(
+      { _id: tripId, userId },
+      { isPublished },
+      { new: true }
+    );
+
+    if (!trip) {
+      return res.status(404).json({
+        success: false,
+        message: "Trip not found or you do not have permission"
+      });
+    }
+
+    return res.json({
+      success: true,
+      message: isPublished ? "Trip published successfully" : "Trip unpublished successfully",
+      trip
+    });
+  } catch (error) {
+    console.error("Update trip publish status error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Update trip publish status failed"
+    });
   }
 };

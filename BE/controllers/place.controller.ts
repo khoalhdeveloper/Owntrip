@@ -9,6 +9,12 @@ const getRapidHeaders = () => ({
   "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
 });
 
+const isQuotaExceededError = (error: any) => {
+  const status = error?.response?.status;
+  const message = String(error?.response?.data?.message || error?.message || "").toLowerCase();
+  return status === 429 || message.includes("daily quota") || message.includes("quota");
+};
+
 const buildPhotoProxyUrl = (req: Request, photoName: string, maxHeightPx = 400) => {
   const baseUrl = `${req.protocol}://${req.get("host")}`;
   return `${baseUrl}/api/places/photo?name=${encodeURIComponent(photoName)}&maxHeightPx=${maxHeightPx}`;
@@ -41,6 +47,14 @@ export const getPlacePhoto = async (req: Request, res: Response) => {
     return res.status(200).send(Buffer.from(mediaResponse.data));
   } catch (error: any) {
     console.error(error.response?.data || error.message);
+
+    if (isQuotaExceededError(error)) {
+      return res.status(429).json({
+        success: false,
+        message: "RapidAPI đã hết quota trong ngày. Vui lòng thử lại ngày mai hoặc nâng gói."
+      });
+    }
+
     return res.status(500).json({
       success: false,
       message: "Get place photo failed"
@@ -138,7 +152,7 @@ export const searchNearby = async (req: Request, res: Response) => {
 export const searchText = async (req: Request, res: Response) => {
   try {
 
-    const { q, lat, lng, radius, type, limit, photoLimit } = req.query;
+    const { q, lat, lng, radius, type, limit, photoLimit, includePhotoFallback } = req.query;
 
     if (!q) {
       return res.status(400).json({
@@ -156,6 +170,7 @@ export const searchText = async (req: Request, res: Response) => {
     const maxPhotoCount = Number.isFinite(parsedPhotoLimit)
       ? Math.min(Math.max(Math.floor(parsedPhotoLimit), 1), 10)
       : 5;
+    const shouldFetchPhotoDetails = String(includePhotoFallback || "false") === "true";
 
     const queryList = (Array.isArray(q) ? q : [q])
       .flatMap((item) => String(item).split(","))
@@ -193,7 +208,7 @@ export const searchText = async (req: Request, res: Response) => {
 
     const rapidHeaders = getRapidHeaders();
 
-    const responses = await Promise.all(
+    const searchResults = await Promise.allSettled(
       queryList.map((queryText) =>
         axios.post(
           "https://google-map-places-new-v2.p.rapidapi.com/v1/places:searchText",
@@ -212,7 +227,34 @@ export const searchText = async (req: Request, res: Response) => {
       )
     );
 
-    const rawPlaces = responses.flatMap((response) => response.data.places || []);
+    const successfulResponses = searchResults
+      .filter((result): result is PromiseFulfilledResult<any> => result.status === "fulfilled")
+      .map((result) => result.value);
+
+    const failedResponses = searchResults
+      .filter((result): result is PromiseRejectedResult => result.status === "rejected")
+      .map((result) => result.reason);
+
+    if (!successfulResponses.length) {
+      const hasQuotaError = failedResponses.some((err: any) => isQuotaExceededError(err));
+
+      if (hasQuotaError) {
+        return res.status(429).json({
+          success: false,
+          message: "RapidAPI đã hết quota trong ngày. Vui lòng thử lại ngày mai hoặc nâng gói.",
+          queryCount: queryList.length,
+          total: 0,
+          places: []
+        });
+      }
+
+      return res.status(500).json({
+        success: false,
+        message: "Search text failed"
+      });
+    }
+
+    const rawPlaces = successfulResponses.flatMap((response) => response.data.places || []);
 
     const uniqueRawPlaces = Array.from(
       new Map(rawPlaces.map((place: any) => [place.id, place])).values()
@@ -225,7 +267,7 @@ export const searchText = async (req: Request, res: Response) => {
           .map((photo: any) => photo.name)
           .filter((name: string) => Boolean(name));
 
-        if (!photoNames.length && p.id) {
+        if (!photoNames.length && p.id && shouldFetchPhotoDetails) {
           try {
             const detailResponse = await axios.get(
               `${RAPID_API_BASE_URL}/places/${p.id}`,
@@ -242,7 +284,9 @@ export const searchText = async (req: Request, res: Response) => {
               .map((photo: any) => photo.name)
               .filter((name: string) => Boolean(name));
           } catch (photoError: any) {
-            console.error(`Get photos failed for place ${p.id}:`, photoError.response?.data || photoError.message);
+            if (!isQuotaExceededError(photoError)) {
+              console.error(`Get photos failed for place ${p.id}:`, photoError.response?.data || photoError.message);
+            }
           }
         }
 
@@ -271,6 +315,8 @@ export const searchText = async (req: Request, res: Response) => {
     res.json({
       success: true,
       queryCount: queryList.length,
+      partial: failedResponses.length > 0,
+      failedQueries: failedResponses.length,
       total: places?.length || 0,
       places
     });
@@ -278,6 +324,15 @@ export const searchText = async (req: Request, res: Response) => {
   } catch (error: any) {
 
     console.error(error.response?.data || error.message);
+
+    if (isQuotaExceededError(error)) {
+      return res.status(429).json({
+        success: false,
+        message: "RapidAPI đã hết quota trong ngày. Vui lòng thử lại ngày mai hoặc nâng gói.",
+        total: 0,
+        places: []
+      });
+    }
 
     res.status(500).json({
       success: false,

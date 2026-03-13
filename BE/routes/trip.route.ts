@@ -1,12 +1,24 @@
 import { Router } from "express";
-import { createTrip, getMyTrips, getTripDetail } from "../controllers/trip.controller";
+import {
+	createTrip,
+	getProvinceImageCatalog,
+	getMyTrips,
+	getPublishedTrips,
+	getTripDetail,
+	updateTrip,
+	updateTripPublishStatus
+} from "../controllers/trip.controller";
 import { verifyToken } from "../middlewares/auth.middleware";
 
 const router = Router();
 
 router.post("/", verifyToken, createTrip);
 router.get("/my", verifyToken, getMyTrips);
-router.get("/:tripId", verifyToken, getTripDetail);
+router.get("/provinces/images", getProvinceImageCatalog);
+router.get("/published", getPublishedTrips);
+router.patch("/:tripId", verifyToken, updateTrip);
+router.patch("/:tripId/publish", verifyToken, updateTripPublishStatus);
+router.get("/:tripId", getTripDetail);
 
 
 module.exports = router;

@@ -19,6 +19,14 @@ const tripSchema = new Schema<ITrip>(
       required: true
     },
 
+    province: {
+      type: String
+    },
+
+    provinceImage: {
+      type: String
+    },
+
     startDate: {
       type: Date,
       required: true
@@ -34,7 +42,12 @@ const tripSchema = new Schema<ITrip>(
       required: true
     },
 
-    description: String
+    description: String,
+
+    isPublished: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true }
 );
