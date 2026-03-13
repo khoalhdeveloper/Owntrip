@@ -13,6 +13,7 @@ const inventoryRoutes = require('./routes/inventory.route');
 const placesRoutes = require('./routes/place.route');
 const tripRoutes = require('./routes/trip.route');
 const planRoutes = require('./routes/plan.route');
+const chatbotRoutes = require ('./routes/chatbot.routes');
 
 var app = express();
 connectDB();
@@ -47,6 +48,7 @@ app.use('/api/inventory', inventoryRoutes);
 app.use('/api/places', placesRoutes);
 app.use('/api/trips', tripRoutes);
 app.use('/api/plans', planRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 
 app.use(function(req, res, next) {
