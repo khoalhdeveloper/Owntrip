@@ -11,4 +11,5 @@ router.put('/updateProfile/:id', auth_middleware_1.verifyToken, user_controller_
 router.put('/updatePassword/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.updatePassword);
 router.post('/verifyEmail', user_controller_1.UserController.verifyEmail);
 router.post('/resendOTP', user_controller_1.UserController.resendOTP);
+router.post('/logout', auth_middleware_1.verifyToken, user_controller_1.UserController.logout);
 module.exports = router;

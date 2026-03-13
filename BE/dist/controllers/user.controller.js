@@ -172,4 +172,12 @@ exports.UserController = {
             res.status(500).json({ success: false, message: error.message });
         }
     },
+    logout: async (req, res) => {
+        try {
+            res.json({ success: true, message: "Logout successful" });
+        }
+        catch (error) {
+            res.status(500).json({ success: false, message: error.message });
+        }
+        }
 };
