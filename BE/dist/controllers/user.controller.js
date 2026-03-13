@@ -18,7 +18,7 @@ exports.UserController = {
                 ...req.body,
                 otp,
                 otpExpires,
-                isVerified: false
+                isVerified: true
             });
             await user.save();
             await (0, emailService_1.sendEmailTemplate)(user.email, 'Xác thực tài khoản của bạn', 'otpTemplate', {
