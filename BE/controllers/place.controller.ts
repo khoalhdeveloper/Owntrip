@@ -108,7 +108,7 @@ export const searchText = async (req: Request, res: Response) => {
     const parsedPhotoLimit = Number(photoLimit);
     const maxPhotoCount = Number.isFinite(parsedPhotoLimit)
       ? Math.min(Math.max(Math.floor(parsedPhotoLimit), 1), 10)
-      : 1;
+      : 5;
 
     const queryList = (Array.isArray(q) ? q : [q])
       .flatMap((item) => String(item).split(","))
@@ -144,6 +144,12 @@ export const searchText = async (req: Request, res: Response) => {
       requestBodyBase.includedType = type;
     }
 
+    const rapidHeaders = {
+      "Content-Type": "application/json",
+      "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
+      "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
+    };
+
     const responses = await Promise.all(
       queryList.map((queryText) =>
         axios.post(
@@ -154,23 +160,54 @@ export const searchText = async (req: Request, res: Response) => {
           },
           {
             headers: {
-              "Content-Type": "application/json",
+              ...rapidHeaders,
               "X-Goog-FieldMask":
                 "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.types,places.googleMapsUri,places.photos",
-              "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
-              "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
             }
           }
         )
       )
     );
 
-    const mappedPlaces = responses.flatMap((response) => {
-      const apiPlaces = response.data.places || [];
-      return apiPlaces.map((p: any) => {
-        const photos = (p.photos || [])
+    const rapidApiPhotoBaseUrl = "https://google-map-places-new-v2.p.rapidapi.com/v1";
+
+    const rawPlaces = responses.flatMap((response) => response.data.places || []);
+
+    const uniqueRawPlaces = Array.from(
+      new Map(rawPlaces.map((place: any) => [place.id, place])).values()
+    ).slice(0, maxResultCount);
+
+    const places = await Promise.all(
+      uniqueRawPlaces.map(async (p: any) => {
+        let photoNames = (p.photos || [])
           .slice(0, maxPhotoCount)
-          .map((photo: any) => `https://places.googleapis.com/v1/${photo.name}/media?maxHeightPx=400&key=${process.env.GOOGLE_API_KEY}`);
+          .map((photo: any) => photo.name)
+          .filter((name: string) => Boolean(name));
+
+        if (!photoNames.length && p.id) {
+          try {
+            const detailResponse = await axios.get(
+              `${rapidApiPhotoBaseUrl}/places/${p.id}`,
+              {
+                headers: {
+                  ...rapidHeaders,
+                  "X-Goog-FieldMask": "id,photos"
+                }
+              }
+            );
+
+            photoNames = (detailResponse.data.photos || [])
+              .slice(0, maxPhotoCount)
+              .map((photo: any) => photo.name)
+              .filter((name: string) => Boolean(name));
+          } catch (photoError: any) {
+            console.error(`Get photos failed for place ${p.id}:`, photoError.response?.data || photoError.message);
+          }
+        }
+
+        const photos = photoNames.map(
+          (photoName: string) => `${rapidApiPhotoBaseUrl}/${photoName}/media?maxHeightPx=400`
+        );
 
         const photoUrl = photos[0] || null;
 
@@ -187,14 +224,8 @@ export const searchText = async (req: Request, res: Response) => {
           photo: photoUrl,
           photos
         };
-      });
-    });
-
-    const uniquePlaces = Array.from(
-      new Map(mappedPlaces.map((place: any) => [place.placeId, place])).values()
+      })
     );
-
-    const places = uniquePlaces.slice(0, maxResultCount);
 
     res.json({
       success: true,
