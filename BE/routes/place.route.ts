@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { searchPlace, searchNearby, searchText } from "../controllers/place.controller";
+import { getPlacePhoto, searchPlace, searchNearby, searchText } from "../controllers/place.controller";
 
 const router = Router();
 
@@ -20,5 +20,11 @@ router.get("/nearby", searchNearby);
  * GET /api/places/text?q=cafe dalat&lat=11.94&lng=108.44&radius=5000
  */
 router.get("/text", searchText);
+
+/**
+ * Proxy ảnh địa điểm qua backend (không lộ RapidAPI key)
+ * GET /api/places/photo?name=places/.../photos/...&maxHeightPx=400
+ */
+router.get("/photo", getPlacePhoto);
 
 module.exports = router;

@@ -1,6 +1,53 @@
 import { Request, Response } from "express";
 import axios from "axios";
 
+const RAPID_API_BASE_URL = "https://google-map-places-new-v2.p.rapidapi.com/v1";
+
+const getRapidHeaders = () => ({
+  "Content-Type": "application/json",
+  "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
+  "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
+});
+
+const buildPhotoProxyUrl = (req: Request, photoName: string, maxHeightPx = 400) => {
+  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  return `${baseUrl}/api/places/photo?name=${encodeURIComponent(photoName)}&maxHeightPx=${maxHeightPx}`;
+};
+
+export const getPlacePhoto = async (req: Request, res: Response) => {
+  try {
+    const { name, maxHeightPx } = req.query;
+
+    if (!name) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing photo name"
+      });
+    }
+
+    const mediaResponse = await axios.get(
+      `${RAPID_API_BASE_URL}/${name}/media`,
+      {
+        headers: getRapidHeaders(),
+        params: {
+          maxHeightPx: maxHeightPx ? Number(maxHeightPx) : 400
+        },
+        responseType: "arraybuffer"
+      }
+    );
+
+    const contentType = mediaResponse.headers["content-type"] || "image/jpeg";
+    res.setHeader("Content-Type", contentType);
+    return res.status(200).send(Buffer.from(mediaResponse.data));
+  } catch (error: any) {
+    console.error(error.response?.data || error.message);
+    return res.status(500).json({
+      success: false,
+      message: "Get place photo failed"
+    });
+  }
+};
+
 export const searchPlace = async (req: Request, res: Response) => {
   try {
     const { q } = req.query;
@@ -144,11 +191,7 @@ export const searchText = async (req: Request, res: Response) => {
       requestBodyBase.includedType = type;
     }
 
-    const rapidHeaders = {
-      "Content-Type": "application/json",
-      "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
-      "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
-    };
+    const rapidHeaders = getRapidHeaders();
 
     const responses = await Promise.all(
       queryList.map((queryText) =>
@@ -169,8 +212,6 @@ export const searchText = async (req: Request, res: Response) => {
       )
     );
 
-    const rapidApiPhotoBaseUrl = "https://google-map-places-new-v2.p.rapidapi.com/v1";
-
     const rawPlaces = responses.flatMap((response) => response.data.places || []);
 
     const uniqueRawPlaces = Array.from(
@@ -187,7 +228,7 @@ export const searchText = async (req: Request, res: Response) => {
         if (!photoNames.length && p.id) {
           try {
             const detailResponse = await axios.get(
-              `${rapidApiPhotoBaseUrl}/places/${p.id}`,
+              `${RAPID_API_BASE_URL}/places/${p.id}`,
               {
                 headers: {
                   ...rapidHeaders,
@@ -206,7 +247,7 @@ export const searchText = async (req: Request, res: Response) => {
         }
 
         const photos = photoNames.map(
-          (photoName: string) => `${rapidApiPhotoBaseUrl}/${photoName}/media?maxHeightPx=400`
+          (photoName: string) => buildPhotoProxyUrl(req, photoName, 400)
         );
 
         const photoUrl = photos[0] || null;
