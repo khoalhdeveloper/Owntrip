@@ -9,6 +9,7 @@
     "prod": "npm run build && node dist/bin/www"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "axios": "^1.13.6",
     "bcrypt": "^6.0.0",
     "cookie-parser": "~1.4.4",
