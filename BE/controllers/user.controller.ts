@@ -4,7 +4,10 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateOTP, getOTPExpiration } from '../utils/otpGenerator';
 import { sendEmailTemplate } from '../utils/emailService';
+import { OAuth2Client } from 'google-auth-library';
 
+
+const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 
 export const UserController = {
@@ -138,34 +141,70 @@ export const UserController = {
       res.status(500).json({ success: false, message: error.message });
     }
   },
-  loginwithgoogle: async (req: Request, res: Response) => {
-  try {
-    const { email, displayName, avatar } = req.body;
-    let user = await User.findOne({ email });
+  googleLogin: async (req: Request, res: Response) => {
+    try {
+      const { idToken } = req.body;
 
-    if (!user) {
-      
-      user = new User({ 
-        email, 
-        displayName, 
-        avatar,
-        isVerified: true, 
-        password: await bcrypt.hash(Math.random().toString(36), 10) 
-      });        
-      await user.save();
+      if (!idToken) {
+        return res.status(400).json({ success: false, message: 'Google ID token is required' });
+      }
+
+      if (!process.env.GOOGLE_CLIENT_ID) {
+        return res.status(500).json({ success: false, message: 'Server is missing GOOGLE_CLIENT_ID configuration' });
+      }
+
+      const ticket = await googleClient.verifyIdToken({
+        idToken,
+        audience: process.env.GOOGLE_CLIENT_ID
+      });
+
+      const payload = ticket.getPayload();
+      if (!payload?.email || !payload.email_verified) {
+        return res.status(401).json({ success: false, message: 'Invalid Google account information' });
+      }
+
+      const email = payload.email.toLowerCase();
+      const displayName = payload.name || email.split('@')[0];
+      let user = await User.findOne({ email });
+
+      if (!user) {
+        user = new User({
+          email,
+          displayName,
+          isVerified: true,
+          password: `${Math.random().toString(36).slice(2)}${Date.now()}`
+        });
+        await user.save();
+      }
+
+      if (!user.isVerified) {
+        user.isVerified = true;
+        await user.save();
+      }
+
+      const token = jwt.sign(
+        { userId: user.userId, email: user.email, role: user.role },
+        process.env.JWT_SECRET!,
+        { expiresIn: '1d' }
+      );
+
+      res.json({
+        success: true,
+        message: 'Google login successful',
+        token,
+        userId: user.userId,
+        email: user.email,
+        displayName: user.displayName,
+        role: user.role
+      });
+    } catch (error: any) {
+      const message = String(error?.message || 'Google authentication failed');
+      if (message.includes('Wrong recipient') || message.includes('Token used too late') || message.includes('Invalid token signature')) {
+        return res.status(401).json({ success: false, message: 'Invalid or expired Google token' });
+      }
+      res.status(500).json({ success: false, message: 'Google authentication failed' });
     }
-
-    const token = jwt.sign(
-      { userId: user.userId, email: user.email, role: user.role },
-      process.env.JWT_SECRET!,
-      { expiresIn: '1d' }
-    );
-    
-    res.json({ success: true, token, userId: user.userId });
-  } catch (error: any) {
-    res.status(500).json({ success: false, message: error.message });
-  }
-},
+  },
   updateProfile: async (req: Request, res: Response) => {
     try {
       
@@ -199,5 +238,7 @@ export const UserController = {
       res.status(500).json({ success: false, message: error.message });
     }
   },
+  
 
 };
+

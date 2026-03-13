@@ -7,6 +7,8 @@ router.post('/register', UserController.register);
 
 router.post('/login', UserController.login);
 
+router.post('/login/google', UserController.googleLogin);
+
 router.get('/myProfile/:id', verifyToken, UserController.getProfile);
 
 router.put('/updateProfile/:id', verifyToken, UserController.updateProfile);

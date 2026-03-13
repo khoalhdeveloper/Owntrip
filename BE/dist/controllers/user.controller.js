@@ -9,6 +9,8 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const otpGenerator_1 = require("../utils/otpGenerator");
 const emailService_1 = require("../utils/emailService");
+const google_auth_library_1 = require("google-auth-library");
+const googleClient = new google_auth_library_1.OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 exports.UserController = {
     register: async (req, res) => {
         try {
@@ -120,25 +122,56 @@ exports.UserController = {
             res.status(500).json({ success: false, message: error.message });
         }
     },
-    loginwithgoogle: async (req, res) => {
+    googleLogin: async (req, res) => {
         try {
-            const { email, displayName, avatar } = req.body;
+            const { idToken } = req.body;
+            if (!idToken) {
+                return res.status(400).json({ success: false, message: 'Google ID token is required' });
+            }
+            if (!process.env.GOOGLE_CLIENT_ID) {
+                return res.status(500).json({ success: false, message: 'Server is missing GOOGLE_CLIENT_ID configuration' });
+            }
+            const ticket = await googleClient.verifyIdToken({
+                idToken,
+                audience: process.env.GOOGLE_CLIENT_ID
+            });
+            const payload = ticket.getPayload();
+            if (!payload?.email || !payload.email_verified) {
+                return res.status(401).json({ success: false, message: 'Invalid Google account information' });
+            }
+            const email = payload.email.toLowerCase();
+            const displayName = payload.name || email.split('@')[0];
             let user = await user_model_1.default.findOne({ email });
             if (!user) {
                 user = new user_model_1.default({
                     email,
                     displayName,
-                    avatar,
                     isVerified: true,
-                    password: await bcrypt_1.default.hash(Math.random().toString(36), 10)
+                    password: `${Math.random().toString(36).slice(2)}${Date.now()}`
                 });
                 await user.save();
             }
+            if (!user.isVerified) {
+                user.isVerified = true;
+                await user.save();
+            }
             const token = jsonwebtoken_1.default.sign({ userId: user.userId, email: user.email, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1d' });
-            res.json({ success: true, token, userId: user.userId });
+            res.json({
+                success: true,
+                message: 'Google login successful',
+                token,
+                userId: user.userId,
+                email: user.email,
+                displayName: user.displayName,
+                role: user.role
+            });
         }
         catch (error) {
-            res.status(500).json({ success: false, message: error.message });
+            const message = String(error?.message || 'Google authentication failed');
+            if (message.includes('Wrong recipient') || message.includes('Token used too late') || message.includes('Invalid token signature')) {
+                return res.status(401).json({ success: false, message: 'Invalid or expired Google token' });
+            }
+            res.status(500).json({ success: false, message: 'Google authentication failed' });
         }
     },
     updateProfile: async (req, res) => {

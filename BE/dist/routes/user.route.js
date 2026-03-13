@@ -6,6 +6,7 @@ const auth_middleware_1 = require("../middlewares/auth.middleware");
 const router = (0, express_1.Router)();
 router.post('/register', user_controller_1.UserController.register);
 router.post('/login', user_controller_1.UserController.login);
+router.post('/login/google', user_controller_1.UserController.googleLogin);
 router.get('/myProfile/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.getProfile);
 router.put('/updateProfile/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.updateProfile);
 router.put('/updatePassword/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.updatePassword);

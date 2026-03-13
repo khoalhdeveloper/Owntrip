@@ -17,6 +17,7 @@
     "debug": "~2.6.9",
     "dotenv": "^17.2.3",
     "express": "~4.16.1",
+    "google-auth-library": "^10.6.1",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.5",
