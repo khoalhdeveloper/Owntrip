@@ -353,4 +353,50 @@ export const updateTripPublishStatus = async (req: AuthRequest, res: Response) =
       message: "Update trip publish status failed"
     });
   }
+ 
+
+};
+
+export const deleteTripById = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    const { tripId } = req.params;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized"
+      });
+    }
+
+    const trip = await Trip.findOne({ _id: tripId, userId });
+
+    if (!trip) {
+      return res.status(404).json({
+        success: false,
+        message: "Trip not found or you do not have permission"
+      });
+    }
+
+    const planDays = await PlanDay.find({ tripId }).select("_id");
+    const dayIds = planDays.map((day) => day._id);
+
+    if (dayIds.length > 0) {
+      await PlanPlace.deleteMany({ dayId: { $in: dayIds } });
+    }
+
+    await PlanDay.deleteMany({ tripId });
+    await Trip.deleteOne({ _id: tripId, userId });
+
+    return res.json({
+      success: true,
+      message: "Trip deleted successfully"
+    });
+  } catch (error) {
+    console.error("Delete trip error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Delete trip failed"
+    });
+  }
 };

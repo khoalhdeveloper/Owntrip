@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
 	createTrip,
+	deleteTripById,
 	getProvinceImageCatalog,
 	getMyTrips,
 	getPublishedTrips,
@@ -18,6 +19,7 @@ router.get("/provinces/images", getProvinceImageCatalog);
 router.get("/published", getPublishedTrips);
 router.patch("/:tripId", verifyToken, updateTrip);
 router.patch("/:tripId/publish", verifyToken, updateTripPublishStatus);
+router.delete("/:tripId", verifyToken, deleteTripById);
 router.get("/:tripId", getTripDetail);
 
 
