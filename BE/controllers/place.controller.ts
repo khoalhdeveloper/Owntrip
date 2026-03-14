@@ -3,6 +3,11 @@ import axios from "axios";
 
 const RAPID_API_BASE_URL = "https://google-map-places-new-v2.p.rapidapi.com/v1";
 
+const WIKIMEDIA_HEADERS = {
+  "User-Agent": "OwnTrip/1.0 (contact: owntrip@example.com)",
+  "Accept-Language": "en"
+};
+
 const getRapidHeaders = () => ({
   "Content-Type": "application/json",
   "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
@@ -31,6 +36,223 @@ const buildFallbackPhotoUrl = (seedBase: string) => {
   return `https://picsum.photos/seed/owntrip-place-${seed}/900/600`;
 };
 
+const parseWikipediaTitle = (wikipediaTag?: string) => {
+  if (!wikipediaTag) {
+    return null;
+  }
+
+  const raw = String(wikipediaTag).trim();
+  if (!raw) {
+    return null;
+  }
+
+  const titlePart = raw.includes(":") ? raw.split(":").slice(1).join(":") : raw;
+  const title = titlePart.replace(/_/g, " ").trim();
+  return title || null;
+};
+
+const parseWikidataId = (wikidataTag?: string) => {
+  if (!wikidataTag) {
+    return null;
+  }
+
+  const value = String(wikidataTag).trim().toUpperCase();
+  if (!/^Q\d+$/.test(value)) {
+    return null;
+  }
+
+  return value;
+};
+
+const wikidataIdCache = new Map<string, string | null>();
+const wikidataImageCache = new Map<string, string | null>();
+
+const fetchCommonsThumbnailFromFileName = async (fileName: string) => {
+  const normalizedFileName = String(fileName || "").replace(/^File:/i, "").trim();
+  if (!normalizedFileName) {
+    return null;
+  }
+
+  const response = await axios.get("https://commons.wikimedia.org/w/api.php", {
+    params: {
+      action: "query",
+      format: "json",
+      prop: "imageinfo",
+      iiprop: "url",
+      iiurlwidth: 900,
+      titles: `File:${normalizedFileName}`
+    },
+    headers: WIKIMEDIA_HEADERS,
+    timeout: 8000
+  });
+
+  const pages = response.data?.query?.pages || {};
+  const firstPage = Object.values(pages)[0] as any;
+  return firstPage?.imageinfo?.[0]?.thumburl || firstPage?.imageinfo?.[0]?.url || null;
+};
+
+const resolveWikidataIdByWikipediaTitle = async (title: string) => {
+  const cacheKey = String(title || "").trim().toLowerCase();
+  if (!cacheKey) {
+    return null;
+  }
+
+  if (wikidataIdCache.has(cacheKey)) {
+    return wikidataIdCache.get(cacheKey) || null;
+  }
+
+  const response = await axios.get("https://en.wikipedia.org/w/api.php", {
+    params: {
+      action: "query",
+      format: "json",
+      prop: "pageprops",
+      redirects: 1,
+      titles: title
+    },
+    headers: WIKIMEDIA_HEADERS,
+    timeout: 8000
+  });
+
+  const pages = response.data?.query?.pages || {};
+  const firstPage = Object.values(pages)[0] as any;
+  const wikidataId = parseWikidataId(firstPage?.pageprops?.wikibase_item) || null;
+  wikidataIdCache.set(cacheKey, wikidataId);
+  return wikidataId;
+};
+
+const fetchWikimediaImageByWikidataId = async (wikidataId: string) => {
+  const parsedId = parseWikidataId(wikidataId);
+  if (!parsedId) {
+    return null;
+  }
+
+  if (wikidataImageCache.has(parsedId)) {
+    return wikidataImageCache.get(parsedId) || null;
+  }
+
+  const response = await axios.get("https://www.wikidata.org/w/api.php", {
+    params: {
+      action: "wbgetentities",
+      format: "json",
+      ids: parsedId,
+      props: "claims"
+    },
+    headers: WIKIMEDIA_HEADERS,
+    timeout: 8000
+  });
+
+  const entity = response.data?.entities?.[parsedId];
+  const p18Claim = entity?.claims?.P18?.[0];
+  const fileName = p18Claim?.mainsnak?.datavalue?.value;
+
+  if (!fileName) {
+    wikidataImageCache.set(parsedId, null);
+    return null;
+  }
+
+  const imageUrl = await fetchCommonsThumbnailFromFileName(fileName);
+  wikidataImageCache.set(parsedId, imageUrl || null);
+  return imageUrl || null;
+};
+
+const fetchWikipediaImageByTitleAndLang = async (title: string, lang: "vi" | "en") => {
+  const response = await axios.get(`https://${lang}.wikipedia.org/w/api.php`, {
+    params: {
+      action: "query",
+      format: "json",
+      prop: "pageimages",
+      piprop: "thumbnail",
+      pithumbsize: 900,
+      redirects: 1,
+      titles: title
+    },
+    headers: WIKIMEDIA_HEADERS,
+    timeout: 8000
+  });
+
+  const pages = response.data?.query?.pages || {};
+  const firstPage = Object.values(pages)[0] as any;
+  return firstPage?.thumbnail?.source || null;
+};
+
+const fetchWikimediaImageByTitle = async (title: string) => {
+  const viImage = await fetchWikipediaImageByTitleAndLang(title, "vi");
+  if (viImage) {
+    return viImage;
+  }
+
+  return fetchWikipediaImageByTitleAndLang(title, "en");
+};
+
+const guessWikiTitlesByPlaceName = (name?: string, address?: string) => {
+  const placeName = String(name || "").trim();
+  if (!placeName) {
+    return [] as string[];
+  }
+
+  const suffix = String(address || "").split(",").map((v) => v.trim()).filter(Boolean);
+  const cityOrProvince = suffix[suffix.length - 1] || "";
+
+  return Array.from(new Set([
+    placeName,
+    cityOrProvince ? `${placeName}, ${cityOrProvince}` : "",
+    cityOrProvince ? `${placeName} (${cityOrProvince})` : ""
+  ].filter(Boolean)));
+};
+
+const enrichPlacesWithWikimedia = async (places: any[]) => {
+  return Promise.all(
+    places.map(async (place) => {
+      const wikidataId = place?._wikidataId;
+      const wikiTitle = place?._wikiTitle;
+      const placeName = place?._nameForWiki;
+      const placeAddress = place?._addressForWiki;
+
+      const titleCandidates = wikiTitle
+        ? [wikiTitle]
+        : guessWikiTitlesByPlaceName(placeName, placeAddress);
+
+      try {
+        const resolvedWikidataId =
+          parseWikidataId(wikidataId) || (titleCandidates[0] ? await resolveWikidataIdByWikipediaTitle(titleCandidates[0]) : null);
+
+        const wikidataPhoto = resolvedWikidataId
+          ? await fetchWikimediaImageByWikidataId(resolvedWikidataId)
+          : null;
+
+        let wikiPhoto = wikidataPhoto;
+
+        if (!wikiPhoto) {
+          for (const title of titleCandidates) {
+            wikiPhoto = await fetchWikimediaImageByTitle(title);
+            if (wikiPhoto) {
+              break;
+            }
+          }
+        }
+
+        if (wikiPhoto) {
+          const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, ...cleanPlace } = place;
+          return {
+            ...cleanPlace,
+            photo: wikiPhoto,
+            photos: [wikiPhoto]
+          };
+        }
+      } catch (error: any) {
+        const contextHint = wikidataId || wikiTitle || titleCandidates[0] || placeName || "unknown-place";
+        console.error(
+          `Wikimedia photo failed for ${contextHint}:`,
+          error.response?.data || error.message
+        );
+      }
+
+      const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, ...cleanPlace } = place;
+      return cleanPlace;
+    })
+  );
+};
+
 const hashString = (value: string) => {
   let hash = 0;
 
@@ -57,6 +279,10 @@ const normalizeOsmPlace = (place: any) => {
   const lat = Number(place?.lat);
   const lon = Number(place?.lon);
   const osmId = `${place?.osm_type || "osm"}_${place?.osm_id || place?.place_id}`;
+  const wikipediaTag = place?.extratags?.wikipedia;
+  const wikidataTag = place?.extratags?.wikidata;
+  const wikiTitle = parseWikipediaTitle(wikipediaTag);
+  const wikidataId = parseWikidataId(wikidataTag);
   const fallbackPhoto = buildFallbackPhotoUrl(`${osmId}-${place?.display_name || ""}`);
   const fallbackStats = buildFallbackRating(`${osmId}-${place?.display_name || ""}`);
 
@@ -73,7 +299,11 @@ const normalizeOsmPlace = (place: any) => {
       ? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`
       : null,
     photo: fallbackPhoto,
-    photos: [fallbackPhoto]
+    photos: [fallbackPhoto],
+    _wikiTitle: wikiTitle,
+    _wikidataId: wikidataId,
+    _nameForWiki: place?.name || place?.display_name?.split(",")?.[0]?.trim() || "",
+    _addressForWiki: place?.display_name || ""
   };
 };
 
@@ -85,6 +315,8 @@ const normalizePhotonPlace = (feature: any) => {
   const lat = Number(coords[1]);
   const props = feature?.properties || {};
   const osmId = `${props?.osm_type || "osm"}_${props?.osm_id || props?.id || props?.osm_key || "unknown"}`;
+  const wikiTitle = parseWikipediaTitle(props?.wikipedia);
+  const wikidataId = parseWikidataId(props?.wikidata);
   const fallbackPhoto = buildFallbackPhotoUrl(`${osmId}-${props?.name || ""}`);
   const fallbackStats = buildFallbackRating(`${osmId}-${props?.name || ""}`);
   const addressParts = [
@@ -109,7 +341,11 @@ const normalizePhotonPlace = (feature: any) => {
       ? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`
       : null,
     photo: fallbackPhoto,
-    photos: [fallbackPhoto]
+    photos: [fallbackPhoto],
+    _wikiTitle: wikiTitle,
+    _wikidataId: wikidataId,
+    _nameForWiki: props?.name || "",
+    _addressForWiki: addressParts.join(", ")
   };
 };
 
@@ -125,7 +361,8 @@ const searchPhoton = async (queryText: string, limit: number, lat?: number, lng?
   });
 
   const features = Array.isArray(response.data?.features) ? response.data.features : [];
-  return features.map(normalizePhotonPlace);
+  const places = features.map(normalizePhotonPlace);
+  return enrichPlacesWithWikimedia(places);
 };
 
 const searchNominatim = async (queryText: string, limit: number) => {
@@ -134,6 +371,7 @@ const searchNominatim = async (queryText: string, limit: number) => {
       q: queryText,
       format: "jsonv2",
       addressdetails: 1,
+      extratags: 1,
       limit,
       countrycodes: "vn"
     },
@@ -144,7 +382,8 @@ const searchNominatim = async (queryText: string, limit: number) => {
     timeout: 10000
   });
 
-  return (Array.isArray(response.data) ? response.data : []).map(normalizeOsmPlace);
+  const places = (Array.isArray(response.data) ? response.data : []).map(normalizeOsmPlace);
+  return enrichPlacesWithWikimedia(places);
 };
 
 const searchOpenPlaces = async (queryText: string, limit: number, lat?: number, lng?: number) => {
@@ -418,8 +657,15 @@ export const searchText = async (req: Request, res: Response) => {
     );
 
     const successfulResponses = searchResults
-      .filter((result): result is PromiseFulfilledResult<any> => result.status === "fulfilled")
-      .map((result) => result.value);
+      .map((result, index) => ({ result, index }))
+      .filter(
+        (entry): entry is { result: PromiseFulfilledResult<any>; index: number } =>
+          entry.result.status === "fulfilled"
+      )
+      .map((entry) => ({
+        query: queryList[entry.index],
+        response: entry.result.value
+      }));
 
     const failedResponses = searchResults
       .filter((result): result is PromiseRejectedResult => result.status === "rejected")
@@ -454,11 +700,36 @@ export const searchText = async (req: Request, res: Response) => {
       });
     }
 
-    const rawPlaces = successfulResponses.flatMap((response) => response.data.places || []);
+    const groupedPlaces = successfulResponses.map((entry) => ({
+      query: entry.query,
+      places: Array.isArray(entry.response.data?.places) ? entry.response.data.places : []
+    }));
 
-    const uniqueRawPlaces = Array.from(
-      new Map(rawPlaces.map((place: any) => [place.id, place])).values()
-    ).slice(0, maxResultCount);
+    // Round-robin merge so multiple keywords contribute results more evenly.
+    const uniqueById = new Map<string, any>();
+    let cursor = 0;
+    let hasRemaining = true;
+
+    while (hasRemaining && uniqueById.size < maxResultCount) {
+      hasRemaining = false;
+
+      for (const group of groupedPlaces) {
+        if (cursor < group.places.length) {
+          hasRemaining = true;
+          const place = group.places[cursor];
+          if (place?.id && !uniqueById.has(place.id)) {
+            uniqueById.set(place.id, place);
+            if (uniqueById.size >= maxResultCount) {
+              break;
+            }
+          }
+        }
+      }
+
+      cursor += 1;
+    }
+
+    const uniqueRawPlaces = Array.from(uniqueById.values());
 
     const places = await Promise.all(
       uniqueRawPlaces.map(async (p: any) => {
@@ -495,6 +766,11 @@ export const searchText = async (req: Request, res: Response) => {
         );
 
         const photoUrl = photos[0] || null;
+        const fallbackPhoto = buildFallbackPhotoUrl(
+          `${p.id || "place"}-${p.displayName?.text || p.formattedAddress || ""}`
+        );
+        const finalPhoto = photoUrl || fallbackPhoto;
+        const finalPhotos = photos.length > 0 ? photos : [fallbackPhoto];
 
         return {
           placeId: p.id,
@@ -506,8 +782,8 @@ export const searchText = async (req: Request, res: Response) => {
           totalReviews: p.userRatingCount,
           types: p.types,
           mapUrl: p.googleMapsUri,
-          photo: photoUrl,
-          photos
+          photo: finalPhoto,
+          photos: finalPhotos
         };
       })
     );
@@ -517,6 +793,7 @@ export const searchText = async (req: Request, res: Response) => {
       queryCount: queryList.length,
       partial: failedResponses.length > 0,
       failedQueries: failedResponses.length,
+      matchedQueries: groupedPlaces.filter((group) => group.places.length > 0).map((group) => group.query),
       total: places?.length || 0,
       places
     });
