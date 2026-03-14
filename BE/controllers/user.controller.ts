@@ -131,6 +131,7 @@ export const UserController = {
           userId: user.userId,
           email: user.email,
           displayName: user.displayName,
+          image: user.image,
           role: user.role
         
       });
@@ -140,7 +141,8 @@ export const UserController = {
   },
   loginwithgoogle: async (req: Request, res: Response) => {
   try {
-    const { email, displayName, avatar } = req.body;
+    const { email, displayName, avatar, image } = req.body;
+    const profileImage = image || avatar;
     let user = await User.findOne({ email });
 
     if (!user) {
@@ -148,10 +150,13 @@ export const UserController = {
       user = new User({ 
         email, 
         displayName, 
-        avatar,
+        image: profileImage,
         isVerified: true, 
         password: await bcrypt.hash(Math.random().toString(36), 10) 
       });        
+      await user.save();
+    } else if (profileImage && !user.image) {
+      user.image = profileImage;
       await user.save();
     }
 
@@ -161,7 +166,7 @@ export const UserController = {
       { expiresIn: '1d' }
     );
     
-    res.json({ success: true, token, userId: user.userId });
+    res.json({ success: true, token, userId: user.userId, image: user.image });
   } catch (error: any) {
     res.status(500).json({ success: false, message: error.message });
   }

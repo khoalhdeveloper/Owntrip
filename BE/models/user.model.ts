@@ -9,6 +9,7 @@ const userSchema = new Schema<IUser>({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   displayName: { type: String, required: true },
+  image: { type: String },
   balance: { type: Number, default: 0 },
   points: { type: Number, default: 0 },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },

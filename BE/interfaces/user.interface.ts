@@ -5,6 +5,7 @@ export interface IUser extends Document {
   email: string;
   password?: string;
   displayName: string;
+  image?: string;
   balance: number;
   points: number;
   role: 'user' | 'admin';
