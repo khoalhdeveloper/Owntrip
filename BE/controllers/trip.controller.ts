@@ -101,6 +101,7 @@ export const getTripDetail = async (req: AuthRequest, res: Response) => {
       });
 
       result.push({
+        dayId: day._id,
         day: day.dayNumber,
         date: day.date,
         places,
@@ -116,6 +117,64 @@ export const getTripDetail = async (req: AuthRequest, res: Response) => {
     res.status(500).json({
       success: false,
       message: "Get trip detail failed",
+    });
+  }
+};
+
+export const getTripDestinations = async (req: AuthRequest, res: Response) => {
+  try {
+    const { tripId } = req.params;
+
+    const trip = await Trip.findById(tripId);
+
+    if (!trip) {
+      return res.status(404).json({
+        success: false,
+        message: "Trip not found"
+      });
+    }
+
+    const days = await PlanDay.find({ tripId }).sort({ dayNumber: 1 });
+    const dayMap = new Map<string, { dayId: string; day: number; date: Date }>();
+
+    for (const day of days) {
+      dayMap.set(String(day._id), {
+        dayId: String(day._id),
+        day: day.dayNumber,
+        date: day.date
+      });
+    }
+
+    const dayIds = days.map((day) => day._id);
+    const places = dayIds.length > 0
+      ? await PlanPlace.find({ dayId: { $in: dayIds } }).sort({ order: 1, createdAt: 1 })
+      : [];
+
+    const destinations = places.map((place) => {
+      const dayInfo = dayMap.get(String(place.dayId));
+      return {
+        dayId: String(place.dayId),
+        day: dayInfo?.day,
+        date: dayInfo?.date,
+        place
+      };
+    });
+
+    return res.json({
+      success: true,
+      trip: {
+        _id: trip._id,
+        title: trip.title,
+        destination: trip.destination
+      },
+      totalDestinations: destinations.length,
+      destinations
+    });
+  } catch (error) {
+    console.error("Get trip destinations error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Get trip destinations failed"
     });
   }
 };
@@ -306,6 +365,7 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
     for (const day of days) {
       const places = await PlanPlace.find({ dayId: day._id }).sort({ order: 1 });
       result.push({
+        dayId: day._id,
         day: day.dayNumber,
         date: day.date,
         places

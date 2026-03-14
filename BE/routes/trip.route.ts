@@ -3,6 +3,7 @@ import {
 	createTrip,
 	deleteTripById,
 	getProvinceImageCatalog,
+	getTripDestinations,
 	getMyTrips,
 	getPublishedTrips,
 	getTripDetail,
@@ -17,6 +18,7 @@ router.post("/", verifyToken, createTrip);
 router.get("/my", verifyToken, getMyTrips);
 router.get("/provinces/images", getProvinceImageCatalog);
 router.get("/published", getPublishedTrips);
+router.get("/:tripId/destinations", getTripDestinations);
 router.patch("/:tripId", verifyToken, updateTrip);
 router.patch("/:tripId/publish", verifyToken, updateTripPublishStatus);
 router.delete("/:tripId", verifyToken, deleteTripById);
