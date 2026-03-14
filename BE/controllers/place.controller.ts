@@ -31,9 +31,31 @@ const toSeed = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "") || "place";
 
-const buildFallbackPhotoUrl = (seedBase: string) => {
-  const seed = toSeed(seedBase);
-  return `https://picsum.photos/seed/owntrip-place-${seed}/900/600`;
+const fetchCommonsImageBySearchTerm = async (searchTerm: string) => {
+  const normalized = String(searchTerm || "").trim();
+  if (!normalized) {
+    return null;
+  }
+
+  const response = await axios.get("https://commons.wikimedia.org/w/api.php", {
+    params: {
+      action: "query",
+      format: "json",
+      generator: "search",
+      gsrsearch: normalized,
+      gsrnamespace: 6,
+      gsrlimit: 1,
+      prop: "imageinfo",
+      iiprop: "url",
+      iiurlwidth: 900
+    },
+    headers: WIKIMEDIA_HEADERS,
+    timeout: 8000
+  });
+
+  const pages = response.data?.query?.pages || {};
+  const firstPage = Object.values(pages)[0] as any;
+  return firstPage?.imageinfo?.[0]?.thumburl || firstPage?.imageinfo?.[0]?.url || null;
 };
 
 const parseWikipediaTitle = (wikipediaTag?: string) => {
@@ -231,6 +253,12 @@ const enrichPlacesWithWikimedia = async (places: any[]) => {
           }
         }
 
+        if (!wikiPhoto && placeName) {
+          wikiPhoto =
+            await fetchCommonsImageBySearchTerm(`${placeName} Vietnam`) ||
+            await fetchCommonsImageBySearchTerm(placeName);
+        }
+
         if (wikiPhoto) {
           const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, ...cleanPlace } = place;
           return {
@@ -247,7 +275,7 @@ const enrichPlacesWithWikimedia = async (places: any[]) => {
         );
       }
 
-      const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, ...cleanPlace } = place;
+      const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, photo, photos, ...cleanPlace } = place;
       return cleanPlace;
     })
   );
@@ -275,6 +303,38 @@ const buildFallbackRating = (seedBase: string) => {
   };
 };
 
+const toNumberOrNull = (value: any) => {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const normalizeGeoapifyPlace = (item: any) => {
+  const geoId = String(item?.properties?.place_id || item?.properties?.datasource?.raw?.osm_id || "").trim();
+  const lat = toNumberOrNull(item?.properties?.lat ?? item?.properties?.result_type === "point" ? item?.geometry?.coordinates?.[1] : item?.properties?.lat);
+  const lon = toNumberOrNull(item?.properties?.lon ?? item?.properties?.result_type === "point" ? item?.geometry?.coordinates?.[0] : item?.properties?.lon);
+  const name = String(item?.properties?.name || item?.properties?.formatted || "").trim() || "Unknown place";
+  const fallbackStats = buildFallbackRating(`${geoId || name}-${lat || ""}-${lon || ""}`);
+  const address = item?.properties?.formatted || "";
+
+  return {
+    placeId: geoId || `geoapify_${toSeed(name)}`,
+    name,
+    address,
+    latitude: lat,
+    longitude: lon,
+    rating: fallbackStats.rating,
+    totalReviews: fallbackStats.totalReviews,
+    types: item?.properties?.result_type ? [String(item.properties.result_type)] : [],
+    mapUrl: lat !== null && lon !== null
+      ? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`
+      : null,
+    photo: null,
+    photos: [],
+    _nameForWiki: name,
+    _addressForWiki: address
+  };
+};
+
 const normalizeOsmPlace = (place: any) => {
   const lat = Number(place?.lat);
   const lon = Number(place?.lon);
@@ -283,7 +343,6 @@ const normalizeOsmPlace = (place: any) => {
   const wikidataTag = place?.extratags?.wikidata;
   const wikiTitle = parseWikipediaTitle(wikipediaTag);
   const wikidataId = parseWikidataId(wikidataTag);
-  const fallbackPhoto = buildFallbackPhotoUrl(`${osmId}-${place?.display_name || ""}`);
   const fallbackStats = buildFallbackRating(`${osmId}-${place?.display_name || ""}`);
 
   return {
@@ -298,8 +357,8 @@ const normalizeOsmPlace = (place: any) => {
     mapUrl: Number.isFinite(lat) && Number.isFinite(lon)
       ? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`
       : null,
-    photo: fallbackPhoto,
-    photos: [fallbackPhoto],
+    photo: null,
+    photos: [],
     _wikiTitle: wikiTitle,
     _wikidataId: wikidataId,
     _nameForWiki: place?.name || place?.display_name?.split(",")?.[0]?.trim() || "",
@@ -317,7 +376,6 @@ const normalizePhotonPlace = (feature: any) => {
   const osmId = `${props?.osm_type || "osm"}_${props?.osm_id || props?.id || props?.osm_key || "unknown"}`;
   const wikiTitle = parseWikipediaTitle(props?.wikipedia);
   const wikidataId = parseWikidataId(props?.wikidata);
-  const fallbackPhoto = buildFallbackPhotoUrl(`${osmId}-${props?.name || ""}`);
   const fallbackStats = buildFallbackRating(`${osmId}-${props?.name || ""}`);
   const addressParts = [
     props?.name,
@@ -340,8 +398,8 @@ const normalizePhotonPlace = (feature: any) => {
     mapUrl: Number.isFinite(lat) && Number.isFinite(lon)
       ? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`
       : null,
-    photo: fallbackPhoto,
-    photos: [fallbackPhoto],
+    photo: null,
+    photos: [],
     _wikiTitle: wikiTitle,
     _wikidataId: wikidataId,
     _nameForWiki: props?.name || "",
@@ -387,18 +445,37 @@ const searchNominatim = async (queryText: string, limit: number) => {
 };
 
 const searchOpenPlaces = async (queryText: string, limit: number, lat?: number, lng?: number) => {
+  const merged = new Map<string, any>();
+  const normalizedLimit = Math.min(Math.max(Math.floor(limit), 1), 50);
+
+  const addPlaces = (places: any[]) => {
+    for (const place of places) {
+      const key = String(place?.placeId || "").trim() ||
+        `${toSeed(place?.name || "")}_${place?.latitude || ""}_${place?.longitude || ""}`;
+
+      if (!merged.has(key)) {
+        merged.set(key, place);
+      }
+
+      if (merged.size >= normalizedLimit) {
+        break;
+      }
+    }
+  };
+
   try {
-    return await searchPhoton(queryText, limit, lat, lng);
+    const photonPlaces = await searchPhoton(queryText, normalizedLimit, lat, lng);
+    addPlaces(photonPlaces);
+    if (merged.size >= normalizedLimit) {
+      return Array.from(merged.values()).slice(0, normalizedLimit);
+    }
   } catch (photonError: any) {
     console.error("Photon fallback failed:", photonError.response?.data || photonError.message);
-
-    try {
-      return await searchNominatim(queryText, limit);
-    } catch (nominatimError: any) {
-      console.error("Nominatim fallback failed:", nominatimError.response?.data || nominatimError.message);
-      return [];
-    }
   }
+
+  // Nominatim is intentionally skipped because public endpoint blocks server traffic frequently.
+
+  return Array.from(merged.values()).slice(0, normalizedLimit);
 };
 
 export const getPlacePhoto = async (req: Request, res: Response) => {
@@ -765,12 +842,8 @@ export const searchText = async (req: Request, res: Response) => {
           (photoName: string) => buildPhotoProxyUrl(req, photoName, 400)
         );
 
-        const photoUrl = photos[0] || null;
-        const fallbackPhoto = buildFallbackPhotoUrl(
-          `${p.id || "place"}-${p.displayName?.text || p.formattedAddress || ""}`
-        );
-        const finalPhoto = photoUrl || fallbackPhoto;
-        const finalPhotos = photos.length > 0 ? photos : [fallbackPhoto];
+        const finalPhoto = photos[0] || null;
+        const finalPhotos = photos;
 
         return {
           placeId: p.id,
