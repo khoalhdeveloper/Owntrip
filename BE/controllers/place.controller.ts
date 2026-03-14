@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import axios from "axios";
 
 const RAPID_API_BASE_URL = "https://google-map-places-new-v2.p.rapidapi.com/v1";
+const DEFAULT_PUBLIC_API_BASE_URL = "https://owntrip.vercel.app";
 
 const WIKIMEDIA_HEADERS = {
   "User-Agent": "OwnTrip/1.0 (contact: owntrip@example.com)",
@@ -20,8 +21,66 @@ const isQuotaExceededError = (error: any) => {
   return status === 429 || message.includes("daily quota") || message.includes("quota");
 };
 
+const normalizeBaseUrl = (value?: string | null) => {
+  const raw = String(value || "").trim().replace(/\/+$/g, "");
+  if (!raw) {
+    return "";
+  }
+
+  if (/^https?:\/\//i.test(raw)) {
+    return raw;
+  }
+
+  return `https://${raw}`;
+};
+
+const getRequestBaseUrl = (req: Request) => {
+  const configuredBaseUrl = normalizeBaseUrl(process.env.PUBLIC_API_BASE_URL) || DEFAULT_PUBLIC_API_BASE_URL;
+  if (configuredBaseUrl) {
+    return configuredBaseUrl;
+  }
+
+  const deploymentBaseUrl =
+    normalizeBaseUrl(process.env.APP_URL) ||
+    normalizeBaseUrl(process.env.API_BASE_URL) ||
+    normalizeBaseUrl(process.env.BACKEND_URL) ||
+    normalizeBaseUrl(process.env.RENDER_EXTERNAL_URL) ||
+    normalizeBaseUrl(process.env.RAILWAY_PUBLIC_DOMAIN) ||
+    normalizeBaseUrl(process.env.RAILWAY_STATIC_URL) ||
+    normalizeBaseUrl(process.env.VERCEL_URL);
+
+  if (deploymentBaseUrl) {
+    return deploymentBaseUrl;
+  }
+
+  const forwardedHostHeader = req.headers["x-forwarded-host"];
+  const forwardedHost = Array.isArray(forwardedHostHeader)
+    ? forwardedHostHeader[0]
+    : String(forwardedHostHeader || "").split(",")[0].trim();
+
+  const forwardedProtoHeader = req.headers["x-forwarded-proto"];
+  const forwardedProto = Array.isArray(forwardedProtoHeader)
+    ? forwardedProtoHeader[0]
+    : String(forwardedProtoHeader || "").split(",")[0].trim();
+
+  const originHeader = req.headers.origin;
+  const origin = Array.isArray(originHeader)
+    ? originHeader[0]
+    : String(originHeader || "").trim();
+  const originHost = origin ? origin.replace(/^https?:\/\//i, "").replace(/\/+$/g, "") : "";
+
+  const protocol = forwardedProto || req.protocol;
+  const host = forwardedHost || originHost || req.get("host") || "localhost";
+
+  if (/^localhost(?::\d+)?$/i.test(host) || /^127\.0\.0\.1(?::\d+)?$/i.test(host)) {
+    return "http://localhost:3000";
+  }
+
+  return `${protocol}://${host}`;
+};
+
 const buildPhotoProxyUrl = (req: Request, photoName: string, maxHeightPx = 400) => {
-  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  const baseUrl = getRequestBaseUrl(req);
   return `${baseUrl}/api/places/photo?name=${encodeURIComponent(photoName)}&maxHeightPx=${maxHeightPx}`;
 };
 
@@ -230,52 +289,28 @@ const guessWikiTitlesByPlaceName = (name?: string, address?: string) => {
 const enrichPlacesWithWikimedia = async (places: any[]) => {
   return Promise.all(
     places.map(async (place) => {
-      const wikidataId = place?._wikidataId;
-      const wikiTitle = place?._wikiTitle;
-      const placeName = place?._nameForWiki;
-      const placeAddress = place?._addressForWiki;
+      const wikidataId = parseWikidataId(place?._wikidataId);
+      const wikiTitle = String(place?._wikiTitle || "").trim();
+      const placeName = String(place?._nameForWiki || place?.name || "").trim();
+      const placeAddress = String(place?._addressForWiki || place?.address || "").trim();
 
-      const titleCandidates = wikiTitle
-        ? [wikiTitle]
-        : guessWikiTitlesByPlaceName(placeName, placeAddress);
+      let wikiPhoto: string | null = null;
 
       try {
-        const resolvedWikidataId =
-          parseWikidataId(wikidataId) || (titleCandidates[0] ? await resolveWikidataIdByWikipediaTitle(titleCandidates[0]) : null);
+        if (wikidataId) {
+          wikiPhoto = await fetchWikimediaImageByWikidataId(wikidataId);
+        }
 
-        const wikidataPhoto = resolvedWikidataId
-          ? await fetchWikimediaImageByWikidataId(resolvedWikidataId)
-          : null;
-
-        let wikiPhoto = wikidataPhoto;
+        if (!wikiPhoto && wikiTitle) {
+          wikiPhoto = await fetchWikimediaImageByTitle(wikiTitle);
+        }
 
         if (!wikiPhoto) {
-          for (const title of titleCandidates) {
-            wikiPhoto = await fetchWikimediaImageByTitle(title);
-            if (wikiPhoto) {
-              break;
-            }
-          }
-        }
-
-        if (!wikiPhoto && placeName) {
-          wikiPhoto =
-            await fetchCommonsImageBySearchTerm(`${placeName} Vietnam`) ||
-            await fetchCommonsImageBySearchTerm(placeName);
-        }
-
-        if (wikiPhoto) {
-          const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, ...cleanPlace } = place;
-          return {
-            ...cleanPlace,
-            photo: wikiPhoto,
-            photos: [wikiPhoto]
-          };
+          wikiPhoto = await resolveWikiPhotoByPlaceContext(placeName, placeAddress);
         }
       } catch (error: any) {
-        const contextHint = wikidataId || wikiTitle || titleCandidates[0] || placeName || "unknown-place";
         console.error(
-          `Wikimedia photo failed for ${contextHint}:`,
+          `Wikimedia photo failed for ${placeName || place?.placeId || "unknown-place"}:`,
           error.response?.data || error.message
         );
       }
@@ -284,13 +319,47 @@ const enrichPlacesWithWikimedia = async (places: any[]) => {
       const fallbackPhoto = buildFallbackPhotoUrl(
         `${cleanPlace?.placeId || cleanPlace?.name || "place"}-${cleanPlace?.address || ""}`
       );
+
+      const finalPhoto = wikiPhoto || fallbackPhoto;
       return {
         ...cleanPlace,
-        photo: fallbackPhoto,
-        photos: [fallbackPhoto]
+        photo: finalPhoto,
+        photos: [finalPhoto]
       };
     })
   );
+};
+
+const resolveWikiPhotoByPlaceContext = async (name?: string, address?: string) => {
+  const placeName = String(name || "").trim();
+  const placeAddress = String(address || "").trim();
+  const titleCandidates = guessWikiTitlesByPlaceName(placeName, placeAddress);
+
+  for (const title of titleCandidates) {
+    const resolvedWikidataId = await resolveWikidataIdByWikipediaTitle(title);
+    if (resolvedWikidataId) {
+      const wikidataPhoto = await fetchWikimediaImageByWikidataId(resolvedWikidataId);
+      if (wikidataPhoto) {
+        return wikidataPhoto;
+      }
+    }
+  }
+
+  for (const title of titleCandidates) {
+    const wikiPhoto = await fetchWikimediaImageByTitle(title);
+    if (wikiPhoto) {
+      return wikiPhoto;
+    }
+  }
+
+  if (placeName) {
+    return (
+      await fetchCommonsImageBySearchTerm(`${placeName} Vietnam`) ||
+      await fetchCommonsImageBySearchTerm(placeName)
+    );
+  }
+
+  return null;
 };
 
 const hashString = (value: string) => {
@@ -822,43 +891,21 @@ export const searchText = async (req: Request, res: Response) => {
 
     const places = await Promise.all(
       uniqueRawPlaces.map(async (p: any) => {
-        let photoNames = (p.photos || [])
-          .slice(0, maxPhotoCount)
-          .map((photo: any) => photo.name)
-          .filter((name: string) => Boolean(name));
+        let wikiPhoto: string | null = null;
 
-        if (!photoNames.length && p.id && shouldFetchPhotoDetails) {
-          try {
-            const detailResponse = await axios.get(
-              `${RAPID_API_BASE_URL}/places/${p.id}`,
-              {
-                headers: {
-                  ...rapidHeaders,
-                  "X-Goog-FieldMask": "id,photos"
-                }
-              }
-            );
-
-            photoNames = (detailResponse.data.photos || [])
-              .slice(0, maxPhotoCount)
-              .map((photo: any) => photo.name)
-              .filter((name: string) => Boolean(name));
-          } catch (photoError: any) {
-            if (!isQuotaExceededError(photoError)) {
-              console.error(`Get photos failed for place ${p.id}:`, photoError.response?.data || photoError.message);
-            }
-          }
+        try {
+          wikiPhoto = await resolveWikiPhotoByPlaceContext(p.displayName?.text, p.formattedAddress);
+        } catch (wikiError: any) {
+          console.error(
+            `Wikimedia photo failed for place ${p.id || p.displayName?.text || "unknown-place"}:`,
+            wikiError.response?.data || wikiError.message
+          );
         }
-
-        const photos = photoNames.map(
-          (photoName: string) => buildPhotoProxyUrl(req, photoName, 400)
-        );
 
         const fallbackPhoto = buildFallbackPhotoUrl(
           `${p.id || "place"}-${p.displayName?.text || p.formattedAddress || ""}`
         );
-        const finalPhoto = photos[0] || fallbackPhoto;
-        const finalPhotos = photos.length > 0 ? photos : [fallbackPhoto];
+        const finalPhoto = wikiPhoto || fallbackPhoto;
 
         return {
           placeId: p.id,
@@ -871,7 +918,7 @@ export const searchText = async (req: Request, res: Response) => {
           types: p.types,
           mapUrl: p.googleMapsUri,
           photo: finalPhoto,
-          photos: finalPhotos
+          photos: [finalPhoto]
         };
       })
     );
