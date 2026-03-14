@@ -240,20 +240,83 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
       });
     }
 
-    trip.startDate = nextStartDate;
-    trip.endDate = nextEndDate;
-    trip.totalDays =
+    const nextTotalDays =
       Math.ceil(
         (nextEndDate.getTime() - nextStartDate.getTime()) /
         (1000 * 60 * 60 * 24)
       ) + 1;
 
+    const currentStartMs = new Date(trip.startDate).setHours(0, 0, 0, 0);
+    const currentEndMs = new Date(trip.endDate).setHours(0, 0, 0, 0);
+    const nextStartMs = new Date(nextStartDate).setHours(0, 0, 0, 0);
+    const nextEndMs = new Date(nextEndDate).setHours(0, 0, 0, 0);
+
+    const dateRangeChanged =
+      currentStartMs !== nextStartMs ||
+      currentEndMs !== nextEndMs ||
+      trip.totalDays !== nextTotalDays;
+
+    trip.startDate = nextStartDate;
+    trip.endDate = nextEndDate;
+    trip.totalDays = nextTotalDays;
+
     await trip.save();
+
+    if (dateRangeChanged) {
+      const existingDays = await PlanDay.find({ tripId }).sort({ dayNumber: 1 });
+      const existingDayByNumber = new Map<number, any>();
+
+      for (const day of existingDays) {
+        if (!existingDayByNumber.has(day.dayNumber)) {
+          existingDayByNumber.set(day.dayNumber, day);
+        }
+      }
+
+      for (let dayNumber = 1; dayNumber <= nextTotalDays; dayNumber++) {
+        const nextDate = new Date(nextStartDate);
+        nextDate.setDate(nextStartDate.getDate() + (dayNumber - 1));
+
+        const existingDay = existingDayByNumber.get(dayNumber);
+
+        if (!existingDay) {
+          await PlanDay.create({
+            tripId,
+            dayNumber,
+            date: nextDate
+          });
+          continue;
+        }
+
+        existingDay.date = nextDate;
+        await existingDay.save();
+      }
+
+      const redundantDays = existingDays.filter((day) => day.dayNumber > nextTotalDays);
+      const redundantDayIds = redundantDays.map((day) => day._id);
+
+      if (redundantDayIds.length > 0) {
+        await PlanPlace.deleteMany({ dayId: { $in: redundantDayIds } });
+        await PlanDay.deleteMany({ _id: { $in: redundantDayIds } });
+      }
+    }
+
+    const days = await PlanDay.find({ tripId }).sort({ dayNumber: 1 });
+    const result = [];
+
+    for (const day of days) {
+      const places = await PlanPlace.find({ dayId: day._id }).sort({ order: 1 });
+      result.push({
+        day: day.dayNumber,
+        date: day.date,
+        places
+      });
+    }
 
     return res.json({
       success: true,
       message: "Trip updated successfully",
-      trip
+      trip,
+      days: result
     });
   } catch (error) {
     console.error("Update trip error:", error);
