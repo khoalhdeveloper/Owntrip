@@ -31,6 +31,11 @@ const toSeed = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "") || "place";
 
+const buildFallbackPhotoUrl = (seedBase: string) => {
+  const seed = toSeed(seedBase);
+  return `https://picsum.photos/seed/owntrip-place-${seed}/900/600`;
+};
+
 const fetchCommonsImageBySearchTerm = async (searchTerm: string) => {
   const normalized = String(searchTerm || "").trim();
   if (!normalized) {
@@ -276,7 +281,14 @@ const enrichPlacesWithWikimedia = async (places: any[]) => {
       }
 
       const { _wikiTitle, _wikidataId, _nameForWiki, _addressForWiki, photo, photos, ...cleanPlace } = place;
-      return cleanPlace;
+      const fallbackPhoto = buildFallbackPhotoUrl(
+        `${cleanPlace?.placeId || cleanPlace?.name || "place"}-${cleanPlace?.address || ""}`
+      );
+      return {
+        ...cleanPlace,
+        photo: fallbackPhoto,
+        photos: [fallbackPhoto]
+      };
     })
   );
 };
@@ -842,8 +854,11 @@ export const searchText = async (req: Request, res: Response) => {
           (photoName: string) => buildPhotoProxyUrl(req, photoName, 400)
         );
 
-        const finalPhoto = photos[0] || null;
-        const finalPhotos = photos;
+        const fallbackPhoto = buildFallbackPhotoUrl(
+          `${p.id || "place"}-${p.displayName?.text || p.formattedAddress || ""}`
+        );
+        const finalPhoto = photos[0] || fallbackPhoto;
+        const finalPhotos = photos.length > 0 ? photos : [fallbackPhoto];
 
         return {
           placeId: p.id,
