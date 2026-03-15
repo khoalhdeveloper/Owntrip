@@ -55,20 +55,14 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
     vnp_ExpireDate: vnpExpireDate
   };
 
-  // Sort keys alphabetically (template chuẩn)
+  // Sort keys alphabetically (chuẩn VNPay, không encode key)
   function sortObject(obj: Record<string, string>) {
-    let sorted: Record<string, string> = {};
-    let str: string[] = [];
-    let key: string;
-    for (key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        str.push(encodeURIComponent(key));
-      }
-    }
-    str.sort();
-    for (let i = 0; i < str.length; i++) {
-      sorted[decodeURIComponent(str[i])] = obj[decodeURIComponent(str[i])];
-    }
+    const sorted: Record<string, string> = {};
+    Object.keys(obj)
+      .sort()
+      .forEach((key) => {
+        sorted[key] = obj[key];
+      });
     return sorted;
   }
 
@@ -100,20 +94,14 @@ export const verifyVNPayReturn = (query: VNPayReturnParams): boolean => {
   delete params['vnp_SecureHash'];
   delete params['vnp_SecureHashType'];
 
-  // Sort keys A-Z (dùng template chuẩn)
+  // Sort keys A-Z (chuẩn VNPay, không encode key)
   function sortObject(obj: Record<string, string>) {
-    let sorted: Record<string, string> = {};
-    let str: string[] = [];
-    let key: string;
-    for (key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        str.push(encodeURIComponent(key));
-      }
-    }
-    str.sort();
-    for (let i = 0; i < str.length; i++) {
-      sorted[decodeURIComponent(str[i])] = obj[decodeURIComponent(str[i])];
-    }
+    const sorted: Record<string, string> = {};
+    Object.keys(obj)
+      .sort()
+      .forEach((key) => {
+        sorted[key] = obj[key];
+      });
     return sorted;
   }
   const sortedParams = sortObject(params);
