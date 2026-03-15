@@ -17,5 +17,12 @@ router.post('/verifyEmail', UserController.verifyEmail);
 
 router.post('/resendOTP', UserController.resendOTP);
 
+router.post('/top-up', verifyToken, UserController.topUpBalance);
+
+router.post('/pay-with-points', verifyToken, UserController.payWithPoints);
+
+// VNPay
+router.post('/vnpay/create-payment', verifyToken, UserController.vnpayCreatePayment);
+router.get('/vnpay/return', UserController.vnpayReturn);
 
 module.exports = router;

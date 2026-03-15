@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import User from '../models/user.model';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { AuthRequest } from '../middlewares/auth.middleware';
+import { buildVNPayUrl, verifyVNPayReturn, parseVNPayAmount, isVNPaySuccess } from '../utils/vnpay';
+import crypto from 'crypto';
 import { generateOTP, getOTPExpiration } from '../utils/otpGenerator';
 import { sendEmailTemplate } from '../utils/emailService';
 
@@ -201,6 +204,238 @@ export const UserController = {
       await user.save();
       res.json({ success: true, message: "Password updated successfully" });
     } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
+   * API: Nạp tiền vào hệ thống → quy đổi thành points
+   * POST /api/users/top-up
+   * Body: { amount } (VND)
+   * Tỷ lệ: 1,000 VND = 1 point
+   */
+  topUpBalance: async (req: AuthRequest, res: Response) => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        return res.status(401).json({ success: false, message: "Bạn cần đăng nhập để thực hiện thao tác này" });
+      }
+
+      const { amount } = req.body;
+      const parsedAmount = Number(amount);
+
+      if (!parsedAmount || !Number.isFinite(parsedAmount) || parsedAmount <= 0) {
+        return res.status(400).json({ success: false, message: "Số tiền nạp phải là số dương" });
+      }
+
+      if (parsedAmount < 1000) {
+        return res.status(400).json({ success: false, message: "Số tiền nạp tối thiểu là 1,000 VND" });
+      }
+
+      if (parsedAmount > 500000000) {
+        return res.status(400).json({ success: false, message: "Số tiền nạp tối đa là 500,000,000 VND mỗi lần" });
+      }
+
+      // 1,000 VND = 1 point
+      const pointsEarned = Math.floor(parsedAmount / 1000);
+
+      const updatedUser = await User.findOneAndUpdate(
+        { userId },
+        { $inc: { points: pointsEarned } },
+        { new: true }
+      ).select('-password');
+
+      if (!updatedUser) {
+        return res.status(404).json({ success: false, message: "Người dùng không tồn tại" });
+      }
+
+      return res.status(200).json({
+        success: true,
+        message: `Nạp tiền thành công! ${parsedAmount.toLocaleString()} VND → ${pointsEarned} points.`,
+        data: {
+          amountPaid: parsedAmount,
+          pointsEarned,
+          newPoints: updatedUser.points
+        }
+      });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
+   * API: Thanh toán bằng points
+   * POST /api/users/pay-with-points
+   * Body: { pointsToUse } — số points cần trừ cho giao dịch
+   */
+  payWithPoints: async (req: AuthRequest, res: Response) => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        return res.status(401).json({ success: false, message: "Bạn cần đăng nhập để thực hiện thao tác này" });
+      }
+
+      const { pointsToUse } = req.body;
+      const parsedPoints = Number(pointsToUse);
+
+      if (!parsedPoints || !Number.isInteger(parsedPoints) || parsedPoints <= 0) {
+        return res.status(400).json({ success: false, message: "Số điểm quy đổi phải là số nguyên dương" });
+      }
+
+      const user = await User.findOne({ userId });
+      if (!user) {
+        return res.status(404).json({ success: false, message: "Người dùng không tồn tại" });
+      }
+
+      if (user.points < parsedPoints) {
+        return res.status(400).json({
+          success: false,
+          message: `Points không đủ. Bạn hiện có ${user.points} points, cần ${parsedPoints} points.`
+        });
+      }
+
+      user.points -= parsedPoints;
+      await user.save();
+
+      return res.status(200).json({
+        success: true,
+        message: `Thanh toán thành công ${parsedPoints} points.`,
+        data: {
+          pointsUsed: parsedPoints,
+          newPoints: user.points
+        }
+      });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
+   * API: Tạo link thanh toán VNPay để nạp tiền
+   * POST /api/users/vnpay/create-payment
+   * Body: { amount } (VND, tối thiểu 10,000)
+   * Yêu cầu đăng nhập (verifyToken)
+   */
+  vnpayCreatePayment: async (req: AuthRequest, res: Response) => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        return res.status(401).json({ success: false, message: 'Bạn cần đăng nhập để thực hiện thao tác này' });
+      }
+
+      const { amount } = req.body;
+      const parsedAmount = Number(amount);
+
+      if (!parsedAmount || !Number.isFinite(parsedAmount) || parsedAmount <= 0) {
+        return res.status(400).json({ success: false, message: 'Số tiền nạp phải là số dương' });
+      }
+      if (parsedAmount < 10000) {
+        return res.status(400).json({ success: false, message: 'Số tiền nạp tối thiểu là 10,000 VND' });
+      }
+      if (parsedAmount > 500000000) {
+        return res.status(400).json({ success: false, message: 'Số tiền nạp tối đa là 500,000,000 VND mỗi lần' });
+      }
+
+      // txnRef: unique per transaction (userId + timestamp + random)
+      const txnRef = `${userId}-${Date.now()}-${crypto.randomBytes(3).toString('hex')}`;
+
+      const returnUrl = process.env.VNPAY_RETURN_URL ||
+        `${process.env.PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/users/vnpay/return`;
+
+      const rawIp =
+        (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
+        req.socket?.remoteAddress ||
+        '127.0.0.1';
+      const ipAddr = rawIp === '::1' ? '127.0.0.1' : rawIp;
+
+      const paymentUrl = buildVNPayUrl(
+        {
+          amount: Math.round(parsedAmount),
+          orderInfo: `NAP TIEN OWNTRIP ${userId}`,
+          userId,
+          returnUrl,
+          ipAddr
+        },
+        txnRef
+      );
+
+      return res.status(200).json({
+        success: true,
+        message: 'Tạo link thanh toán thành công',
+        data: { paymentUrl, txnRef, amount: parsedAmount }
+      });
+    } catch (error: any) {
+      console.error('VNPay create payment error:', error.message);
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
+   * API: VNPay Return
+   * GET /api/users/vnpay/return
+   * VNPay redirect browser về đây sau khi thanh toán.
+   * Cập nhật balance + points rồi trả JSON.
+   */
+  vnpayReturn: async (req: Request, res: Response) => {
+    try {
+      const query = req.query as Record<string, string>;
+
+      if (!verifyVNPayReturn(query)) {
+        return res.status(400).json({ success: false, message: 'Chữ ký không hợp lệ' });
+      }
+
+      const responseCode = query['vnp_ResponseCode'];
+      const txnRef = query['vnp_TxnRef'] || '';
+      const amount = parseVNPayAmount(query['vnp_Amount'] || '0');
+      const userId = txnRef.split('-')[0];
+
+      if (!isVNPaySuccess(responseCode)) {
+        const codeMap: Record<string, string> = {
+          '07': 'Giao dịch bị nghi ngờ gian lận',
+          '09': 'Thẻ/Tài khoản chưa đăng ký dịch vụ',
+          '10': 'Xác thực thẻ thất bại quá 3 lần',
+          '11': 'Giao dịch hết hạn',
+          '12': 'Thẻ/Tài khoản bị khóa',
+          '13': 'Sai mật khẩu OTP',
+          '24': 'Khách hàng hủy giao dịch',
+          '51': 'Tài khoản không đủ số dư',
+          '65': 'Vượt hạn mức giao dịch trong ngày',
+          '75': 'Ngân hàng đang bảo trì',
+          '79': 'Sai mật khẩu quá số lần quy định',
+          '99': 'Lỗi không xác định'
+        };
+        return res.status(200).json({
+          success: false,
+          message: codeMap[responseCode] || `Thanh toán thất bại (code: ${responseCode})`,
+          responseCode
+        });
+      }
+
+      // 1,000 VND = 1 point
+      const pointsEarned = Math.floor(amount / 1000);
+
+      const updatedUser = await User.findOneAndUpdate(
+        { userId },
+        { $inc: { points: pointsEarned } },
+        { new: true }
+      ).select('-password');
+
+      if (!updatedUser) {
+        return res.status(404).json({ success: false, message: 'Không tìm thấy tài khoản' });
+      }
+
+      return res.status(200).json({
+        success: true,
+        message: `Nạp tiền thành công! ${amount.toLocaleString()} VND → ${pointsEarned} points.`,
+        data: {
+          txnRef,
+          amountPaid: amount,
+          pointsEarned,
+          newPoints: updatedUser.points
+        }
+      });
+    } catch (error: any) {
+      console.error('VNPay return error:', error.message);
       res.status(500).json({ success: false, message: error.message });
     }
   },
