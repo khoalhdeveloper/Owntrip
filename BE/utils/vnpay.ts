@@ -73,14 +73,13 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
   }
 
   const sortedParams = sortObject(vnpParams);
-  // 1. Tạo signData: KHÔNG encode value
-  const signData = qs.stringify(sortedParams, { encode: false });
+  // 1. Tạo signData: PHẢI encode value (dấu cách là %20, không phải +)
+  let signData = qs.stringify(sortedParams, { encode: true });
+  signData = signData.replace(/\+/g, '%20');
   // 2. Tạo chữ ký
   const signature = hmacSha512(secretKey, signData);
-  // 3. Gán chữ ký vào params
-  sortedParams['vnp_SecureHash'] = signature;
-  // 4. Tạo URL: PHẢI encode value
-  const vnpUrl = `${VNPAY_URL}?${qs.stringify(sortedParams, { encode: true })}`;
+  // 3. Tạo URL cuối cùng (giống hệt signData, chỉ nối thêm chữ ký)
+  const vnpUrl = `${VNPAY_URL}?${signData}&vnp_SecureHash=${signature}`;
   // Log để kiểm tra
   console.log('VNPay signData:', signData);
   console.log('VNPay signature:', signature);
@@ -118,7 +117,8 @@ export const verifyVNPayReturn = (query: VNPayReturnParams): boolean => {
     return sorted;
   }
   const sortedParams = sortObject(params);
-  const signData = qs.stringify(sortedParams, { encode: false });
+  let signData = qs.stringify(sortedParams, { encode: true });
+  signData = signData.replace(/\+/g, '%20');
   const computed = hmacSha512(secretKey, signData);
   return computed.toLowerCase() === secureHash.toLowerCase();
 };
