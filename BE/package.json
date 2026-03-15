@@ -19,6 +19,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^9.0.3",
+    "moment-timezone": "^0.6.0",
     "mongoose": "^9.1.5",
     "morgan": "~1.9.1",
     "resend": "^6.9.1"
@@ -27,6 +28,7 @@
     "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
+    "@types/moment-timezone": "^0.5.13",
     "@types/node": "^25.2.0",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",

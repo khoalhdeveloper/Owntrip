@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import moment from 'moment-timezone';
 import qs from 'querystring';
 
 export interface VNPayCreateParams {
@@ -25,18 +26,6 @@ const getConfig = () => {
   return { tmnCode, secretKey };
 };
 
-const formatDate = (date: Date): string => {
-  const pad = (n: number) => String(n).padStart(2, '0');
-  return (
-    date.getFullYear().toString() +
-    pad(date.getMonth() + 1) +
-    pad(date.getDate()) +
-    pad(date.getHours()) +
-    pad(date.getMinutes()) +
-    pad(date.getSeconds())
-  );
-};
-
 const hmacSha512 = (secret: string, data: string): string =>
   crypto.createHmac('sha512', secret).update(Buffer.from(data, 'utf-8')).digest('hex');
 
@@ -47,8 +36,8 @@ const hmacSha512 = (secret: string, data: string): string =>
 export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string => {
   const { tmnCode, secretKey } = getConfig();
   const now = new Date();
-
-  const expire = new Date(now.getTime() + 15 * 60 * 1000); // 15 minutes
+  const vnpCreateDate = moment(now).tz('Asia/Ho_Chi_Minh').format('YYYYMMDDHHmmss');
+  const vnpExpireDate = moment(now).tz('Asia/Ho_Chi_Minh').add(15, 'minutes').format('YYYYMMDDHHmmss');
 
   const vnpParams: Record<string, string> = {
     vnp_Version: '2.1.0',
@@ -62,8 +51,8 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
     vnp_Amount: String(params.amount * 100), // VNPay wants amount * 100
     vnp_ReturnUrl: params.returnUrl,
     vnp_IpAddr: params.ipAddr,
-    vnp_CreateDate: formatDate(now),
-    vnp_ExpireDate: formatDate(expire)
+    vnp_CreateDate: vnpCreateDate,
+    vnp_ExpireDate: vnpExpireDate
   };
 
   // Sort keys alphabetically before signing
