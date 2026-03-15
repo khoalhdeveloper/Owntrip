@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import moment from 'moment-timezone';
-import qs from 'querystring';
+import qs from 'qs';
 
 export interface VNPayCreateParams {
   amount: number;        // VND
@@ -56,20 +56,27 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
   };
 
   // Sort keys alphabetically before signing
-  const sortedKeys = Object.keys(vnpParams).sort();
-  const sortedParams: Record<string, string> = {};
-  for (const k of sortedKeys) {
-    sortedParams[k] = vnpParams[k];
-  }
+  const sortObject = (obj: Record<string, string>) => {
+    const sorted = {} as Record<string, string>;
+    Object.keys(obj).sort().forEach((key) => {
+      sorted[key] = obj[key];
+    });
+    return sorted;
+  };
 
-  const signData = qs.stringify(sortedParams, undefined, undefined, {
-    encodeURIComponent: (str) => str  // do NOT encode when building sign string
-  });
-
+  const sortedParams = sortObject(vnpParams);
+  // 1. Tạo signData: KHÔNG encode value
+  const signData = qs.stringify(sortedParams, { encode: false });
+  // 2. Tạo chữ ký
   const signature = hmacSha512(secretKey, signData);
+  // 3. Gán chữ ký vào params
   sortedParams['vnp_SecureHash'] = signature;
-
-  return `${VNPAY_URL}?${qs.stringify(sortedParams)}`;
+  // 4. Tạo URL: PHẢI encode value
+  const vnpUrl = `${VNPAY_URL}?${qs.stringify(sortedParams, { encode: true })}`;
+  // Log để kiểm tra
+  console.log('VNPay signData:', signData);
+  console.log('VNPay signature:', signature);
+  return vnpUrl;
 };
 
 /**
