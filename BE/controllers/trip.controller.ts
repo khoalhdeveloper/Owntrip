@@ -9,6 +9,8 @@ import {
   normalizeText
 } from "../utils/provinceImages";
 
+import Notification from "../models/notification.model";
+
 export const createTrip = async (req: AuthRequest, res: Response) => {
 
   try {
@@ -57,6 +59,13 @@ export const createTrip = async (req: AuthRequest, res: Response) => {
     }
 
     await PlanDay.insertMany(days);
+
+    // Tạo notification cho user
+    await Notification.create({
+      userId,
+      title: "Tạo chuyến đi thành công",
+      message: `Chuyến đi '${title}' đến ${destination} đã được tạo thành công!`,
+    });
 
     res.json({
       success: true,
