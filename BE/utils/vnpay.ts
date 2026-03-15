@@ -34,6 +34,8 @@ const hmacSha512 = (secret: string, data: string): string =>
  * txnRef should uniquely identify this top-up transaction.
  */
 export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string => {
+    // Log secret key thực tế để debug
+    console.log('VNPAY_SECRET_KEY:', process.env.VNPAY_SECRET_KEY);
   const { tmnCode, secretKey } = getConfig();
   const now = new Date();
   const vnpCreateDate = moment(now).tz('Asia/Ho_Chi_Minh').format('YYYYMMDDHHmmss');
@@ -77,6 +79,7 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
   // Log để kiểm tra
   console.log('VNPay signData:', signData);
   console.log('VNPay signature:', signature);
+  console.log('VNPay URL:', vnpUrl);
   return vnpUrl;
 };
 
