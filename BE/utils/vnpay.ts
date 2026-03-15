@@ -55,14 +55,22 @@ export const buildVNPayUrl = (params: VNPayCreateParams, txnRef: string): string
     vnp_ExpireDate: vnpExpireDate
   };
 
-  // Sort keys alphabetically before signing
-  const sortObject = (obj: Record<string, string>) => {
-    const sorted = {} as Record<string, string>;
-    Object.keys(obj).sort().forEach((key) => {
-      sorted[key] = obj[key];
-    });
+  // Sort keys alphabetically (template chuẩn)
+  function sortObject(obj: Record<string, string>) {
+    let sorted: Record<string, string> = {};
+    let str: string[] = [];
+    let key: string;
+    for (key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        str.push(encodeURIComponent(key));
+      }
+    }
+    str.sort();
+    for (let i = 0; i < str.length; i++) {
+      sorted[decodeURIComponent(str[i])] = obj[decodeURIComponent(str[i])];
+    }
     return sorted;
-  };
+  }
 
   const sortedParams = sortObject(vnpParams);
   // 1. Tạo signData: KHÔNG encode value
