@@ -101,16 +101,24 @@ export const verifyVNPayReturn = (query: VNPayReturnParams): boolean => {
   delete params['vnp_SecureHash'];
   delete params['vnp_SecureHashType'];
 
-  const sortedKeys = Object.keys(params).sort();
-  const sortedParams: Record<string, string> = {};
-  for (const k of sortedKeys) {
-    sortedParams[k] = params[k];
+  // Sort keys A-Z (dùng template chuẩn)
+  function sortObject(obj: Record<string, string>) {
+    let sorted: Record<string, string> = {};
+    let str: string[] = [];
+    let key: string;
+    for (key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        str.push(encodeURIComponent(key));
+      }
+    }
+    str.sort();
+    for (let i = 0; i < str.length; i++) {
+      sorted[decodeURIComponent(str[i])] = obj[decodeURIComponent(str[i])];
+    }
+    return sorted;
   }
-
-  const signData = qs.stringify(sortedParams, undefined, undefined, {
-    encodeURIComponent: (str) => str
-  });
-
+  const sortedParams = sortObject(params);
+  const signData = qs.stringify(sortedParams, { encode: false });
   const computed = hmacSha512(secretKey, signData);
   return computed.toLowerCase() === secureHash.toLowerCase();
 };
