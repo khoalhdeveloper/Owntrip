@@ -689,7 +689,7 @@ export const searchNearby = async (req: Request, res: Response) => {
       {
         headers: {
           "Content-Type": "application/json",
-           "X-Goog-FieldMask":
+          "X-Goog-FieldMask":
             "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.types,places.googleMapsUri,places.photos",
           "X-RapidAPI-Key": process.env.RAPIDAPI_KEY!,
           "X-RapidAPI-Host": process.env.RAPIDAPI_HOST!
@@ -697,7 +697,33 @@ export const searchNearby = async (req: Request, res: Response) => {
       }
     );
 
-    res.json(response.data);
+    // Chuẩn hóa dữ liệu trả về giống OSM
+    const googlePlaces = Array.isArray(response.data?.places) ? response.data.places : [];
+    const normalizedPlaces = googlePlaces.map((p: any) => {
+      const photo = p.photos && p.photos.length > 0 && p.photos[0]?.name
+        ? `${req.protocol}://${req.get("host")}/api/places/photo?name=${encodeURIComponent(p.photos[0].name)}`
+        : null;
+      return {
+        placeId: p.id,
+        name: p.displayName?.text,
+        address: p.formattedAddress,
+        latitude: p.location?.latitude,
+        longitude: p.location?.longitude,
+        rating: p.rating,
+        totalReviews: p.userRatingCount,
+        types: p.types,
+        mapUrl: p.googleMapsUri,
+        photo: photo,
+        photos: photo ? [photo] : []
+      };
+    });
+
+    res.json({
+      success: true,
+      source: "google",
+      total: normalizedPlaces.length,
+      places: normalizedPlaces
+    });
   } catch (error: any) {
     console.error(error.response?.data || error.message);
 
