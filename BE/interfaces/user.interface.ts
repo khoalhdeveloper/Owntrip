@@ -8,7 +8,7 @@ export interface IUser extends Document {
   image?: string;
   balance: number;
   points: number;
-  role: 'user' | 'admin';
+  role: 'user' | 'admin' | 'hotel_owner';
   otp?: string;
   otpExpires?: Date;
   isVerified: boolean;

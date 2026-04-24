@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import Hotel from '../models/hotel.model';
 import RoomInventory from '../models/roomInventory.model';
 import Review from '../models/review.model';
+import { AuthRequest } from '../middlewares/auth.middleware';
 
 // Helper function: Tạo mảng các ngày trong khoảng thời gian
 const getDatesInRange = (startDate: Date, endDate: Date): Date[] => {
@@ -159,9 +160,10 @@ export const HotelController = {
       res.status(500).json({ success: false, message: error.message });
     }
   },
-  createHotel: async (req: Request, res: Response) => {
+  createHotel: async (req: AuthRequest, res: Response) => {
     try {
-      const { name, starRating, address, images, description, rooms, tags, inventorySetup } = req.body;
+      const { name, starRating, ownerId, address, images, description, amenities, rooms, tags, inventorySetup } = req.body;
+      const userId = ownerId || req.user?.userId; // Ưu tiên ID từ body để bạn dễ test
 
       // 1. Kiểm tra dữ liệu đầu vào cơ bản
       if (!name || !address || !address.fullAddress) {
@@ -179,6 +181,7 @@ export const HotelController = {
         address,
         images,
         description,
+        amenities,
         rooms, // Mảng chứa các loại phòng như Deluxe, Suite...
         tags,  // Ví dụ: ["Bán chạy nhất", "Giá tốt 2026"]
         reviewSummary: { // Khởi tạo điểm mặc định
@@ -187,7 +190,8 @@ export const HotelController = {
           cleanliness: 0,
           service: 0,
           facilities: 0
-        }
+        },
+        ownerId: ownerId || req.user?.userId // Gán trực tiếp ở đây cho an toàn
       });
 
       // 3. Lưu vào Database
@@ -230,6 +234,79 @@ export const HotelController = {
         message: "Thêm khách sạn thành công!",
         hotelId: savedHotel.hotelId,
         inventoryCreated: totalInventoryRecords
+      });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  // Lấy danh sách khách sạn của chính chủ (dành cho Dashboard)
+  getMyHotels: async (req: AuthRequest, res: Response) => {
+    try {
+      const userId = req.user?.userId;
+      const hotels = await Hotel.find({ ownerId: userId });
+      res.status(200).json({ success: true, data: hotels });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  // Cập nhật thông tin khách sạn (Có kiểm tra quyền sở hữu)
+  updateHotel: async (req: AuthRequest, res: Response) => {
+    try {
+      const { id } = req.params; // hotelId
+      const userId = req.user?.userId;
+      const role = req.user?.role;
+
+      const hotel = await Hotel.findOne({ hotelId: id });
+      if (!hotel) return res.status(404).json({ success: false, message: "Khách sạn không tồn tại" });
+
+      // Lớp bảo vệ: Admin được sửa mọi thứ, Hotel Owner chỉ được sửa của mình
+      if (role !== 'admin' && hotel.ownerId !== userId) {
+        return res.status(403).json({ 
+          success: false, 
+          message: "Bạn không có quyền chỉnh sửa khách sạn này!" 
+        });
+      }
+
+      // Thực hiện cập nhật các trường được gửi lên
+      const updatedHotel = await Hotel.findOneAndUpdate(
+        { hotelId: id },
+        { $set: req.body },
+        { new: true }
+      );
+
+      res.status(200).json({
+        success: true,
+        message: "Cập nhật thông tin thành công!",
+        data: updatedHotel
+      });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  // Admin gán chủ sở hữu cho khách sạn
+  assignOwner: async (req: AuthRequest, res: Response) => {
+    try {
+      const { hotelId, ownerId } = req.body;
+
+      if (!hotelId || !ownerId) {
+        return res.status(400).json({ success: false, message: "Cần truyền hotelId và ownerId" });
+      }
+
+      const hotel = await Hotel.findOneAndUpdate(
+        { hotelId },
+        { $set: { ownerId } },
+        { new: true }
+      );
+
+      if (!hotel) return res.status(404).json({ success: false, message: "Khách sạn không tồn tại" });
+
+      res.status(200).json({
+        success: true,
+        message: `Đã gán ${ownerId} làm chủ khách sạn ${hotelId}`,
+        data: hotel
       });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });

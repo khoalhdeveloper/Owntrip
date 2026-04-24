@@ -32,6 +32,11 @@ const hotelSchema = new Schema<IHotel>({
     service: { type: Number, default: 0 },
     facilities: { type: Number, default: 0 },
     valueForMoney: { type: Number, default: 0 }
+  },
+  ownerId: {
+    type: String,
+    ref: "User",
+    index: true
   }
 }, { timestamps: true, versionKey: false });
 
