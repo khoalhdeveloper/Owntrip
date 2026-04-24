@@ -22,6 +22,24 @@ const getDatesInRange = (startDate: Date, endDate: Date): Date[] => {
 
 export const HotelController = {
   /**
+   * Lấy danh sách khách sạn (có thể lọc theo city)
+   * GET /api/hotels?city=Da+Nang
+   */
+  getAllHotels: async (req: Request, res: Response) => {
+    try {
+      const { city } = req.query;
+      const filter: any = {};
+      if (city) {
+        filter['address.city'] = { $regex: new RegExp(city as string, 'i') };
+      }
+      const hotels = await Hotel.find(filter).sort({ createdAt: -1 });
+      res.status(200).json({ success: true, data: hotels });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
    * Lấy toàn bộ dữ liệu trang chi tiết khách sạn (Agoda Style)
    * GET /api/hotels/:id?checkIn=YYYY-MM-DD&checkOut=YYYY-MM-DD
    */
@@ -30,12 +48,16 @@ export const HotelController = {
       const { id } = req.params; // HotelId00x
       const { checkIn, checkOut } = req.query;
 
-      if (!checkIn || !checkOut) {
-        return res.status(400).json({ message: "Vui lòng chọn ngày nhận/trả phòng" });
-      }
+      // Nếu không có ngày, mặc định là hôm nay và ngày mai
+      const today = new Date();
+      const tomorrow = new Date();
+      tomorrow.setDate(today.getDate() + 1);
 
-      const startDate = new Date(checkIn as string);
-      const endDate = new Date(checkOut as string);
+      const startDate = checkIn ? new Date(checkIn as string) : today;
+      const endDate = checkOut ? new Date(checkOut as string) : tomorrow;
+      
+      startDate.setHours(0, 0, 0, 0);
+      endDate.setHours(0, 0, 0, 0);
 
       // 1. Lấy thông tin khách sạn (Gallery, Amenities, Address)
       const hotel = await Hotel.findOne({ hotelId: id });
@@ -67,8 +89,11 @@ export const HotelController = {
           },
           // Dữ liệu vẽ thanh Progress Bar (Sạch sẽ, Dịch vụ...)
           reviewDashboard: hotel.reviewSummary, 
+          description: hotel.description,
+          rooms: hotel.rooms,
+          amenities: hotel.amenities,
           pricing: {
-            fromPrice: minPriceRecord ? minPriceRecord.priceAtDate : "Hết phòng",
+            fromPrice: minPriceRecord ? minPriceRecord.priceAtDate : (hotel.rooms?.[0]?.basePrice || "Hết phòng"),
             currency: "VND"
           },
           location: {
@@ -171,6 +196,9 @@ export const HotelController = {
       // 4. Tự động tạo Inventory nếu có inventorySetup
       let totalInventoryRecords = 0;
       if (inventorySetup && inventorySetup.length > 0) {
+        // Xóa sạch inventory cũ của hotelId này (nếu có) để tránh lỗi duplicate key
+        await RoomInventory.deleteMany({ hotelId: savedHotel.hotelId });
+        
         for (const setup of inventorySetup) {
           if (setup.start && setup.end && setup.roomTypeId && setup.total && setup.price) {
             const dates = getDatesInRange(new Date(setup.start), new Date(setup.end));

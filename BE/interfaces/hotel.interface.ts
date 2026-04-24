@@ -21,6 +21,7 @@ export interface IHotel extends Document {
   };
   images: string[];
   description: string;
+  amenities?: string[];
   rooms: IRoomType[];
   reviewSummary: {
     score: number;       // Ví dụ: 8.6

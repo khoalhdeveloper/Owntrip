@@ -291,6 +291,12 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
       trip.provinceImage = matchedProvince?.imageUrl;
     }
 
+    if (req.body.accommodation !== undefined) {
+      trip.accommodation = req.body.accommodation;
+      // Đảm bảo mongoose nhận biết trường này đã thay đổi
+      trip.markModified('accommodation');
+    }
+
     const nextStartDate = startDate ? new Date(startDate) : new Date(trip.startDate);
     const nextEndDate = endDate ? new Date(endDate) : new Date(trip.endDate);
 

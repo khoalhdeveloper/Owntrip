@@ -47,6 +47,15 @@ const tripSchema = new Schema<ITrip>(
     isPublished: {
       type: Boolean,
       default: false
+    },
+    accommodation: {
+      hotelId: String,
+      roomTypeId: String,
+      hotelName: String,
+      hotelImage: String,
+      checkIn: Date,
+      checkOut: Date,
+      totalPrice: Number
     }
   },
   { timestamps: true }
