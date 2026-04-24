@@ -32,4 +32,5 @@ export interface IHotel extends Document {
     valueForMoney: number;
   };
   tags: string[];        // ["Bán chạy nhất", "2024"]
+  ownerId?: string;      // ID của User chủ khách sạn
 }
