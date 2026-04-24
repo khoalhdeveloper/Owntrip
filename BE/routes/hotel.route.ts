@@ -4,6 +4,9 @@ import { verifyToken } from '../middlewares/auth.middleware';
 
 const router = Router();
 
+// Route lấy danh sách khách sạn (lọc theo city nếu có)
+router.get('/', HotelController.getAllHotels);
+
 // Route lấy dữ liệu tổng hợp cho UI (Không cần đăng nhập)
 router.get('/:id/page', HotelController.getHotelFullPage);
 
