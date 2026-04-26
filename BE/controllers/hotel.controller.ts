@@ -311,5 +311,19 @@ export const HotelController = {
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
     }
+  },
+
+  // Xóa khách sạn (Admin)
+  deleteHotel: async (req: AuthRequest, res: Response) => {
+    try {
+      const { id } = req.params;
+      const hotel = await Hotel.findOneAndDelete({ hotelId: id });
+      if (!hotel) return res.status(404).json({ success: false, message: "Khách sạn không tồn tại" });
+      // Xóa luôn inventory liên quan
+      await RoomInventory.deleteMany({ hotelId: id });
+      res.status(200).json({ success: true, message: "Đã xóa khách sạn thành công" });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
   }
 };
