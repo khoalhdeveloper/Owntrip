@@ -8,4 +8,5 @@ const router = (0, express_1.Router)();
 router.get('/info', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), system_controller_1.SystemController.getSystemInfo);
 router.get('/config', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), system_controller_1.SystemController.getConfig);
 router.post('/config', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), system_controller_1.SystemController.updateConfig);
+router.get('/dashboard-stats', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), system_controller_1.SystemController.getDashboardStats);
 module.exports = router;

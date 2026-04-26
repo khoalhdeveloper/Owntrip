@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SystemController = void 0;
 const systemConfig_model_1 = __importDefault(require("../models/systemConfig.model"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const user_model_1 = __importDefault(require("../models/user.model"));
+const hotel_model_1 = __importDefault(require("../models/hotel.model"));
+const booking_model_1 = __importDefault(require("../models/booking.model"));
+const avatarItem_model_1 = __importDefault(require("../models/avatarItem.model"));
 exports.SystemController = {
     // GET /api/system/info
     getSystemInfo: async (req, res) => {
@@ -68,6 +72,48 @@ exports.SystemController = {
             }));
             await systemConfig_model_1.default.bulkWrite(operations);
             res.json({ success: true, message: 'Cấu hình hệ thống đã được cập nhật' });
+        }
+        catch (error) {
+            res.status(500).json({ success: false, message: error.message });
+        }
+    },
+    // GET /api/system/dashboard-stats
+    getDashboardStats: async (req, res) => {
+        try {
+            const [totalUsers, totalHotels, totalBookings, totalAvatars, recentBookings] = await Promise.all([
+                user_model_1.default.countDocuments(),
+                hotel_model_1.default.countDocuments(),
+                booking_model_1.default.countDocuments(),
+                avatarItem_model_1.default.countDocuments(),
+                booking_model_1.default.find().sort({ createdAt: -1 }).limit(5).populate('userId', 'displayName email')
+            ]);
+            // Tính tổng doanh thu
+            const allBookings = await booking_model_1.default.find({ status: { $in: ['confirmed', 'completed'] } });
+            const totalRevenue = allBookings.reduce((sum, b) => sum + (b.totalPrice || 0), 0);
+            // Thống kê theo tháng (6 tháng gần nhất)
+            const months = [];
+            for (let i = 5; i >= 0; i--) {
+                const d = new Date();
+                d.setMonth(d.getMonth() - i);
+                months.push({
+                    name: `T${d.getMonth() + 1}`,
+                    revenue: 0 // Sẽ tính sau nếu có dữ liệu theo ngày
+                });
+            }
+            res.json({
+                success: true,
+                data: {
+                    stats: [
+                        { name: 'Người dùng', value: totalUsers, icon: 'users', color: 'blue' },
+                        { name: 'Khách sạn', value: totalHotels, icon: 'hotel', color: 'emerald' },
+                        { name: 'Đặt chỗ', value: totalBookings, icon: 'booking', color: 'violet' },
+                        { name: 'Avatar Shop', value: totalAvatars, icon: 'sparkles', color: 'pink' },
+                    ],
+                    totalRevenue,
+                    recentBookings,
+                    chartData: months
+                }
+            });
         }
         catch (error) {
             res.status(500).json({ success: false, message: error.message });

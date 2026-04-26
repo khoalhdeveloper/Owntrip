@@ -64,7 +64,7 @@ export default function Dashboard() {
             {/* Mock bars */}
             {[40, 70, 45, 90, 65, 85, 100, 60, 50, 80, 55, 75].map((height, i) => (
               <div key={i} className="w-full bg-blue-50 rounded-t-lg relative group">
-                <div 
+                <div
                   className="absolute bottom-0 w-full bg-blue-600 rounded-t-lg group-hover:bg-blue-500 transition-colors"
                   style={{ height: `${height}%` }}
                 ></div>
@@ -100,8 +100,8 @@ export default function Dashboard() {
                   <span className={cn(
                     "text-[10px] font-bold px-2 py-0.5 rounded-full mt-1 inline-block",
                     booking.status === 'Hoàn thành' ? "bg-emerald-100 text-emerald-700" :
-                    booking.status === 'Đang xử lý' ? "bg-amber-100 text-amber-700" :
-                    "bg-red-100 text-red-700"
+                      booking.status === 'Đang xử lý' ? "bg-amber-100 text-amber-700" :
+                        "bg-red-100 text-red-700"
                   )}>
                     {booking.status}
                   </span>
