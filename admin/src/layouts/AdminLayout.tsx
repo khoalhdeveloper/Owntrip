@@ -3,7 +3,6 @@ import {
   LayoutDashboard, 
   Users, 
   Map, 
-  CalendarCheck, 
   Settings, 
   LogOut,
   Bell,
@@ -20,7 +19,6 @@ const navItems = [
   { name: 'Người dùng', path: '/users', icon: Users },
   { name: 'Khách sạn', path: '/hotels', icon: Map },
   { name: 'Avatar Shop', path: '/avatar-shop', icon: Sparkles },
-  { name: 'Đặt chỗ', path: '/bookings', icon: CalendarCheck },
   { name: 'Cài đặt', path: '/settings', icon: Settings },
 ];
 
