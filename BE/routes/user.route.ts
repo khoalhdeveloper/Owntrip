@@ -7,6 +7,14 @@ router.post('/register', UserController.register);
 
 router.post('/login', UserController.login);
 
+router.get('/', verifyToken, UserController.getAllUsers);
+
+router.post('/', verifyToken, UserController.createUser);
+
+router.delete('/:id', verifyToken, UserController.deleteUser);
+
+router.put('/:id', verifyToken, UserController.adminUpdateUser);
+
 router.get('/myProfile/:id', verifyToken, UserController.getProfile);
 
 router.put('/updateProfile/:id', verifyToken, UserController.updateProfile);

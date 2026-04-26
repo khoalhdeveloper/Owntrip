@@ -4,6 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import AdminLayout from './layouts/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Users from './pages/Users';
 
 // App component
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<AdminLayout />}>
             <Route index element={<Navigate to="/dashboard" replace />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="users" element={<Users />} />
             {/* Thêm các trang quản trị khác ở đây */}
           </Route>
         </Route>

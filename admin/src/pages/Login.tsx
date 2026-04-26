@@ -23,8 +23,6 @@ export default function Login() {
       const response = await api.post('/users/login', { email, password });
       
       if (response.data && response.data.success) {
-        // Chỉ cho phép role Admin đăng nhập (nếu hệ thống của bạn có phân quyền)
-        // Hiện tại cứ cho đăng nhập thành công là vào.
         const userData = {
           userId: response.data.userId,
           email: response.data.email,
