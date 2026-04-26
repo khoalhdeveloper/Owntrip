@@ -34,14 +34,17 @@ export const AvatarItemController = {
   // POST /api/avatar-items — Tạo item mới (Admin)
   create: async (req: AuthRequest, res: Response) => {
     try {
+      console.log('Incoming AvatarItem data:', req.body);
       const { name, type, imageUrl, previewUrl, price, rarity, description, isActive } = req.body;
       if (!name || !type || !imageUrl || price === undefined) {
         return res.status(400).json({ success: false, message: 'Thiếu thông tin bắt buộc: name, type, imageUrl, price' });
       }
       const item = new AvatarItem({ name, type, imageUrl, previewUrl, price, rarity, description, isActive });
       await item.save();
+      console.log('Saved successfully:', item.itemId);
       res.status(201).json({ success: true, message: 'Tạo item thành công', data: item });
     } catch (error: any) {
+      console.error('Save AvatarItem error:', error);
       res.status(500).json({ success: false, message: error.message });
     }
   },

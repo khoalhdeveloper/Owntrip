@@ -8,7 +8,7 @@ export const SystemController = {
     try {
       const dbStatus = mongoose.connection.readyState === 1 ? 'Connected' : 'Disconnected';
       const uptime = process.uptime();
-      
+
       res.json({
         success: true,
         data: {
@@ -58,7 +58,7 @@ export const SystemController = {
   updateConfig: async (req: Request, res: Response) => {
     try {
       const updates = req.body; // { key1: value1, key2: value2 }
-      
+
       const operations = Object.keys(updates).map(key => ({
         updateOne: {
           filter: { key },
@@ -68,7 +68,7 @@ export const SystemController = {
       }));
 
       await SystemConfig.bulkWrite(operations);
-      
+
       res.json({ success: true, message: 'Cấu hình hệ thống đã được cập nhật' });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
