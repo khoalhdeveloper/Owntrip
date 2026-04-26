@@ -95,6 +95,62 @@ export const UserController = {
       res.status(500).json({ success: false, message: error.message });
     }
   },  
+  getAllUsers: async (req: Request, res: Response) => {
+    try {
+      const users = await User.find().select('-password').sort({ createdAt: -1 });
+      res.json({ success: true, data: users });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+  createUser: async (req: Request, res: Response) => {
+    try {
+      const { email, password, displayName, role } = req.body;
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+        return res.status(400).json({ success: false, message: "Email đã tồn tại trong hệ thống" });
+      }
+      
+      const user = new User({
+        email,
+        password, // Sẽ được tự động hash qua pre('save') middleware
+        displayName,
+        role: role || 'user',
+        isVerified: true
+      });
+      await user.save();
+      
+      const userData = user.toObject();
+      delete (userData as any).password;
+      
+      res.status(201).json({ success: true, message: "Tạo người dùng thành công", data: userData });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+  deleteUser: async (req: Request, res: Response) => {
+    try {
+      const user = await User.findOneAndDelete({ userId: req.params.id });
+      if (!user) return res.status(404).json({ success: false, message: "Không tìm thấy người dùng" });
+      res.json({ success: true, message: "Xóa người dùng thành công" });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
+  adminUpdateUser: async (req: Request, res: Response) => {
+    try {
+      const { displayName, role } = req.body;
+      const user = await User.findOneAndUpdate(
+        { userId: req.params.id },
+        { displayName, role },
+        { new: true }
+      ).select('-password');
+      if (!user) return res.status(404).json({ success: false, message: "Không tìm thấy người dùng" });
+      res.json({ success: true, message: "Cập nhật thành công", data: user });
+    } catch (error: any) {
+      res.status(500).json({ success: false, message: error.message });
+    }
+  },
   getProfile: async (req: Request, res: Response) => {
     try {
       const user = await User.findOne({ userId: req.params.id }).select('-password');

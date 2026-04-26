@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const trip_controller_1 = require("../controllers/trip.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const router = (0, express_1.Router)();
+router.post("/", auth_middleware_1.verifyToken, trip_controller_1.createTrip);
+router.get("/my", auth_middleware_1.verifyToken, trip_controller_1.getMyTrips);
+router.get("/provinces/images", trip_controller_1.getProvinceImageCatalog);
+router.get("/published", trip_controller_1.getPublishedTrips);
+router.get("/:tripId/destinations", trip_controller_1.getTripDestinations);
+router.patch("/:tripId", auth_middleware_1.verifyToken, trip_controller_1.updateTrip);
+router.patch("/:tripId/publish", auth_middleware_1.verifyToken, trip_controller_1.updateTripPublishStatus);
+router.delete("/:tripId", auth_middleware_1.verifyToken, trip_controller_1.deleteTripById);
+router.get("/:tripId", trip_controller_1.getTripDetail);
+module.exports = router;
