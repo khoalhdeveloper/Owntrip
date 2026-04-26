@@ -4,7 +4,7 @@ import { Eye, EyeOff, Lock, Mail, Loader2 } from 'lucide-react';
 import api from '../lib/axios';
 import { useAuth } from '../context/AuthContext';
 
-export default function Login() {
+export default function Login() { // Login Component
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
