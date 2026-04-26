@@ -25,4 +25,7 @@ router.post('/create', verifyToken, HotelController.createHotel);
 // Route cập nhật khách sạn 
 router.patch('/:id', verifyToken, HotelController.updateHotel);
 
+// Route xóa khách sạn (Admin)
+router.delete('/:id', verifyToken, authorizeRole(['admin']), HotelController.deleteHotel);
+
 module.exports = router;

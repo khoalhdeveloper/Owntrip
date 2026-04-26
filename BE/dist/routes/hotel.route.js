@@ -18,4 +18,6 @@ router.post('/assign-owner', auth_middleware_1.verifyToken, (0, auth_middleware_
 router.post('/create', auth_middleware_1.verifyToken, hotel_controller_1.HotelController.createHotel);
 // Route cập nhật khách sạn 
 router.patch('/:id', auth_middleware_1.verifyToken, hotel_controller_1.HotelController.updateHotel);
+// Route xóa khách sạn (Admin)
+router.delete('/:id', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), hotel_controller_1.HotelController.deleteHotel);
 module.exports = router;
