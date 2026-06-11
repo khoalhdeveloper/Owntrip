@@ -23,14 +23,14 @@ export const UserController = {
         isVerified: false
       });
       await user.save();
-      
-      
+
+      // Gửi email OTP
       await sendEmailTemplate(
         user.email,
         'Xác thực tài khoản của bạn',
         'otpTemplate',
         {
-          DISPLAY_NAME: user.displayName,
+          DISPLAY_NAME: user.displayName || 'Khách hàng',
           OTP_CODE: otp
         }
       );
@@ -184,11 +184,11 @@ export const UserController = {
       if (!isMatch) {
         return res.status(400).json({ success: false, message: "Invalid email or password" });
       }
-      
-      if (!user.isVerified) {
-        return res.status(403).json({ success: false, message: "Please verify your email first" });
-      }
 
+      if (!user.isVerified) {
+        return res.status(403).json({ success: false, message: "Vui lòng xác thực email trước khi đăng nhập" });
+      }
+      
       const token = jwt.sign(
         { userId: user.userId, email: user.email, role: user.role },
         process.env.JWT_SECRET!,

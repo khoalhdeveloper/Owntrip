@@ -2,14 +2,16 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 
-// Tạo transporter cho Nodemailer sử dụng Gmail
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// Function to create a fresh transporter using the latest process.env
+const getTransporter = () => {
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+};
 
 export const sendEmailTemplate = async (
   to: string,
@@ -25,14 +27,32 @@ export const sendEmailTemplate = async (
       throw new Error(`Invalid email address: ${to}`);
     }
 
-    const templatePath = path.join(__dirname, 'templates', `${templateName}.html`);
-    let htmlContent = fs.readFileSync(templatePath, 'utf8');
+    let htmlContent = `
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xác thực tài khoản</title>
+</head>
+<body style="font-family: Arial, sans-serif; background: #f7f9fc; padding: 20px;">
+  <div style="max-width: 500px; margin: auto; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #2b6cb0; text-align: center;">Xin chào {{DISPLAY_NAME}}</h2>
+    <p>Mã OTP xác thực của bạn là:</p>
+    <h1 style="text-align: center; color: #2b6cb0;">{{OTP_CODE}}</h1>
+    <p style="text-align: center;">Mã này sẽ hết hạn sau 5 phút.</p>
+    <hr />
+    <p style="font-size: 12px; color: #999; text-align: center;">
+      © 2026 Your App. All rights reserved.
+    </p>
+  </div>
+</body>
+</html>`;
 
     for (const [key, value] of Object.entries(variables)) {
       htmlContent = htmlContent.replace(new RegExp(`{{${key}}}`, 'g'), value);
     }
 
-    const info = await transporter.sendMail({
+    const info = await getTransporter().sendMail({
       from: `"Owntrip Support" <${process.env.EMAIL_USER}>`,
       to,
       subject,
