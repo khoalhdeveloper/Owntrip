@@ -4,6 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './layouts/DashboardLayout';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import FAQ from './pages/FAQ';
 import Dashboard from './pages/Dashboard';
 import MyHotels from './pages/MyHotels';
 import Bookings from './pages/Bookings';
@@ -20,6 +21,9 @@ export default function App() {
 
           {/* Public login page */}
           <Route path="/login" element={<Login />} />
+
+          {/* FAQ page */}
+          <Route path="/faq" element={<FAQ />} />
 
           {/* Protected hotel owner management dashboard routes */}
           <Route element={<ProtectedRoute />}>
