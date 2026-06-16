@@ -24,6 +24,7 @@ const creatorPackageRoutes = require('./routes/creatorPackage.routes');
 const checkinRoutes = require('./routes/checkin.route');
 const withdrawalRoutes = require('./routes/withdrawal.route');
 const frameRoutes = require('./routes/frame.route');
+const missionRoutes = require('./routes/mission.route');
 const aiRoutes = require('./routes/ai.route');
 var app = express();
 connectDB();
@@ -76,6 +77,7 @@ app.use('/api/creator-packages', creatorPackageRoutes);
 app.use('/api/checkins', checkinRoutes);
 app.use('/api/withdrawals', withdrawalRoutes);
 app.use('/api/frames', frameRoutes);
+app.use('/api/missions', missionRoutes);
 app.use('/api/ai', aiRoutes);
 
 app.use(function(req, res, next) {

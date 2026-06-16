@@ -13,6 +13,7 @@ const userSchema = new mongoose_1.Schema({
     displayName: { type: String, required: true },
     image: { type: String },
     avatarFrame: { type: String },
+    unlockedCheckinFrameIds: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Frame' }],
     phone: { type: String },
     balance: { type: Number, default: 0 },
     points: { type: Number, default: 0 },

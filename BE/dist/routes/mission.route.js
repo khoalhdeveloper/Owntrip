@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const mission_controller_1 = require("../controllers/mission.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const router = (0, express_1.Router)();
+router.get("/", mission_controller_1.getMissions);
+router.get("/my-progress", auth_middleware_1.verifyToken, mission_controller_1.getMyMissionProgress);
+router.get("/admin", auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)("admin"), mission_controller_1.getAllMissionsAdmin);
+router.post("/", auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)("admin"), mission_controller_1.createMissionAdmin);
+router.patch("/:id/toggle", auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)("admin"), mission_controller_1.toggleMissionActiveAdmin);
+router.put("/:id", auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)("admin"), mission_controller_1.updateMissionAdmin);
+router.delete("/:id", auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)("admin"), mission_controller_1.deleteMissionAdmin);
+router.post("/:id/claim-reward", auth_middleware_1.verifyToken, mission_controller_1.claimReward);
+module.exports = router;

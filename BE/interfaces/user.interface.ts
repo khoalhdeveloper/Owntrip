@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export interface IUser extends Document {
   userId: string;
@@ -7,6 +7,7 @@ export interface IUser extends Document {
   displayName: string;
   image?: string;
   avatarFrame?: string;
+  unlockedCheckinFrameIds?: Types.ObjectId[];
   phone?: string;
   balance: number;
   points: number;

@@ -1,5 +1,6 @@
 import { Response, Request } from "express";
 import Frame from "../models/frame.model";
+import User from "../models/user.model";
 import { AuthRequest } from "../middlewares/auth.middleware";
 import cloudinary from "../config/cloudinary";
 
@@ -47,6 +48,58 @@ export const getFrames = async (req: Request, res: Response) => {
   }
 };
 
+/**
+ * [USER] Get active frames available to the current user.
+ * Includes all free frames and mission frames already unlocked by rewards.
+ */
+export const getMyUnlockedFrames = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized"
+      });
+    }
+
+    const user = await User.findOne({ userId }).select("unlockedCheckinFrameIds");
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Khong tim thay nguoi dung"
+      });
+    }
+
+    const unlockedFrameIds = user.unlockedCheckinFrameIds || [];
+    const frames = await Frame.find({
+      isActive: true,
+      $or: [
+        { unlockType: "free" },
+        { _id: { $in: unlockedFrameIds } }
+      ]
+    }).sort({ order: 1 });
+
+    const unlockedIdSet = new Set(unlockedFrameIds.map((id) => id.toString()));
+    const framesWithUnlockStatus = frames.map((frame) => ({
+      ...frame.toObject(),
+      isUnlocked: frame.unlockType === "free" || unlockedIdSet.has(frame._id.toString())
+    }));
+
+    return res.json({
+      success: true,
+      total: framesWithUnlockStatus.length,
+      frames: framesWithUnlockStatus
+    });
+  } catch (error) {
+    console.error("Get unlocked frames error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Khong the lay danh sach frame da mo khoa",
+      error: error instanceof Error ? error.message : "Unknown error"
+    });
+  }
+};
+
 // ─────────────────────────────────────────────
 // ADMIN
 // ─────────────────────────────────────────────
@@ -81,7 +134,7 @@ export const getAllFramesAdmin = async (req: AuthRequest, res: Response) => {
  */
 export const createFrame = async (req: AuthRequest, res: Response) => {
   try {
-    const { name, category, layoutType, slotsCount, order } = req.body;
+    const { name, category, unlockType, layoutType, slotsCount, order } = req.body;
 
     // Kiểm tra tên frame
     if (!name) {
@@ -110,6 +163,7 @@ export const createFrame = async (req: AuthRequest, res: Response) => {
       imageUrl,
       thumbnailUrl,
       category:   category   || "general",
+      unlockType: unlockType || "free",
       layoutType: layoutType || "single",
       slotsCount: slotsCount || 1,
       order:      order      || 0,

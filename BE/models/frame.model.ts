@@ -30,6 +30,12 @@ const frameSchema = new Schema<IFrame>(
       trim: true
     },
 
+    unlockType: {
+      type: String,
+      enum: ["free", "mission"],
+      default: "free"
+    },
+
     // Kiểu bố cục: 'single' (1 ô) hoặc 'filmstrip-4' (4 ô dạng dải film)
     layoutType: {
       type: String,
