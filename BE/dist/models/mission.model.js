@@ -34,46 +34,29 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-const checkinSchema = new mongoose_1.Schema({
-    userId: {
+const missionRewardSchema = new mongoose_1.Schema({
+    type: {
         type: String,
-        ref: "User",
+        enum: ["points", "souvenir", "checkin_frame"],
         required: true
     },
-    placeId: {
-        type: String
-    },
-    imageUri: {
-        type: String,
-        default: ""
-    },
-    title: {
-        type: String,
-        required: true,
-        default: "Kỷ niệm Check-in"
-    },
-    date: {
-        type: String,
-        required: true
-    },
-    userLocation: {
-        latitude: Number,
-        longitude: Number
-    },
-    distanceMeters: {
-        type: Number
-    },
-    source: {
-        type: String,
-        enum: ["location", "photo_booth"],
-        default: "photo_booth"
-    },
-    checkedInAt: {
-        type: Date
-    },
-    isFavorite: {
-        type: Boolean,
-        default: false
-    }
+    pointsAmount: { type: Number, default: 0 },
+    frameId: { type: mongoose_1.Schema.Types.ObjectId, ref: "Frame" },
+    souvenirId: { type: String },
+    title: { type: String },
+    description: { type: String }
+}, { _id: false });
+const missionSchema = new mongoose_1.Schema({
+    title: { type: String, required: true, trim: true },
+    description: { type: String, default: "" },
+    imageUrl: { type: String, default: "" },
+    requiredPlaceIds: [{ type: String, required: true }],
+    reward: { type: missionRewardSchema, required: true },
+    isActive: { type: Boolean, default: true },
+    startsAt: { type: Date },
+    endsAt: { type: Date },
+    order: { type: Number, default: 0 }
 }, { timestamps: true });
-exports.default = mongoose_1.default.model("Checkin", checkinSchema);
+missionSchema.index({ isActive: 1, order: 1 });
+missionSchema.index({ requiredPlaceIds: 1 });
+exports.default = mongoose_1.default.model("Mission", missionSchema);

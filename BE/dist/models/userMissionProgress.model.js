@@ -34,46 +34,22 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-const checkinSchema = new mongoose_1.Schema({
+const userMissionProgressSchema = new mongoose_1.Schema({
     userId: {
         type: String,
         ref: "User",
         required: true
     },
-    placeId: {
-        type: String
-    },
-    imageUri: {
-        type: String,
-        default: ""
-    },
-    title: {
-        type: String,
-        required: true,
-        default: "Kỷ niệm Check-in"
-    },
-    date: {
-        type: String,
+    missionId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Mission",
         required: true
     },
-    userLocation: {
-        latitude: Number,
-        longitude: Number
-    },
-    distanceMeters: {
-        type: Number
-    },
-    source: {
-        type: String,
-        enum: ["location", "photo_booth"],
-        default: "photo_booth"
-    },
-    checkedInAt: {
-        type: Date
-    },
-    isFavorite: {
-        type: Boolean,
-        default: false
-    }
+    checkedPlaceIds: [{ type: String }],
+    completedAt: { type: Date },
+    rewardGrantedAt: { type: Date },
+    rewardClaimedAt: { type: Date },
+    rewardResult: { type: mongoose_1.Schema.Types.Mixed }
 }, { timestamps: true });
-exports.default = mongoose_1.default.model("Checkin", checkinSchema);
+userMissionProgressSchema.index({ userId: 1, missionId: 1 }, { unique: true });
+exports.default = mongoose_1.default.model("UserMissionProgress", userMissionProgressSchema);

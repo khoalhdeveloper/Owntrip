@@ -11,6 +11,7 @@ const userSchema = new Schema<IUser>({
   displayName: { type: String, required: true },
   image: { type: String },
   avatarFrame: { type: String },
+  unlockedCheckinFrameIds: [{ type: Schema.Types.ObjectId, ref: 'Frame' }],
   phone: { type: String },
   balance: { type: Number, default: 0 },
   points: { type: Number, default: 0 },

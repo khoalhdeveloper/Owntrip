@@ -3,8 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reorderFrames = exports.toggleFrameActive = exports.deleteFrame = exports.updateFrame = exports.createFrame = exports.getAllFramesAdmin = exports.getFrames = void 0;
+exports.reorderFrames = exports.toggleFrameActive = exports.deleteFrame = exports.updateFrame = exports.createFrame = exports.getAllFramesAdmin = exports.getMyUnlockedFrames = exports.getFrames = void 0;
 const frame_model_1 = __importDefault(require("../models/frame.model"));
+const user_model_1 = __importDefault(require("../models/user.model"));
 const cloudinary_1 = __importDefault(require("../config/cloudinary"));
 // ─── Helper: Tạo thumbnail URL từ Cloudinary imageUrl ────────────────────────
 // Cloudinary hỗ trợ transformation qua URL — chèn "w_200,c_scale" vào path
@@ -48,6 +49,55 @@ const getFrames = async (req, res) => {
     }
 };
 exports.getFrames = getFrames;
+/**
+ * [USER] Get active frames available to the current user.
+ * Includes all free frames and mission frames already unlocked by rewards.
+ */
+const getMyUnlockedFrames = async (req, res) => {
+    try {
+        const userId = req.user?.userId;
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: "Unauthorized"
+            });
+        }
+        const user = await user_model_1.default.findOne({ userId }).select("unlockedCheckinFrameIds");
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Khong tim thay nguoi dung"
+            });
+        }
+        const unlockedFrameIds = user.unlockedCheckinFrameIds || [];
+        const frames = await frame_model_1.default.find({
+            isActive: true,
+            $or: [
+                { unlockType: "free" },
+                { _id: { $in: unlockedFrameIds } }
+            ]
+        }).sort({ order: 1 });
+        const unlockedIdSet = new Set(unlockedFrameIds.map((id) => id.toString()));
+        const framesWithUnlockStatus = frames.map((frame) => ({
+            ...frame.toObject(),
+            isUnlocked: frame.unlockType === "free" || unlockedIdSet.has(frame._id.toString())
+        }));
+        return res.json({
+            success: true,
+            total: framesWithUnlockStatus.length,
+            frames: framesWithUnlockStatus
+        });
+    }
+    catch (error) {
+        console.error("Get unlocked frames error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Khong the lay danh sach frame da mo khoa",
+            error: error instanceof Error ? error.message : "Unknown error"
+        });
+    }
+};
+exports.getMyUnlockedFrames = getMyUnlockedFrames;
 // ─────────────────────────────────────────────
 // ADMIN
 // ─────────────────────────────────────────────
@@ -81,7 +131,7 @@ exports.getAllFramesAdmin = getAllFramesAdmin;
  */
 const createFrame = async (req, res) => {
     try {
-        const { name, category, layoutType, slotsCount, order } = req.body;
+        const { name, category, unlockType, layoutType, slotsCount, order } = req.body;
         // Kiểm tra tên frame
         if (!name) {
             return res.status(400).json({
@@ -105,6 +155,7 @@ const createFrame = async (req, res) => {
             imageUrl,
             thumbnailUrl,
             category: category || "general",
+            unlockType: unlockType || "free",
             layoutType: layoutType || "single",
             slotsCount: slotsCount || 1,
             order: order || 0,

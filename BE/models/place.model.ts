@@ -21,7 +21,8 @@ const placeSchema = new Schema<IPlace>(
     openingHours: String,
     preferences: [String],
     source: { type: String, default: "Google Maps" },
-    addedCount: { type: Number, default: 0 }
+    addedCount: { type: Number, default: 0 },
+    isCheckinEnabled: { type: Boolean, default: true }
   },
   { timestamps: true }
 );
