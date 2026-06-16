@@ -12,6 +12,7 @@ interface Frame {
   imageUrl: string;
   thumbnailUrl?: string;
   category: string;
+  unlockType?: 'free' | 'mission';
   layoutType: 'single' | 'filmstrip-4';
   slotsCount: number;
   isActive: boolean;
@@ -21,6 +22,7 @@ interface Frame {
 
 type CategoryType = 'general' | 'holiday' | 'seasonal' | 'city';
 type LayoutType   = 'single' | 'filmstrip-4';
+type UnlockType   = 'free' | 'mission';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const CATEGORY_CONFIG: Record<CategoryType, { label: string; color: string }> = {
@@ -35,9 +37,15 @@ const LAYOUT_CONFIG: Record<LayoutType, { label: string; icon: typeof LayoutGrid
   'filmstrip-4': { label: '4 ô film', icon: Film,       color: 'bg-purple-50 text-purple-700' },
 };
 
+const UNLOCK_CONFIG: Record<UnlockType, { label: string; color: string }> = {
+  free:    { label: 'Miễn phí',     color: 'bg-emerald-50 text-emerald-700' },
+  mission: { label: 'Quà mission',  color: 'bg-fuchsia-50 text-fuchsia-700' },
+};
+
 const EMPTY_FORM = {
   name: '',
   category: 'general' as CategoryType,
+  unlockType: 'free' as UnlockType,
   layoutType: 'single' as LayoutType,
   slotsCount: 1,
 };
@@ -104,6 +112,7 @@ export default function Frames() {
     setForm({
       name:       frame.name,
       category:   frame.category as CategoryType,
+      unlockType: (frame.unlockType || 'free') as UnlockType,
       layoutType: frame.layoutType,
       slotsCount: frame.slotsCount,
     });
@@ -160,6 +169,7 @@ export default function Frames() {
       const formData = new FormData();
       formData.append('name',       form.name);
       formData.append('category',   form.category);
+      formData.append('unlockType', form.unlockType);
       formData.append('layoutType', form.layoutType);
       formData.append('slotsCount', String(form.slotsCount));
       if (selectedFile) formData.append('image', selectedFile);
@@ -314,6 +324,7 @@ export default function Frames() {
               {filtered.map(frame => {
                 const catConf    = CATEGORY_CONFIG[frame.category as CategoryType] ?? CATEGORY_CONFIG.general;
                 const layoutConf = LAYOUT_CONFIG[frame.layoutType];
+                const unlockConf = UNLOCK_CONFIG[(frame.unlockType || 'free') as UnlockType];
                 const LayoutIcon = layoutConf.icon;
                 return (
                   <div
@@ -362,6 +373,9 @@ export default function Frames() {
                         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${layoutConf.color}`}>
                           <LayoutIcon className="w-3 h-3" />
                           {layoutConf.label}
+                        </span>
+                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${unlockConf.color}`}>
+                          {unlockConf.label}
                         </span>
                       </div>
                       {/* Toggle active */}
@@ -435,6 +449,18 @@ export default function Frames() {
                   <option value="holiday">Lễ hội (Holiday)</option>
                   <option value="seasonal">Mùa vụ (Seasonal)</option>
                   <option value="city">Thành phố (City)</option>
+                </select>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-sm font-semibold text-gray-700">Cách mở khóa</label>
+                <select
+                  value={form.unlockType}
+                  onChange={e => setForm(f => ({ ...f, unlockType: e.target.value as UnlockType }))}
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-transparent focus:border-teal-500 focus:bg-white rounded-xl text-sm outline-none transition-all"
+                >
+                  <option value="free">Miễn phí - ai cũng dùng được</option>
+                  <option value="mission">Quà mission - chỉ hiện sau khi nhận thưởng</option>
                 </select>
               </div>
 
