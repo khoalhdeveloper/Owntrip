@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { getPlacePhoto, searchPlace, searchNearby, searchText, getPlaceChildren, getTopAddedPlaces } from "../controllers/place.controller";
+import { getPlacePhoto, searchPlace, searchNearby, searchText, getPlaceChildren, getTopAddedPlaces, togglePlaceCheckin } from "../controllers/place.controller";
+import { verifyToken, authorizeRole } from "../middlewares/auth.middleware";
 
 const router = Router();
 
@@ -40,5 +41,9 @@ router.get("/address", searchText);
 router.get("/photo", getPlacePhoto);
 
 router.get("/gettopplaces", getTopAddedPlaces);
+
+// Admin endpoints to toggle place check-in capability
+router.patch("/:id/toggle-checkin", verifyToken, authorizeRole("admin"), togglePlaceCheckin);
+router.put("/:id", verifyToken, authorizeRole("admin"), togglePlaceCheckin);
 
 module.exports = router;
