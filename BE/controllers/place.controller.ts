@@ -265,11 +265,15 @@ export const searchPlace = async (req: Request, res: Response) => {
 
     // 1. Tìm kiếm trong database local trước (Ưu tiên tuyệt đối nếu có dữ liệu)
     const localPlaces = await Place.find({
-      $or: searchTerms.flatMap((term) => [
-        { name: { $regex: term, $options: "i" } },
-        { address: { $regex: term, $options: "i" } },
-        { city: { $regex: term, $options: "i" } }
-      ])
+      $or: [
+        { placeId: rawQuery },
+        ...searchTerms.flatMap((term) => [
+          { name: { $regex: term, $options: "i" } },
+          { address: { $regex: term, $options: "i" } },
+          { city: { $regex: term, $options: "i" } },
+          { placeId: { $regex: term, $options: "i" } }
+        ])
+      ]
     }).sort({ addedCount: -1 }).limit(20);
 
     if (localPlaces.length > 0) {
@@ -615,11 +619,15 @@ export const searchText = async (req: Request, res: Response) => {
 
     // 1. Thử tìm kiếm trong database local trước
     const dbResults = await Place.find({
-      $or: expandedQueryList.flatMap((queryText) => [
-        { name: { $regex: queryText, $options: "i" } },
-        { address: { $regex: queryText, $options: "i" } },
-        { city: { $regex: queryText, $options: "i" } }
-      ])
+      $or: [
+        ...queryList.map(qText => ({ placeId: qText })),
+        ...expandedQueryList.flatMap((queryText) => [
+          { name: { $regex: queryText, $options: "i" } },
+          { address: { $regex: queryText, $options: "i" } },
+          { city: { $regex: queryText, $options: "i" } },
+          { placeId: { $regex: queryText, $options: "i" } }
+        ])
+      ]
     }).sort({ addedCount: -1 }).limit(maxResultCount);
 
     if (dbResults.length > 0) {
