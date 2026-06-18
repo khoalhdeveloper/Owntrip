@@ -6,6 +6,7 @@ const google_auth_library_1 = require("google-auth-library");
 const DEFAULT_GOOGLE_CLIENT_IDS = [
     '524802175661-eqh020259d1r1da0rp6lr2c626crrg97.apps.googleusercontent.com',
     '524802175661-ubek35mvbpg4m2ociktb484us6prr6oq.apps.googleusercontent.com',
+    '524802175661-4jmb95kti7c3csqu22ljdccqp66pff6l.apps.googleusercontent.com',
     '524802175661-62nri3lt2vkio173e1imnt375qt9kjc5.apps.googleusercontent.com',
 ];
 function getGoogleAudienceIds() {
