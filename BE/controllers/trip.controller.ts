@@ -275,7 +275,7 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.userId;
     const tripId = req.params.tripId as any;
-    const { title, destination, startDate, endDate, description, isPublished, notes, budget } = req.body;
+    const { title, destination, startDate, endDate, description, isPublished, notes, budget, provinceImage } = req.body;
 
     if (!userId) {
       return res.status(401).json({
@@ -310,6 +310,10 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
       const matchedProvince = findProvinceImageByDestination(destination);
       trip.province = matchedProvince?.province;
       trip.provinceImage = matchedProvince?.imageUrl;
+    }
+
+    if (provinceImage !== undefined) {
+      trip.provinceImage = provinceImage;
     }
 
     if (req.body.accommodation !== undefined) {
