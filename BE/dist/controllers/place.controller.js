@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTopAddedPlaces = exports.getPlaceChildren = exports.searchText = exports.searchNearby = exports.searchPlace = exports.getPlacePhoto = void 0;
+exports.togglePlaceCheckin = exports.getTopAddedPlaces = exports.getPlaceChildren = exports.searchText = exports.searchNearby = exports.searchPlace = exports.getPlacePhoto = void 0;
 const axios_1 = __importDefault(require("axios"));
 const place_model_1 = __importDefault(require("../models/place.model"));
 const provinceImages_1 = require("../utils/provinceImages");
@@ -223,11 +223,15 @@ const searchPlace = async (req, res) => {
         }
         // 1. Tìm kiếm trong database local trước (Ưu tiên tuyệt đối nếu có dữ liệu)
         const localPlaces = await place_model_1.default.find({
-            $or: searchTerms.flatMap((term) => [
-                { name: { $regex: term, $options: "i" } },
-                { address: { $regex: term, $options: "i" } },
-                { city: { $regex: term, $options: "i" } }
-            ])
+            $or: [
+                { placeId: rawQuery },
+                ...searchTerms.flatMap((term) => [
+                    { name: { $regex: term, $options: "i" } },
+                    { address: { $regex: term, $options: "i" } },
+                    { city: { $regex: term, $options: "i" } },
+                    { placeId: { $regex: term, $options: "i" } }
+                ])
+            ]
         }).sort({ addedCount: -1 }).limit(20);
         if (localPlaces.length > 0) {
             return res.json({
@@ -246,7 +250,8 @@ const searchPlace = async (req, res) => {
                     userRatingCount: p.reviewCount,
                     types: p.category ? [p.category] : [],
                     photos: p.images?.map(img => ({ name: img })),
-                    addedCount: p.addedCount || 0
+                    addedCount: p.addedCount || 0,
+                    isCheckinEnabled: p.isCheckinEnabled !== false
                 }))
             });
         }
@@ -365,11 +370,22 @@ const searchPlace = async (req, res) => {
                 providerId: serpData?.provider_id
             };
         }));
+        // Query local DB for check-in status of these returned Goong places
+        const placeIds = formattedPlaces.map(p => p.placeId);
+        const existingPlaces = await place_model_1.default.find({ placeId: { $in: placeIds } });
+        const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+        const finalPlaces = formattedPlaces.map(p => {
+            const existing = existingMap.get(p.placeId);
+            return {
+                ...p,
+                isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+            };
+        });
         res.json({
             success: true,
             source: "goong",
             predictions: predictions,
-            places: formattedPlaces
+            places: finalPlaces
         });
     }
     catch (error) {
@@ -427,7 +443,8 @@ const searchNearby = async (req, res) => {
                     : null,
                 photo: p.images?.[0] || null,
                 photos: p.images || [],
-                addedCount: p.addedCount || 0
+                addedCount: p.addedCount || 0,
+                isCheckinEnabled: p.isCheckinEnabled !== false
             }));
             return res.json({
                 success: true,
@@ -494,11 +511,23 @@ const searchNearby = async (req, res) => {
                 photos: [finalPhoto]
             };
         }))).filter(Boolean);
+        const filteredPlaces = places;
+        // Query local DB for check-in status of these returned Goong places
+        const placeIds = filteredPlaces.map(p => p.placeId);
+        const existingPlaces = await place_model_1.default.find({ placeId: { $in: placeIds } });
+        const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+        const finalPlaces = filteredPlaces.map(p => {
+            const existing = existingMap.get(p.placeId);
+            return {
+                ...p,
+                isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+            };
+        });
         res.json({
             success: true,
             source: "goong",
-            total: places.length,
-            places
+            total: finalPlaces.length,
+            places: finalPlaces
         });
     }
     catch (error) {
@@ -532,11 +561,15 @@ const searchText = async (req, res) => {
         }
         // 1. Thử tìm kiếm trong database local trước
         const dbResults = await place_model_1.default.find({
-            $or: expandedQueryList.flatMap((queryText) => [
-                { name: { $regex: queryText, $options: "i" } },
-                { address: { $regex: queryText, $options: "i" } },
-                { city: { $regex: queryText, $options: "i" } }
-            ])
+            $or: [
+                ...queryList.map(qText => ({ placeId: qText })),
+                ...expandedQueryList.flatMap((queryText) => [
+                    { name: { $regex: queryText, $options: "i" } },
+                    { address: { $regex: queryText, $options: "i" } },
+                    { city: { $regex: queryText, $options: "i" } },
+                    { placeId: { $regex: queryText, $options: "i" } }
+                ])
+            ]
         }).sort({ addedCount: -1 }).limit(maxResultCount);
         if (dbResults.length > 0) {
             const formattedPlaces = dbResults.map(p => ({
@@ -672,11 +705,22 @@ const searchText = async (req, res) => {
             };
         }));
         const filteredPlaces = places.filter(Boolean);
+        // Query local DB for check-in status of these returned Goong places
+        const placeIds = filteredPlaces.map(p => p.placeId);
+        const existingPlaces = await place_model_1.default.find({ placeId: { $in: placeIds } });
+        const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+        const finalPlaces = filteredPlaces.map(p => {
+            const existing = existingMap.get(p.placeId);
+            return {
+                ...p,
+                isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+            };
+        });
         res.json({
             success: true,
             source: "goong",
-            total: filteredPlaces.length,
-            places: filteredPlaces
+            total: finalPlaces.length,
+            places: finalPlaces
         });
     }
     catch (error) {
@@ -720,11 +764,11 @@ exports.getPlaceChildren = getPlaceChildren;
  */
 const getTopAddedPlaces = async (req, res) => {
     try {
-        const { minAddedCount = "1", limit = "10" } = req.query;
-        const min = Math.max(0, Number(minAddedCount) || 1);
-        const lim = Math.min(50, Math.max(1, Number(limit) || 10));
+        const { minAddedCount, limit = "50" } = req.query;
+        const min = minAddedCount !== undefined ? Math.max(0, Number(minAddedCount)) : 0;
+        const lim = Math.min(100, Math.max(1, Number(limit) || 50));
         const results = await place_model_1.default.find({ addedCount: { $gte: min } })
-            .sort({ addedCount: -1 })
+            .sort({ addedCount: -1, createdAt: -1 })
             .limit(lim);
         const places = results.map((p) => ({
             placeId: p.placeId,
@@ -737,7 +781,8 @@ const getTopAddedPlaces = async (req, res) => {
             types: p.category ? [p.category] : [],
             photo: p.images?.[0],
             photos: p.images,
-            addedCount: p.addedCount || 0
+            addedCount: p.addedCount || 0,
+            isCheckinEnabled: p.isCheckinEnabled !== false
         }));
         return res.json({ success: true, total: places.length, places });
     }
@@ -747,3 +792,57 @@ const getTopAddedPlaces = async (req, res) => {
     }
 };
 exports.getTopAddedPlaces = getTopAddedPlaces;
+const togglePlaceCheckin = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { isCheckinEnabled } = req.body;
+        let place = await place_model_1.default.findOne({ placeId: id });
+        if (!place) {
+            // Fetch details from Goong to create it in our database
+            const detailRes = await axios_1.default.get(`${GOONG_API_BASE_URL}/v2/place/detail`, {
+                params: {
+                    api_key: getGoongKey(),
+                    place_id: id
+                }
+            });
+            const d = detailRes.data?.result;
+            if (!d) {
+                return res.status(404).json({ success: false, message: "Không tìm thấy địa điểm trên Goong" });
+            }
+            // Create new local place
+            place = new place_model_1.default({
+                placeId: id,
+                name: d.name,
+                address: d.formatted_address,
+                location: {
+                    lat: d.geometry?.location?.lat,
+                    lng: d.geometry?.location?.lng
+                },
+                category: (d.types && d.types[0]) || "",
+                rating: d.rating || 0,
+                reviewCount: d.user_ratings_total || 0,
+                isCheckinEnabled: isCheckinEnabled !== false
+            });
+            await place.save();
+        }
+        else {
+            place.isCheckinEnabled = isCheckinEnabled !== false;
+            await place.save();
+        }
+        return res.json({
+            success: true,
+            message: place.isCheckinEnabled ? "Đã bật check-in cho địa điểm" : "Đã tắt check-in cho địa điểm",
+            place: {
+                placeId: place.placeId,
+                name: place.name,
+                address: place.address,
+                isCheckinEnabled: place.isCheckinEnabled
+            }
+        });
+    }
+    catch (error) {
+        console.error("Toggle place checkin failed:", error?.message || error);
+        return res.status(500).json({ success: false, message: "Không thể cập nhật trạng thái check-in" });
+    }
+};
+exports.togglePlaceCheckin = togglePlaceCheckin;

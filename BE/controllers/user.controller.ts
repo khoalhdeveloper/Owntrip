@@ -7,6 +7,7 @@ import { buildVNPayUrl, verifyVNPayReturn, parseVNPayAmount, isVNPaySuccess } fr
 import crypto from 'crypto';
 import { generateOTP, getOTPExpiration } from '../utils/otpGenerator';
 import { sendEmailTemplate } from '../utils/emailService';
+import { verifyGoogleIdToken } from '../utils/googleAuth';
 
 
 
@@ -217,12 +218,9 @@ export const UserController = {
     if (!idToken) {
       return res.status(400).json({ success: false, message: "Missing idToken" });
     }
-    const decoded: any = jwt.decode(idToken);
-    if (!decoded || !decoded.email) {
-      return res.status(400).json({ success: false, message: "Invalid idToken" });
-    }
+    const decoded = await verifyGoogleIdToken(idToken);
     
-    const email = decoded.email;
+    const email = decoded.email!;
     const displayName = decoded.name || email.split('@')[0];
     const profileImage = decoded.picture;
     let user = await User.findOne({ email });
@@ -250,7 +248,8 @@ export const UserController = {
     
     res.json({ success: true, token, userId: user.userId, image: user.image });
   } catch (error: any) {
-    res.status(500).json({ success: false, message: error.message });
+    const statusCode = error.message?.startsWith('Invalid Google token') ? 401 : 500;
+    res.status(statusCode).json({ success: false, message: error.message });
   }
 },
   updateProfile: async (req: Request, res: Response) => {
