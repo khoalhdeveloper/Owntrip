@@ -33,7 +33,7 @@ const buildExternalError = (message, statusCode) => {
 };
 const askTravelBot = async (message) => {
     const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash"
+        model: "gemini-3.1-flash-lite"
     });
     const prompt = `
 Bạn là chatbot tư vấn du lịch Việt Nam.

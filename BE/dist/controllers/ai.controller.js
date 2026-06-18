@@ -34,7 +34,7 @@ const rearrangeItinerary = async (req, res) => {
         "replyMessage": "Một câu trả lời ngắn gọn, thân thiện bằng tiếng Việt."
       }
     `;
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
         try {
             const response = await axios_1.default.post(url, {
                 contents: [{ parts: [{ text: prompt }] }],
@@ -107,7 +107,7 @@ const autoGenerateTrip = async (req, res) => {
         "replyMessage": "Một câu giới thiệu ngắn gọn, thân thiện (ví dụ: 'Dạ em đã chọn lọc và lên lịch trình hoàn chỉnh cho anh/chị rồi ạ!')"
       }
     `;
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
         try {
             const response = await axios_1.default.post(url, {
                 contents: [{ parts: [{ text: prompt }] }],
