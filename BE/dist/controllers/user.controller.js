@@ -11,6 +11,7 @@ const vnpay_1 = require("../utils/vnpay");
 const crypto_1 = __importDefault(require("crypto"));
 const otpGenerator_1 = require("../utils/otpGenerator");
 const emailService_1 = require("../utils/emailService");
+const googleAuth_1 = require("../utils/googleAuth");
 exports.UserController = {
     register: async (req, res) => {
         try {
@@ -200,10 +201,7 @@ exports.UserController = {
             if (!idToken) {
                 return res.status(400).json({ success: false, message: "Missing idToken" });
             }
-            const decoded = jsonwebtoken_1.default.decode(idToken);
-            if (!decoded || !decoded.email) {
-                return res.status(400).json({ success: false, message: "Invalid idToken" });
-            }
+            const decoded = await (0, googleAuth_1.verifyGoogleIdToken)(idToken);
             const email = decoded.email;
             const displayName = decoded.name || email.split('@')[0];
             const profileImage = decoded.picture;
@@ -226,7 +224,8 @@ exports.UserController = {
             res.json({ success: true, token, userId: user.userId, image: user.image });
         }
         catch (error) {
-            res.status(500).json({ success: false, message: error.message });
+            const statusCode = error.message?.startsWith('Invalid Google token') ? 401 : 500;
+            res.status(statusCode).json({ success: false, message: error.message });
         }
     },
     updateProfile: async (req, res) => {

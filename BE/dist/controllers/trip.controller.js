@@ -223,7 +223,7 @@ const updateTrip = async (req, res) => {
     try {
         const userId = req.user?.userId;
         const tripId = req.params.tripId;
-        const { title, destination, startDate, endDate, description, isPublished, notes, budget } = req.body;
+        const { title, destination, startDate, endDate, description, isPublished, notes, budget, provinceImage } = req.body;
         if (!userId) {
             return res.status(401).json({
                 success: false,
@@ -251,6 +251,9 @@ const updateTrip = async (req, res) => {
             const matchedProvince = (0, provinceImages_1.findProvinceImageByDestination)(destination);
             trip.province = matchedProvince?.province;
             trip.provinceImage = matchedProvince?.imageUrl;
+        }
+        if (provinceImage !== undefined) {
+            trip.provinceImage = provinceImage;
         }
         if (req.body.accommodation !== undefined) {
             trip.accommodation = req.body.accommodation;
