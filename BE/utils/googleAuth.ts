@@ -19,7 +19,7 @@ export function getGoogleAudienceIds(): string[] {
     .map((id) => id.trim())
     .filter(Boolean);
 
-  return idsFromEnv?.length ? idsFromEnv : DEFAULT_GOOGLE_CLIENT_IDS;
+  return Array.from(new Set([...(idsFromEnv ?? []), ...DEFAULT_GOOGLE_CLIENT_IDS]));
 }
 
 export async function verifyGoogleIdToken(

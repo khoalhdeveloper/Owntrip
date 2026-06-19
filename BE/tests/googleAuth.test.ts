@@ -5,10 +5,16 @@ async function testAudienceIdsFromEnv() {
   const original = process.env.GOOGLE_CLIENT_IDS;
   process.env.GOOGLE_CLIENT_IDS = ' client-a.apps.googleusercontent.com,client-b.apps.googleusercontent.com,, ';
 
-  assert.deepEqual(getGoogleAudienceIds(), [
-    'client-a.apps.googleusercontent.com',
-    'client-b.apps.googleusercontent.com',
-  ]);
+  const audienceIds = getGoogleAudienceIds();
+
+  assert.equal(audienceIds[0], 'client-a.apps.googleusercontent.com');
+  assert.equal(audienceIds[1], 'client-b.apps.googleusercontent.com');
+  assert.ok(
+    audienceIds.includes('524802175661-4jmb95kti7c3csqu22ljdccqp66pff6l.apps.googleusercontent.com')
+  );
+  assert.ok(
+    audienceIds.includes('524802175661-62nri3lt2vkio173e1imnt375qt9kjc5.apps.googleusercontent.com')
+  );
 
   process.env.GOOGLE_CLIENT_IDS = original;
 }
