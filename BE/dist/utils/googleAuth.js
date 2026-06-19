@@ -13,7 +13,7 @@ function getGoogleAudienceIds() {
     const idsFromEnv = process.env.GOOGLE_CLIENT_IDS?.split(',')
         .map((id) => id.trim())
         .filter(Boolean);
-    return idsFromEnv?.length ? idsFromEnv : DEFAULT_GOOGLE_CLIENT_IDS;
+    return Array.from(new Set([...(idsFromEnv ?? []), ...DEFAULT_GOOGLE_CLIENT_IDS]));
 }
 async function verifyGoogleIdToken(idToken, options = {}) {
     const audience = options.audienceIds ?? getGoogleAudienceIds();
