@@ -30,6 +30,27 @@ const frameSchema = new Schema<IFrame>(
       trim: true
     },
 
+    province: {
+      type: String,
+      trim: true
+    },
+
+    destinationTags: {
+      type: [String],
+      default: []
+    },
+
+    isDefault: {
+      type: Boolean,
+      default: false
+    },
+
+    unlockCondition: {
+      type: String,
+      enum: ["none", "checkin_at_location", "mission_reward", "purchase"],
+      default: "none"
+    },
+
     unlockType: {
       type: String,
       enum: ["free", "mission"],

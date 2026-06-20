@@ -34,74 +34,33 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-// Schema Mongoose cho Frame ảnh check-in
-const frameSchema = new mongoose_1.Schema({
-    // Tên hiển thị của frame
-    name: {
+const memorySchema = new mongoose_1.Schema({
+    userId: {
         type: String,
-        required: true,
-        trim: true
+        ref: "User",
+        required: true
     },
-    // URL ảnh frame đầy đủ (upload lên Cloudinary)
+    tripId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Trip"
+    },
+    checkinId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Checkin"
+    },
     imageUrl: {
         type: String,
         required: true
     },
-    // URL ảnh thu nhỏ để preview nhanh (tùy chọn)
-    thumbnailUrl: {
+    caption: {
         type: String,
         default: ""
     },
-    // Danh mục frame (general, travel, holiday, seasonal...)
-    category: {
-        type: String,
-        default: "general",
-        trim: true
-    },
-    province: {
-        type: String,
-        trim: true
-    },
-    destinationTags: {
+    locationName: String,
+    province: String,
+    tags: {
         type: [String],
         default: []
-    },
-    isDefault: {
-        type: Boolean,
-        default: false
-    },
-    unlockCondition: {
-        type: String,
-        enum: ["none", "checkin_at_location", "mission_reward", "purchase"],
-        default: "none"
-    },
-    unlockType: {
-        type: String,
-        enum: ["free", "mission"],
-        default: "free"
-    },
-    // Kiểu bố cục: 'single' (1 ô) hoặc 'filmstrip-4' (4 ô dạng dải film)
-    layoutType: {
-        type: String,
-        enum: ["single", "filmstrip-4"],
-        default: "single"
-    },
-    // Số lượng ô ảnh tương ứng với layoutType
-    slotsCount: {
-        type: Number,
-        default: 1
-    },
-    // Trạng thái hiển thị: true = đang kích hoạt, false = ẩn
-    isActive: {
-        type: Boolean,
-        default: true
-    },
-    // Thứ tự sắp xếp (số càng nhỏ hiển thị càng trước)
-    order: {
-        type: Number,
-        default: 0
     }
-}, 
-// Tự động thêm createdAt và updatedAt
-{ timestamps: true });
-exports.default = mongoose_1.default.model("Frame", frameSchema);
+}, { timestamps: true });
+exports.default = mongoose_1.default.model("Memory", memorySchema);

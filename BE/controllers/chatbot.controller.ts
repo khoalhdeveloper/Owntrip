@@ -5,16 +5,16 @@ export const chatBot = async (req: Request, res: Response) => {
 
   try {
 
-    const { message } = req.body;
+    const { message, tripContext } = req.body;
 
     if (!message) {
       return res.status(400).json({
         success: false,
-        message: "Message is required"
+        message: "Vui lòng nhập nội dung tin nhắn"
       });
     }
 
-    const reply = await askTravelBot(message);
+    const reply = await askTravelBot(message, tripContext);
 
     res.json({
       success: true,
@@ -26,8 +26,8 @@ export const chatBot = async (req: Request, res: Response) => {
     const statusCode = typeof error?.statusCode === "number" ? error.statusCode : 500;
     const responseMessage =
       statusCode >= 500
-        ? "Chat service is temporarily unavailable. Please try again shortly."
-        : error?.message || "Unexpected error";
+        ? "Dịch vụ chat tạm thời không khả dụng. Vui lòng thử lại sau."
+        : error?.message || "Đã xảy ra lỗi không mong muốn";
 
     res.status(statusCode).json({
       success: false,

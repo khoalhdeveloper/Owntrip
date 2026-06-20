@@ -21,6 +21,49 @@ const extractPublicId = (imageUrl: string): string => {
   return withoutExt;
 };
 
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const normalizeTags = (value: unknown): string[] => {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  if (typeof value === "string") {
+    return value.split(",").map((item) => item.trim()).filter(Boolean);
+  }
+
+  return [];
+};
+
+const buildFrameFilter = (query: Request["query"]) => {
+  const { province, destination, category } = query;
+  const targetedFilter: Record<string, any> = {};
+
+  if (province) {
+    targetedFilter.province = { $regex: escapeRegExp(String(province)), $options: "i" };
+  }
+
+  if (destination) {
+    targetedFilter.destinationTags = { $regex: escapeRegExp(String(destination)), $options: "i" };
+  }
+
+  if (category) {
+    targetedFilter.category = String(category);
+  }
+
+  if (Object.keys(targetedFilter).length === 0) {
+    return { isActive: true };
+  }
+
+  return {
+    isActive: true,
+    $or: [
+      targetedFilter,
+      { isDefault: true }
+    ]
+  };
+};
+
 // ─────────────────────────────────────────────
 // PUBLIC
 // ─────────────────────────────────────────────
@@ -31,7 +74,7 @@ const extractPublicId = (imageUrl: string): string => {
  */
 export const getFrames = async (req: Request, res: Response) => {
   try {
-    const frames = await Frame.find({ isActive: true }).sort({ order: 1 });
+    const frames = await Frame.find(buildFrameFilter(req.query)).sort({ order: 1 });
 
     return res.json({
       success: true,
@@ -134,7 +177,18 @@ export const getAllFramesAdmin = async (req: AuthRequest, res: Response) => {
  */
 export const createFrame = async (req: AuthRequest, res: Response) => {
   try {
-    const { name, category, unlockType, layoutType, slotsCount, order } = req.body;
+    const {
+      name,
+      category,
+      province,
+      destinationTags,
+      isDefault,
+      unlockCondition,
+      unlockType,
+      layoutType,
+      slotsCount,
+      order
+    } = req.body;
 
     // Kiểm tra tên frame
     if (!name) {
@@ -163,6 +217,10 @@ export const createFrame = async (req: AuthRequest, res: Response) => {
       imageUrl,
       thumbnailUrl,
       category:   category   || "general",
+      province,
+      destinationTags: normalizeTags(destinationTags),
+      isDefault: isDefault === true || isDefault === "true",
+      unlockCondition: unlockCondition || "none",
       unlockType: unlockType || "free",
       layoutType: layoutType || "single",
       slotsCount: slotsCount || 1,
@@ -204,6 +262,12 @@ export const updateFrame = async (req: AuthRequest, res: Response) => {
     }
 
     const updateData: Record<string, any> = { ...req.body };
+    if (req.body.destinationTags !== undefined) {
+      updateData.destinationTags = normalizeTags(req.body.destinationTags);
+    }
+    if (req.body.isDefault !== undefined) {
+      updateData.isDefault = req.body.isDefault === true || req.body.isDefault === "true";
+    }
 
     // Nếu có file upload mới → cập nhật URL và xóa ảnh cũ trên Cloudinary
     if (req.file) {

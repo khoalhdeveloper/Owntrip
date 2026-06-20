@@ -19,11 +19,11 @@ router.get('/google-proxy', (req, res) => {
         res.send("Missing state parameter for deep linking");
     }
 });
-router.get('/', auth_middleware_1.verifyToken, user_controller_1.UserController.getAllUsers);
+router.get('/', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), user_controller_1.UserController.getAllUsers);
 router.get('/me', auth_middleware_1.verifyToken, user_controller_1.UserController.getMe);
-router.post('/', auth_middleware_1.verifyToken, user_controller_1.UserController.createUser);
-router.delete('/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.deleteUser);
-router.put('/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.adminUpdateUser);
+router.post('/', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), user_controller_1.UserController.createUser);
+router.delete('/:id', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), user_controller_1.UserController.deleteUser);
+router.put('/:id', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), user_controller_1.UserController.adminUpdateUser);
 router.get('/myProfile/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.getProfile);
 router.put('/updateProfile/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.updateProfile);
 router.put('/updatePassword/:id', auth_middleware_1.verifyToken, user_controller_1.UserController.updatePassword);
@@ -37,5 +37,5 @@ router.post('/pay-with-points', auth_middleware_1.verifyToken, user_controller_1
 // VNPay
 router.post('/vnpay/create-payment', auth_middleware_1.verifyToken, user_controller_1.UserController.vnpayCreatePayment);
 router.get('/vnpay/return', user_controller_1.UserController.vnpayReturn);
-router.post('/test-topup', auth_middleware_1.verifyToken, user_controller_1.UserController.testTopUpBalance);
+router.post('/test-topup', auth_middleware_1.verifyToken, (0, auth_middleware_1.authorizeRole)(['admin']), user_controller_1.UserController.testTopUpBalance);
 module.exports = router;

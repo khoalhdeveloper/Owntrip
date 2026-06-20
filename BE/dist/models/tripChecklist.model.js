@@ -34,74 +34,40 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-// Schema Mongoose cho Frame ảnh check-in
-const frameSchema = new mongoose_1.Schema({
-    // Tên hiển thị của frame
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    // URL ảnh frame đầy đủ (upload lên Cloudinary)
-    imageUrl: {
+const checklistItemSchema = new mongoose_1.Schema({
+    id: {
         type: String,
         required: true
     },
-    // URL ảnh thu nhỏ để preview nhanh (tùy chọn)
-    thumbnailUrl: {
+    title: {
         type: String,
-        default: ""
+        required: true
     },
-    // Danh mục frame (general, travel, holiday, seasonal...)
     category: {
         type: String,
-        default: "general",
-        trim: true
+        enum: ["documents", "clothes", "tech", "health", "money", "other"],
+        default: "other"
     },
-    province: {
-        type: String,
-        trim: true
-    },
-    destinationTags: {
-        type: [String],
-        default: []
-    },
-    isDefault: {
+    checked: {
         type: Boolean,
         default: false
-    },
-    unlockCondition: {
-        type: String,
-        enum: ["none", "checkin_at_location", "mission_reward", "purchase"],
-        default: "none"
-    },
-    unlockType: {
-        type: String,
-        enum: ["free", "mission"],
-        default: "free"
-    },
-    // Kiểu bố cục: 'single' (1 ô) hoặc 'filmstrip-4' (4 ô dạng dải film)
-    layoutType: {
-        type: String,
-        enum: ["single", "filmstrip-4"],
-        default: "single"
-    },
-    // Số lượng ô ảnh tương ứng với layoutType
-    slotsCount: {
-        type: Number,
-        default: 1
-    },
-    // Trạng thái hiển thị: true = đang kích hoạt, false = ẩn
-    isActive: {
-        type: Boolean,
-        default: true
-    },
-    // Thứ tự sắp xếp (số càng nhỏ hiển thị càng trước)
-    order: {
-        type: Number,
-        default: 0
     }
-}, 
-// Tự động thêm createdAt và updatedAt
-{ timestamps: true });
-exports.default = mongoose_1.default.model("Frame", frameSchema);
+}, { _id: false });
+const tripChecklistSchema = new mongoose_1.Schema({
+    tripId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Trip",
+        required: true
+    },
+    userId: {
+        type: String,
+        ref: "User",
+        required: true
+    },
+    items: {
+        type: [checklistItemSchema],
+        default: []
+    }
+}, { timestamps: true });
+tripChecklistSchema.index({ tripId: 1, userId: 1 }, { unique: true });
+exports.default = mongoose_1.default.model("TripChecklist", tripChecklistSchema);
