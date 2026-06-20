@@ -31,7 +31,36 @@ const buildExternalError = (message, statusCode) => {
     error.statusCode = statusCode;
     return error;
 };
-const askTravelBot = async (message) => {
+const buildTripContextPrompt = (tripContext) => {
+    if (!tripContext) {
+        return "";
+    }
+    const days = Array.isArray(tripContext.days)
+        ? tripContext.days.map((day) => ({
+            day: day.day,
+            date: day.date,
+            places: Array.isArray(day.places)
+                ? day.places.map((place) => ({
+                    name: place.name,
+                    address: place.address,
+                    timeOfDay: place.timeOfDay
+                }))
+                : []
+        }))
+        : [];
+    return `
+Người dùng đang hỏi trong ngữ cảnh chuyến đi này:
+- Tên chuyến đi: ${tripContext.title || "chưa rõ"}
+- Điểm đến: ${tripContext.destination || "chưa rõ"}
+- Ngày bắt đầu: ${tripContext.startDate || "chưa rõ"}
+- Ngày kết thúc: ${tripContext.endDate || "chưa rõ"}
+- Ngày hiện tại: ${tripContext.currentDay || "chưa rõ"}
+- Danh sách ngày và địa điểm: ${JSON.stringify(days, null, 2)}
+
+Nếu câu hỏi liên quan đến chuyến đi này, hãy ưu tiên trả lời dựa trên ngữ cảnh trên.
+`;
+};
+const askTravelBot = async (message, tripContext) => {
     const model = genAI.getGenerativeModel({
         model: "gemini-3.1-flash-lite"
     });
@@ -42,9 +71,12 @@ Hãy:
 - gợi ý địa điểm
 - gợi ý lịch trình
 - gợi ý món ăn
-- trả lời ngắn gọn
+- trả lời ngắn gọn, thực tế, thân thiện
+- luôn trả lời bằng tiếng Việt có dấu
 
-Câu hỏi: ${message}
+${buildTripContextPrompt(tripContext)}
+
+Câu hỏi của người dùng: ${message}
 `;
     for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
         try {
@@ -56,7 +88,7 @@ Câu hỏi: ${message}
             const isLastAttempt = attempt === MAX_RETRIES;
             if (!retryable || isLastAttempt) {
                 if (retryable) {
-                    throw buildExternalError("Chatbot is temporarily busy due to high demand. Please try again in a moment.", 503);
+                    throw buildExternalError("Chatbot đang bận do có nhiều yêu cầu. Vui lòng thử lại sau ít phút.", 503);
                 }
                 throw error;
             }
@@ -65,6 +97,6 @@ Câu hỏi: ${message}
             await sleep(delay);
         }
     }
-    throw buildExternalError("Chatbot is temporarily busy due to high demand. Please try again in a moment.", 503);
+    throw buildExternalError("Chatbot đang bận do có nhiều yêu cầu. Vui lòng thử lại sau ít phút.", 503);
 };
 exports.askTravelBot = askTravelBot;

@@ -4,14 +4,14 @@ exports.chatBot = void 0;
 const gemini_service_1 = require("../services/gemini.service");
 const chatBot = async (req, res) => {
     try {
-        const { message } = req.body;
+        const { message, tripContext } = req.body;
         if (!message) {
             return res.status(400).json({
                 success: false,
-                message: "Message is required"
+                message: "Vui lòng nhập nội dung tin nhắn"
             });
         }
-        const reply = await (0, gemini_service_1.askTravelBot)(message);
+        const reply = await (0, gemini_service_1.askTravelBot)(message, tripContext);
         res.json({
             success: true,
             reply
@@ -20,8 +20,8 @@ const chatBot = async (req, res) => {
     catch (error) {
         const statusCode = typeof error?.statusCode === "number" ? error.statusCode : 500;
         const responseMessage = statusCode >= 500
-            ? "Chat service is temporarily unavailable. Please try again shortly."
-            : error?.message || "Unexpected error";
+            ? "Dịch vụ chat tạm thời không khả dụng. Vui lòng thử lại sau."
+            : error?.message || "Đã xảy ra lỗi không mong muốn";
         res.status(statusCode).json({
             success: false,
             message: responseMessage

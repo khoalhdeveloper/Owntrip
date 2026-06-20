@@ -20,15 +20,15 @@ router.get('/google-proxy', (req, res) => {
   }
 });
 
-router.get('/', verifyToken, UserController.getAllUsers);
+router.get('/', verifyToken, authorizeRole(['admin']), UserController.getAllUsers);
 
 router.get('/me', verifyToken, UserController.getMe);
 
-router.post('/', verifyToken, UserController.createUser);
+router.post('/', verifyToken, authorizeRole(['admin']), UserController.createUser);
 
-router.delete('/:id', verifyToken, UserController.deleteUser);
+router.delete('/:id', verifyToken, authorizeRole(['admin']), UserController.deleteUser);
 
-router.put('/:id', verifyToken, UserController.adminUpdateUser);
+router.put('/:id', verifyToken, authorizeRole(['admin']), UserController.adminUpdateUser);
 
 router.get('/myProfile/:id', verifyToken, UserController.getProfile);
 
@@ -51,6 +51,6 @@ router.post('/pay-with-points', verifyToken, UserController.payWithPoints);
 // VNPay
 router.post('/vnpay/create-payment', verifyToken, UserController.vnpayCreatePayment);
 router.get('/vnpay/return', UserController.vnpayReturn);
-router.post('/test-topup', verifyToken, UserController.testTopUpBalance);
+router.post('/test-topup', verifyToken, authorizeRole(['admin']), UserController.testTopUpBalance);
 
 module.exports = router;

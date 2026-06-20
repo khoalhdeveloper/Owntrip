@@ -23,6 +23,39 @@ const extractPublicId = (imageUrl) => {
     const withoutExt = withoutVersion.replace(/\.[^/.]+$/, ''); // "frames/abc"
     return withoutExt;
 };
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const normalizeTags = (value) => {
+    if (Array.isArray(value)) {
+        return value.map((item) => String(item).trim()).filter(Boolean);
+    }
+    if (typeof value === "string") {
+        return value.split(",").map((item) => item.trim()).filter(Boolean);
+    }
+    return [];
+};
+const buildFrameFilter = (query) => {
+    const { province, destination, category } = query;
+    const targetedFilter = {};
+    if (province) {
+        targetedFilter.province = { $regex: escapeRegExp(String(province)), $options: "i" };
+    }
+    if (destination) {
+        targetedFilter.destinationTags = { $regex: escapeRegExp(String(destination)), $options: "i" };
+    }
+    if (category) {
+        targetedFilter.category = String(category);
+    }
+    if (Object.keys(targetedFilter).length === 0) {
+        return { isActive: true };
+    }
+    return {
+        isActive: true,
+        $or: [
+            targetedFilter,
+            { isDefault: true }
+        ]
+    };
+};
 // ─────────────────────────────────────────────
 // PUBLIC
 // ─────────────────────────────────────────────
@@ -32,7 +65,7 @@ const extractPublicId = (imageUrl) => {
  */
 const getFrames = async (req, res) => {
     try {
-        const frames = await frame_model_1.default.find({ isActive: true }).sort({ order: 1 });
+        const frames = await frame_model_1.default.find(buildFrameFilter(req.query)).sort({ order: 1 });
         return res.json({
             success: true,
             total: frames.length,
@@ -131,7 +164,7 @@ exports.getAllFramesAdmin = getAllFramesAdmin;
  */
 const createFrame = async (req, res) => {
     try {
-        const { name, category, unlockType, layoutType, slotsCount, order } = req.body;
+        const { name, category, province, destinationTags, isDefault, unlockCondition, unlockType, layoutType, slotsCount, order } = req.body;
         // Kiểm tra tên frame
         if (!name) {
             return res.status(400).json({
@@ -155,6 +188,10 @@ const createFrame = async (req, res) => {
             imageUrl,
             thumbnailUrl,
             category: category || "general",
+            province,
+            destinationTags: normalizeTags(destinationTags),
+            isDefault: isDefault === true || isDefault === "true",
+            unlockCondition: unlockCondition || "none",
             unlockType: unlockType || "free",
             layoutType: layoutType || "single",
             slotsCount: slotsCount || 1,
@@ -194,6 +231,12 @@ const updateFrame = async (req, res) => {
             });
         }
         const updateData = { ...req.body };
+        if (req.body.destinationTags !== undefined) {
+            updateData.destinationTags = normalizeTags(req.body.destinationTags);
+        }
+        if (req.body.isDefault !== undefined) {
+            updateData.isDefault = req.body.isDefault === true || req.body.isDefault === "true";
+        }
         // Nếu có file upload mới → cập nhật URL và xóa ảnh cũ trên Cloudinary
         if (req.file) {
             const newImageUrl = req.file.path;

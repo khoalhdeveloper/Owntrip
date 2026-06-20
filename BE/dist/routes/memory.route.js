@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const memory_controller_1 = require("../controllers/memory.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const router = (0, express_1.Router)();
+router.post("/", auth_middleware_1.verifyToken, memory_controller_1.createMemory);
+router.get("/my", auth_middleware_1.verifyToken, memory_controller_1.getMyMemories);
+router.get("/trip/:tripId", auth_middleware_1.verifyToken, memory_controller_1.getTripMemories);
+router.delete("/:id", auth_middleware_1.verifyToken, memory_controller_1.deleteMemory);
+module.exports = router;

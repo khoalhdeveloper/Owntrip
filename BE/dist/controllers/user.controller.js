@@ -31,8 +31,7 @@ exports.UserController = {
             });
             res.status(201).json({
                 success: true,
-                message: "User registered successfully. Please verify your email with the OTP sent.",
-                otp
+                message: "User registered successfully. Please verify your email with the OTP sent."
             });
         }
         catch (error) {
@@ -230,7 +229,11 @@ exports.UserController = {
     },
     updateProfile: async (req, res) => {
         try {
-            const { password, balance, points, ...allowedUpdates } = req.body;
+            const requester = req.user;
+            if (!requester || (requester.userId !== req.params.id && requester.role !== 'admin')) {
+                return res.status(403).json({ success: false, message: 'Forbidden' });
+            }
+            const { password, balance, points, role, userId, isVerified, otp, otpExpires, ...allowedUpdates } = req.body;
             const user = await user_model_1.default.findOneAndUpdate({ userId: req.params.id }, allowedUpdates, { new: true }).select('-password');
             if (!user)
                 return res.status(404).json({ message: "User not found" });
@@ -242,13 +245,19 @@ exports.UserController = {
     },
     updatePassword: async (req, res) => {
         try {
+            const requester = req.user;
+            if (!requester || (requester.userId !== req.params.id && requester.role !== 'admin')) {
+                return res.status(403).json({ success: false, message: 'Forbidden' });
+            }
             const { oldPassword, newPassword } = req.body;
             const user = await user_model_1.default.findOne({ userId: req.params.id });
             if (!user)
                 return res.status(404).json({ message: "User not found" });
-            const isMatch = await bcrypt_1.default.compare(oldPassword, user.password);
-            if (!isMatch) {
-                return res.status(400).json({ success: false, message: "Old password is incorrect" });
+            if (requester.role !== 'admin' || requester.userId === req.params.id) {
+                const isMatch = await bcrypt_1.default.compare(oldPassword, user.password);
+                if (!isMatch) {
+                    return res.status(400).json({ success: false, message: "Old password is incorrect" });
+                }
             }
             const hashedPassword = await bcrypt_1.default.hash(newPassword, 10);
             user.password = hashedPassword;
@@ -457,6 +466,9 @@ exports.UserController = {
      */
     testTopUpBalance: async (req, res) => {
         try {
+            if (process.env.NODE_ENV === 'production') {
+                return res.status(404).json({ success: false, message: 'Route not found' });
+            }
             const userId = req.user?.userId;
             if (!userId) {
                 return res.status(401).json({ success: false, message: "Bạn cần đăng nhập" });

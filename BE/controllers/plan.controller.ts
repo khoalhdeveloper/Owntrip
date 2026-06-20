@@ -1,13 +1,42 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import mongoose from "mongoose";
 import PlanPlace from "../models/planPlace.model";
 import Place from "../models/place.model";
+import PlanDay from "../models/planDay.model";
+import Trip from "../models/trip.model";
+import { AuthRequest } from "../middlewares/auth.middleware";
 
-export const addPlaceToDay = async (req: Request, res: Response) => {
+const forbiddenItineraryMessage = "You do not have permission to edit this itinerary";
+
+async function assertDayOwner(dayId: string, userId: string) {
+  const day = await PlanDay.findById(dayId);
+  if (!day) {
+    return null;
+  }
+
+  const trip = await Trip.findOne({ _id: day.tripId, userId });
+  if (!trip) {
+    return null;
+  }
+
+  return { day, trip };
+}
+
+const getRequesterId = (req: AuthRequest) => req.user?.userId;
+
+export const addPlaceToDay = async (req: AuthRequest, res: Response) => {
 
   try {
 
-    const { dayId } = req.params;
+    const dayId = String(req.params.dayId);
+    const userId = getRequesterId(req);
+
+    if (!userId || !(await assertDayOwner(dayId, userId))) {
+      return res.status(403).json({
+        success: false,
+        message: forbiddenItineraryMessage
+      });
+    }
 
     const {
       placeId,
@@ -67,10 +96,18 @@ export const addPlaceToDay = async (req: Request, res: Response) => {
 
 };
 
-export const reorderPlaces = async (req: Request, res: Response) => {
+export const reorderPlaces = async (req: AuthRequest, res: Response) => {
   try {
-    const { dayId } = req.params;
+    const dayId = String(req.params.dayId);
     const { placeIds } = req.body; 
+    const userId = getRequesterId(req);
+
+    if (!userId || !(await assertDayOwner(dayId, userId))) {
+      return res.status(403).json({
+        success: false,
+        message: forbiddenItineraryMessage
+      });
+    }
 
     if (!Array.isArray(placeIds)) {
       return res.status(400).json({ success: false, message: "Invalid data" });
@@ -88,11 +125,20 @@ export const reorderPlaces = async (req: Request, res: Response) => {
   }
 };
 
-export const deletePlaceFromDay = async (req: Request, res: Response) => {
+export const deletePlaceFromDay = async (req: AuthRequest, res: Response) => {
 
   try {
 
-    const { dayId, planPlaceId } = req.params;
+    const dayId = String(req.params.dayId);
+    const planPlaceId = String(req.params.planPlaceId);
+    const userId = getRequesterId(req);
+
+    if (!userId || !(await assertDayOwner(dayId, userId))) {
+      return res.status(403).json({
+        success: false,
+        message: forbiddenItineraryMessage
+      });
+    }
 
     const place = await PlanPlace.findOne({ _id: planPlaceId as any, dayId: dayId as any });
 
@@ -131,7 +177,7 @@ export const deletePlaceFromDay = async (req: Request, res: Response) => {
 
 };
 
-export const reorderPlacesInDay = async (req: Request, res: Response) => {
+export const reorderPlacesInDay = async (req: AuthRequest, res: Response) => {
   try {
     const { dayId, orderedPlaceIds, orderedPlanPlaceIds, placeIds } = req.body;
 
@@ -142,6 +188,15 @@ export const reorderPlacesInDay = async (req: Request, res: Response) => {
       return res.status(400).json({
         success: false,
         message: "dayId is required"
+      });
+    }
+
+    const userId = getRequesterId(req);
+
+    if (!userId || !(await assertDayOwner(String(targetDayId), userId))) {
+      return res.status(403).json({
+        success: false,
+        message: forbiddenItineraryMessage
       });
     }
 
