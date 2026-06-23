@@ -1,0 +1,2249 @@
+[
+  {
+    "placeId": "ChIJkcCWwhX3NjERTXivb64luww",
+    "name": "Hân Cherry Coffee & Milk Tea",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "03 Đường HK3, Mỹ Đu, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8442872,
+      "lng": 105.7789263
+    },
+    "rating": 3.7,
+    "reviewCount": 13,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 989 230 228",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGvYoErtyPlSy4pEHtpd3Izi9_r8BucaMNGw4vM3zhkFRvUHGPmsnMAFo8LIXXXYSQHvWOWbpb7XqZP926_I0t0eDyjLmL_nSFEe6bZoZP86W8sDJ6zL0ooPPgHYurWqKrPB1Y5TQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEtqOzhvr-hd_BTq0BeyF-hlZG37J7NWsl31FXt2hcRfjXtkx3_qIk26ivRVnvlsAiZ3KAxNcdhXFmbuIZ7uFW8EMOi2H3eHOCG1iDs6v4lA3THiK_zGPgAibW0AjPTIQ6Jo2I=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEBRJ3WyzA77m9EApD3MIIPbhtsrWGxF9xh3O0V7du7F7Zbv7y2nEv_inJne0jl_alMXBow7HEXqr-dtgwwdOIpZdpMDrtTyFBFfqWomJm87nLM2rDjB0NORQn6jriNvcPOt8ug=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10:30 PM, Tuesday: 7 AM to 10:30 PM, Wednesday: 7 AM to 10:30 PM, Thursday: 7 AM to 10:30 PM, Friday: 7 AM to 10:30 PM, Saturday: 7 AM to 10:30 PM, Sunday: 7 AM to 10:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great dessert",
+      "Great tea selection"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJX-fSzC1ZNjERioM4m_ftCaA",
+    "name": "Đoành quán",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "Phường, Nguyệt Viên, Thanh Hóa 40100, Vietnam",
+    "location": {
+      "lat": 19.8500698,
+      "lng": 105.8059046
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 969 218 228",
+    "website": "https://www.facebook.com/profile.php?id=100040715647754",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6KpAqm4e9hokADPWPOwKKrRKnBs3VS7HISRYIA1yTYcEG62Z9dNUKntxydBJOg6A8tiIaqYZ78s2tdRcAJdm_LlG1nejpqpIJLYfRvTSdAzLpXzZ6E-iX3PvhJX_TrYkrIiU28Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWXwY0poM_sjd5_QutSRuE4QrYBPbp0Qefz5fgnA-hqcttI1X02JS513GgWyHjCOUfz9dFrMfy-hG38h8f7daieRQkhe0ja72ONOdny6JZkjEs83pOAPa14O9_C9ddXlgsMdqe=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4M16-0nvx5f_nga9QLUSG_L9tdMp6aiNbnL4Hbk4dE7OXQwDXr2TCqwu4tmJ920RFOJuMTrGWfQ8secAparOtKso-eA6ARsLcodes0gzBGnOikLggKqJP8dYkDhhZcFYMS-CI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Table service",
+      "Gender-neutral restroom",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJgZo58XhYNjERBJuKbayJ1Bg",
+    "name": "Quán 84 Làng Cố",
+    "category": "Restaurant",
+    "city": "Thanh Hoa",
+    "address": "Đông Sơn, Ham Rong, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.847022,
+      "lng": 105.7839748
+    },
+    "rating": 4.3,
+    "reviewCount": 20,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 978 793 289",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0betn4VgcKXtnzKfM-oGJBYhXzhw_U3ToMISns_NuFWFTR28ANjgUTMX8t4DpedsyNol81KWXEOvoIOBg8s3xwxhG8cssZh0b33Tg5vwbzfLi_acpLz11AhcqIHdvsy9ZO709xw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJDK4iQt0NmYsnd_J10knUdLPzfnWOv4xQ8Uts_mfyaXFLCO7XGoIkri8ygozzGMQ0EsT6c9WqTRIJjTKiJXB6xOJEczxvc_oQ0gqhnvC7dW2DHvWzHKPlItc8ZMNnIkWmXlq-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE66ENvh7DUZUIk4rC56xk_oY0ET-TNC6tZWXvNtNN7mp-XyWm670L_Q9701EdvmK-RaA1JCcH_U_u2znWC7xklViKFfIGJUamkVEuA-GH9ByzYVNULFCz9hpdpCGQN2kugWMII=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Outdoor seating",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Catering",
+      "Seating",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ49DOyhz3NjERhegn7uaV8dk",
+    "name": "Quán Trà sữa Sanvy Milk Tea",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "198 Đ. Đình Hương, Đình Hương, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8410519,
+      "lng": 105.770526
+    },
+    "rating": 4.8,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=IgePDqPkHXGHaoa06UNuiw&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=205.2575&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFO9UaZkvrydiZ46mscctMbIOAhdn5rYXT2_NcZ7y_Gho_RDZ1HV8orH6bcR_hIoIkIIQRed0W8ddaGChLnqsw7I_Smkpm2jMHdZTT177DPb3a2mv62Ovo7U0ifbRBwYgRJwZg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Coffee",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJD_YTTgBZNjERL79AdRLW-b8",
+    "name": "Chè Miền Tây - cô Đậu",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "Công ty Phân bón, Hữu Nghị, KCN, Nguyệt Viên, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8418039,
+      "lng": 105.8030534
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 964 247 168",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=JdWXtv_DxGJr4bO5DdesXg&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=175.5833&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHqBmh33nsqF6uY0wEtOcAFQn0ZzW-V2keHbSKmD4ofA6yO44_NwKirvnm_z5fuYWIynNzZOEN52LmU4XzJC_y1HyJ6ziu7-d91TDv7lPydXnuDL-5PJEpelNms84WXPooCt2k=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 9:30 PM, Tuesday: 6 AM to 9:30 PM, Wednesday: 6 AM to 9:30 PM, Thursday: 6 AM to 9:30 PM, Friday: 6 AM to 9:30 PM, Saturday: 6 AM to 9:30 PM, Sunday: 6 AM to 9:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Great coffee",
+      "Coffee",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Good for kids",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJD48AEb_3NjERSAvXjQ9ibYw",
+    "name": "Cafe Zin - Mộc Mạc Tâm Hồn Việt",
+    "category": "Cafe",
+    "city": "Thanh Hóa",
+    "address": "369 Đ. Đình Hương, Hạc Oa, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8481864,
+      "lng": 105.7691947
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 917 898 363",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhYVNiFi0cqXx4O2N-et5fpcqVNGQeQqsPci-4eS86ze6c0FdVdRGKVwoWGtpjjH9Lg4yvQYHLc9_Tb27YRrqztkefIz1yppw4B1PVy3h0vB3gxoROwc4nMvn9CuMWSOHi_RV7TA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYtmgCvWeSM_Dz-SvG24-9StYowFEp4MoqNI45h_QTxxKW-SDGs0Ij1_VxGCBQARvNuDYFLr4_yEwa4hgThFSz4xHrqppkE4DivS5fAY-kQv63ignDgqTZt_ghvj-FoYluVz1A4A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFg9u4wW1zApdmTz_VxN9ZD3AFMDiRCxpr5acdQG4Sl_M7wGC6BfcEPk53cDxpHBFKtbRTUCn82qmzXsXoV7I74pFtX644a7PrxvfGTywtbnijaGc5WChVbdegk81YJHEuyqumZEw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Dine-in",
+      "Great coffee",
+      "Wheelchair accessible restroom",
+      "Coffee",
+      "Restroom",
+      "Casual",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJWaXCxcT3NjER6SqmJIQZNkU",
+    "name": "Quán Cầu",
+    "category": "Cafe",
+    "city": "Thanh Hóa",
+    "address": "02, Đình Hòa, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8410022,
+      "lng": 105.7696118
+    },
+    "rating": 4,
+    "reviewCount": 90,
+    "price": "$",
+    "phoneNumber": "+84 979 239 909",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmA1IxEBnorbVYmmTLjT2Bw4VewBH6oCzU007Ys2voouH03dIyDxaagOMLhri5JOjMM4V90Gzs7sClHOff6pvUd3X3JH5BlJmEnZljCqdNaK0gPKZi4lJB22JqJwlX9iLQnZgxol0a5Zyj=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKSYOFqv-GEQ_NjkKcZruJNPE0Z-c_zrk2B60d2ArnpBQ0lOOA9hFY-up962iKI79HyoSVf67Vw5EmoG8YoAlYHFYPmLu-3LNHj1xlfm14IdBYMK1jXfSwGe78_dN5VuI4IOjTX2BeVHbR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHVXWZreAoYzYXEssqQw__kWLiT1jEGVTs7zc9j-a-GsvokwD7QBNfLnNDW48Dpvmp4roC3KGKCTBYFDbiWCIRzCYKoO5-PGnXUpbmKjkg9-AwvKBK40wPxmC-EmEjiARwqE8mo=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "By owner",
+      "Outdoor seating",
+      "Delivery",
+      "Drive-through",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Coffee",
+      "Hard liquor",
+      "Catering",
+      "Seating"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJdfxjUyn3NjERZrrQYn0qdkI",
+    "name": "GiNi Coffee & Bida",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "Phố 6, Đông Tiến, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8756356,
+      "lng": 105.7509431
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 967 891 194",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmFlz1XgkOU4O0J-wU-6b1RxV0eDseJ-jscxPmOOADYqNZXlUoMG6gl8BT8HugzSCBQbCP0dWNWgjcCqevl6-HvbOJ4TDB3uamW4XegphAIPVkhC5mDKzTanscx7N7I1SnOiRr3w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHr0cpHXd4_-JCRI3qh4xXtdOUOkByTzTd-ZgzOR3iO4_mcp3_-49AzWF0xIVVFinGL3zDMZ-906YLRm9Ibt39tQOYrCFsTKB1oPOmcK_pkRMjt2xUpy-uGVHJqbqws0uO75zQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLxSTePZF9gkHV0JY0-O5nY0JfAqpyTjruyGD2vG0d0nm8IKI_329783j0amqyNCHOaeAa8j5EzRq53qUzZrDgnNIgFPsFFuDNE45GCYhwmWQDhPDdenGupfqOeyqehfLGrb0dBw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Coffee",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ7TT3j2D3NjERJNHJhrpX7ys",
+    "name": "KARAOKE Lương Oanh",
+    "category": "Coffee shop",
+    "city": "Thanh Hoa",
+    "address": "Thôn 1, Dong Tien, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.8640076,
+      "lng": 105.7488589
+    },
+    "rating": 4.8,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 903 189 433",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTK_RZMjC3wQQPpktXEYwvXYqChk4EQG2xc3-aqAG35PGbqLVpSWY4d-2RkEmn-UPVRyxcfPitvg4f_pqiN4C_KsauwdRP-rZtc4Vfz6gf49Lj7yqO1cUBBLYpfjwG0acYSnk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMYvwuqbBuALulldgSNntCKsRoG38zle98tq30SWsw5owANWwyqJePPXzgc5GZsesFqjD2oEUEBPRQNbvnwmt6Q4HM1gcKaoDbPrLPzhgIJuiBuyMp-v8qEhn5abYTKijCxm-F=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1d4Cn422UlqfMgl1rTc3Fw9Dm-NeoxU-Uc7pODwFAFjolLjiHoIfyjpohOpu9FKplxESjoGxdmKCJ2CopeJs9Y4Cvnfu9ZPDgo5dnR1wyq2HC6_YnXKvdvUaGwsFYQYAqmJF7VA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos",
+      "Outdoor seating",
+      "Delivery",
+      "Onsite services",
+      "Dine-in",
+      "Great coffee",
+      "Coffee",
+      "Seating",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Free parking lot"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ--G9MEL2NjERetUiBPDf6uI",
+    "name": "Quan Kraoke Nam Lan",
+    "category": "Cafe",
+    "city": "Thanh Hóa",
+    "address": "thon 6, tp, Đông Tiến, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8799894,
+      "lng": 105.7503681
+    },
+    "rating": 4.5,
+    "reviewCount": 26,
+    "price": "$$",
+    "phoneNumber": "+84 977 586 566",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGypIN5ZM0XY9qmHqb7PJSA_rMAW-Ws09V3eshIvigVNW9xn1aKJAwd1od_1p6cnhFxsJsJgxOqYT_8yIAL7F82HZuUA-E9bbrbp_8g5WD5u212w2X57tsvTCqAGr6HDzwqKSuO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTNj2TQPPSxJ6WqVYZkb9qa1fk5KV9QmvsF8Gc7hfeGKrcjewwRmBZH9vuljD4HUwf0lE2C_wOmxkJNw7C6zLHN8QzUbVXDmaUYwOM6bHUuq-mPqKzojdy0xwT_p4gBxkC4hw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGlN1v6lDlpItrF5Q2dN0fcV_HjMIdPfxIe_3eFrGgLkFXQuIQfGeaUAHf04Mz4n1E-dPX5g1Yha3tzub7NWcaxdGrhj1qirkyKr1LbnKH7As0T0_GghrKql67wY1k6ru8Pf7o=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Great coffee",
+      "Sports",
+      "Alcohol",
+      "Beer",
+      "Coffee",
+      "Hard liquor",
+      "Dessert",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Cash-only",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ509u1MT3NjER4yEjnL-xDc0",
+    "name": "Ẩm Thực Huế Hương Giang",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "249 Đ. Đình Hương, P, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8417838,
+      "lng": 105.7702024
+    },
+    "rating": 4.2,
+    "reviewCount": 26,
+    "price": "₫1–400,000",
+    "phoneNumber": "+84 946 358 338",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjbaN8Mhu65ETbRTtVxMps2T1S7-qmNbJ-pFWOyxOlaDXXtTU-zEzExbIZp7CQ4yytvh5oaF_ZB9QKVxAOAPW-onDgYwoO_CMgsD5iMPXBqWBycTNBU6wmutlnZht2Uoi9MaEhkqsQ91Nd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFXR7iFMppyCdVp91n7FA8J_w-GkblMX6ujxb029DyBwaDALt_kVT4_LEFMTxKLhwISvfc65IEE9aWKyothwiljJPnekYuSUaoJqNATJd_OF2E3sJuG7dZbrXPXxrIBg7FaCzakXZG2uos=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMeEVKZ4AdXfEHIbVLeQcnbVc0Ts32SuatVbAzyuK3wAL9UKYjpalTfjOB_2LVw4-ZnaZ0r9RkPoP6ZIL92smfcFZcA8gzHcMrRJIq7RA9s4djpTTFWuYmu8gL7gXNuKfsoUoLFi6c66Rl=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Quick bite",
+      "Breakfast",
+      "Bữa trưa",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ73knYdb3NjER15iStAtv78w",
+    "name": "Nhà Thuyền Hồ Kim Quy",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RQXH+9W5, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8483974,
+      "lng": 105.7798512
+    },
+    "rating": 4.2,
+    "reviewCount": 108,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHpt2hKH64fDe_cZ_RcRYNFU4n6JNaJdP2-DAnBTe15-EnTapVOsXHxq9JpjzSNKS41iqujkFDjURvyQ-vBo-lSoIkfeOW5U5TEYUtgqBfArJnWcyVtwHsi1NifeVj2G09eOMvB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSe661fonyFEOxnr8BXDhmkRgDE6_SztfeBxvaG_tTzRSDspySMxmCsfrQdMFV63yBYtS1z4sWMGgtLCxmtk2DpA0g1CfVlt5atICAMyfQFQ3yGTQwMwA_ilxicv12USxaIuQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBEN3S8ntC8APwrov8PglWOo6ibZxFBBtnDohYfUmuaLhO7Xu99xisSxZfzsZYRkaSy_uOGxQoZi_YA4dv6MrqEsefJMVr4CO1JgjiLkWE2kSTN9lLNymERaJ25dj5JEy8i124zg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 7 PM, Tuesday: 7 AM to 7 PM, Wednesday: 7 AM to 7 PM, Thursday: 7 AM to 7 PM, Friday: 7 AM to 7 PM, Saturday: 7 AM to 7 PM, Sunday: 7 AM to 7 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Outdoor seating",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "All you can eat",
+      "Beer",
+      "Coffee",
+      "Wine",
+      "Brunch",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Dessert"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ-QVFl3ZYNjERCgUBA9kxs5Y",
+    "name": "Nhà hàng Sơn Long",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RQQP+CJ6, Hàm Long, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8385316,
+      "lng": 105.7865195
+    },
+    "rating": 4,
+    "reviewCount": 44,
+    "price": "₫100–200K",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGv4MZT-eQZcr16vc6f1a_pqQYXxA-dTLzA_bDkGKYUgFgfOjwA0pcs3-fkWrtngk8_w323AdsCLEBgErPpEAhyczjEGrrrx_xG-pqn_gy6PMEpEwkpI_s3uCfyPBCbv8kSPt25Ig=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2bmm2hKYaieFqQ4vPjTwF7MMFi3POb9OAYuNH57qX_NQd4l_PXv4zigGWSMLy3ahbuOwyI9XEnUdUPVQrq9-Ph90xLm6b2y9UHP_WNbOGgRyeRispIoel7N3aNXIgBnKkCBWpnA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHVLE-TLgRaXWd4I7D6h6fs_Til3G-dn3RomRxEI0GXV-dII1Y83ibMQlGRgm31gNO2hXJq7X6Z7h0JOe_bQETdpbXEC1QVyU3QRJ8k-tmQl4PQcdq3UtNDodisRrLL9gCi26MiXQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Bữa trưa",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Small plates",
+      "Dinner",
+      "Catering"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJG1USH2NZNjER2RuhB1Wff8s",
+    "name": "Nhà hàng Chung Đức",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "VR24+4MJ, Unnamed, Road, Nguyệt Viên, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8503367,
+      "lng": 105.8066431
+    },
+    "rating": 4.4,
+    "reviewCount": 11,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 984 245 700",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHf4XN06gbsz5XHxqYx1m56msJpMuKX5PsN10kGCTKhaqlBtLVyzQnNWDtm1sLZrmiqdLXmKxm-DAx6RFzJnSlaWxt9-dB_3tmtLJbsGEJOuUx2smLK23VqROXGcVR3v-TMY3w6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6p1m6Aw-KrzFyfsbrLyrWA4sc12qn8Hc7qLlWIxY1dlXIXmwJ0VcMPBCLQUzxIPKBTtqfQ9vrCeeNkefiBIjAFZ1ciTnxZi0nkWZNa01d2GoEUp6PnleVWcfSmQpipKE9X95dtA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERepJXySKeVxljwuNpQJWo6R_ivxEn-qfLlsA2MywE_-60AA3ojJNWjaCau6S3340y6Wf7d3gveOfY_4Vkig9HZ-68fdS6sx0Ox0U5jbuhy3yVWh4mnRSc8f9UHOm0p_xzCoLpmg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Accepts reservations"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJaxYxHAD3NjER9Gr5QtEWrHw",
+    "name": "Nhà Hàng Dạ Lan",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "VQ98+9RH, Phố 2, phường, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.868613,
+      "lng": 105.767313
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=9rffZStDbuXGCFhw4bySjg&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=102.45059&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Restroom",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJowxvA9T3NjERFocDSLT6M9U",
+    "name": "Phở Bò 3 Anh Em",
+    "category": "Breakfast restaurant",
+    "city": "Thanh Hóa",
+    "address": "Phố 7, Hạc Oa, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.850744,
+      "lng": 105.7698023
+    },
+    "rating": 5,
+    "reviewCount": 24,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 963 804 633",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxZbAp8UkkB4dG5fhFbvF-Xb7tl_O-n5wxIvraOh_vr22nRyb6An4-tdHenDdZMdYB6dSF7q11sldChZ1fk6Nog6T8SooraaaDPHdpQ8KeWoVwF4ryFnAvBP4S5nLglnE1ery7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKgL9vt0PjgrZ_kf5ApguuLzelfYBc5igBkjjWkvtiycGPon7wUr5kEKNjZz3uPNPT6rH0ZBdRVll4WNrdI6rr9atdrGslqTmvAp_dBKA4QalFkVwrBqN22E3XjyE32bJBUUzg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFp4f8dBgUq1LhNzQySjZTrEsLkoy_Qh88X1pTll1UMlOuzZo7_ArqTrpnhk6WUaEoPWPq-QYSkxg-3XCxVh8JYe4wBeZC6COzV0dOKU0ElWBGegU0Y4QdMEF6INelUwIioNYGulA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "By owner",
+      "Takeout",
+      "Dine-in",
+      "Breakfast",
+      "Quick bite",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Accepts reservations",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ-w6uLhf3NjER4Y7EmSBZtHw",
+    "name": "Nhà hàng Đồng Quê - Ba Cô",
+    "category": "Restaurant",
+    "city": "Thanh Hoa",
+    "address": "Ham Rong, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.8455983,
+      "lng": 105.7653269
+    },
+    "rating": 4.1,
+    "reviewCount": 400,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 911 225 586",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFGXuI9YKmkj-mnQFMIYUpi6LMD2tfbNtnsoDAP3jE2FPw3DTx2E09rXIUPR5njQNMH4kDyUdxTZCa_tN-u3hWj8LuNkVuqVaYOIwo_To6DRmE1qMI-I60Zj3m86GdekoL8IoeoNQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhKR-9m8sVi6D7gmbQUQu59ZUvTjhxDn2mKbYlp2ku702wWNNgNhF2VnzgTwgMkqcx6tVLzNy5pWr1mGJr8AxYzLBUC9jBpMyEccclOR4PaLU7r7DXskKdhNhmrOfeO6whNY0D=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSlD7CJaAdjj9WcnQh0IG2PiEwZEq7bAvTsMp8BO2V7D3_HLKE8QghZcla786zevAjaGVRfi_8qYLpJUQnHdT2SRoAeP5N7p2h_HZdImSTa9jCD6Qgzkdh8e2gLT33_LUt3X66YiBMOvIH=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8:30 AM to 10 PM, Tuesday: 8:30 AM to 10 PM, Wednesday: 8:30 AM to 10 PM, Thursday: 8:30 AM to 10 PM, Friday: 8:30 AM to 10 PM, Saturday: 8:30 AM to 10 PM, Sunday: 8:30 AM to 10 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Outdoor seating",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Solo dining"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJLZ_ut8_3NjERvXZcd1L9FCI",
+    "name": "Nhà hàng Đồng Xanh",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RQW9+RJM, 226 Đ. Đình Hương, Hạc Oa, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8479353,
+      "lng": 105.7688703
+    },
+    "rating": 4.1,
+    "reviewCount": 832,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 237 8641 999",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWo1N7fvebmrusbyoqmY9-DKWf57dVKKVLugqIhz9P9Zf3uTxwa09DfdEXY3FRKqT9fNX86BRU_Vx9uTmZsFrjzTXCtcveorKd6BVNGan8ArLPyzX9DqV-MmVrsUdAaWZVIWY93A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTmf1GJsQGuKkmtpeENibuoBpAhGYW6sSD7ZNEqYrv3nWquqazlrDsAWrYbTyWVRopdfkIzaMtbW97tRdjfKPWaGZGJil4egLknISeMTvtQgbUerZwXO9OFOkmsgL5Wzpm5t_02A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTZs9l_KIUoiML9UYxXoMFZtsG1KRO4ytGPT9ub6m_5WEwXoPZMtWptj5XxRewXzYH-g_FdszC_7bvDNXxJkMxf4xNlSJvUQgX4k9VyZwwb2-R2jbBwd5CXAfEqRO3RwJBuHcJwr9uOLUV=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8:30 AM to 10 PM, Tuesday: 8:30 AM to 10 PM, Wednesday: 8:30 AM to 10 PM, Thursday: 8:30 AM to 10 PM, Friday: 8:30 AM to 10 PM, Saturday: 8:30 AM to 10 PM, Sunday: 8:30 AM to 10 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ92B_fTD3NjERCOC9_YK56SM",
+    "name": "Nhà Hàng Ven Sông",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "9 Tư Phố, Thanh Dương, Đông Tiến, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8773192,
+      "lng": 105.7617414
+    },
+    "rating": 4.8,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BqMJ-Tt1qLigwqh_uLrUpw&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=319.10413&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFY1H43SuPCvY468lwfEHtuDho6oNQE3BWaXNyv77gwXLlLmZkzYUedu9SZydhvhrnxH-xfHc716sf96a_BOeMBGDiWnyNHGZ6_qVV1PUWTjntMhstAC5yHiSomyj4SsoXE_gLbrI4-S_Lf=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Alcohol",
+      "Beer",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJKck0ej73NjERFSOmB5foOlI",
+    "name": "Alpha Coffee",
+    "category": "Cafe",
+    "city": "Thanh Hoa",
+    "address": "Dong Tien, Thanh Hoa 40000, Vietnam",
+    "location": {
+      "lat": 19.8739709,
+      "lng": 105.7517245
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVjQKOtfRoTzkHnNpQl68Hop37OXsN5FlLLJAEKj4FKVF3-YNjwUrAmfdX00miXly39pjGHla4i082sNDh5vtJ3ygQul8TWrnI7BPqQ5e7U1ezDgW31pjPSMudQ47HEcVJH_n5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgPf_zv1L6UHppyfMQ5J4-LUpYYPF6fJdLbt6O7yLXbLrf00cnxABr1XJrdR_3maqcx9iTXKQdZUWN3JkMFKJfKyvIv9wiiCW_X0eZb0pKimnKSITG-6HzPIIH0P8gfM_T5BAO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCwik1jaJC4MfEbOHMNkKkqLYKkRNaJvq9ZvvEQJYsP3E0pvEBFx9ERdUkPLrydFfzzGO_In_znEuszDd9tN7vy3sPWTW1IyjaRF3GhO5wq0_13-K6fbWfFURfmeV8EplxBd4S=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Coffee",
+      "Catering",
+      "Restroom",
+      "Casual",
+      "Quiet",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJIbIGRwBZNjERrwvn_QyBjL8",
+    "name": "Nhà Hàng Nhật Lệ",
+    "category": "Asian restaurant",
+    "city": "Thanh Hóa",
+    "address": "RRQ3+729, Nguyệt Viên, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8386896,
+      "lng": 105.8024685
+    },
+    "rating": 4.9,
+    "reviewCount": 33,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 586 090 909",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEnuzlXktxzyLovh0ZnRKAWniemN9Va_XQmxF0hhOk-O_GQVr7rj3bqJ8dw-T3VicBPhB61u49C3epTSoo4kKrUcLceok69tahMFzXwMc8hXOfh-qV9FKejMY_HSV0m82pRtqlb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFhHj6ZRO6nkzwvwGAvtDA0ksAnIT8vEVqSTEvk687jjvrTh-MPgeHGcDsLipxj7twyV2VsaipvdzMzFKU15Wqhel4P_UKBnIG2QFjHQRTnRo_Myf2hfZ-pAAXKjF6b1JiQQ8Sh1g-L-Dw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHeUOHcLIccwG-aV9aYidLsuHK03vChTCEjGlhQZTfIYLbufpFG-SqQZWks4jCZVjXCw5e1eUAq9tpwGOhWfhpjthKoe1Q96ELaSZ8sC8r_f2zev5JbW0nNOEdeW6H2Us_hIMCGEuqsrZfB=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Món Nhật",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJdXcNXE1ZNjERsWH5jo9rcCI",
+    "name": "Coffee Làng Cổ",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "66 Trịnh Thế Lợi, Đông Sơn, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8500468,
+      "lng": 105.7836448
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 989 428 822",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHQoRk01fl8rWuY0WhjkYwuurllJysGNaD4fBmK52QQ8hROWGuG50DyD5WsQNKbBwrphtU6SOqQULwBo6-5aq5maz0b3DpLDzOwNchtb-KFP3tKKEN2m6RpieqyB17Dqth9Pg5py4T8qa7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVjNB8NifZAIwH0fhgudQAH7NGEuyH5VSPE2kL0Tp4uIGcpOx-88__xlKzTa9XP1IkO2pKxsYUp2tThLfzvLSkmb1Xog54m00YEfPx2_GPT_Po_rRWBjT2czQPS2bHSjqdQvlqDC4Kt6CQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpwQQx62qNrZQZNx9ZxeIsB31Wf_gzr4rsRar3Ae02OeHnDlsL7y6Nu5Sb_by7ROq8xcLMtsWLkxlBw5TsuNKMbxPv4xW5Uju9a3wiNK4I_IzvGXPd6BrvTSFc_rltOn6VKrhDBFVJZ8wE=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "By owner",
+      "Coffee"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJt52u5Qn3NjERkqtRcdKiyj8",
+    "name": "Nhà hàng Nét Xưa",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "214d Đ. Đình Hương, Hàm Rồng, Thanh Hóa 440000, Vietnam",
+    "location": {
+      "lat": 19.843423,
+      "lng": 105.7678224
+    },
+    "rating": 4.8,
+    "reviewCount": 128,
+    "price": "₫200–300K",
+    "phoneNumber": "+84 815 553 366",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3OG14vtvCvJpNOxrh2Ur6BcQDU6tWmHQ6mh9LVBvrmki--EvCqv6dc3EBJAIX-GZywAr5DcMY5-1sUTiEKl4dylkYNxq2UE2BGe1cgfEl37YjFUJhkLoXYrilXNzRmrsYXayrQQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWdm-D_WoHuXqfjicRO1z_rrFHt42T6ZeyU7xZapppEgaBQb_Jsc_yXFK6V7UcXc4o5YxJt80kE7Lb4cQ7YORILaUOW-tcnFORzg-oP8xebwl204q1FU6sxiJ0wn6uRqMnCu-NH3sMeqgl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEATm6oWFcr6VqFI6HJFsvmX0QIR9GByvJYlRKWYlP4GQZzLr4c6QDybFBTI9OvWFpvdJVEdwA0BBqNT2aH6Le3zzIlLW_hzBqwg0e-JJNngq_UKglQRXR_vRSN0ItHGqA549o=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 10 PM, Sunday: 8 AM to 10 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ4UfFYwD3NjERBMuEh67Mris",
+    "name": "Cafe Phố xa",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "3 Tư Phố, Thôn 3, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8654953,
+      "lng": 105.7702362
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=AnrGriO3qz36iGLVyzWZ0Q&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=184.72972&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmcmnSu28BXHJKwJmCXkWvncBMfQDt-kQLrEYTYvGy3rtxPYc74oGlcJtfR_1t2Skjkbhlb8t2pN-W1aZ4j1C66UeOiPaUH8kl3HbxrHyVc4PkhoqFmWAO-B6ybrXz15IQpdKC=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Coffee",
+      "Great coffee",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJs8CjTmBZNjERhKZE_gX4aQk",
+    "name": "Coffee đồi C4 Hàm Rồng",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "RQRQ+4F9, Hàm Long, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8398736,
+      "lng": 105.7881546
+    },
+    "rating": 4.8,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 945 992 275",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEeFntgL5jkmkwsLmW-dHK8p9K5OmBAmcQi3ssic_-7ibLQoSHzkwZS52FbMSA_MISqS3YPtdgV-AW2M7bl4RmewW5g144s4XuoU93kgS_UWxffoJoldiAWlz6EzWtoHftu443f=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcLOhDNSpKkoPeSIIHaODm57ZvTjwaNhIVHz0I7oUVL6SfavS2g9L7kZArEZ2ncjS8kTphS2lk9jsa9B3uONEhNb9mw2IHXpx59mmyHeSxE0S1DqR9WbHgYsLb0dN_wDgnUk5m=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdMh0ilkJydk7njpRjr9mCSqW97GuWVb0Mj0kqZ9lrVJz9Joj89LNCZtdizV-dC4Lojb7Yb6nuRribp0fjASHS86cGLmuf3sotVgPJ7nWc71_c3zPlDjwpgFfmpzC-vJskI7E=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Dine-in",
+      "Great coffee",
+      "Coffee",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ6yr31733NjERqr_KuvRPaXc",
+    "name": "Café ruby",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "Phố1, thôn 1, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8708372,
+      "lng": 105.7669603
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkkTOFfCABQRg125AY2dQUD-EXikV0yFp_CTEnA1-xpaxKWH7kgHtVFmkevfOP4zBuflmyadsWi_rWOhrRIOVF9wte25yBybig4mTy0pBsqSlgLdBPv7EuN4lECIFUjPfd1WvAxQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9DyVGnMzANrYksQcMUlOnuDIKlzRofj4w9aBOzjZK1IE_Sz2POMHLXGQQT14XZhLiy73K6hzvDdPZg3GyZDRxP_uq8tzDlAw0NIEW3jcZhTGCBzpmT9RQIMYBtNeV6T0iG5xo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-c-g55PE0S9Sn__uF7WXi5tWltc7cnaCUL5Nxgd6Lul4ayoOeFcvLfYRZ8K_5_o1Ma3JijjHTilpv-ssmfP-mygqaietjxcCWY9yMsohgm9xPpCbFC5P_hJjMFgLIdVfTvfPv=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJkaObYQBZNjEROuU1R4d0bCA",
+    "name": "Chợ tôc cà phê",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "38 Trịnh Thế Lợi, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8527445,
+      "lng": 105.7825106
+    },
+    "rating": 4.5,
+    "reviewCount": 28,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 842 111 171",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxIkJrvJYnMZGH_nTl168MQwH9VoU_3S28m7mHblIhVGcuAHXa6vvIQUF03qRXsQPFnOZkFNpsRbOZerz6lB6WHnonWmvRy4ZImd-QVI4TNaq4IHt-0wwEUQQbVkGUQYxq6e6-OHfhiXCV=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBMiAwfS2RVQk7cXpC5FEHcZjntiT5xH_tmgPzsX7LzsZrP4oG6ncIQiDnBpUClALrVPE_s2FOw3jRDio0fpREu5gkxeNslkw0R455GVl-_vY_YKoOYHwSdw4lnFbGOLYiLDrcs6DSFNU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9hNwVXFbrKEqvEjmbSD4N1p5YGZ951_r8j61dUQqb_7fsxXqW_ngZCIlRZWoappmbA7LmAxGUs7yeJdHgUN9PNtupmmlVrMX1MKWTQ9hXDzPvMBy0fcbSwpETi1RYx29siUVfB168UHXq=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Great coffee",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "NFC mobile payments",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJH2vtNAD3NjERPCFzr7edOvA",
+    "name": "Minh Minh Coffee",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "07c Đường Lê Thành, Đình Hòa, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8408687,
+      "lng": 105.765627
+    },
+    "rating": 5,
+    "reviewCount": 31,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 963 728 312",
+    "website": "https://www.facebook.com/share/1CwB6qD2y7/?mibextid=wwXIfr",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbjThfKkpjQcVxlKpUVcAyLXH41i87uAkNFx70nq8P35OGs79j-ICpYV9xZNJ2xbK25GgWbpXK2CvuyiLAEXSuolGGXfZ-A1Df30wkcxC6qzTRGK7cpZwrsyHqu4wrqjA_yWJFpG5rue4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpOKDAqzZHKZA7MS30OmEgQ9ITiPx6-2rSWjl4A2eeyYjq1O_M1ZeFwe58tGb2AJGrGsvclnHshNTtLga-HoOVEybDdEyhZ5qi5yfI_NEZ4IQy_0B6ZOiAPk6gQ44EuvPdFRupL5G5xI1d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbbIN0gebaQwFEUNXVdEvl3mxmUnYhwENnLawbcswdlJkVTm1VcvPe4sHd4AP0Ys4XW8dPeUUJDOxZPKVPEj3clse6dVR9xwkrDKCic29tIu0I9j0tO5k07eR1Jt6j6rn0azXY2myA2V6I=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 12 AM to 11 PM, Tuesday: 12 AM to 11 PM, Wednesday: 12 AM to 11 PM, Thursday: 12 AM to 11 PM, Friday: 12 AM to 11 PM, Saturday: 12 AM to 11 PM, Sunday: 6:30 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Iced coffee",
+      "Fruit salad",
+      "Coconut",
+      "By owner",
+      "Great coffee",
+      "Alcohol",
+      "Coffee",
+      "Breakfast",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJS2lYr633NjER9mSvptdlPaM",
+    "name": "Cà Phê Nghĩa Địa",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "Đ. Đình Hương, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8531683,
+      "lng": 105.7702818
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 396 488 721",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSBOtKNQpJcx_maFQbHZN-vZaK79orvDKX-V9IIFO4yznfHw3LoGyYwMzzMZUnkddg2lbHQb4vbKJOZCscjdsJJ3teZddKheJfaQFFCxmY_wDFbSMX-r9rwBgq2Nrho1FaMskYbZhFcRl6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKxlRvBO5gm4SSfazKINDfIzp-RgtAPt9k4-XIA6RGK_t5XfvJM34WgK3nXqtW6RUUPVy_SBCPX99eREmJWA2YfSSWw3i7YcWRh2Fe_6lfZsGC1_QDEE5d0w4GabZ4nrJDtSUICbboaJXp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmPWZ9irGSwIqnDl3n2jO6i3uH8BMjpVNLuCqjUMMtp2uFWo3QrCMsHNkR4rQbtiIGoAZzptIomQ0m54Fvu8vykyQvFP4dkYpUb3nqozq20sqIxS_wTMXTzLUvDeGdDEM8C0Uoy28AA5BI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6:30 AM to 5:30 PM, Tuesday: 6:30 AM to 5:30 PM, Wednesday: 6:30 AM to 5:30 PM, Thursday: 6:30 AM to 5:30 PM, Friday: 6:30 AM to 5:30 PM, Saturday: 6:30 AM to 5:30 PM, Sunday: 6:30 AM to 5:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJi2F2Ae5XNjERe0fqeB4c-xU",
+    "name": "Park Coffee",
+    "category": "Coffee shop",
+    "city": "Thanh Hóa",
+    "address": "QQMM+4H3 Công viên Bố Vệ, Lê Hiến Tông, Hạc Thành, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8434134,
+      "lng": 105.7969189
+    },
+    "rating": 4.6,
+    "reviewCount": 28,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 836 868 456",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0sLZA4hGe9bFctvUHzUBaYNv_nqj7DDzVde7c3OQ-uXz8lRNBS0oQMh1gqZdL0zBrCopbE_d64I8tl0AZjKzRGg3si-u9ln8fVm2v7rAKQLHFSC5SBCqmGid_J3eSLlfQ9Efy4UmyA4k=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHvYMRK6-fx2s1lEzmcaUXy9UmH9622JviypWfPLOljI4LCElsRZ0Gpn1HxkxlzVZl5szlBr2NjVEtoaOmMfIQdC66X2fter3yFticbx3pzkBELEm4kSmSOtTJIUlSSHtd605NJsJWS-liK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2wpbiYfHGJTUuGqaPsTTZfQKgpHsng0Qs1BY02ouni7aKVxLDxTrEHhrksYW9UxHWf4NifS_Dbz3BJ8TBDrOQiir9EFmNiBbwXWSmGI3qlUVI_l75Ai5mb6Zf1Rtspq8hBzlA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Outdoor seating",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Catering",
+      "Seating",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ94pRwE7xNjERER1lyPg8y2c",
+    "name": "Đền thờ Quận công Lê Giám",
+    "category": "Museum",
+    "city": "Thanh Hóa",
+    "address": "RMF9+JCW, Hữu Bộc, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8241221,
+      "lng": 105.6685809
+    },
+    "rating": 4.6,
+    "reviewCount": 7,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 237 8782 489",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcm0td-Je9-RiPtebZZ_IWcG5KTC6zgl3SihrG4JcDdb1uesjGcAW5SO_aGNXGZTUvErRzSCNrGn_OgHUVYHYcnJOXjz5fDvreMRxY2Mn2s4lla88FkvD6evlL6OR8YJhC4nu_=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Wheelchair accessible restroom",
+      "Restroom",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ57HQ2m1YNjERecnoMA1HJTo",
+    "name": "Hàm Rồng Overpass Bridge",
+    "category": "Bridge",
+    "city": "Thanh Hóa",
+    "address": "RQRX+3WF, xóm 10, Nguyệt Viên, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.840192,
+      "lng": 105.7997933
+    },
+    "rating": 4.6,
+    "reviewCount": 60,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHv5SbkNIGXEykzU_Z1e_IZnz4cUWHew6ivq3pNe3N76myi9NePda-QaXQO4Oom7DYwa_uJdfb-ogPMhR9GMjVnWbm6vMki9tNDBrhJoJfz0-8ecge5wJJGjYnuCXm6Vx0NTAxgTiwU_Pw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXbo5NDWmE4KAqqAKXglPKRHLA80DcDgkxhY88-HtxGhcEj9OxQIRDh8ddl79FzJbeR_MZMAJ4zjBzr6xy8JXr84G_q3WSSNbqQsuiMARCpfjKZwq2UGCCqP06nJA9zIEuwV5qrw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFot6cq8pV3yJP-dxEF2IFleJozn59BSDxDPDETwLl_jkTXkHq0nSC0VP8cf-uxyxVUNq-fYz30xAQlyaT8U3EUyyXUttB51iSaRhcJBtUfNHsXWWHnoLUCYOY5hvgkwU66Cuz7vQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "River",
+      "Videos",
+      "Bridge"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJcYrbDUxZNjERMr_7iw4O0FI",
+    "name": "Du Lịch Thanh Hoá - Trung Tâm Phát Triển Du Lịch Sông Mã",
+    "category": "Travel agency",
+    "city": "Thanh Hóa",
+    "address": "Đê sông Mã, Nguyệt Viên, Thanh Hóa 40000, Vietnam",
+    "location": {
+      "lat": 19.8614245,
+      "lng": 105.7883686
+    },
+    "rating": 4.7,
+    "reviewCount": 12,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 967 454 498",
+    "website": "http://dulichsongma.com/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSLnTzQIR3Z0nbja8OLt0T_xwtSCnJWk0kMdOdcjQp5TQiSpV631xE_LzMSd4GjKlAPA-XmG2vU0R4qFlev5IGamwcZsjZu5cuvb9xF4jc6QnAL7Y7SI_nA-ks84Sw6BZ0maIq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2FQH6wsc8iv8Ki0ICSNwfA81c8XQpm72eX-ChlWqWHabXpJrO8tIBcKVJtMBMTGX5g7BKs1nprEL-cxEizn_oFWOuBhXalcSF2P18KB2E794xffB3-ath9L1SqpnZyne27ekc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHvFHJrq6hQVEXV4P9PaCSvQNbagjM4GJUMShYsD-UYu4txutH9VjzW-DBI_sWhYFlf_lirjtQL6ZPy_N4vomoCkEyRdCeMcFnrWgcBAJo2Cvg5bOPrnXaraCULOE4CiKiComS1=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Inside",
+      "Videos"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJl2AegHhYNjERpGKmTBPCA3k",
+    "name": "Đền Đức Thánh Cả",
+    "category": "Place of worship",
+    "city": "Thanh Hóa",
+    "address": "Số 3 Đường Đức Thánh Cả, Đông Sơn, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.846831,
+      "lng": 105.7820604
+    },
+    "rating": 4.3,
+    "reviewCount": 10,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzDt8_XcpKBoe7TG_3VkaI8jJXdvwi82rEtv1T1o684LZx2qTyHHgkDQI5zAC2ixw6q3kSAZduAKoV2GVK4JghM-zB7SZGiKf3mH_OYWsYZf12FbykHH8I10Jc8F3IDQg4f4I=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1RrctY07b3zMiqrStvshMs_Jcm-6OpJnJQNV6pQzxYCO1TxbHzFXfmxD0-W_IghL69aGMt_zMHjSBiWtM6XEjvN1a9Nhj1GVcyeirX-IJi8h5GU7qLsUgYh9DtZvqJBl-d7p3iPqMjrFW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIVoypsNCXzcdfvrOz4qRci4Uxm0gGk2YjA4aiHPN18sVTpwxDC4_am-IEM2G8oMoZJEcopwceaEoXyqkHnJQ_LKzkhUjn_tmPHmuht53xu5RJONyBgtcB9I1bgund_3LeU-p2=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Videos",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJmcPOiEz3NjERNtIIqVb-LHk",
+    "name": "Hồ Kim Quy",
+    "category": "Fishing pond",
+    "city": "Thanh Hóa",
+    "address": "RQWJ+G64, Đường Đức Thánh Cả, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.846265,
+      "lng": 105.7805722
+    },
+    "rating": 3.9,
+    "reviewCount": 18,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 335 530 363",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHa91dau0BkA-b3_09SE2IcOw1eAGRoeQ8RdrJ7GP3_PnnyHjIgMAhq4xrRo9BRdQEYAcNiHKU2chtV8iWoU_nyzQ1GAeHCjS5QNohw4Np_NVUA7BIER5_pvqx7ztVi_GfPlrw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHg6GNaRhDFw5xxj3ozBcrjoo3m56SrQIOmz8xiQZmH666C26dTiJGM9sDFXp32lU17_PBkG2q6vKIGKUGRpPsA6vfNaNtSo14kMHy0vGqwwvgqKhPw5DfDVezKqzzlIWg0DUUt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBljsGlayri3_knhfggrW9m-UgJj64pd1WMCv6ozo2SQi8J90PLSufFqjiweGgwCSHZz2xf23d2gSDkPAnVnf8JdyUfo0qz1QB6EVY35RELmRZsj8vLw6R5apCY9Fi6L27QotN=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Mountain",
+      "Videos"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJCylQe55ZNjERNQDkijoSf0E",
+    "name": "Hann Nail",
+    "category": "Beauty salon",
+    "city": "Thanh Hóa",
+    "address": "Phượng Đình, 2, Nguyệt Viên, Thanh Hóa 40107, Vietnam",
+    "location": {
+      "lat": 19.8485647,
+      "lng": 105.804836
+    },
+    "rating": 5,
+    "reviewCount": 6,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 962 358 229",
+    "website": "https://www.facebook.com/thaohab?mibextid=LQQJ4d",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpz0WTDOy4CSbHDZ7D81yS4PjCI27dwYujlD3fMbdkxyxB6vL9jl-rBT0PhjTowhEBEJJNzEy-4OEmTH4EA8AV_XtgWJ3TRydinYYzzfyiFUXW7ydKiGeNFfbjxy9G1i2oLRWoCQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6jgV6pdtJ9rdl41z7K2y4zcVRSqdVKSeLLC1EAIEJCQVU0CYaJ8cvqyTYQMbUttMjR_uNiCUQKzMT6aobJW0howrqiynACFaghUAuX9x8bAheWIkRbhzoU12UWMTnRBT-zkk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0GwtC2fgCk7pkjDGt_M8lddlImnX1DFemW5KC4kBIfkoaicJft5Mb99_XK1QH43gS-ajJP_KLzqennBlG8RZc-9Gxrm7lYeU-_IOYqzjHKw3LaqUsR-DoXWUSjyHnJ6SRbClNog=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10:30 PM, Tuesday: 7 AM to 10:30 PM, Wednesday: 7 AM to 10:30 PM, Thursday: 7 AM to 10:30 PM, Friday: 7 AM to 10:30 PM, Saturday: 7 AM to 10:30 PM, Sunday: 7 AM to 10:30 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Manicure",
+      "By owner",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJAYS_O9b3NjER_3aBIHdXQlE",
+    "name": "Nhà Hàng Đệ Nhất Dê",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "Đường Đức Thánh Cả, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8478033,
+      "lng": 105.7810585
+    },
+    "rating": 3.8,
+    "reviewCount": 272,
+    "price": "₫200–300K",
+    "phoneNumber": "+84 378 934 968",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFRfdqQUDZloCdFZL929jH6vRTJbU33cEzn_lApTcJVksc9aeeaPp4aRFtpeNcTaTZKKiCV6Jm0DN8kmFVvfvF_iF_kGzy3tVT_vM76Z68h0QNDG54jHcWpLF2_AR5OB-liFbU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdYPsPUNf_BFARXh8-e4RlnnykoMJcIwFnALbzL0FG6zGRwzMRRIwL1ZNG4bOiNODdk2BbMaFD6TmJZYxBq14ieGuTB0lyFYuO-6Vp_a7LtU7oEChnz9h3JZOoIp4Lx-5c5Vh4n6o3EyoH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFT7Ufb7mJFQlTEixrHuA-_R-pGspk7PhhjvKSO05xbf1VXIuExGX4NWcWdtUs-aUQwN8OjksQ5HkxxQcQ1E8TPp9tGbi2vMp_lJ3CX2-7susEWtv1u21HufQLM-3KOGyheU9Z5pKshGlIJ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Outdoor seating",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Alcohol",
+      "Beer",
+      "Hard liquor"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ391vEcxZNjERADEcacwA-C8",
+    "name": "Trạm 36 Glamping",
+    "category": "Tourist attraction",
+    "city": "Thanh Hóa",
+    "address": "VQ6Q+43, Nguyệt Viên, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8603437,
+      "lng": 105.787721
+    },
+    "rating": 4.2,
+    "reviewCount": 32,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 329 241 790",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOGMYyD09Z3ZDPD4zcFGolBjIekRHm9MHlbD9-y0AujafNHRkYjZ9t07IpjdtrAJafUW5UYkWGhRkAo0VoEFoyA6McRIqt5NpRaTWqFJugKuO79ZJPe64afWoVXCmrQsv4TKkNzSVVqH45=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfv6ndMKuVfewxVNqFkRUUIEmm-xtKZtpsLqGeuzc-yDYt_HoLKT1F1bt6VHpI-wABC2Zqj0ZIWpgdvh4mHmxssTYpVtbIrjtdONJ12SOazGbFVse0HGkejUk7YtQSKNYp5-Dt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkiehaV1gSa7WQOzw-fAP0S_wqCjKIOGlQLm0MTuwO_-09oPgz9S4-3SIjZwWJeQ5WLyG3Zk5p4O_4YxY-8Hqj3uuI5Vz2kjAau4LHCO6ItBVatvEvek0aYPDZYhuU3w78JDWQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Mountain",
+      "Videos",
+      "Restroom",
+      "Getting tickets in advance recommended",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJf4tJqydXNjERGC7Ekhc0A9E",
+    "name": "Viettrip Light Travel",
+    "category": "Sightseeing tour agency",
+    "city": "Thanh Hoa",
+    "address": "Khu Đô Thị Vinhomes Star, Hac Thanh, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.8139078,
+      "lng": 105.8037938
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 373 111 922",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGYSsIiuRrEJEUXp9csUaTx4aL8DVuYbFzoyYVDo_tsBi8Q2Vw6zLqMRAygCxhJ2DTkHOFKNGg5t-C0kpvJcK4M4aT-w8T3FCowKfvvOL70VKAJyZh6-HReLX5mBTkUJd6CO9M=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHg2PWVvI1a-ZRi2OQLuMupDj5GNqo737be0YDlTr2kjW2QvVK50Sj1zo98ZpohIEgoaA1Ha7VKaTUL7aIoVd86nvnclKGTZmcblhwADRM_eAHb85E1Ske9jCCGqYrKO4IzQjBouA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSwPGZucTrhXjVVU1GBAgtYBlu1n5nWX11goONPg1Bsnoei0zeQQ_KdJHPTz-BdmWUxQumdecSHQYew2y6B6f1AAQ3yRW-iE6fd3YVppFn7UK1ZVeaO5kYiQHJ1GZgLxVDcePm4w=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 5:30 PM, Tuesday: 7 AM to 5:30 PM, Wednesday: 7 AM to 5:30 PM, Thursday: 7 AM to 5:30 PM, Friday: 7 AM to 5:30 PM, Saturday: 7 AM to 5:30 PM, Sunday: Closed",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Inside",
+      "Videos",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJQxPmoP5XNjERGgqda2lVh00",
+    "name": "Công ty TNHH Du lịch quốc tế Vietwonder",
+    "category": "Sightseeing tour agency",
+    "city": "Thanh Hóa",
+    "address": "Tân Thành Eco 1, P, Hạc Thành, Thanh Hóa 450000, Vietnam",
+    "location": {
+      "lat": 19.7880251,
+      "lng": 105.7850068
+    },
+    "rating": 4.5,
+    "reviewCount": 15,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 912 555 237",
+    "website": "http://vietwonder.vn/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXTVUAA8syEXamwWqHYEQ9dyumrKZUEs909q91cVuD99DIrJrlAiVoQf3E0MBY6L9r30LEePaXOvR-W9jx6l_FYYcPl6h46ZTMug7JjSU4jDeolWUq7VAnbUw6KmPP6IJveoaf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdXMdyMDuZheJkQ3g2m0Ut2FVRYSeHMby4kvf1s6KZ0mIXv64ZEvog7GhoD8ZioQ97IhOZP92DjuhkuLAgVKirtHgi25sbtV7MyderBPzFqocTp9Wj8ixVCNuZdkaysN49CSvS2DhNcO1u=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-OO3UEDbUJDLaLUC7gg73mJb2sjZQvfEiCfCN24apVjnZyXVOwBAec5KtMPDOh3FdlkuCs9bFCRJyKsvsuXBlhkrdDMXuZb7kz_Ygi8bIoAaZYbGQ0LgDWHMwce9Nvyq78cFsyg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: 9 AM to 5 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJN_IMIcv3NjERZ0BgYMn7f_k",
+    "name": "resort vew hồ",
+    "category": "Boat tour agency",
+    "city": "Thanh Hoa",
+    "address": "xóm 5, Ham Rong, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.8233447,
+      "lng": 105.7755771
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=vs6QJu8hojfkHEikzOxXwQ&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=83.47452&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJfcBuJwD3NjERrJsXELH8-bk",
+    "name": "Động Tiên Sơn",
+    "category": "Tourist attraction",
+    "city": "Thanh Hóa",
+    "address": "VQ2H+RWC, Động, Tiên Sơn, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8520745,
+      "lng": 105.7797639
+    },
+    "rating": 4.3,
+    "reviewCount": 77,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECvV5GBkDCOefrHZEmxgWdfXscJ-Qz9tgqaWzX-L-yd__FWfFGcCAxzIsve6X61Tcro1Kwtp6EWfmQGNAd4WNy2aCITNTjYgBVgMqDugZvXErLMSiJ2ZIPQVcTFaWJVTBDkgtKyVbIsw6u=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHGTskhxq-WDl7FRZR6WQ6Z_t6J9XkYhIUPoOshe36YYqCXd27G9LUnTcG23GQK80cy1yDUZWs_3hheMY2MT_5VxWQ9mH-pw2t-ijt9_s8JuhH0bUnX4sjINLhVCe-o_-O8oMI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJeN5Oh-0ejYGHokB29xNs4g0NGkydAFX8fg7Xi27_8_42x2G61foHUFCjqvSlbKU-9ja3ab_O5HkhJiYv8-mlOtxuGQHMGiG2PeMcOHhLoJwYym_NySpSKA5DZIq_MmM6R8V3=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Videos",
+      "Restroom",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ632qRXdYNjERaWe8WoGdhTk",
+    "name": "Trúc Lâm Hàm Rồng Zen Monastery",
+    "category": "Buddhist temple",
+    "city": "Thanh Hóa",
+    "address": "đường C4, Hàm Rồng, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8431664,
+      "lng": 105.7869688
+    },
+    "rating": 4.6,
+    "reviewCount": 769,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 237 3963 696",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw-54VgENzURQWhwDwiXhmj4hc-WXMJ3cK-vSXU6hIdKRbhwXnFEbPelxOVQ2iIYXizNhv0QTfluunPgTlzTdpJICHwTopZbeAFouQ_iDzzo7edClRgrs6JIOZwDLp4A-ts-nxDT_4OdA7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUoGM4h8Cx19TyDwJf_g6Q86ih2VKM-Qsyqcqq0AWZn_daKslapIHUhCsObSffWWUJZI3jd8NlbGamHNrmdkOru2MaDVHIR46LlqskSQDnnMT4vFEKgtVD25Zw-20enAxN1iKN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3oPYu65AYHmb2DHF4PiKFfiv003HfH-VSny-6nOU5YeNGVwXNvsyevRU8uEiuQXeflzr89q2gzwfLTSIUO1Pg7CUz4yZscTKXMLwddLjTDDiJX8Ih6o1W4ttnHJWBKL_lrYI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6:30 AM to 8:30 PM, Tuesday: 6:30 AM to 8:30 PM, Wednesday: 6:30 AM to 8:30 PM, Thursday: Open 24 hours, Friday: 6:30 AM to 8:30 PM, Saturday: 6:30 AM to 8:30 PM, Sunday: 6:30 AM to 8:30 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJPajCvnFYNjER8TR2xe2VWlk",
+    "name": "Long Quang Cave",
+    "category": "Tourist attraction",
+    "city": "Thanh Hoa",
+    "address": "Hàm Long, Ham Rong, Thanh Hoa 40000, Vietnam",
+    "location": {
+      "lat": 19.8389156,
+      "lng": 105.7921077
+    },
+    "rating": 4.1,
+    "reviewCount": 87,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcCxVdWB2Lap5IJlD2UHOmM1RZz_a2OJmQGg3PTIY0uTwzoKxUk1l4yISDW4XDJgP2QO6oIo7jajJ10NF488j-icSLroWdY_nJ-SUle0iep6G-57lLVkm-Gc18CuQnytoNLYQ1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI5_MXBSDnKDf8ja-bx_oSUzDxJGhis8xUsYI-PWYZ0wmRqV7kupRb8abMnnviiVnn8b_3Y_f1qTYOKMAfaerzTmwP7SolXLdF0YK4IGyD-GGPambdfirtHk7jpoxw1BRdMiYMaQ7oMMnJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEournrW5D08bWASc_-IHxCVyroz7u-sqRtJWbT3juTPB7YwLbNFNKpoW-khDem5QXZW0SnDE9unBABIL3OXUcsLdThBK-zYTMOry_hYRPWu2pMFNxnEKaDKb-PV1SQhhubWDt9kK64lqw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 5 PM, Tuesday: 7:30 AM to 5 PM, Wednesday: 7 AM to 5 PM, Thursday: 7 AM to 5 PM, Friday: 7 AM to 5 PM, Saturday: 7 AM to 5 PM, Sunday: 7 AM to 5 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ7-OObhVXNjER8HC_pKHYBf8",
+    "name": "son dua thanh hoa",
+    "category": "Farm household tour",
+    "city": "Thanh Hóa",
+    "address": "xa, Hạc Thành, Thanh Hóa 41721, Vietnam",
+    "location": {
+      "lat": 19.8046962,
+      "lng": 105.7835348
+    },
+    "rating": 3,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 983 093 038",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHjHopsF30cbJElzeYebWia5iBzrsutu0Fiwvq25Jw3JlOw5X1k1o0sAP8wph7ej_TOTZSnS_fAAUDF3d4RWTQ0olEEuWo6nQbRvop3I6xkgwm5oi_9Lu_tQLAz9u_hoqnRVX8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGo1_HtUv_kNOkfKvvWogqWJAzsrUDFArb00hqJVvYEWFIZ7nGnBXUEVjika8DyDAVHyQtxC5VDVMi-Ij-QKF6E0TnTApyYnAcjU4B4H_S3Nw3aWFAfE4kgoIicurO9MI5KkSKv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFBH6YtRmAjF6tPiT97JpmkkQ7xVnjRoOiZGv7-R-UrrZ_eTcpaxtHQBQdqFlMk-V2UFTZqQu6zMcE2cELcqlQ577PFWnwo4mGK32ES89qQ_YyoVaXg1okQ8iW9rKn7YVqPDRv9=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ9xxzWV9XNjERhrvP5H86GiA",
+    "name": "NHÀ THẦN TÀI",
+    "category": "Sightseeing tour agency",
+    "city": "Thanh Hóa",
+    "address": "16/43 Đ. Trịnh Kiểm, Quảng Phú, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.7910787,
+      "lng": 105.7979236
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3LCNcIH40lqizNP9G884opjj-Pcs6XOQvIBU3WzBzfdy_xgOYSs7u3wCPdye0F5QbTNRqDauRE7TOAYfNssYTfE7RZn5oGoNXJlAGl_UodYy2jmJ7L4CBR6r14R4stTymFMdNAvsYjz4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPN0mJ2bjRBFn9JoS05iqPTmVwQRDxQl_A3jUakOFRhGPnGW-fQOSG_qDjJ5AXwR4NN2kcErcETIZZnFaIw8inag6idJOO-OO3BY72cASzqM5I2TkYR1CNFLm4gXe-5yWaNiUfmvQCIIsM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHo0lRabccTHkjns_075CW1ncpaLMEouGt6vhSW_LFWrFMCPs4GUkNX5pGgUOHmbcqphYKkYtzB4KFP88eYx_w4Zh-kEXN4VnpspXRSRKH5KAznUIbIlp-im11Fz8D2uuCRP51fMnP0zsg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJNbWkQAD3NjERorD1lFAhM_k",
+    "name": "Nhà Hàng Giắng",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RP9M+CC6, Đ. Nguyễn Mộng Tuân, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8185394,
+      "lng": 105.7335255
+    },
+    "rating": 4.5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 912 122 230",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmY8uwXK7YunyzWDvO9IfxfVpuQyVNZf2ivMURzBx_gSOd4ae9v3YbPLzXD2iw-9HcnOSVOTWtsIY5r-QY6oB1jus-7YRHQvZPY7ZkJ4zXCCR0vQFBO0Hw4Oh1admFdoT-Q9ifXg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEe_LR5wofUV6r-N_s380FoNJfeF48Efq6_y20Utcst4d75gYHVJo2OTjKE-CoReOBi5jDn35q0rgYqQuM_-qdqy2ga7NrC3fyYd0XiqjDDrDE75j1T8gEIdMn8fmd3-2T9zfQ0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFk3cFbxa0mZYHI6lapA3nsR8qaAm_wmtfyFXjJ9HOQNxaqtYxfJIYMGBLZnhzSMZXLRbYlQQtfStZTL73biTc8PNwnQMvtFugSlEHYV8XF4YwRO1Y1Zv3EiI2rAIeBa_GWAN0Dyw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Outdoor seating",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Bữa trưa",
+      "Catering",
+      "Seating",
+      "Table service"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJhbuqQ2v3NjERP2LOTenRsNc",
+    "name": "Nhà hàng Dung mai",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RP9J+WRJ nằm trên, Đường Lê thế Long, QL45, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8198472,
+      "lng": 105.732009
+    },
+    "rating": 5,
+    "reviewCount": 7,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 948 589 801",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERP-n_JJmXNZq3qFjGDPvS0A1hUayhXQ_1Ivwkupp1EiKLZhCMfsX-SIZNqBJ5mpNHGZSTd2Dm2M6mvdcL5cKCuCnU9h0nAX2HsUvGUdI52AeC95EpjMZDklspd9hwbWNiOzkQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHb_k4BVXKyhkbivfGMNU9Ts370NNOnAZob9rfWgLquJWuo7L0VTalxh8rQwkZ0hyXUT5Y37wnbgYEM7jhyUdJS1vpjRYR2-OFnNRdJ_DNJj4xvYkbaKGKRoqShthg0oa8BXRidkLQoR9J2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTYEdE--ee2_8cGhA2MggAsi_eE2ZYItDAn6zEooSUtLlR5UlQU2Bf_tO2QXFvH2UAYaCfLDGwbvx30u-KbMfAVS-TOLddQDG7f17nrCapCKSjob39_co3kIu1Rk65BOXH86nyWEeMkHT2=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Bữa trưa"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ-XNYKwD5NjERej0f4GzTmH4",
+    "name": "Nhà Hàng Phố Núi",
+    "category": "Breakfast restaurant",
+    "city": "Thanh Hóa",
+    "address": "QPQX+HPX, Đông Quang, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.788908,
+      "lng": 105.7493798
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyQ3qVuPWPWwvYGAecoL7jZx_gAuzp-H9qFGG8oQ34569Iei1Uu650YEEgxU4Wc6AaAbbyqAQwyx8adZbSgnbzE1i3iiXsiACkfIfxDm9l2smBHlLD2NoHwy4NXaexoQ62B6H-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFpxWVw-yFjXJeF0kPH5-sASkSkpJwRkzyF8U3U03M-LojwIMb4nvSpM4n2Py83K5Pr7JuR2idfZ4n1GNJSsQuYKbMM6M-80AIvnJ8_si9_VZaulApxNLgchk_grqkciasMjPCF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoutWk56fgN-Ej9jLedEiDKjrn4vgfzBIhC0fn3w1B1exu_WI2-o_AUb7mvfzq4DopJeRtlB1FjSWnbQs4zI-1QUNi2wEQfgnnRtb3079RGTV797RuppcONFshj_hubYPVQXtG=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Takeout",
+      "Breakfast",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJo2PyYwD3NjER8YsvyXYVol4",
+    "name": "Nhà Hàng Hùng Phương",
+    "category": "Vietnamese restaurant",
+    "city": "Thanh Hóa",
+    "address": "RP8M+WHJ, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8173487,
+      "lng": 105.7338764
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 843 020 333",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGB2qPls2coY-GNmkebnX-ZivOkHnlVY12duhA8ZB1eD8PYiTR6eXUkZsgcJY5jw3yHREpS6Ud-4RCSRD0MSNmWoXyWPFcOa-utDQyMfzPrfwLTK7d_6VJlgHDZFfnBtptOV7imeZMu8sSz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEY5ABD52CsllKR8IgvgtjByEoRfPLBF4lIT3OJ-m89Dbrgt5qvgYY7JYhx4dy4Vi3rMWezJ8_agb8gDW5gwouSEfr3S84hn_bF0mE1D21LuHYKdzTOIILWjiNZTTcRDq00pfmQE2NXE5M2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkcIXMO2rKajStwdznGcBeuY2fkUY79KPb3kJy3BHWxEsG3IzsPIX3oC6quHno1jo4TJ9I8_Oo7JvVdjqmLdqMS1Me7Sd5fwt1dfKM2eYxndiSnvYRXGCXYTr6jPsKIyGSjiKVZozYL33Z=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Noodle",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJZfx1ijv4NjERjEVKnHm4SGA",
+    "name": "Nhà Hàng Kiếm Mạnh",
+    "category": "Restaurant",
+    "city": "Thanh Hoa",
+    "address": "Dong Quang, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.7961452,
+      "lng": 105.75272
+    },
+    "rating": 5,
+    "reviewCount": 3,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 983 590 654",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdsx-skbyCWC-x_4Ro3Z11yfCgCzymVZUCw9YUIU4O0qyJOnfXAiErG9FzUnaYK5AGPU1QCPFUPscaj4pH-PELCcZ41DLZMsbnEgDmb99QoT5TzIzDRpapSYJLH1kEoanZKiFnmQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSEMSsASIxNo2I6r3e3doKH0nTs7m6ZESYRkdoS7fSdbF2y0ZS3Wt36nvtzpUC6FgHpwXKdpIyao3v1qiY4fXMo6UwYfr7_90ANtCjUFdQWlfE3xjKw2PwazB5ydczeeWMGHfT=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2BdjxiPuLDXSA9fiAiIjdp170WUuLeZd9NPCpuR3QyVtMAT949MFrX-jkBcAAzEle7WWfd0d6R_Tmd6gZJjTbw4WkB-ZEZ5OmU9yHY2ArsCWxXi4DX4RlohGuQWc40igKeb_v=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 4:30 AM to 11 PM, Tuesday: 4:30 AM to 11 PM, Wednesday: 4:30 AM to 11 PM, Thursday: 4:30 AM to 11 PM, Friday: 4:30 AM to 11 PM, Saturday: 4:30 AM to 11 PM, Sunday: 4:30 AM to 11 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJb5WzcP73NjER7BHXyNHj4hQ",
+    "name": "BẾP NHÀ SÂU",
+    "category": "Tiffin center",
+    "city": "Thanh Hóa",
+    "address": "Kp nhuệ sâm, Phúc Hậu, Đông Sơn, Thanh Hóa 40806, Vietnam",
+    "location": {
+      "lat": 19.8152247,
+      "lng": 105.7204392
+    },
+    "rating": 4.8,
+    "reviewCount": 11,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 886 071 956",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGX1BAYukG6hnImCWDQrmC77vfjM716tIbo06duq5MHC4J-gRL5uBcZ53O4slYoVZXvk6kbrTqmXLuaZO_0pt7MCfy8k8qos7whDOHLSRJiSbq5A6mbNoR7nxAF0BVvDP9JDxN3KOgOqw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJC0Pd8ma0mRrHo-D0UBwxyCbsxq45d33e3xQGFWFWeXne7wwYtVmDWNvs0cK7oJaufDMBeze1PJ3jdshsBBXnho5rA8uQ1U7sYoCRUmWYRhXh96xL4n3K95R4gFqygC3H4qFLs00qt6c=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBhWGFEE3fc8vC212fcbgr8Pp4AA1hHLZIBbdPcN1iUek_o2sioDRBqpOhckbUZOuBm0BzbIn0hq4u1IxK71tSwmCWBgDJ4qoVO9JD4jDOuqzBIZo9S7bkSz-3EhVgHwPIIN29tpFFAkcw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 5:30 AM to 11 PM, Tuesday: 5:30 AM to 11 PM, Wednesday: 5:30 AM to 11 PM, Thursday: 5:30 AM to 11 PM, Friday: 5:30 AM to 11 PM, Saturday: 5:30 AM to 11 PM, Sunday: 5:30 AM to 11 PM",
+    "cuisineTags": [
+      "Ăn chay",
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Wheelchair accessible parking lot",
+      "Wheelchair accessible seating",
+      "Coffee",
+      "Quick bite",
+      "Small plates"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJYZFJMwD3NjERJPnk5jd5z4o",
+    "name": "Nhà Hàng Mạnh Phượng",
+    "category": "Rice restaurant",
+    "city": "Thanh Hóa",
+    "address": "RMFQ+8V9, QL47, xóm Bắc, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8235311,
+      "lng": 105.6897428
+    },
+    "rating": 5,
+    "reviewCount": 60,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 921 521 919",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm3BhqcJ4hA5qSnAGqp7tgKfIT745-tPQ0CF-NoQVYvdwC9fkn0qUluhORcyTqde09mdP3XAs_zs3LsoJb8GoZuBpofRJkIEkNWTMZT9Z0nF-6BUKDI0kEijNp7L6g3Z0bt_GZcnm5TL7G=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFptecMCpGFCmTlT6bhUMJO6bCUYT9BsBGRZKhvmGADrGLfOnooJX0T8zEsSJ4PtRRmhmveKnc1jQ60xfhDqP-7OEQdVvvr5Fm5u7hL_GNH12NlbE0HwWKtPVRCCCeAoI98nmwSEh4hUc19=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHaViF0Li4jx_vHITJkvRvBfpQq4IMpaPtecl1Nbov4Z_R-1LVShdHLYQoKZIPwj7nuoOCgwMeiub0CVOmfDdzCqmiKKGBHDseWphWC38xE6tQMPtHArXiJEx_8k7ipIlbs5fRObNDRe1k=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Onsite services",
+      "Takeout",
+      "Dine-in",
+      "Sports",
+      "Wheelchair accessible entrance"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ19XK55_3NjER7vfl53gLew8",
+    "name": "NHÀ HÀNG HÙNG LƯU",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "RMFQ+8V9, QL47, xóm Bắc, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8234788,
+      "lng": 105.6899276
+    },
+    "rating": 4.8,
+    "reviewCount": 75,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 974 833 486",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7s8O2at4iZRDSwnciX0MfJdEEbSR4BNK-Z79hZkC5oq6LsuBFrN8oW7GRYZrHOkPDxjRbyf0XCY-PXAnd-nfu64SORBEmA_XdEFz9hE-FFok2XYocUGOrbv_5XB7zHl7ujrtTUsWPofY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPLvYxtszJa3Zli1gkon5rI0ptmrKf-7zITNaZz9ztIZMzxD0ZJDOuhf3eFgN6HetqmGA1toeAWRFkxNct5eX4GZzyOhymT7I6IsH7v65y-oWwiOFW5A_xiUMwQAKFILvWpsJItaLzv5h5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtDJFylPwdEzuougaDGeGp9WiYbCFLhIFvz-4NWDFoJYuDKc3Ly_oAEPuw7VL09kt-rTVEZWeWi-e-hNTpAjZe6G-pCqHDPSGP8bw2i61tabRrjUs4oHSDnyu8XYyhLp2DlIXuuQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Ăn chay",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Hot pot",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Sports"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJWY243Nn5NjERYgs0viLso2Y",
+    "name": "sang autic",
+    "category": "Tour agency",
+    "city": "Thanh Hoa",
+    "address": "ngọc lap, Hac Thanh, Thanh Hoa 440000, Vietnam",
+    "location": {
+      "lat": 19.8056992,
+      "lng": 105.7776678
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 981 765 868",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wRWD0H6egPBCpg_OtCOQBA&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=280.27505&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJTXdKBQD3NjERUeF2wC7XoJs",
+    "name": "NHÀ HÀNG NAM LIÊN",
+    "category": "Restaurant",
+    "city": "Thanh Hoa",
+    "address": "xóm Bắc, Dong Son, Thanh Hoa, Vietnam",
+    "location": {
+      "lat": 19.8239375,
+      "lng": 105.6886875
+    },
+    "rating": 4.1,
+    "reviewCount": 114,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 981 084 234",
+    "website": "https://www.facebook.com/lexuan.nam.739?mibextid=YMEMSu",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPzfePwAs5YxRtm7JxZTBGs3vJbt19CWdpob2OMJp980WUWm5JdZMQ5Oiz93lzZw2u_q9aa0btLoc1GaW9yRPWGg56uV5J6imXxPJKATZSK42kj-jlfWH8bS8-43kyr74r7fI6R9HQ5yKr=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHLvlIvYmDOFbYTgE3UhVp2muV6kW9bkE4mLsMxr-J2z7TdOFvn9n4XBVMd2ogZAkpQpzmZUUbQcG1AkNc7_MyoJzynVbMQxP6OlgNoTkjb1hs8ZHFsOvWsIhhC4ByWKhlzpa-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFazOjihachGF47wRurprsTXk64TG97FxwmSAJxd_5jVxb_i4Kf13H6AM_MiWP3Yv-SXF3bJmcy1Azd4V7OXRkPx4wSp1KREzQfUr0dHIEquDDaFtsj8B6lMn0BIGg76-WFbj_q=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Pho",
+      "By owner",
+      "Outdoor seating",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Bữa trưa",
+      "Wheelchair accessible restroom",
+      "Alcohol"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJFVkvWZr5NjERUMfKwTBznUY",
+    "name": "HANOTOURS CHI NHÁNH THANH HÓA",
+    "category": "Tour operator",
+    "city": "Thanh Hóa",
+    "address": "295 Nguyễn Trãi, P, Hạc Thành, Thanh Hóa 40132, Vietnam",
+    "location": {
+      "lat": 19.8037003,
+      "lng": 105.7671598
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 939 339 856",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFjXcjapgH3_x4TjBPf_x6xUjfddkBPvX_sOswkjjtKHFYEct5n1qA58NmgpdgNpOiWdRSc17i57oyNYh1dy0n9g-KvwuQGn1TSflOSaBsWs8OJSjTfzawa917lHDFW4YKN4kTd2A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-8Kgvhq7helHERpoRrQiB6Zn0RH3lWMuLbruThTAWzLqTcjwzbAFgKF2EJ5pTcb2a9wJ1C6ErO1YZzRGTaaIm-gkt9YX_bIJ6EX-d2THsNTb8dy1IiCz7axXvi3S8ZLt8CJsN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHi8w-vpW6X08jQBfx0S1Nm12rgHns8reunDkLCPAtwx0iWrecp-RO-MCbeBsvoahISbGFq696Nx-E6zXN6kakX_FH6kEQHLomzmwmD0ou8B43rTQmawvOR3ho5YHShL5YMpzI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 5:30 PM, Tuesday: 8 AM to 5:30 PM, Wednesday: 8 AM to 5:30 PM, Thursday: 8 AM to 5:30 PM, Friday: 8 AM to 5:30 PM, Saturday: 8 AM to 5:30 PM, Sunday: 8 AM to 5:30 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJu1WrFQD5NjER7xvluFIKz-w",
+    "name": "Nhà hàng Đam Quán",
+    "category": "Restaurant",
+    "city": "Thanh Hóa",
+    "address": "QPVG+CG4, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.7935155,
+      "lng": 105.7263182
+    },
+    "rating": 4.9,
+    "reviewCount": 10,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 934 618 099",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGPCrWaZKXYjvnMhvaaI-zXpBiQS-6OqwddWN23D6R2soQKi8_E_JHGIPtBHx0r_aG2O3vxXi2YKXdZf6leJkQmdgxLfQyBSK-Mxg0KRJMqOgdKIDRfaIy9jP-g7JbMxZTSk5yavK4Syqan=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQT1FwEUKY_GwUIIA7mqPc0xz51RJkIrgb65AQkWAqUkLByUkvmw4DJqfCIZuaNcN-mFZBCmq8B_1n-nutSsMHxjr5SDDWtq7gXA881i85-yKvlsJ4t9sIHxPKI_lPRyumeXW1gcf2pLVq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHtV2JPuIs9P3U7ewaL8SaqzTX09ThCe1_CT2tmGdnSMqkgWQhpL9qFaFIAtKZGjfnTw8dTbNrPLAOSnlWNVOXRfJP-o5B_GFc8obNv9oLrEQLDRQmNUYSbL3SwKADT-Hevo36OsHhzqWbR=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Dine-in",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJhWDJCKH5NjERz8I6xyTnlF0",
+    "name": "Thẩm Định Giá Hoàng Quân - VP Thanh Hóa",
+    "category": "Corporate office",
+    "city": "Thanh Hóa",
+    "address": "38A Đại lộ Lê Lợi, P, Hạc Thành, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8082523,
+      "lng": 105.7736473
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 237 6256 159",
+    "website": "http://www.hqa.com.vn/",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=FvXxmV8YR0j4IzJpxV41uA&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=2.4101043&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: 8 AM to 5:30 PM, Tuesday: 8 AM to 5:30 PM, Wednesday: 8 AM to 5:30 PM, Thursday: 8 AM to 5:30 PM, Friday: 8 AM to 5:30 PM, Saturday: Closed, Sunday: Closed",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ7yfn2o73NjERmDfTJUH-z9k",
+    "name": "Toco Homestay",
+    "category": "Cottage rental",
+    "city": "Thanh Hóa",
+    "address": "MB 725, thôn Viên Khê, Đông Sơn, Thanh Hóa, Vietnam",
+    "location": {
+      "lat": 19.8211562,
+      "lng": 105.7044686
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 943 555 136",
+    "website": "https://facebook.com/nhanghitoco",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdj2A03Hoy2gRwCp3HLTu2r2N9qdgw3kcoEV9NEJHlUrnXawZ7J8BqzZLlnFzgmCqvRHwzuhlhG-wHBqJFBlrdjGnsEMe6XxIJbeOCUAw4XUqvPgNw44aP8BWq6sN5N6gQCU85-w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHgbJpbzZDo0dexGEjvz6V89yRvg2pqYpVNDTDxqGzK-gqPBIfZdPOk_5EjIASobW3_eqQbbEfm4Hgf6ojVPPAC8jR2YxJVBL5l-7qKf-ZhveS8YaT1m385vPlz0mCceN-nIwLhZA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIQQ8ww5eBuidIRr4XLuurVc17g9b06b86ESlLZ92kNYoLMzyFIQbJuQsR6UNAfMTYLIu2czl5N_Jktkh9QhfpPAxxNrCPhc3jeA39WUNqMFzuU1CyrUNomeQkbd9Q-Jpz_Ct7=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Inside",
+      "Interior design",
+      "Online appointments",
+      "Onsite services",
+      "Gender-neutral restroom",
+      "Appointment required"
+    ],
+    "source": "Google Maps via Apify"
+  }
+]

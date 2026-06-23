@@ -1,0 +1,4555 @@
+[
+  {
+    "placeId": "ChIJo89KUNllyjYRRe_utbywaAw",
+    "name": "NHÀ HÀNG ĐỘC LẬP restaurant",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M758+M8Q, Đường 3/10, Nà Cạn, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6592058,
+      "lng": 106.2658473
+    },
+    "rating": 4.1,
+    "reviewCount": 18,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 854 388 338",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6H_-vvm0u2Fi3AevdXTxy7D320NOfoVewUicJRfAIDkJFtFNmQVh7AlJEhibIJP2mzYMe0ac_waf0QXPfMtAuS_ekCl1Bm1NnfGAA4gTHPnjU5_Zq16IvnzTXcErFX-6wo4hMHUiA5-E=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9AGHzqWis7Z8apnari2yBEc4_qZNAcHfbkFDXaeg27ePPwb3bjOVA07zDBnt_VaY6SsbV4zTg04GdnneqtN3ltpFYCv3SLH_-mW2T-o97nF6BDjbpKMBFISBSdFGSKs9GdCQZV5q6bkwb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaMmUaarpbIXEZiS-HKHok_4vX_YMrzSf--3WdkGrRzVHptu7LK-trXB8lIupiox0n5GeUkvNVztp3tFVCWKnGE6X65Cz75Wa2X1XYomwoaIcTyVgQHmynu3IrsL7K8eAYT1fHAstyNYcr=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Bữa trưa",
+      "Dinner",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Small plates"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJL4oULgBjyjYRhU1sMSHRnWc",
+    "name": "Petrolimex Gas Station Store No.31",
+    "category": "Gas station",
+    "city": "Cao Bằng",
+    "address": "J872+RGP, QL4A, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.614631,
+      "lng": 106.3013894
+    },
+    "rating": 1.9,
+    "reviewCount": 8,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9HgEcmyvF_wZxWn-VUH8ZrFNSHkpQqKlATy-mIdsNHv28htlSNcvgLXmewX2AtiIeedU5q058rGNAnKgqy3lMJkmSPivkvi7wCGbEqOQCjFEof_KwPsCvcPd8AyZzmL1S21U5jBGPzSY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCCUt6tvVhs5ZHNJipMpWX9xFVsmRtHlOkah3LutQSXe6M0uNXLDxKHVmHrbVHnSEcm-Tk0urCB8754KxIqsPWqK3GkQjXpxf6y1S3CSyRG5VCOt5sTvSDeoWU9Ceb0xVTSkUg1bEmq3ej=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=hBRVU5UOSwM-ykAEpoSLSA&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=81.82581&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: 5:30 AM to 10 PM, Tuesday: 5:30 AM to 10 PM, Wednesday: 5:30 AM to 10 PM, Thursday: 5:30 AM to 10 PM, Friday: 5:30 AM to 10 PM, Saturday: 5:30 AM to 10 PM, Sunday: 5:30 AM to 10 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Filling station",
+      "Gasoline pump",
+      "Car wash",
+      "Diesel gas",
+      "Propane exchange",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJRwUuAtxjyjYRHhmO55E6-BY",
+    "name": "Trứng vịt thả suối nà sảo chu trinh cao bằng",
+    "category": "Egg supplier",
+    "city": "Cao Bằng",
+    "address": "Km 10 xóm 3, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.5925623,
+      "lng": 106.3091983
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 365 713 364",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wR3ooct7_AZy_W1xQ1bR4w&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=64.243065&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQnbN0wfryxvog5uO6B7gK_lBLLF5XH-gXYdTxgWdj8_uJkWcz6ydQPpD31eUk00GFqyv0wDl_fcyZV73kKETcfuh3R4Mp9Eli76mSqWMknE1pRMx7S8_DOHlWMd3_PPdLX8wc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLEmwqg2xKQU95dBIAh5OzjdsJHwz1s_N931zC230_NdoKFjCELoPVKJJcw4LwJH5_Q1JllsGc5s6qhFh5uo9S7EDYFQOo9d9bs7CsPKIm1WQF39qmq38ftV8PnAIXtnhwk09v=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 9 PM, Tuesday: 6 AM to 9 PM, Wednesday: 5:30 AM to 9 PM, Thursday: 5 AM to 9 PM, Friday: 6 AM to 9 PM, Saturday: 5 AM to 9 PM, Sunday: 5 AM to 9 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJTet5tWhlyjYRRIbnLBqr9lU",
+    "name": "Hạt Dẻ Quán",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Số 2 Phố Kim Đồng, Thục Phán, Cao Bằng 270000, Vietnam",
+    "location": {
+      "lat": 22.6668189,
+      "lng": 106.260815
+    },
+    "rating": 4,
+    "reviewCount": 450,
+    "price": "₫200–300K",
+    "phoneNumber": "+84 981 021 102",
+    "website": "https://www.facebook.com/hatdequancaobang",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_wY5f26ZBjFmtsF6jcKQPUHlyVkMEqjurrJntKOreCx2YRK4gXhoE4iz3FfnU2qUivziqKCYTGMe7pqnNTwmn1AOv73J0zcXaFw_kvEbo571heZiCeJ63SuAgY_SZlgFvQbkt_BcN2H4H=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmAtMknq2oNMauVZ5vAdo1U0ljDt6jCxuJFbEQBl2Q8fhaFJboQCYXj2pCPrxRIDSB4oewTBkgSDVvqeTzngc1J00Aj5BISSJznmMR7nU3cDmKm6CR-AxBephKV27IJGbQF_JW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkHs7oGNYBAuHf-hx0XgKBCgnYneYdhmjhIsFEcuh-pxY-S9ki3LSIPJ3B1Hy-vTni6WUEiYBtztFFNIhE9zhiX0JBrb8wDJE1SP5VM9aownh7-jjywCFul48E6-sr73ne3Kq1Ww=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 11 AM to 11 PM, Tuesday: 11 AM to 11 PM, Wednesday: 11 AM to 11 PM, Thursday: 11 AM to 11 PM, Friday: 11 AM to 11 PM, Saturday: 11 AM to 11 PM, Sunday: 11 AM to 11 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Pork belly",
+      "Hot pot",
+      "Chicken soup",
+      "Biryani",
+      "Peking duck",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJC71O9_xnyjYRnwbnEK4rdWo",
+    "name": "HƯƠNG VIỆT PALACE",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6GV+P2M, Km3, Nà Cáp, Thục Phán, Cao Bằng 271160, Vietnam",
+    "location": {
+      "lat": 22.6769046,
+      "lng": 106.2427956
+    },
+    "rating": 4.5,
+    "reviewCount": 138,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 389 535 553",
+    "website": "https://www.facebook.com/huong.viet.wedding.palace",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHpTCQVyFcmOyP6QB5mgMBeK9ekmcYWUJrQRXo-NtvAfLtKtwcd91PBHJkR6_-W2UVpe14h8NnE1bBGFWY1heizeG3RY_wSfiJKTByw-2XznDhc7j9FsK-kvb0p_TvJ_ZdmebH0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoOZXZTKi6xUoxAH7YwKiCmr1eLJK1eCQ3zGqy82Hx58u_pJClhHpzvUT4efEvqNA8qZhLRQS0Pd0KFb2GKX30jOJS625kNMIixiWc9UqdddHl6w3j8jQuLP8OiEa9uQNQgxeVhQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPfsBb0LgalTfejdBJxlWmOngt41i9Fkmzk15_lbDthE083zecNEI6iTbZ2gtIcwgCw34iXZvGbLQh0EmYdgsR5eNoe3asDKxpWBLo0kkwTfGhEsa87Gjn0NUQOqxby4qYVXI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 9 AM to 10:30 PM, Tuesday: 9 AM to 10:30 PM, Wednesday: 9 AM to 10:30 PM, Thursday: 9 AM to 10:30 PM, Friday: 9 AM to 10:30 PM, Saturday: 9 AM to 10:30 PM, Sunday: 9 AM to 10:30 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Seafood",
+      "Hot pot",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great coffee",
+      "Great dessert"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJvU6KxAlnyjYRFFfcTSC9DwM",
+    "name": "Nhà Hàng Hải Sản Biển Đông",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Km6 Tổ 7, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6830906,
+      "lng": 106.2141382
+    },
+    "rating": 4.5,
+    "reviewCount": 35,
+    "price": "₫200–300K",
+    "phoneNumber": "+84 799 816 333",
+    "website": "https://www.facebook.com/Nh%C3%A0-H%C3%A0ng-H%E1%BA%A3i-S%E1%BA%A3n-Bi%E1%BB%83n-%C4%90%C3%B4ng-TP-Cao-B%E1%BA%B1ng-112165547936256/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGELi5gA882SwojaYwzr0w4lpjzf3JwhB-p9eucOxRLojpWHh_LSNT4S98dAGmSkpd8LhQfyqvq1Hjl-9dfmlpvZFVZhwoYcE3sL7cDw1sp976NRC4VfRsyITN8ZyFjTpEIYmI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGU-zYVGP3yC-PfiV8hX_AGoQd9u_VIVplYDPd2wa_qvk8RoJ741epXYpHtwZMUi1tESYNMZk0owW9XW1C7xTcA5ZnlE38MZe2iU7XzMkM-w3i2jgKdJEJcu2DqRGB6xHbBBDg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_0cxtgco49DwpzzU7yVYKaimjhkG50oh1J0AgzFc8O9x5dWz5R-795Z-0SLW0YC0iVvKFNyr1jDb2ez8xI8ia88oYv5NQ8uPiLq-4SMKXrLTxFAQH9VefEGpxvFhAu7OhVKH5=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 9 AM to 12 AM, Tuesday: 9 AM to 12 AM, Wednesday: 9 AM to 12 AM, Thursday: 9 AM to 12 AM, Friday: 9 AM to 12 AM, Saturday: 9 AM to 12 AM, Sunday: 9 AM to 12 AM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Alcohol",
+      "All you can eat",
+      "Beer",
+      "Hard liquor"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJWUtnVwBnyjYRBT5pmjvxPjk",
+    "name": "Nhà hàng VUA HÀU",
+    "category": "Family restaurant",
+    "city": "Cao Bằng",
+    "address": "M6JF+22F, QL3, Vò Nhạn, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6800222,
+      "lng": 106.2226146
+    },
+    "rating": 4.7,
+    "reviewCount": 3,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 985 216 551",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6hEU8tEHMFdVpMxbTFdLewR6GEa7yMhGEmN534jBGZPZryN5QZ-VSoFsH-if2BaHTLH-ESZ4l888snlnOiVJDsR1RiDb2JFbKSZa_PJS98gBUXcy0wAHudETpHoPt7Nq3FxPh2w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGiw7yno-N34A0q75RJ7_aBuPghF7Ev4xHzaRPB5n6jRlb2jT3c0fcDWnrS8Omwa62-Ioz3JpubFIlBmMTxm-_psZIW8bXhpbxrk2NcFrMytYWojKp7tc-pbYcnhd_R06O0VLlW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE1DONe-WCKifdgaZYVaz4JhnhlRwyoRxbqoRM4vmEHiwcJwlmy0NIrwyKGg6cDpnrVAfStwLvOKxFVXw0t0TFW7rOCROF5y1cglI8S8bv9Op5IkvjNRFnJh2r_mi3cAD1YNZE2=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJcabj0c5lyjYRtqx9YQ16EPI",
+    "name": "Nhà hàng Quốc Bảo",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "62 Bế Văn Đàn, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6664522,
+      "lng": 106.2570586
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 912 089 116",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSTYL_7I18ghbPw7ju8moQHDEcPvzcbb9kDQ_sAmQbWYk43LxSCFTyKXJavtAj60o2gklmOIRnPjg5I2zR1BX3mHfT43n-DQe8A3o6Qv75sSXzjigYZmfcJIj6LjTVRRk055EA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHek8B-zCvzNLsHaFV4AviyXlS_8-eNJx8ydVp2KWA6i5d0S8AHQdGLqfwfHKWOwxaoewyqEogHYg4ygqjXWZmB1GA3A8P1UCwW1q660lN1uWKH8bgigr8p7t2DOaHvlp9PFEw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFx2vl4J-kW84AHKVa0m5YdVaGCo5EsE6FJ6InAerpY-6lnLihO6Dutfq00M8ELpUi3OlQquYA_NapXSN4ERMdpq26ScZJ1Jwy8vDLvtEu9QNGm5IcZZ-qsKy3eYTNfl-dPDFeiSg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8:30 AM to 12 AM, Tuesday: 8:30 AM to 12 AM, Wednesday: 8:30 AM to 12 AM, Thursday: 8:30 AM to 12 AM, Friday: 8:30 AM to 12 AM, Saturday: 8:30 AM to 12 AM, Sunday: 8:30 AM to 12 AM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Bữa trưa",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ1c_aFshlyjYRhUDOzj6d-UA",
+    "name": "Nhà hàng Kim Quán",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Đường 3/10, Nà Cạn, Nùng Trí Cao, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.6562918,
+      "lng": 106.2693935
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 853 861 822",
+    "website": "https://www.facebook.com/profile.php?id=100063572735321",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFj_Adgi0igHf45Yw_lEl_Hi19a41In4Tk0k-rsgLHXyhBkde01ftx2EFJ0AJMFpE1mhd7pJ8UJg2k4tCynF-ryJHWoc5mS3v6b7uSJkA-MP8wtGUye8nV6ICUEpfSL-CSkS7srTQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnVDSa0tRFyNVgJfc6gD_Lk67mOJTEtYahIWMkd0jLyfLivs3NP7B-KFFR8CiAq1WALivVSEl7TUOeqrJFyVVEEZUK_aljhZz2V3_F_EmtauQm0GuDa6CwEZTKOHXvTfACriwPhw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHuG09vUyZqGVbRSpDPX2fUOoCWLA4AwWVOx7S91qnB6zK35FibNmju6sJe5dTG9iGC__lVZePT7U1CRNU3ab62KZx09jjErksy5H01MvQjJ3hLiSXOrhZnpD1fF8Q8NxSz5q-J=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Hot pot",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Small plates",
+      "Brunch",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Table service"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJESCgSQBlyjYRSzM9hPCBpUg",
+    "name": "Tré trộn nhà Thư",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "039 tổ 8, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6540702,
+      "lng": 106.2648431
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 859 020 696",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnzUVvizi-oXwpZ-FnZDzjddG6ronBnZ-dkmmne5hRsSOT08cTCHxH8htGPMFRBibz99rNb29C11vpcqQosB7uHwtcXIJeKReyiAXUUkxt-DPeD7bLAt39DOriiOvwDpZbuuoU902jlqyT=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwcCD4UEx8Vti27PT5bKFN0j25Wm8y5Y1lTdfxA_vWljITmtR4E7dY4jGkJO7RpVhX58U5L7Ykcqqn_tOMr6Bgl06ByGZWHroIs-US9u1frbqokq_DFEGevDl4iNnykA4NYtXw0xNXIwgd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3PR-UlG76o7MXiXcPUq2LJDa10AGHR5w-wLlB0vj4TBatpcQx_Qqsba1uqegB3RFdLg1a9LD7qd2qwqXnNP2hv6hjcTjwgfG3i7tPub4Qa2NXdqGD8g4NTwEeTLOwxBWp6biA8WKNdfk=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 10 PM, Sunday: 8 AM to 10 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJzea7n8llyjYRVJMqtP05GEc",
+    "name": "Co Huong",
+    "category": "Vietnamese restaurant",
+    "city": "Cao Bằng",
+    "address": "M758+6G4, Đường 3/10, Tổ 22, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6581012,
+      "lng": 106.2664564
+    },
+    "rating": 4.8,
+    "reviewCount": 29,
+    "price": "₫1–100,000",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFGXnpQHPcn04UkyB5WBjpvE9ppqFs6XUxlDTyaXU-H3_FSOt7NYQI1A877F1bWi2DWhqiuKteqxouT7aGWav8QME5VSOiP87rGSmt0I2ymTGiuxPZkrVxG3XZD-rKcst2eHqCR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7Nbx-0uIvhZL2RrHq5K_u0I8eyhuOENKQUrPi8ij_KbPkNrtSBwVV_jaSshGRYr3JcD4fvi0zBiFSB1zyQqy8dkSlmw1kHStPysi4Ouw2HMJVcewFxCg6ZMtVAIPZ1D1GhB5e28M6pHpZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGeeSH5CcEf4uc-qfH16mcKKJY2jfABX_MbYHk0-LjfUYidfTsxLOzqt9xRT4XX_Vzgx1VEIuENP1s6Ktd_McR_k2IcPqcC3tmKzHDb6wDm7BIrAxgLvZBRB6GXbeTJoKrlCzis=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Bánh xèo",
+      "Noodle",
+      "Takeout",
+      "Dine-in",
+      "Alcohol",
+      "Beer",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJQYJwDiRkyjYRVIvTBxenQEs",
+    "name": "Nhà hàng Ngon Cao Bằng",
+    "category": "Vietnamese restaurant",
+    "city": "Cao Bằng",
+    "address": "05 Hoàng Như, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6645665,
+      "lng": 106.2593142
+    },
+    "rating": 4,
+    "reviewCount": 711,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 913 279 210",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsLbb90-vmOu20bPrnVH78MIMkGTAU5RyaGO5KZKd1mHe3r6GCw9_oFkPt5jXsrFXvZG_MHcIHgb5R14ORoLNIfqBREmqxrBqjVHm14dF_uOncpmhT-UXQjrWn67Vu-ciP6E4dMnGM7Ft7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPdILL-FpVTpWgBCcOf0P-VwZqGWrkzofgv7rJYftP0pYatY0Ar5F9A3GVHwED6wQFvqiDl107zcLffVPO7tNs9r1R3zJeqw7LYN5lVJs6Jd8qyFVygMxmTk1KffvKoJ1Pu-S5XGLEpTxl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFd4NXHZBJL9Szd-10oTm0cN4oHjUOInoLUAdOw1Ep8Mtvh-Ckp6q5xZIceDmUPtacZLhAYDxDzifh7tTSUD3yLQgSK6WHqC0aLAzAQwiP37KEaq_wQfbJQEea4_I2vyrJr317kby4khN4=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 10 PM, Sunday: 8 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Peking duck",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Wheelchair accessible restroom",
+      "Wheelchair accessible seating"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ9dnIOalnyjYRZkvzuu_NM2g",
+    "name": "Nhà Hàng Phố Núi",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "QL3, Nà Cáp, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6765667,
+      "lng": 106.2416201
+    },
+    "rating": 4.5,
+    "reviewCount": 19,
+    "price": "₫1–400,000",
+    "phoneNumber": "+84 847 228 688",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZMoEjKX306F_6Z5hOGzouFgjnhFb2XIisEM0rnQkfTHLLm4usnb5gdvHmABkxu6QdZi41i9CA9XLwrmQxxhRURRncuSF9EaNUunep6ZL2WDZpaZTzxuSrYakkqBd5NdJ2wNIf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0uE6GD9vdddZU5a8mMidP64McqAH4CE4lGXy5YaQ1b9r2JoVzTwG_KTD4MK5HlBJQ41sYwyaRL0_LrbEW29I78R2prlX0m0HI4oUm8nyOmV8o9GX4Bt2INy0ztDrwADJX4zvhYYw9aYl0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoZ8veaxLQiHjfuQF1dqd2L4DvtnAf_cKZ2LqgWhRo7xpV1nyWTqOjMEl7m2hmvygrEqvZH7oo8uYIkhU_Ym9pwKZAeerlmbgznru4PwhlOxhdtYW2Dv0YSQA5fGs56wOnDBFk=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Quick bite",
+      "Small plates",
+      "Brunch"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ2bJb4m5lyjYRpa9QMmgZag8",
+    "name": "Nhà Hàng Linh Hằng",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "143 Phố Kim Đồng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6615241,
+      "lng": 106.2598289
+    },
+    "rating": 4.1,
+    "reviewCount": 75,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 913 027 527",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsxk8E9drRCq79mXSi0AOky0K5slQOCkLOdtrAxQy357aLbPFMS6kgHmVETaN80PKqHYiinuqkOHVsUKv5raDq6h2KgYfvMEu9tw5uJKyh5akHTZ1WH4vCW6YiupnV9Nfo8trSng=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYCVaGhKZB4qSS9boeP9gq7lzVWqWnUPO2S6J_Bl-KBSnIDk0r7r1rf1bKR7-CeNP5bx2oy4FBMb896IUu_glVnQU5fpd8hX802OCawKbjdl9GaXPUsJz1w_Jc6Jr12Nn0I83i=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGY_pEckZa8H5CEZ2drt4GajtLHZgORcSlG7AtXrw69_B_cFhRLdn-eIHLfu3wMvATEwcAx06aiAH0h4MSKDmNe1lT_cvYn7ZQoizdk4pgDlBngXqHRaZTlUFes9kJusF361oaJBU-bf7G=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 9:30 AM to 9:45 PM, Tuesday: 9:30 AM to 9:45 PM, Wednesday: 9:30 AM to 9:45 PM, Thursday: 9:30 AM to 9:45 PM, Friday: 9:30 AM to 9:45 PM, Saturday: 9:30 AM to 9:45 PM, Sunday: 9:30 AM to 9:45 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Hot pot",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great dessert",
+      "Bữa trưa",
+      "Dinner",
+      "Solo dining",
+      "Wheelchair accessible restroom",
+      "Alcohol"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJh6dFcgBlyjYRbHp22df6gqg",
+    "name": "Bếp nhà Phương",
+    "category": "Restaurant",
+    "city": "Cao Bang",
+    "address": "Tan Giang, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.655339,
+      "lng": 106.2645646
+    },
+    "rating": 5,
+    "reviewCount": 15,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 915 929 559",
+    "website": "https://www.facebook.com/share/16E7BqwtUt/?mibextid=wwXIfr",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWGCqrvKIY8tPiKUKSyX2CUn8JmGYddZ-WnvYH4OQ6hXlRC0SeAULV9ez4L6fcX1xmYviITQx0-pxg1eN_UueUOzFTzHQCYF8cwD4oSB1fVJl8TdS6XX_QVlu4TJGGzUdJ_C5y4TCeAN0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqkOLraPGHBELJMtSdbYPU4HmuM9LHxwVmcPew9fAnvV3jCqsTT-lYMvWK-h19eTAQr3TtB3AUFTDRcN3VCWoQTv87jtTGCOxl9Sfs5cbAdKqo5tH7EDq6PRZpl7oPgXZocz7znRSqYFc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-0b3Yo3H59_5KmijnHngKWNugTQ8VVE-m6KX_7WWhKMPpYxwZRAukBgi4ymDCZzizc2hIUaMWxlO5aamTSRy2wrB_X-2SrMZdXa6QzXyr42DFYzxPwnhggDpDC_Y68JN4kb9r6L9b2Hr9=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11:30 PM, Tuesday: 7 AM to 11:30 PM, Wednesday: 7 AM to 11:30 PM, Thursday: 7 AM to 11:30 PM, Friday: 7 AM to 11:30 PM, Saturday: 7 AM to 11:30 PM, Sunday: 7 AM to 11:30 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Quick bite",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ8XgBRtJnyjYRwnE3rGCn8ZE",
+    "name": "Nhà Hàng Bản Phố Cao Bằng",
+    "category": "Restaurant",
+    "city": "Cao Bang",
+    "address": "Vò Nhạn, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6810466,
+      "lng": 106.2212999
+    },
+    "rating": 4.4,
+    "reviewCount": 21,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 967 871 736",
+    "website": "https://www.facebook.com/share/1LcKxa77m3/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCfOsuVCv31IVDvt4NcH-FlANsIJCjDTNNOyPL2lu0qGVN6gsZ0q_49aoubFglFoFvULzSDr0BNy6Z_PQETcshWV_WA95EFVBLYC1iHIsVI9Lgxr_wxw97qyE-pbtUyeAxhBmJhQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnRtSHET-77Fj1sbwyBsyt-VcI7b8ym8cXwCxDwLOKK0q67Rpj_b6pfucexJpSa1eokTsAKwPHLlyD910HOiSa8CliX4qGeqkV582aUdzQhq6WgxGt90bTyELQQ_fOcprwA0NSgiCkPIEH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPENGTSlIo72PamwvThfyLMuWhOP4giuHkRzYsC-hyND9xzph4yKwUAMabZuv-FPU_TS6yNrgD8xLNWRs7uYsLFgUPvjtdGCB4PXdjHMoKEhXBcl4wIB0nx3Y7G08Sb1Flny0=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Wheelchair accessible seating",
+      "Alcohol"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJV5bcCsJlyjYRJGCIRaL7aAc",
+    "name": "Yên - Ngon như mẹ nấu",
+    "category": "Family restaurant",
+    "city": "Cao Bằng",
+    "address": "22 Đường 1-4, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6653805,
+      "lng": 106.2535644
+    },
+    "rating": 4.6,
+    "reviewCount": 413,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 813 013 579",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFM0YBggoQVVp7ie8sCwgkjkqQ6edku1asesK0hH4xkxUdE7qHEZUyytBMCRVRqiH0WsSt5T6VK8Hvcob-fmGjRpSIqcyj_sM1Bg7Bcje-jGxy5pFxUaT-2Wi4-lJ_ySzdFJUQOMQ_Djqcb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbbSIkos9IP_ehJpxovd5hDLSuYwNDUCDdAa2KqabFH_DEggOGcIaKinkHog4NuPvbgxzWPftoNle9bRS4kS5zeop5SuuNQlPJ0FsVV6LeOkoMcXpnE2tFepifVpVsiFyAeLo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGG423S0tSy-E5oFJ5c9sCnpRXhXVf6KohfoQqBKO4hYuGY7Zt1STBOl51AJZbZ8r81Gh8fi_7uF1wXxeqBOeYxlYehumDzo9Bw5FWalThluvh1_wOWbRNFDQP1y3UmSV08PJde623F6Gy6=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 10 AM to 2 PM, 5 to 9:30 PM, Tuesday: 10 AM to 2 PM, 5 to 9:30 PM, Wednesday: 10 AM to 2 PM, 5 to 9:30 PM, Thursday: 10 AM to 2 PM, 5 to 9:30 PM, Friday: 10 AM to 2 PM, 5 to 9:30 PM, Saturday: 10 AM to 2 PM, 5 to 9:30 PM, Sunday: 10 AM to 2 PM, 5 to 9:30 PM",
+    "cuisineTags": [
+      "Ăn chay",
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Onsite services",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Bữa trưa"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJXdv2JVJlyjYRA3_wueOs6n0",
+    "name": "Nhà hàng Hải Sản ANH EM QUÁN",
+    "category": "Seafood restaurant",
+    "city": "Cao Bằng",
+    "address": "M739+XRQ, Đường, Nà Cạn, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6549602,
+      "lng": 106.2695987
+    },
+    "rating": 4.3,
+    "reviewCount": 40,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDfTtS_gyeqxN032QyxBwRjohHpOjyfzOPnAqbg6yy8c9e1KkPjkuu5vheau-Sv82kpc7u_qukgNFPO1bxoT6YRsbXB84giCtGM8uP_1-cp5BX7a0Z-trNM_Wpk3H1QjJoc6ENbQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEy4gGt82pkOmTjxyRtU3IpKGnDTgLo-lZ2ClnrJVVQSMSa2fqvktvVbcJVRHaz4xWA8SiOynEquC6t_PiKxRFSEDViM_jRdU_zbWeXudbwa6gNPeoT_VRH2gu7g0TJHUQ01kMcq-y_X-fz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHYigsn0382-gSPs37G00KzyoHZ_fp_PKb7tHa47nzzqfjx6DvhSGW092aZhLGAGixd3Ys6KePuWi8IxfoVlmd2-Rcxlt-CZ6_-Vm1SD61s0PeeV2QNEkO3RsJ2C7OmcXVw-upz-PggOY=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Closed, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ96bu9u5lyjYRSFuCrLDtJbg",
+    "name": "Sli Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "Rạp ngoài trời cũ, TNR Grand Palace, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.660032,
+      "lng": 106.2592004
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 919 911 886",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHV9yb17GTBTN1uw21foUaL2y-dFjUBtprJ26B64cxKxRkxMDsVwMbaDldnUaKiPxmowGGhp8EG8o4ttVzgzVxPhxUx1U2GMSQG_o58udCBf5BKq3NtRSytnfIa1p_jQw_F1mAXyz3XYQVO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZUSX5y-WsaHu049TfzjQPQN8Ku8E8tXqf8XsLw-Ta5ThWyqEclweBmDqC2X5HUo_2wk--BQQm_JsAzbvgL36Mp4RRaRmgwbmERlRpdibh0CiMva4IGUsekn4CRhXy9s8LvCY-kVhAsnBf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx8v1pbKhsiac4t9qM-d0L-0c2r59J8eMOKueL_j7-nJq8IGBL6QHTNkhKADlgc_TjV3pnjlmR_Xo6dODfJ7vtS8KpOkGf_1jsGSYOUc7j0Di4F537q32EsUt4ZxnXu9kI9DerXNNlzrpk=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 10 PM, Tuesday: 6 AM to 10 PM, Wednesday: 6 AM to 10 PM, Thursday: 6 AM to 10 PM, Friday: 6 AM to 10 PM, Saturday: 6 AM to 10 PM, Sunday: 6 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Dine-in",
+      "Seating",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ3XWjkIRlyjYRzYcZcYym7V0",
+    "name": "Tiệm Cafe Nhà Bull",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "65 Phố Lý Tự Trọng, Thục Phán, Cao Bằng 270000, Vietnam",
+    "location": {
+      "lat": 22.6693322,
+      "lng": 106.2568453
+    },
+    "rating": 4.9,
+    "reviewCount": 17,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 889 337 327",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE8iKexXV__T_oYFyRZSZQ3vK0YGVizVDbWvJKSwcv58kKdkGv3xvAXe9PUVucdo1rgvjyZtSxCyPPi7IGHN2BTFxTNiPNAjQEwRcfuX_609yQgYbMmCJbhC6UX5qhwQ8_Ev0XfrA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1vPkrssyIMwrQyLE-Xz7YtWrdc4xQdfzO4Z7Iurr8odC9neOcF3Vd3HFJwH7yCXYLSHXkChgLMZICFW4kB0ac3BWBUvpEpnRRVd--gi94hevXKy-MkAJ-DE-R1T_mEQDUu6mK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_rDRF9WOER1bWHNMA8JXcrVoS-gW0z8fwOTSlBEZ6LOxM4QrFXTcIVGgTl05KcUzxCW98-mwLVPWSOIpDB-Pm_cZmsnEUSlvAupdJ5XXz4jOGnpifyCRJQwb8yPFAkMQfdVf7BrxjCbl8=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 12 PM, Tuesday: 7 AM to 12 PM, Wednesday: 7 AM to 12 PM, Thursday: 7 AM to 12 PM, Friday: 7 AM to 12 PM, Saturday: 7 AM to 12 PM, Sunday: 7 AM to 12 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "Ice cream",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ1YPrzDBlyjYRP88_zdj6mA0",
+    "name": "La Maison Café, Cao Bằng",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "Nguyễn Du, Phố Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.662418,
+      "lng": 106.2592225
+    },
+    "rating": 4.7,
+    "reviewCount": 34,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 865 311 689",
+    "website": "https://www.facebook.com/La-Maison-Caf%C3%A9-Cao-B%E1%BA%B1ng-110848604911436",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAETe0ImrDP3q2BwDEf1UVFbbSlxGoZABDZlxxSfoSwuKh6Af2SWZ3U2maxDWJhjRD6dnBP5BpO8IvLZ3W2PdPVpyNjlvy43XnBCVy6c9mVuT200d5iArPqdICH2RR4C9V5ItmaNUmMYDvr-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbB5NdRAIeq1VmQbreq3rIMrxPRCUUnfnJUAOpnKKHn3v9UyF2wU5beSVybhXyva8dM07YL7pYRdPclHRhvb58zk8H2kwTXVZ9gGUw1wnwfALtqYK6VWBPy9TN7WbVdH_y5BUX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ5W9HWNqDbuft1DqKSXURnRnMw4l1hOgsKQHi6mQUSsyu7on5vZBG7f58679O2cei7hig20j3EU6ib4Qg2-qWlyZnxvs9EY4bJbZiG0Wge2NfVYr5ELHvkxPQdDiloD0dfTAB1ljFn9qF=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Juice",
+      "Cocktail",
+      "By owner",
+      "Identifies as women-owned",
+      "Outdoor seating",
+      "Delivery",
+      "Drive-through",
+      "Onsite services",
+      "Takeout"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJXYVrnhxlyjYRTTUZ4HG7-o4",
+    "name": "Vườn Phố Cafe and Cocktails bar",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "44 Kim Đồng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6622027,
+      "lng": 106.2596533
+    },
+    "rating": 4.2,
+    "reviewCount": 251,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 904 466 256",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWheGH2bQ_WlXWCZcGN7NYyzKPc7REzhO7C8aCGRbJx_gu_fWKZ52sDIKjkaDI4OVnqG6adgDKTcXh9BmONVlAbqh2yzXU0t7WTWFe3DUSQbTrL3IB4-BjKHdOSuz5NWCNTvDy1xFhd9E=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFOSHdqTYaMPanA1I1Wdm-si2sdgTPYC-wPc4UhhEaZwbpzb8y1v6utx7qp7cbth0040nk88EoC2_3yrZ9RxeMn3FPIRqMqPrZsc1PuzIEjk9ge42zTorSifGH1FSw2A9gn2sq3XK0R9ZA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGRptje4-PxD6NbPGHALZ_QsKX97m2Oj8xe1xbFxhc1OQOV5rRStGnNOFLwP0q4lcVIF4TVDeydPzrcnYu39BCzx5KlpMxUZSLaAcc9VBTiUCYIEquq_cLEgCJlnsJFRitiActSb5eBokP5=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6:30 AM to 11 PM, Tuesday: 6:30 AM to 11 PM, Wednesday: 6:30 AM to 11 PM, Thursday: 6:30 AM to 11 PM, Friday: 6:30 AM to 11 PM, Saturday: 6:30 AM to 11 PM, Sunday: 6:30 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Affogato",
+      "Juice",
+      "Coffee",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Onsite services"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ9c99mtllyjYRNGiv-epLV54",
+    "name": "Blooms Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "020 Bế Văn Đàn, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.667512,
+      "lng": 106.2564916
+    },
+    "rating": 4.9,
+    "reviewCount": 11,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 839 292 268",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElyjHcEWMW9Cc3WBeDrdaI63GmaEv7BtAsYnB6kWJq3XSUUJFFdFu_CYxPflMEYjSfKER302Wlyc6FOZRfkTSGmshOrWP-ZIDLmUeDcgSb6NQU-oO9Yhxmuzkc_G0Ozjhc85NqmA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWLn9FNPTk3ERbn9EZpOGKnoAsIrmvETb-MQo_jkQrZ2zjIBmRm_i_4ycCTJ-dbh9dtBKJ4fSrvPBMoiPhcFSQvPEPXDbdklsHNt6BzzH_Typ4jFWyeIQKCiHDxVq6nww9UlS1og=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFe8BoJ9q1itJjym-cBSeWOB90SjkRVG41zJuoQEShj1vDs0eh6nfqBwcvBoIPqW4rVV1ED3_GS72WeidOl4xQvn9Eq8_bFFyuhBN_7Ub3XbSeCxBFc5lUpJ755bvuhbPxQqqTH7AzKGf8=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10:30 PM, Tuesday: 8 AM to 10:30 PM, Wednesday: 8 AM to 10:30 PM, Thursday: 8 AM to 10:30 PM, Friday: 8 AM to 10:30 PM, Saturday: 8 AM to 10:30 PM, Sunday: 8 AM to 10:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Catering",
+      "Table service"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJP8jDmQhlyjYRDGMK21pqYnU",
+    "name": "F1 COFFEE & TEA (DRIVE ZONE RC)",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "1 phố Hồng Việt, Thục Phán, Cao Bằng 21100, Vietnam",
+    "location": {
+      "lat": 22.6637635,
+      "lng": 106.2597017
+    },
+    "rating": 5,
+    "reviewCount": 13,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 853 391 234",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG31wmNr4Wp5gwc76KzH7pC9qSDOVi7pDgR9Zy8hUtaCrw-XfN3i72yo_XoZ4qK-GP4cTK3x4r4aIO5P-tqZUdiJPmjEPD9Vjs8Ut1vmhfJfefekQurcZK0LBPP8cJRBmIGl08SO1fmjwdw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFrNLZUCzpXEh-JqJTXZir3eAlyIc_QNfVnEoyiLPtvJkrDcmtYcY7LrrVipsoXturVZleej5MfPcyBtIBcQc1Op9cLxOaYc43I1inR4_gQWjI9c0iUlRdgAxk1jrb1CC2usqmKMXoGUufP=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHNpc4u638BGUDQ8uWhEd1izgdRz_HsgNYBltWRVZ4ZT7WEjj4eB3hX9NLg0PF-xtSLvO5WGKjZpjauTedHzPHKE0exkA8Tgc3hQ5mO1rIHbJ3Kmq2hzASf7EDhWKhMML-b3MRotUjnmMi=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "By owner",
+      "Fireplace",
+      "Great coffee",
+      "Great tea selection",
+      "Live performances",
+      "Sports",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ0cuceABlyjYRRApZCRmy9LM",
+    "name": "EDM Coffee & Tea | Drink & Music",
+    "category": "Cosplay cafe",
+    "city": "Cao Bằng",
+    "address": "City, group 09/tổ 9/088 Ward, Nà Cạn, Nùng Trí Cao, Cao Bằng 21107, Vietnam",
+    "location": {
+      "lat": 22.6619634,
+      "lng": 106.2651724
+    },
+    "rating": 4.9,
+    "reviewCount": 72,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 965 966 666",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcpnH3KME3vqeP4TzVz0f_j2sBmxNiqjY-S8MyqSn4wKgBX7dujap_7nlipz4QHc1fB_54xAeeU2jUBMlKZJP3KK41dXA4kNbllaij1a69gnot30oBgyYIaQvEVSv1Zhk1nM08yaQnxUQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFDNMY-UZd55daxSULKIfPqPgeGqcld7g5LBxXjCPFmxZcu-mUshjsYMN6_7ZaMsXpuPUHk6lNeOfExC1vP0onjg2hegJ4c8jQXfQHdxzZWVWjH17Tl3fQhPsmb7CBZvhanlfZ9uyTDk-56=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsyKCjtFag8R8tcZKoS2RnW9V3LwUw9yKF8o3UUQ4_scPYHAIjvS_MGy5fHV5NkrmI3hIgtqX0danq9duCAZdX0ogRib4o-Y3Mu3V-dov_JsvZtQrt9FjhkstHJ1NQnILgmty_Ot1nkCI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "By owner",
+      "Great beer selection",
+      "Great coffee",
+      "Alcohol",
+      "Beer",
+      "Coffee",
+      "Happy hour drinks",
+      "Small plates",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJAc2WjdZlyjYR1uk5DSoF8vc",
+    "name": "Sông Xanh coffee & tea",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "Đường Hiến Giang, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6727358,
+      "lng": 106.2557468
+    },
+    "rating": 4.7,
+    "reviewCount": 248,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 819 181 618",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI4HtW_TsjxJ_cYb8TAaCF_qb9kiPCclGVg0KEauiPdhNfAyGJ26TYgWaWGxGKs1b9_hckIlXZmDNtuQwvNCjljd54uMKU-l49kT3PYpmFkwU4tdJLNKm3st_kRAE2Y3bd5a0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFMVwFgX2vnI7IJyNiqmz2cE35JKfuDxe1WBiSeqU94pR21M19Nsazl5D0efmWj8g4lAKrI4irZC-ievmxayplpp9L9cTX5QqiuGTigxTzp1AMqJxMZQBDBEo2KcScBiDZhfBIE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3dEtUHy5cvS1YGyt6wLeco6yZeCAxCq6s2_o1G4kvi4oCwVIFRLPZgNTsmcW0GjQcdB_hvJ7es_YJYfXYajxZKV_M2WCbgzl02V2F1yL3deHRATNi80oKLXt7MaIIFjPf6yRc=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great dessert"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJGwUDSSJkyjYRxqpoewVfWQ4",
+    "name": "Toc Ca Phe",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "201 Phố Kim Đồng, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6602047,
+      "lng": 106.2598923
+    },
+    "rating": 4.3,
+    "reviewCount": 479,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 986 998 911",
+    "website": "http://www.facebook.com/toccaphecb",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIm0OlZrqw1zWNbZbWyx6qyGaS9gzFzrONIgHsVuwgdcioejbIW02ru0CQvAl230SUUxuIDb279wxo87d8LMGdEWsfinNZqNy_VH7Cgw-IfFd9JMo3w4U9iHVujBwpvsxJBWjnT_xBoQ8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNCmHCHTMr1Q5UJy7WpyVU4N4CPO_KMp_DRVAeldyPyWYtpboyFjLC-UX--YzirNBeisgwF6A4Qr1DnRny1-KjjpGTr908MPRZ_vfWMoAhfZd1U8Z-U3miQ3KupIURJrT6wLwD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJKZ5Q1iMtWV5CvjvgFaFx2prnZdNr9tCdrQM8W1I7aH0zySPnbIyVIeTw6Tw9WMTMnG4A9qqFFPjqrhNtswSZdtR053hUSvOQpeo2WdeH20wZBVConsA4LMfDBMy9WRaFKtptiiGKoTc=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Iced coffee",
+      "Juice",
+      "Latte",
+      "Outdoor seating",
+      "Onsite services",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJqeOTcyhkyjYRLAxj18-7Z9c",
+    "name": "With Us Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "012 Nguyễn Du, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6624708,
+      "lng": 106.2589553
+    },
+    "rating": 4.8,
+    "reviewCount": 77,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 961 994 604",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHk3II6ZsmEDl1lZswk-6AVkUqPCid9SVJXK2JjLq_pd0hgYcK0LoiLtwSJBWg2K0pm94zgARsbSWupOlJhG1g5tRbydAVBdOjQV0JY3Ncfl13PXmqEAg4aXyvwDB1zWmcPUHmfqikNbrDp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFONSMUt_X6dIgr7aD3dAk18dja7y7cU-5A9ZiUa8SZNZgL3cFoantkndlZP7tpkyPJHtcRZGkQFsrdyAY0KbPs588V6O_sRIiQdrJ_fg9qt3-KEEvEKq54REyLnBiy5rOfiXpfngC5wfNz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGVKAwZK3duu22XzC95TG_LZdc9jKi_BnucZ3HA7CKbGi7CVP1JnuYQF_TQyRj7x4JvhYu3WurHm3ZIA-vtkdWMryR8cnRfTxVV5eKXl_ImBstE4UuKx04LHzbvAEpMbJO1IY-GllHLmcc=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11:30 PM, Tuesday: 7 AM to 11:30 PM, Wednesday: 7 AM to 11:30 PM, Thursday: 7 AM to 11:30 PM, Friday: 7 AM to 11:30 PM, Saturday: 7 AM to 11:30 PM, Sunday: 7 AM to 11:30 PM",
+    "cuisineTags": [
+      "Ăn chay",
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Juice",
+      "Coffee",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJy5v3KfxlyjYRo-8ITha4x2o",
+    "name": "GILU’s Garden",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "32 Phố Thầu, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6644679,
+      "lng": 106.2611118
+    },
+    "rating": 4.6,
+    "reviewCount": 449,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 866 066 116",
+    "website": "https://www.facebook.com/gilusgarden",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZOZu6Pbw2Y0Br5RktOQkZ0I8RrlKzSd8Oky_HXR1DTkrGvzWXyx3vYCT0P1LES3zpYGOAqHnYmg34oy4343ke7OsBnKM4DzBOEPxdg9R_7IQZde_2fFMnv217pi80j8JqebuQNQH4cR0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNc5PpaFW-qQ4mkAm5wVBs4Bn0inhOgnPqzmycJ03Wi6xRpD-tLUlig3a54mrdE1gmNqR8_gXx0gtLoFUSe2tDTqgu5nrFWJMsJm9vuKOoKVa4My2qI8EiJSKZxMclW62g0rH8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFhmUCoEfqVQUeNLBt0_NaSby-Jtuoe9W2OPD8i7F6eElhDkllTxI812VciZ6B7Du-V5EfxxT07NepLZoJgkcg5CJQPSy2ZzkGcUDnwNhDhvd_NZZIGh29hKXQtv4J5ApmaToWT7Uf6LYBV=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Iced coffee",
+      "Milk tea",
+      "Waffle",
+      "Pancake",
+      "Coffee",
+      "Sesame chicken",
+      "Identifies as women-owned",
+      "Outdoor seating",
+      "No-contact delivery"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJWegAHPRlyjYRR82UF1USBOQ",
+    "name": "Cafe Phố",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "140 Vườn Cam, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6675758,
+      "lng": 106.2603922
+    },
+    "rating": 4.4,
+    "reviewCount": 71,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 342 781 382",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnngvf8_bRP31Fp7cdG624xA6lSZKs2xOYfDfwGYJuLWxx7_XhHI4lfE7yb2v7G7FT9VbbhsLEK-XhS6VOvaiYIkM-SQOgzY1JCvESv4bA_hBIjoUlpJC99k4cCKV_ZNzwsmJM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcQEMjkCInz7Qj_ixOqkwnj4AJ0PeS9kkpG-bRlYOSAi2S5AcaK8po6Fffy279SSSiLZJYThpAZt83p2alsO9XekfpwjaMjzaJ_tXKol0kNNKbrN8xwIT3oUm9nCMhf7kNS56m5sfTU6w1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF4VH2n-Gvxwk_UWMpj1TUK2W8xQmha2idrsDDOM-lBK9wYhkCQPJOjqf7NILM6SaOJOINyfB18c72VccVkKPlhU5r8JYqM762BYpqAA6bVMwYnH60_rbA2ILmmlDVJULFiJ9o=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10:30 PM, Tuesday: 7 AM to 10:30 PM, Wednesday: 7 AM to 10:30 PM, Thursday: 7 AM to 10:30 PM, Friday: 7 AM to 10:30 PM, Saturday: 7 AM to 10:30 PM, Sunday: 7 AM to 10:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Breakfast"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJGfBQyyNlyjYRVm1oadPz6Kk",
+    "name": "GHÉ CAFE CAO BẰNG",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "034 Phố Kim Đồng, Thục Phán, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.664401,
+      "lng": 106.2610287
+    },
+    "rating": 4.9,
+    "reviewCount": 41,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 948 193 589",
+    "website": "https://www.facebook.com/share/1KkiHNgMA8/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHL4LAcJPx0_BY75lUlZ29vm5uqu36cBv5GdYG6cIhsTVkb5Op9hRDuQWK00c3zOivzT5TE2zGw4hPo7YaEPx3RDZozxsDHXDwqa_YPumUENEcgj023xk1kZ3GEFtaCS9jkp9Qihw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKBn2wd3MPapa9NohYqTpsHLDKBeyVXsrAxeKq0lhB_l3HLsf3NgjfP6Dk9oXZ7ADaHLASSmQRT949gfmcrp98N9ybTs_0q3QWdx3VNRnPSp9i3OKJVlLCHilqRdepKCpPz3kx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYA6p-1EFUqwPVp39-uyc5q8qgRzjH2-2hh3zN2xwexqKKMan1fet0VCvrQmQwyWvIVw1klvo6wMogrT-i0R6RKMFM2coTwpp2_vKUAyWVqlYTh-Bx7K4_Y16U_0NG2QWt61wKwA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "Ice cream",
+      "By owner",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great dessert",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Dessert"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJhwBcVJVlyjYRPxZ0lZIavgA",
+    "name": "Bánh cuốn Cô Duyên",
+    "category": "Bistro",
+    "city": "Cao Bằng",
+    "address": "Số 007 Tổ 4, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6204562,
+      "lng": 106.287521
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 968 095 881",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFc8LCkyTNfoJiedCkJ_dMmxpoZcuEbGxlPNnof0KfGsTKm199eZN6jnvB1w98bSp2zvm3FMYlSrxV7aspYD6QMDY5U9zh5ocLeSJF9o4djV6NpzBGZhf9-tCtN_8t30aZbfj14=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEyuB0FcTnMUaIzkCiAb_xR2N3zlloSqFvj6livdQx9RDOIF1WzLVFkGN8_wtVqkHkgrxyGgtFvabBFrwcNMohQMqyWcISD2FhibUkpfMw6Tcvyj1F1eUJ5gGdGkDjyVpsA6Zs5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHFGkZvAJqh7A8FX1hljhLD-UlG27gZKXmEWZ6uAjNbF1kuHj8-8AX06YihClutAZo-L239vwJGXAT-pgFJOMApka4T6NwounU21zxqWvZGSZPpufYLtClRlvB6BsSDA7gM20j=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 5 to 10:45 AM, Tuesday: 5 to 10:45 AM, Wednesday: 5 to 10:45 AM, Thursday: 5 to 10:45 AM, Friday: 5 to 10:45 AM, Saturday: 5 to 10:45 AM, Sunday: 5 to 10:45 AM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Takeout",
+      "Dine-in",
+      "Catering",
+      "Casual",
+      "Good for kids",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJd1ndUU5lyjYRCRc1wRbITPo",
+    "name": "KIM DONG COFFEE",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M786+R3W, Phố Kim Đồng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.66711,
+      "lng": 106.2602139
+    },
+    "rating": 4.9,
+    "reviewCount": 45,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 903 484 849",
+    "website": "https://www.facebook.com/vu.dung.562?mibextid=ZbWKwL",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6vdsG43qIUh0YRcyxI-8cqmEY4dq1wpgdc5_LPbkzuAiucS_cNbcuxi32GUCZSdEhbOpTadKxU21yiYeLImeIjbXqE8R71-qMAeLsWnQptz2AkmsuQ5VV1lx0XvstfgLS6RdA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE__3FzU4UPAs-1xhGyjx6Vz3uNVfAiVFVBlM86hKPCAh_yfWR_buiQ_G5MLrcqn7Esv5oZ7-56xpV5XCSI5zvlAXIKYoXdtrpUmuTz8ncWWTpljcpkgUtAZIbg-Oe2wFBNcjVEAmzvD1Ta=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSF4KXd5g3k4n6hJRmVexMdS0wYdRFRhqMchkB_FnEPkzqsZwHmXoWxerKssbzpb4VCrX-ukXguL7OWiryg4lPq0pB1Abutqhgn8Uh1iQgHNs7NNznATpy-yN8ZD2mFddh-7f2ZQ2aWBg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "Cold brew coffee",
+      "Onsite services",
+      "Takeout",
+      "Great coffee",
+      "Great tea selection",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJFynXhtRlyjYRkscmt0xRMRM",
+    "name": "Lôcal coffee & cocktail Cao Bang",
+    "category": "Cocktail bar",
+    "city": "Cao Bằng",
+    "address": "093 Phố Kim Đồng, Thục Phán, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.6630298,
+      "lng": 106.2603081
+    },
+    "rating": 4.7,
+    "reviewCount": 55,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 855 560 666",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLwOeyW757C5Mh5iYoffunpz-jZR0Kl5eudhs3hf1IG413GXqwbPu77oD4Eq1uSXJ5AUIjwLqv0V-0lf37JqDTHDa88qr51SE2kZe0DVUgtBBQ3D0b_b3p_ODTJ0pRIE82006GyuIPDpkt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH48z6j1mMw377dsChkiN8bVNT4rtI0CEptNLbP9nbI-Es7xJdxXuRuTYI_BX92YSg-Q1IS6-sT0Ci6YOski6A4o7MkHFN4a6y5jDkY66waUQq4U54elFV666lhmdzdnM_zbamnbsMsg30=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHnkUOzI3ZRntFRmRWT4rIv3a3M7SzAJBq5V-5BGDvj65PjsalSZBX1PVj4wPFcWg3VjLSn2RINDAyt9M_n91j_hdIh_weKKEWzhS_quFFsn679buzz5uZRIKfYUQaOxq7vQJVo7D146U=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 1 AM, Tuesday: 6 AM to 1 AM, Wednesday: 6 AM to 1 AM, Thursday: 6 AM to 1 AM, Friday: 6 AM to 1 AM, Saturday: 6 AM to 1 AM, Sunday: 6 AM to 1 AM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Spaghetti",
+      "By owner",
+      "Identifies as women-owned",
+      "Outdoor seating",
+      "Delivery",
+      "Drive-through",
+      "Onsite services",
+      "Dine-in",
+      "Bar games"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJEQUE2dhlyjYRecTDqGKnixs",
+    "name": "Pha Phin Cafe",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "76 Đường Hiến Giang, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6681621,
+      "lng": 106.2551412
+    },
+    "rating": 4.7,
+    "reviewCount": 49,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 842 565 565",
+    "website": "http://facebook.com/phaphincafe",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMMtT81GtGUNKDmT9UAqfr3kf8f4fxTeOkhWqKyixIlKRPGOnFSi_qQL_dgAduBsMLclDnF3EzR7HnR9rM-2kw2FVipvLgWzMFrkJ41JaMk81NlKTCAs8u7AoGZvjtuJLgt73zu92OSIvq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVZSDkngyJt5rCIQLHqwBO16WD5sbPJWmcRbpK0P5fEojRmRjb4CErI7NI0wdE-6wO4naVa7EB8nkzi039JZO215PyT9W0JKqzeLT1TRcioHTUW6AZ1py3W26msoYVDQIaI9Zgkum0YiSp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEe5C4GSTgTNhV_XByzYAF5JdxfoOLsx0NXuO0gMzEliv8u5SepwAJdoe7wZpkHBM9gEIjsKwvV2VA43awz18I2BdFTXMp4jvdVpL8CR6REteDJ4J4XjM1GlYpUkPeQefbJO_Qvuw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 11 PM, Tuesday: 7 AM to 11 PM, Wednesday: 7 AM to 11 PM, Thursday: 7 AM to 11 PM, Friday: 7 AM to 11 PM, Saturday: 7 AM to 11 PM, Sunday: 7 AM to 11:30 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "Cold brew coffee",
+      "By owner",
+      "Outdoor seating",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJbzrGl3JlyjYR_1wPy6QFgjQ",
+    "name": "Nâng café",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "075 tổ 10, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6680676,
+      "lng": 106.2543758
+    },
+    "rating": 4.7,
+    "reviewCount": 266,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 847 813 579",
+    "website": "https://www.facebook.com/profile.php?id=100085033421351",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPRsNiI0rXuWCqox0URfd2TeN-m-rLRJFA0M9Xg_r5LHcgHAvW1mNZZVjrGLyxdJhywDKGzbEQUXMM1kZhDDhDYv9EtPc_8-Zf35OEXZT2l6woILr2Lg4ZAbqxunQeKC8tnJa9PoTK3Tbt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbH9frk6UX-Uw9WnVoHlqG6FbDDc7E4oAl72LKBSD_7k-lOA7uKISarbms9n17OSlmVJNof4JDisJA1K-eVj4Mn4tF5jtVGrfQVG3ebnrD9gKkftZ5xUb8lZ2z1Ncf2gJUIywisBbiszmI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGheeAPZne-UP6w7vq8VlMgNllber3AJSLH-mNkTMQMmGybVTw_QkoxUvZSBgg4wCcuSi9BsZ-iCpzySbiRHl7ra_zjQ-z4Jic89cLQGx0IWNLUDr6dOs-gUdoejx5IDrDk5IGbB4trcN9u=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7:30 AM to 11 PM, Tuesday: 7:30 AM to 11 PM, Wednesday: 7:30 AM to 11 PM, Thursday: 7:30 AM to 11 PM, Friday: 7:30 AM to 11 PM, Saturday: 7:30 AM to 11 PM, Sunday: 7:30 AM to 11 PM",
+    "cuisineTags": [
+      "Ăn chay",
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Garden",
+      "Iced coffee",
+      "Coffee",
+      "Latte",
+      "By owner",
+      "Identifies as women-owned",
+      "Outdoor seating",
+      "Delivery",
+      "Onsite services"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJESDkGi9lyjYR8JsgPmamfHc",
+    "name": "Cao Bang Loop Travel Office - Daily Tour & Jeep Tour - Car & Motorbike Rental - Bus Ticket.",
+    "category": "Travel agency",
+    "city": "Cao Bằng",
+    "address": "No 076 Hoàng Văn Thụ, Street, Thục Phán, Cao Bằng 270000, Vietnam",
+    "location": {
+      "lat": 22.6678458,
+      "lng": 106.2585952
+    },
+    "rating": 4.8,
+    "reviewCount": 183,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 984 659 151",
+    "website": "https://caobangloopmotorbike.com/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGeujf4lunGQ5wWerGVn2xwoCpTH-jROBTtqwKYChXyaPCE3DaRhBbLuPRuKQKUtdiygju84CR2_VaM5yRiN74Ynk6ZZOCu29F4-iPzufSWAYZDXD2vEBEuj_GxzDdae0Jz_1HdCqNhTJg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQxPBsiDCQGm4ZJRpLOujplDHV0mKmsq9tx7z9U9kfxlvRmFLoanYJfTmaniTlCr8XSyAeyCDIA50fBWb-NAW5TZwWUlzKuMFyt9sr2tHNVGX652s9ICrTJqKgvlSbVGSqqW1pqA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGog9PirlccLgK1r1lT_Lgy0c074Kg1lOGBTMx9yuV1C5YeiRuGQdAqPfgzlSFLPrMhK4Dw1C3kR9BT9vlancA5t_EbkRamwcmi2VhvABE2BaJluGaWEVfHMYmkG6WKpgUc-IVDKTxyLl4D=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Exterior",
+      "Inside",
+      "By owner",
+      "Online appointments",
+      "Onsite services",
+      "Gender-neutral restroom",
+      "LGBTQ+ friendly",
+      "Appointment required",
+      "NFC mobile payments",
+      "Credit cards",
+      "Discounts for kids",
+      "Family discount"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJZ6O5-PNlyjYRetbAntwXv6o",
+    "name": "Cao Bang Travel - Cao Bang Loop Tour",
+    "category": "Sightseeing tour agency",
+    "city": "Cao Bằng",
+    "address": "Đường 3/10, Nà Cạn, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6649407,
+      "lng": 106.2647601
+    },
+    "rating": 5,
+    "reviewCount": 387,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 966 322 829",
+    "website": "https://caobang.travel/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkOO6ZNXFaAtWJ7_J50_8hdWmHqJ54xqSivVeUXJCkcgWNphTcspk3VVRCD3xkMjgeb9sjWcNK0BWS0-MjkURjdJZoWwPaFz6cYKoctHP1DcXjVHTdQsUe4ZSDYCy7iFo6Tpwf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHw0y1IFQ3TF3uJDEuJ3Ft1-ojMufv_g3WKSONsC0GmA2qQ2KZIghlIPxU4gDWUGJFcRd7hg-MSJT9BCcZDzakQG7KC0zVHUTm2pW4Ar266-qGTPnGZm2C2w_v7kYUAIbdJz3q6U_t1XUTC=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExYKrhKgHuqwdNvjeZkHOaDIW4FSnTpqI2oD3-07EiSsVZfE8zWVL4phy7tKYljf5N6_5p91mRwDXUHQ-SBjMp8tQJ7b5nQYM6NQnlkO9togda1-mxPV0ZAEWDaBEniT1YeWhQBb8SLVge=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Exterior",
+      "Inside",
+      "By owner",
+      "Online appointments",
+      "Onsite services",
+      "Wheelchair accessible restroom",
+      "Wheelchair accessible seating",
+      "Gender-neutral restroom",
+      "LGBTQ+ friendly",
+      "Transgender safespace",
+      "Appointment required",
+      "Checks"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJFfVzViplyjYRWCvpHmGZwgI",
+    "name": "Nhà hàng Thu Hằng",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "83 Đường 3/10, Tổ 11, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6558062,
+      "lng": 106.2691971
+    },
+    "rating": 3.4,
+    "reviewCount": 28,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 388 935 555",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWhVAc5vMHbraqC9Hc5tW1OAPd6qBc63bkziqNWv5qtFWuts8Yj5eWDNE55fWYq6kItIKMyjuoe0Cmk6pQ1DnG38n4Zvy-aGNrpM2gchoP0LZV4OkAvQG3uHkAJjXd7qVHYS-MmAwAGdb6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEs3T1Vi06YiU0NAQ2dGLsedNIGlxtPok5z2dex6-vm71wTqHHbiQsaAz402rPL8U9YuamPL0AjACmzukKWi4ykS55nCav3T3aXUmhoSaCVwzhc2k2ZV0c4ykZbnIH7eIIEUGgyz_xKUizD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGH3DsFNt69BsS_kqMd1FDXqZV455shqQovwcarkA-UYBZcYR_JVC8br4Hrqv2u8TggvIC-ZUtxqhr7yyBLUVLAUIBvmIjEX4CNZEHtdCA-8h4Q3Ex3p7VALwnmTnV8iXzzkE6OXxCU6le1=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 9 AM to 11:30 PM, Tuesday: 9 AM to 11:30 PM, Wednesday: 9 AM to 11:30 PM, Thursday: 9 AM to 11:30 PM, Friday: 9 AM to 11:30 PM, Saturday: 9 AM to 11:30 PM, Sunday: 9 AM to 11:30 PM",
+    "cuisineTags": [
+      "Ăn chay",
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Identifies as women-owned",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great wine list",
+      "Rooftop seating",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJvbT1UXFkyjYR1MUOEjY4Jsw",
+    "name": "Nhà Hàng Thịt Chó Dương Yến Huy Nam Định",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "J7QJ+FWP, QL4A, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6387144,
+      "lng": 106.2823145
+    },
+    "rating": 4,
+    "reviewCount": 28,
+    "price": "₫1–300,000",
+    "phoneNumber": "+84 915 850 412",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxZ9uoReUoccjzNVeCutfyX18aI4t8SkLYAbqWb12ymAIFsjPuveh6ruks1Oy9eP-1CY2xgo-sEGHf6K04P9-bQn6qW3DKdCqgHI5eovHEAms_BMC52VEQvBqNagJbg2BDteS5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKTGsWWo82CgbYTdEUKbkG_XAIRVQvtOT5ZD2BzV-y7ACBs6T2nAb6uw6eIrrFz7fAwmqntKwUsbPzwHEHHEYAlZa9OTJmkNuO_MMc3KGmxofc6cuVoAJXXJK-zAMt1bANEUYbfA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGt9nJsPuyGe13ExgijAtABP2tgeoefSF9nm_h_x3y9widNoBpUnlTDpdI2Y-IglmunYqUwMuFdZI6TH1M8EjbsF19szmimP178AFxgfLQBij7K5G0IbkpT7LtvOCH_iYqc0j0y=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 10 PM, Sunday: 8 AM to 10 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Delivery",
+      "Great beer selection",
+      "Alcohol",
+      "All you can eat",
+      "Beer",
+      "Hard liquor",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJs6afagBjyjYRRsXDr27_A1c",
+    "name": "Nhà Hàng Thuý Cương",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "353 QL4A, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6290492,
+      "lng": 106.2919878
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=j5Qj8bro67yNKgrKTEBhqQ&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=64.20804&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Dine-in",
+      "Alcohol",
+      "Beer",
+      "Catering",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJp45bdgBnyjYRzqLbUUkagrA",
+    "name": "HAHA COFFEE",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M6GF+H33, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6763865,
+      "lng": 106.2226637
+    },
+    "rating": 4.8,
+    "reviewCount": 10,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGapI_r52u2YZcwRsIW-xtpeL8l-kmGiQIIqX33G8EHilVTdATclfQmSKeDWbAIdf4Ys-X_CAGmwGFPjTmCSj0x5na-zEsW_q8smJ6_2UJQd2pJ9-hKrr2HJ3i2wQRKRQgz7CUM4kE1_00=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkb0bNZxqRiDNC9kpXaqvsW68_eE6-UxNIeCisKvcMzxxHKG7JhPlmII6lwIuNm4W27Um-EP41dmE4M2SVe3PzS_EugomXPpreFc54u5mDsOgZ_qQO6ePY4tPgrKT1-_Nb04Cv7OaYPHAX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE1im9Yn9yDGU0BqTbCpLdtYesfyz29XssJdsk2a4E-5A0ooFpyuPBFsJg2ITojGHfDSREMg6SSEHoghDKRMTsM6LVcCr5nclfUkjkSVye3YVOwj5Xw1urASmKfkE0-sPjoSI-nQkSoWkRX=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJNRyYOgBnyjYRuXejkauIB4M",
+    "name": "Huyền coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bang",
+    "address": "Phường, Thuc Phan, Cao Bang 21000, Vietnam",
+    "location": {
+      "lat": 22.6766948,
+      "lng": 106.2182923
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 848 498 688",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWdUja7CC-iOJvSJJhcREzRyNj1bT7z7iyaziflKlsESalerSDnnwgzl44Cjp8XwzXOMslgoYDRmQGXBJ-ndxF5dK3sVmWmskuJpM_1GQhzfyLWJ8tkvK4nKg4dvYe8F26fDkU6620bzvR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdUeF3MDWU-GDwzUtrC86qJGoDj3YoZFUbVnWxDNmV0q2lSggPZh_yFoQDM6SWd_PJ8AQ2xJVJdbHkxb3Ry8yuGRr2NN6TLfZL6YebBxdFn-gM6sDjdZQ-wJX9jDoDoNvwbXBXDgIeiC9S=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8jMO3YQkGyvuE_YUAK3SId9A4jzrmaO-qTLIpby1ckfZlFzBo4oVT6NgsydR3nIkNlcT-DiKeBNWYPfs7zMplYPjgovnKmZ9alMUX9pvd64RnxzkMbJOroyl9CC2UsWQUpFA1LvQVVNBe=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Sports",
+      "Wheelchair accessible parking lot",
+      "Wheelchair accessible seating"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ06n5eQBnyjYRCOHx0CH9Enk",
+    "name": "Lạc Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M6HF+Q9X, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6794932,
+      "lng": 106.2234873
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 836 350 270",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUcVFEHI5e8eNjO2Df_OcDnqW8JdlC2bryySEk12gjXAIjr1FTMR_UWudgtXuju-zwhhF3Suj2m1_N1InDr2b3x2ctkzEIRH_XgcNDH-kZkMGTefEZdxcDASKCfIVwj-Ba84lHR6KfcmY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMbtPzlBBi5bu90240ZkMUqbT2R5MFOdXQxOzf-2dPFTx0cHfFQKuy_ewFSwNWwJ3i_WIrMhwPyFWP6-jzmD69am-UmD4VQBh8Uh0CDEf38gQHBeiWbUr-Iv6DUTsIEnFChFob_4IHHIc=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=_fo3_d-OolGYG2z9Gpyk1Q&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=47.471653&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Great coffee",
+      "Great tea selection",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJEQPLmyNkyjYRsFNAalM9DU0",
+    "name": "Cafe Thanh Hội",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "92 Phố Thầu, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.66279,
+      "lng": 106.2605258
+    },
+    "rating": 4.2,
+    "reviewCount": 39,
+    "price": "$$",
+    "phoneNumber": "+84 206 3955 240",
+    "website": "https://m.facebook.com/profile.php?id=284090935023583",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHY3rP6sqwua9BxRv7L2uNo7RUECn_aY9CQPdk836QHgLXHsZ5rpjwMr5PRVREeMFVT2EfJXSnXMbyuVj9AEy4legM7mq6GAl3xl-6ASpeXqjIVEhikYu5S0o0FlW9Iwtt9ylET=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFrzBTSd-xGnKKlnvrC8hW-MG0FhWtIyM7BYTlYv44reAn29I0T8uIVMeYM762opLN5yYhI5l0L7TeWB0UAsWcpBp4pwOqQPHRiOqZcakjW8iacwclxYV4XXSeyAG1YWjgN7AA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXcKFXbfzDK0PcGIYscl29S03AdR-U3nrvfHk3ovtMvphnuhMP8CeJOfTgWTSJGoznovqMI49RJzCMbP9L55K5E_QwkPubnc-PvwgoZQM5ZeFcnp1Ot3eWtbVj3CEi31KjswMjdA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6:30 AM to 10 PM, Tuesday: 6:30 AM to 10 PM, Wednesday: 6:30 AM to 10 PM, Thursday: 6:30 AM to 10 PM, Friday: 6:30 AM to 10 PM, Saturday: 6:30 AM to 10 PM, Sunday: 6 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Cold brew coffee",
+      "Outdoor seating",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Seating",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJy2Gu6iJlyjYRrky9YTCrle0",
+    "name": "Cafe Bà Hai Sài Gòn",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "Cầu Bằng Giang/008 Nước Giáp, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.670011,
+      "lng": 106.259444
+    },
+    "rating": 4.6,
+    "reviewCount": 7,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGW1U8uYR68STWVb08oPmM4hRHovh58wnB6jd99J0Ye5nKFiaVNwVHWXKBFeIwCP9uHniz7En8RMymBqhq05WKQpLTdy7eW1C8LxE5ducNDwmJOLyJoZTlVSM4ei96BYvvxW4-K_Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMNTOnUjproxBOi9Vo57vit-mCgKSLktq-0EWrZIMJnOxcR4zM3DCmfbbvzoorVjCZdDLklHScld_4S_ZtJzOnTdS4HWb7jHW-2nfbk49GZ7sr0N7l4Ma6JPFQ09O3qz6G1k6F=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGVBIpQyn5spxeZu9pWFksv1in5lTIWA7dPpomIjFOuwtJR731jIkcXm4lo_waXT0nq05G6aB61mBWGbpE_1-Pme2QE4-_lzk8-YgPiLYOYHm0qSpRuFwu_G6bAsbp9ynK-EZQc8Q=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Coffee",
+      "Restroom",
+      "Casual",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ3zB-JABlyjYRRi7PRGC8PBk",
+    "name": "Lapin Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "Kios 8 Chợ Xanh, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6657428,
+      "lng": 106.2618408
+    },
+    "rating": 4.3,
+    "reviewCount": 23,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 912 616 566",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE28m_tDKLc89_e2mcu0-GCarfmlFLiNzttzfXcvbZOSEDnOaKeSUCj8-9NQ4eYDPLY78UMxIu_qbGaZbwfpY42OZzed7Mb1mcBnd2-4rmncDF-EKyAbKG14E6eQHobDqMiq-187A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHx2aHuiJM9fmkf2F6dAGKjO0XaSxvh10BPKFE4O2n8Vo80RHwVygoK6IeRpUxhnU_F4GOOwe0W11S_4v3ExOuKVeLYhv3nlDZQHabhApFIydijasE3KDvqXsqCNmygm8Ykzs6bKj58rCWz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENS-L7k95Rw5EpA7bbutq90CFZ8ILii7zN_wwbx9TD1_R63xlpu02ZTHkIXKppYkpkqv4OmMxeiKIdEVRPMdO-sVWQnV89eoNEzS2dMmTVtYCs97cnuey-GD0DX2Xynjltk1sOIgbQzjxd=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7:30 AM to 11 PM, Tuesday: 7:30 AM to 11 PM, Wednesday: 7:30 AM to 11 PM, Thursday: 7:30 AM to 11 PM, Friday: 7:30 AM to 11 PM, Saturday: 7:30 AM to 11 PM, Sunday: 7:30 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "Outdoor seating",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Wheelchair accessible restroom",
+      "Coffee",
+      "Seating",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ1w8T3_tnyjYRaPALjX7veys",
+    "name": "Mị Cà phê",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "047 tổ 10 Phai Khắt Nà Ngần, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6720315,
+      "lng": 106.251538
+    },
+    "rating": 4.5,
+    "reviewCount": 22,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 945 156 333",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEG4wcPMvK_UKAx-1z-3ZtsJH5BHFKQtC5ODL1c4RA0mDbEGXRYoTZYhHGVEuXN8X2sytSceAMHFCqB9jqdRPxIj2SmMLHyQlfGVdsIrsWNqFdrYn_Ck0xsCpD4cmTbWW2RKU5DEIaB5vmh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQ2znEL_iff_VrLdMPjvSVnMNXT7W0XzVcYtWsTETvvbukro7C4RPdvN5L6CbUkGnNYjn45BcbHhC4y0SpKhY6uD1tEylfk2V4BqlyNg-iLKSpysrCyEjVRs_rjqY5gcJXfCfE4tZMZjkC=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyPn5NYFYy9ZTJ3IHg1Ci-vT_5X9JwAqSJo2a2EV52_0Z4nHEPKs3pLM3aKsuN9l4B-2_iMm74yIxkD_18JYpF2GTsBKCwDewoT9x-T5hMUcwqU-gS_QqO5L1f77u_XojvsFJf8g=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Videos",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Table service",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJT45tL-1nyjYR80BPg89o-bU",
+    "name": "Cafe Quán Trúc",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "QL3, Đường mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6787311,
+      "lng": 106.2471923
+    },
+    "rating": 4.1,
+    "reviewCount": 89,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 206 3957 957",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqKRl0GjVc6w8H0JnrNQhm5ccnr3NbwzpeBCSxmmRQ_90MNCD1Mokgov4zgiXtDw59EKt4pUr-JZaiWavxjm8aAglNFl7IsFs4rd7dhktzcHaDxftuWYf38cekLjyALF0rl7bTSQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-y6kSP7g0wNBr0gTdTZYTVVMSMUBwrHpJp9umAIJV622yi_rXLyo4BmQL_jEmqNkNMAV0ohXkCKBjoSExg0j4_9V_3JtTm_fe54xHXKqazfi1FOszcHy9JsnaafM8TRvwHDs=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYeuxV2Gv_Y-G9Iqw0bCfLpMo8WqwSHrUYhnZYwg6lsvkflHzy5-7WhJF3WjPkFPK4zziP1DMUcgo9ZZNL4lKYO9hq198n0IcwhgX0jPAefnkRjpgqHv6H0Aa_yFpFm-9wOcmP1AQHFdg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Outdoor seating",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Alcohol",
+      "Coffee",
+      "Quick bite",
+      "Catering"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJMdGpGQBlyjYROZDiNTaUyMo",
+    "name": "Quán Ngõ",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "72 Phố Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6637427,
+      "lng": 106.2553655
+    },
+    "rating": 4.4,
+    "reviewCount": 7,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 336 063 989",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUz0qElx5TnWo9MHJHoRpGd-vUZ9uP3HO7opFA9RqkqStPsGOUfsLasQtnxg-V4zP4zL-GhVUwEBZ9EcmqOaph1VsVnGTPiURjOqAFDOnAp74yEDWrY18vVIZUbMiksqC5l8wqgOTYM0o0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEU4_1gEXWIy44MSxRAZrSUh4uU80zqe0oukv-n2rHXEURsMFiReI2vtBWTh-YSLjTh0H-buu1Gu73mv7IlL_MEcUUR-gO7X4AATFGU6qpkBPB4tWIHlfI86va6p2KnZHhWIt29oa7gm_s=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7xbYKAikUFS_NZAaNqe50mUzGKUKZz2hI77-6jWe_tjpgqQrNmXnkSnQ3MD25Vzy8_Na1J4T1qfFUUBgBHmVpFyUULB3_6fYVrKfoDP3Pn33NR7GYkcYpai0ydFWP2fOCqlem6_zUJmA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Vibe",
+      "Great coffee",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJj1xnF-9lyjYRmtxRLPE_yQE",
+    "name": "The 8th Rooftop Bar Cafe",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "1 Hoàng Đình Giong Cao bằng Cao Bang Province, Thục Phán, Cao Bằng 21106, Vietnam",
+    "location": {
+      "lat": 22.6659002,
+      "lng": 106.2564932
+    },
+    "rating": 4.3,
+    "reviewCount": 45,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 944 000 055",
+    "website": "http://maisoncaobanghotel.vn/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEL1SNJtTVvG2fuC-cYg1gRUGo01wKWoDTjRHBc1ThicBc3mPc8-Cm3kmyUEpIpsy2qfpMApchED2oLnc0KRW0vXCfMTjKexGuT7esmMIQJCZNqEJQB9LtybjtnR_uuNW_e54i_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXUP6Wvb3hy2pEWdoFTuTs_xBcdK1_72s-anuq-a_hehOmcQiUHgztLbq65Y_SC9qIpDt-gur14esclcm9DaocO6CvNgfrbWZQObmKdIPeHnoh3hsmN1p8cphu1Ox2LB_to1o=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFP-JB-Dv5yeJCZawJaFOCa3YxtKulqxIttQ5uJC7p4_ue45iYP6ueC22nYJqVFkrlWoBFWkaWKIpbqwzkj1fAHknsHUeY0pDCXTFZJI8b8KBNbFBr8DE-n2rhetskFRjxqpYla=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 PM to 12 AM, Tuesday: 7 PM to 12 AM, Wednesday: 7 PM to 12 AM, Thursday: Open 24 hours, Friday: 7 PM to 12 AM, Saturday: 7 PM to 12 AM, Sunday: 7 PM to 12 AM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Hot chocolate",
+      "Cocktail",
+      "By owner",
+      "Outdoor seating",
+      "Dine-in",
+      "Great beer selection",
+      "Great coffee",
+      "Great wine list",
+      "Live music",
+      "Live performances"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ16caVthlyjYRF54fZLTUNg4",
+    "name": "HAND coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M777+RWV, Đường 3/10, Nà Cạn, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6643311,
+      "lng": 106.2648068
+    },
+    "rating": 4.4,
+    "reviewCount": 16,
+    "price": "₫1–100,000",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_PPtDWHP_4F7751XLXRr3Dljmo4o2Jm4GoJ1znW-UDeznALprqsgCiB_srDnYJaqSKTZS-Wi5RPtmgHBuwDe9oymGJ7hHnMw7MZQu8xZqlzgxF2AHAn9fPwZ-EBWwjANFl5a1i2X336k_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFH9pzyzmFzdxC4U86r0VNQb5Nl0xXRRw5KY9GrYAPiDzUdvAswi92poASSOZI4Qgsb_uTVWhF75jbgSToXUtiPcAMc60LbeS3D4GW8RPf5YMWbRxJdCYgdnEzzYpS8r_FtUtbCxlIsUsR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFjrB3YZQmYmW1UtaCFYRyI-Sh2614sZBH94bBGTuiWtPxAagOCB1wkk1Y0pSvzRtU3zAEU8COESZO1zBlQ1VDFO2Py2mlRwBpJ6Fu7Zz4aseyDsmfi8Y0phjwWp03b2exdDPv7Jg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJYabDEQBnyjYRPXEIwQQoo2M",
+    "name": "ĐỒI cafe",
+    "category": "Coffee shop",
+    "city": "Cao Bang",
+    "address": "Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6691237,
+      "lng": 106.2517422
+    },
+    "rating": 4.7,
+    "reviewCount": 14,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 827 595 111",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG59X6aHk6EUmMsREF-Ag1ZeocyqGw-UyztztkOZRU2xqVptwEdKJHTxUPhSSiK24ZAy6WHSwxuy9qsFK78A2h3VEClnigWmQbmkVuq139WwRVPtVLvIL92jCCdEIb3kliBlQqvSuBeHpQJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfc1NVmyly9ugqaqmF6Tq8B_T9dpmm8u9S3Sp55LjmmlMipXahEmMmC5QJFHsXbHJGrSgvXQSK6Y-WjVN5ac2WQbwc9wNe2OpYiVB-WYDFzY1V8Ql_Oq094OnrSwvYlixAfA4kbeI_q8mN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXTJVw45hNF625v6nGC1sXovE-zXQyrJolmVnCnLR0RYC01tQ9ULBBebe7DSZNs-u0msXre2g5FD4uxP9plzyAgAbBGXUjwvuQUc2R7aMg2mjyzU5yZ5Pzb2EW3tOlaAPWD9q4qgZE4TQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJF_7HNgBlyjYRUtH-dF_R7VE",
+    "name": "Cafe chim cảnh ( coffee and tea) TỐNG KHẢI HOÀN",
+    "category": "Coffee shop",
+    "city": "Cao Bang",
+    "address": "Nung Tri Cao, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6804866,
+      "lng": 106.2537427
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 834 236 866",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYaEINwes0f6abUpvRlqsb6sKBMwYWDW6Oxvv9drboveTPhtFc2LH-A-QIAE5PsTDmqfhapWwtVBuYuRpSTAye3Iz7QarqO7xLHAYSyl4nqqt_NdbV1pwJebChEhWKHsdVr2BR5C6kTX4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHax8dZbvHyCQ-FprgDzUJ_LBXQ8O4JgEk_h1iroLM-Qy0-dmMvpXWoJFTyjOdOnTFtbgAkW9OMegEUTB0Y-J0aNcOxNnOSiTeD6v-yBsiQItHCOPyHH9eJw8TC93WnQKCKb9zQGyyos8Ut=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWx-am3Hs5Lj-cdAJjEUEAZ5hG_jl7u1Nk_uc8pxS04PY62ko82XEYb9_nHoD9DCAIjjZBwiAYvUbbo7Y9EjAAsqzsFyfdpr2pPepqn4UmubiTpgSDa9IAz_tuOoFENfGj6Tsrv3NRZC0=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 5 PM, Tuesday: 7 AM to 5 PM, Wednesday: 7 AM to 5 PM, Thursday: 7 AM to 5 PM, Friday: 7 AM to 5 PM, Saturday: 7 AM to 5 PM, Sunday: 7 AM to 5 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Great coffee",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Tourists",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJB5EBKABlyjYR7f8hLZsCl1s",
+    "name": "Cafe Diệp",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "4 Đường 3/10, Nà Cạn, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6585016,
+      "lng": 106.2670726
+    },
+    "rating": 4.5,
+    "reviewCount": 10,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 915 159 018",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExYd2QrvysdZTvb8J2wVHG9lKvc2nbPLCF9hM60FfbXrGAjwnUzhorjpm0RB8fFurao_UeWy-8BWrrhrkgEYQ8sRctFqIpSx7VcXmOGBK-j3_SxiKqtOCVMbTpPzoANrWJjAg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkMIPERGRglLVgc7xw51pN_VcWOI1_dpGGl0m-s4X8qenVBWtMeoQTuPXYtWQhpecq9rzWM_3GrjMofl8OpnBLLvJVoQ7NgdQRJ3Vc_rOjBJBr069IHceodn-IHQMVZip2JaKShWzkt4k=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGvSooCtVc8RyMkb3im6g2Ib7p8e1duQkznCpfhx5D9huTxI95Ob6IlCOr5A5687JbU_wf9DHXZOTUt7wNXfsLrPTXpZEI3BBnXviF7wfJfzW45lf1-xNxx0MmHnPuWg-3XKB0zfR2B25Q=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Food & drink",
+      "Vibe",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJy0B7UgBnyjYR3m9aRVd26eQ",
+    "name": "Shu Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M782+X2W, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6674763,
+      "lng": 106.2500787
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 976 159 922",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_Blhu1AfqE-VvaI1JD0eZ7KE8or0SRCuZp1xWGyn3kyd_73LIHXNqe8vX_Wnm6lPDNiIK_HqdJMB-iZ5TDtKEupt7L9V6MYwjnl9pm13gaikpx_NIfG1mpGMjzCvNn3CNDgX0TLHfED9I=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPjiZjuf7caUoclls0gD38DPO_KhfVvkyeQAfvOHTRV2FFIMs5C_PUZXhxuUwd2avEcFzehdgxBxqWffFj60JHaFP3nF4Dtf401mMSdHqdjsJsdeLjOOl2GRFzvKAHqxSGw_3KQdn3So9B=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsk2uAv2vBCNDxlXetg2tWBy0sAFSRAOCNjdJ4A6MllPF28rrocXZJxcXigKIsoYEjgE5KgMnFjAFUWhzj73nPeiOQjZ0tuoBLb_30kjr61Kw3GRduI-ih0qU5JRUac-6jDuA_p16fr8kd=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Great coffee",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Tourists",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJq0KW_SJlyjYRDscucPkP8ps",
+    "name": "Maison Coffee Cao Bằng",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "M7H2+VWH, Gia Cung, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.679689,
+      "lng": 106.2523552
+    },
+    "rating": 5,
+    "reviewCount": 24,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 348 600 444",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6CayjOA8X0zHrKUWcxtXewP5ySpISVrC1U9x8e2DDEXEYIW6tjog3audI_-k7YPwX0VLaus3mOCP4yXylNe-5CrNqAWmJ_wJaEynQJtsCM3dUEwBGPI80Vnd5yY2wD0NdA9s=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElNvhR_O9RqBuY0uTc6_7br9z4EU3UAVwIKyjAMvZQVUfFCgiNoaokqdTe0tq1Z9OjagmZ-gIug2LuH1y0q_XYNSgaHLhowjczyhgJCNpy3_lp1cpLKrqOGeXzYm2LZZpNcSMxcA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8av83IUe-xewKRGJmrLRv5lHm5MFmNhlJSBBG2Tq4uIV3OXLQUcOAltxy_k2JiAu1Bcly_Lcr-srU5Ejw0VzCBncu4QGUirhHNwfEVXkgl43LOYZXNEh5BZliYFPbrj3X7w44=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 10 PM, Tuesday: 6 AM to 10 PM, Wednesday: 6 AM to 10 PM, Thursday: 6 AM to 10 PM, Friday: 6 AM to 10 PM, Saturday: 6 AM to 10 PM, Sunday: 6 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Coffee",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJCfm4Wn9lyjYR71ggTu9_Hhg",
+    "name": "Mơ Cafe",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "044 Phố Thầu, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6637874,
+      "lng": 106.2608671
+    },
+    "rating": 5,
+    "reviewCount": 8,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 385 887 852",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcz8iw6Zi2TbouJ52J7elFKm-kAc2lhNeu8MZERlFJK1x6y_kw22xhtoOR1jkCLsE5OgYm8lie9hVDgqX54H9XcC2PgExy8ctUGiQT4ZeZGREJKEfYuffePx1ZzQLTDYoMrE-v6x4tOiiv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEEZ8MjuTW9X8PkQH67ZppZRuUk_cv7WH8cMYMB_8KLLWNfCQbOt-3oLeZolItfnXSU2j-SNXb1IHjeamcXdt_o4rNTl1SbLYTPWQUjqP-H1sCFXcbwCBvrESUSrKswLJrlKD-YfxX1fEU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF47jEZeDPextYCWKyQuBWjR2hKBGEn1qFNZYYxzVyVkoCrebkelMTLNw4oNamKKwkAu6WMmRYubEPenm-WuvXN-0G3hd41vGW9_gTBbX84GFfheU7o9-mIsr--1pGIc_W5tT1DE-4oLuI=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Coffee",
+      "By owner",
+      "Great coffee",
+      "Great tea selection",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Tourists",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJs6W4bABlyjYRs_Hxxoh9Gl0",
+    "name": "Underdog",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "M773+QFC, Đường Không Tên, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.664451,
+      "lng": 106.2538647
+    },
+    "rating": 5,
+    "reviewCount": 19,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 834 890 404",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH433qHmxeXHp538O5y2KuzoaUI2afEyXncetlJO8WL4IEo2huayWUy1nRdepgRcrckqDAFTzjUNf6yJybQrmED21urr3DWYl5xxnPa3MuC_ZOfhXoAM35eM0wOUDFe2qlhqL9H1UYKBfs0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFq5R-iO3cejdSUEKei_b-ksj1zZ17-c_fBTex74ndOlw0luH3I3-bP0Mhx21mJcwEYNz95XwxZoAkvEfZ33yQ7uxlNUBllM_5b-_f4VP-fkKwllNxYMeQAXOpPTJaZL-Npd0OB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEk2oZz1x2QRraPzNpWZypa-Rz4wZbOIq8keWKCB5H88OZhS0KoT35LkE-Z1RBCMCUVkisJg9FNfWYXsBH6U7R7Quv-5rwQDt6-0cYKxTyeSIOCfh2uQXKxvBlXxSfE6X53spa9=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8:30 AM to 11 PM, Tuesday: 8:30 AM to 11 PM, Wednesday: 8:30 AM to 11 PM, Thursday: 8:30 AM to 12 AM, Friday: 8:30 AM to 11 PM, Saturday: 8:30 AM to 11 PM, Sunday: 8:30 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Juice",
+      "By owner",
+      "Delivery",
+      "Drive-through",
+      "Onsite services",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great coffee",
+      "Great tea selection"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ82u4QSZkyjYRMcwmhNdrVog",
+    "name": "Nhà hàng Thu Tường",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "38 Phố Lý Tự Trọng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6683497,
+      "lng": 106.2564516
+    },
+    "rating": 3.9,
+    "reviewCount": 343,
+    "price": "₫100–400K",
+    "phoneNumber": "+84 206 3853 826",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUJNBDEsjvZP2b4rnV7C7Ek30VKsRcoW7gY4huyBsocVZommLNvwsydqyWkZ2n7w4DWAKekcmtauYzvlS7EhvYBv1gKi16g8La-mOCWpoo4-kSss8msfKKwm2akhhd-MZL_N0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMH5M1Y_MJKqdm6nnh3lrtxVCAud1pll3FSZgE-2zkwKGlN7DJN0eSHcHPxjilNAn-VZezjxT0sIRBkrSboiIJys4Zgy6DN3QocuAlIS0l2WIG24Qc_6mJIrn5d6-kbETsAyS_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-3rQWQsi6f3rkICV2w8MUiZzr4BpBd1ssKsVoef1-sPak07njfVocc-GeWmvq2FOt4NIQoSQoEuWT0_2mAbhCiPExbyjIa6DJx2YbEZpekdTSA-aWdCzFV_XKaEWGHOJRS7T5aMP_SKA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "All you can eat",
+      "Beer"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJOy5jhSNkyjYRfrBXlhfh6R4",
+    "name": "Home Cafe - Roastery & Specialty Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "79 Kim Đồng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6633568,
+      "lng": 106.26042
+    },
+    "rating": 4.3,
+    "reviewCount": 61,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 585 188 988",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFezbaaZdf-bh3zwPTBEhWEWv5-Nqjmf0SZqBvybYBbUyoDcOL0TVqdh5uR74aeKr5EzQReLl3wywHJQzHE3mMt4VCvSi4tAvdTwzE6LxCwSAg1w8PidHaJTH5zyicUWmcHa-8q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHjZIWTR32LFDsnLokY2Me4s_tjmgGZkD9-mFCRzUw5vAoix7yxXYObNV2XeB1-vm_LW81pJiaN6y-XDU6odsrUau2P8K_Z1j9dF1hPNSkdEayLd8noc4Lj_hTvhIxIlNCxIwfWlw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnjeVdHdZox7_3aan478nstnnyRnge2FmrQnyskByHDQqUuqbmvzpL8TCTeZQKcHM0P_Gs99dnFWAWqh3PqIYUfmJJ6rLVkzC2KEkCnmHjgIY2tQBEi73ZBRbcKbcgj3fhotgOFw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6:30 AM to 11 PM, Tuesday: 6:30 AM to 11 PM, Wednesday: 6:30 AM to 11 PM, Thursday: 6:30 AM to 11 PM, Friday: 6:30 AM to 11 PM, Saturday: 6:30 AM to 11 PM, Sunday: 6:30 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Iced coffee",
+      "Coffee",
+      "By owner",
+      "Outdoor seating",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJnxpVHwBlyjYRxEJyTOK1xPs",
+    "name": "Aimée Coffee",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "20 Đông Khê, Tân Giang, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6542763,
+      "lng": 106.2666603
+    },
+    "rating": 5,
+    "reviewCount": 6,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 949 868 713",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUcGSqjj_QXJufUM_5GnkCy2dPx2dd3mW3oE7buCDPLv-OFcw5sX31MToJVWS7vmYnr7UzApswVCraUWvH3eDCBLrbnsJKZV6xqjT82hsGzCYi_D11bEV1LC3TKRNtoB18TiEpJkCZJqGD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCispDjOrkcsv0tEaSTvBL3-1HstMFOcwxc4AZpoj5LSQMQ_N1MIryi6dE4gdrsgakoAIJgvrqHOHQBJNBMPplnW8RKaemj4ZD-PAAnQv-0arG_sgT3jaquEQiPY9s5Yi1Jfd1Tnhlhj8P=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=MvzOuEuBnhnOgOkymnUNXQ&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=32.424812&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 10 PM, Sunday: 8 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Coffee",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJcxWgZgBlyjYR3dVc4tXVjzU",
+    "name": "Fenice Caffè - Tiệm Cafe & Bánh Ngọt",
+    "category": "Coffee shop",
+    "city": "Cao Bằng",
+    "address": "9 Hoàng Như, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6641306,
+      "lng": 106.2594405
+    },
+    "rating": 5,
+    "reviewCount": 25,
+    "price": "₫1–100,000",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGCXzfDGEH6Kpg9fjMm5kLz2Bne9x29uBzs4JkClOIGPHeu8nlhdnsL4t8Lk7v7Ls7qHzP65ixp23J4r272e8tDThBo6AXUxhwl4IP72kaYWx2hNbDGSj99XRV_qAJ8LT5sRghSQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2Ye0oHxyAxan-R6CcTPI7z-1eHQwyxNaPIrs-7Adm39zZ_dv61BJnQkdWlNdV2O-lwxUinNfd4TQwr8sVqVORwEn5nPV4oF3HMWGg-OVN2lKiUHSEdH4xD5gWMQ4OWC60xKZ46cqy2xZP=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBBTbpDeHjGYo43NLjTtuIi3VxWI7pZW7P-qWsSfQMK2885Ww0ygH_IWLpPVcOjWFwiTqyhwX8I2H9sLVuxfh_53tb_rnlywT_fCvtQI_Ha0TGEs6kg_q3lSvdQQkO7NjCg-In9wKdOsk=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7:30 AM to 10 PM, Tuesday: 7:30 AM to 10 PM, Wednesday: 7:30 AM to 10:30 PM, Thursday: 7:30 AM to 10 PM, Friday: 7:30 AM to 10 PM, Saturday: 7:30 AM to 10 PM, Sunday: 7:30 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Coffee",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great coffee",
+      "Great tea selection",
+      "Good for working on laptop",
+      "Table service",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJPdujCIZmyjYRsItBovPzR-Y",
+    "name": "Cà Phê Ao Quán",
+    "category": "Cafe",
+    "city": "Cao Bằng",
+    "address": "M6HR+3F4, Nà Cáp, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6776251,
+      "lng": 106.2412078
+    },
+    "rating": 4.2,
+    "reviewCount": 293,
+    "price": "₫1–100,000",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcduGQYoGq5VAK8pn6tZ8Ba_KVzXlDW7FDv_u8qHeN3jwOCvvn-QxzVqqIWNu7QnY8PesB6mZwsQqx6cJUyrbeMbwhvzRHL4nefhDlKbXTWGQbl787p2fxDEL7fKR-hKtO-Ts=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8JmKk0IdoPefAVAUUiT-ef3JW20KG5m8kpAR968qzAgltEWR98CggXAEWy-JUuiXk2tBBvwzohJ5_vE-awpela5FRBdwSILV10nJYMTP4A6M07sKDKIfVwK25Xpe1W2jtW-Qblg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMHFDh7KfM-jxcxLLrLeq6ffO3nHBHgr68PGNlw7DH0_Z8w6teGCto9D6VwdF8GEG08PHLJN6eSZWrJ278d4DI9v6r1Z8zLnG34NaBBm2teLS5V_cXJ4_v9azuxkT89Y0GOB8engFgA-ip=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10 PM, Tuesday: 7 AM to 10 PM, Wednesday: 7 AM to 10 PM, Thursday: 7 AM to 10 PM, Friday: 7 AM to 10 PM, Saturday: 7 AM to 10 PM, Sunday: 7 AM to 10 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Garden",
+      "Outdoor seating",
+      "Dine-in",
+      "Great beer selection",
+      "Great coffee",
+      "Great tea selection",
+      "Great wine list",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Cocktails"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJHUrgi6hnyjYRR5z5pxC7-sk",
+    "name": "Vườn dâu tây - Vườn hoa Trường Anh",
+    "category": "Farm household tour",
+    "city": "Cao Bằng",
+    "address": "Xóm Đà Quận (Khu Cốc Dặm - Bờ Sông Bằng Giang - Cầu treo Sooc, Nàm), Xã, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6833858,
+      "lng": 106.194996
+    },
+    "rating": 4.4,
+    "reviewCount": 12,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 916 899 495",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH07G_GtboKd16ZTtEKP4gKUjMfI2N6bWes9YA-R38vuPYfXsA1ZqLaRJOX6YB2Ju4a6fMBUW-yt7NJq2TTVMhEgGfuCuTmGJlSB3pOljY_XWcTQkJIPek_B5tp6Ja4CYmE-sXm4A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGf09Em0qrJlWq6TsI8VuMoz4FE4hq35FciB9yBPSitMD27D3bfl3D9RTX3wPG6WzVROD_nY6ECzPWXANA1k_TA1oRaHfgun7Sf5Un7hS01P4LXs1IpwtTEhssZrJWP6-p1J0X6oyA9PXV-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmvYrzgbjr1cqH70lZqGkPAR2FHmlkwfxJBcqJ0IANZ9tAlntqilzAbW5N6YqvtYaqXNLTKBIEjNmZzMVjCoMHn8Qkj8Ag4St9XXWSHeI0n32P9c_FIdMieR8mcOOAw2Fvk2Z-=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 6 PM, Tuesday: 8 AM to 6 PM, Wednesday: 8 AM to 6 PM, Thursday: 8 AM to 6 PM, Friday: 8 AM to 6 PM, Saturday: 8 AM to 6 PM, Sunday: 8 AM to 6 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Fragaria",
+      "Videos",
+      "By owner",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJf7bnCY1nyjYRCt44YG40ydw",
+    "name": "Nam Phong Farm",
+    "category": "Farm household tour",
+    "city": "Cao Bang",
+    "address": "Vò Rộc, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6732668,
+      "lng": 106.1812634
+    },
+    "rating": 4.8,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 949 363 833",
+    "website": "http://www.facebook.com/caobangfood",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHF5yyswL-89XL_heiDZ79e9feipdyauT4Us6tNsfEq5bCHP1cm3V2whk6Ua_nbBUrOd0aYiHP8PRfTJclIZ5awrvJpH8y7KsMwuzTWfF6Qkp-_hTiXUVSpQGwhEzrv3mh7tuVl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMvUC_kqXMXL3VcFvuxgCkSxhwF0rDR9xPTVzbW7SXzoJnVJ5wANmgol8XsrLrxL-WWEkccTPC2zlnERPtdm88jY7SrBP0onZeJl-YQu9MoS-SoPPw5qd_CelrepV-a0-zKRg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFzcPUY5V9I3AozAYKB4uTcd35_FC1axA6mBtWBT1zoBg5e_7eTj5N3fJ4nFCIyLHpykq0fPvYS3DZY1abMO0yzd2ruOWIskV7CQm_JOqF6VRuh_Lg6YQ-3VtNiGzk29I8CqMPQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: 8 AM to 5 PM, Sunday: 9 AM to 5 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJC6QIsAlnyjYRz_hAqqzVoSc",
+    "name": "Vườn dâu tây TA farm - Đoàn Thu Trà",
+    "category": "Farm household tour",
+    "city": "Cao Bằng",
+    "address": "M5PQ+GVQ Chùa Đà Quận, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6863298,
+      "lng": 106.1897261
+    },
+    "rating": 4.6,
+    "reviewCount": 16,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 916 899 495",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTHcSnOBPB_vbvJNZ1nmzrB48RTFImpO0hamCqvO31_Uo0EojR8-XCRbkOdGxirskoxv2bcGwtNI1jlEo5yQJbMY2eYruKXG-SibZTn88POrOaW6G_QxgAXGb77B9u42-Q4r4CvQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFF4SrNwfO0qcW94MuXTY1hxEwlddyquVv2anNFty6gRwZfw7QuceXVnVTtOnK_hyHJyIDhmrCxghllEzLblA41aMaWxMrDX1dqIMT-P-AlSE2_26M4SweP7NCw1UATnmOhuf-n=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpdzXKA_8Cnis_ybA-x-PqAXE5Yg24e_aK5v40f7s2LJKFdCx64eC8kvrSL4Pb3BkZlflRM6zG9OSXROtWrABwU3BhSqXrzgK21-74X3ThL_Z5gmUwAZFtby1L4kerohgSxfDS=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 5 AM, Tuesday: 8 AM to 5 AM, Wednesday: 8 AM to 5 AM, Thursday: 8 AM to 5 AM, Friday: 8 AM to 5 AM, Saturday: 8 AM to 5 AM, Sunday: 8 AM to 5 AM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJTYjZ_xVlyjYRIZglpq2LKew",
+    "name": "Easy Rider Cao Bang - Mr Vu's Easy Riders Vietnam",
+    "category": "Sightseeing tour agency",
+    "city": "Cao Bằng",
+    "address": "Nước Giáp, Thục Phán, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.6707499,
+      "lng": 106.2539031
+    },
+    "rating": 4.9,
+    "reviewCount": 44,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 933 272 172",
+    "website": "https://www.mrvueasyrider.com/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm2Bz1t5prUTToAlH0FBIDPfcfo_5ZikM7KFoofkVRMrAJOlI4DKtVghXR_dcfYxm7ooIvDtXTREag5WSJUojgSlzKxKfEExM0U6v_sccAVu-hfj-IwuElKSAPmiQNbHI0t22k2VTIPZww=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_X8lunyefZpZjxm3jNBH1d69QFu1ZjekrDR6FNq4lpZ2UEBhMrsVKGU62U4WHMK-X4y6uuw1r_3T8ASfzh9trW8GYXrJQTksYbf7u0sb7F0NOjRxQMSDMRbr9nxGJZfi0TkrS1lZoNRUL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEJMBzaFPlpzTxfyxoZqeTWCGBW_nLJjVm8VI6TbLY6F8KW6j1XvEaGAj4BKvD4OdJo3pryHr4lo258qchqLm6MdieklUa-x3HEMV6XGrINqfo3oNmRSBo2fIS3ingqHXw44mHSxKC1aEr_=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "By owner",
+      "Online appointments",
+      "Onsite services",
+      "Gender-neutral restroom",
+      "LGBTQ+ friendly",
+      "Transgender safespace",
+      "Credit cards",
+      "Family discount",
+      "Free parking lot"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ95PXdo9lyjYR6G332GW3IKk",
+    "name": "CÔNG TY DU LỊCH S9 CAO BẰNG",
+    "category": "Sightseeing tour agency",
+    "city": "Cao Bang",
+    "address": "Tổ 4, Tan Giang, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.628493,
+      "lng": 106.2929396
+    },
+    "rating": 4.9,
+    "reviewCount": 27,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 382 961 345",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHQRZQkxqsubjC6zL6RhQgh6l0V5gPgbbeRZcUpLmXy0ccxy40wmw0w-4SEadQMY9m2j1yTKC_GwemWKQmeuyErbPNkd8EeXFcoiW5DPMMCV7zEn5GCUdiNnQ8LlgUMrYPUfH5rA7aNUwz0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIG8F94e5Re-xxnI5eg__wo--ruXiyBdClBkDvBX-jMVFa0ALdXs-AUhuoJFJMpXklqaq1claOoFTvhRfXEiaqprk2y59j0wpC_GjjSHuquBlA6DLNtrL4c9uxpDA0O3k7y1VnnVsjtK8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMeJ6Z4cG9cYdHP819lOt9vXD_74AdmAAjew97WfELjcZG4WyAaOUWg_ynuwsAoZwpm2Fq1_Dr9t-Algn_T1q8DJoj08RwquG7AzfMJ8eN2oKeq7zefGSAicp7uXBBkNqC7XCrG3DHz0K1=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Inside",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ2bhkY4hjyjYRNlEE7Pt3Y6o",
+    "name": "Điểm Dừng Chân Khau Dề",
+    "category": "Cottage rental",
+    "city": "Cao Bang",
+    "address": "Khau Dề, Cao Bằng, Cao Bang 334857, Vietnam",
+    "location": {
+      "lat": 22.6327975,
+      "lng": 106.2533301
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 394 577 448",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHWOcVb9zmYup90cEsDYnPqDkoDl_cJjjAUobl--kS_jfW_Ya6ewC2e03Tf13ryUOSjp3YKCJerhzmf6kgRfIKRlWPkwT8CTYGuS_1VQYjtc2M7OdWQgOQZG27LWXTTdbYnVOUuSe6ylJg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9n_myKdinkzD3xqWJsvHMO7q2H5n0DWTYOpx7ZbGLwXrH1ilyZvZLJXr2pgGNcEkoMcgWNBKVE4KyPtQ3vhwhXdKp4AJl3CSVpY1lpPGL0wJX9rxX3tzuXREfqRJw-rc-FUhacbuhKwc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH0NbaNcNbvyoZPd-WKZksUXUAKqvUsPniSOKd4Bfb3oy7UcM5hPKRC_zD48-PnawKShyp50G1aOAd03dkY3sk8tZKgdqtsoxquD33hMFl8biC_yY8gGo8dK-ndJ6bUHR0OZgsOmm5RsBFT=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJPWLxPrhnyjYRjMa1UVwCzFU",
+    "name": "Vườn Hướng Dương Đà Quận",
+    "category": "Farm household tour",
+    "city": "Cao Bằng",
+    "address": "Khu Nam Phong, Xã, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6834739,
+      "lng": 106.1949131
+    },
+    "rating": 4,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 916 899 495",
+    "website": "https://vuon-dau-tay-da-quan.com.vn/",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECMOmeCV6tg7wwXcmrqJe_5oMPIYlnCdjPXOhY87BurbTzoTVvlYuBaau3pcMhM0xad8DIdgq3mx9P7ccPetvEHkNOE1MYd_aiGesOe74_KnUPPYfeOYn76JyYOIk28WJJckXq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJGFTGXSPO6dZ17IYxPFU5q1_AWgQgzHOryE6EKfCtoqnGeZ9jbSu01Kpkhyx3TtYRHTavnIERt4bysxsGtEDp2uvNVnykuvkmIF00hfrU_vSg1URLPTk7QK2-ueQSEI2yDBns=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb6Fv4XgMptzSo1RR49RO2xLMRJE-epqmjEYL8QhR_Q-Ku-vh-igl_4rRYQWrqdMg3eF1KNRKthKJQvr3k4ipouMIElPffhx2eqydxY3bSdmzjP2-F1tNSNarMIlPVtOiuJLV6=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJu1K6JCRkyjYRq6cz7TVdXWg",
+    "name": "Quảng trường Tượng đài Chủ tịch Hồ Chí Minh",
+    "category": "Tourist attraction",
+    "city": "Cao Bằng",
+    "address": "M785+8GC, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6658111,
+      "lng": 106.2587766
+    },
+    "rating": 4.5,
+    "reviewCount": 138,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUJiJTsXoHebXb6NTsBhd2iYuYWFsutThcyfv5KqsAQQLG2BU28fwAAW9Mrv--VG38pYvNEvPKwizCxI20aeBleYO5sMDQMDrMZv35eEINOVSnQ66frc9VVvrrsiAUQbbCyEOxXg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaofrKsniCagvhpaIlCeAfRgtH6I9w0FW3Eg71jhbLiyCxCqGMqMA-YL5LKvM-UZ3g89qVmwVlaWfG7QRot6yP_m_nVQwoyKa3ObmRDOPLXn7IZvDg1fFvulL37T_-vvNCRxT8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsoHZ8JmjYsdP8uDLBi74G4dWy-AsQgj01kol3KXudJY-oueznTqrx_XansowJB8wAXguSN8mVR2vITwpu-BqOwIXK5wvcCM_g9fIepkSsdT3X7rYkOmmH8rK7LOOMrRqdGW8t=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Videos",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJh2syPwBlyjYRI-NYQNdcUbg",
+    "name": "Bánh Cuốn Cô Hân (Banh Cuon Ms Han)",
+    "category": "Family restaurant",
+    "city": "Cao Bang",
+    "address": "Phố Cũ, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6652976,
+      "lng": 106.2565225
+    },
+    "rating": 4.9,
+    "reviewCount": 26,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 919 652 886",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4eo8R9sndbkPN2cyvamIwSKZbWY63zE7kQ75gLGmX3S5YxkYqQoMkUXo-BVK_QOhx9AvzZBlJI9pQrMlEDE1Zbkq9ikX-DTeFVLa9Sf880osk_Wko6ww4J2cotCh2kTM9PGRF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrwg25Gut8E_TAmUNTArMSk7HZLGd4cdhIiuE3nrNobRQT-2bPim52qVlg7GbJMcL7vaiiLymQaCbSJAd9U-r33rsONoZhInv0fqQZRxfXd-aaP2lKqE6TkiuUP71Px--QrTJ0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmlsLcWFkqMu_-LaN3_9KuhXxyugrHv6GkmJV0zv40SLOIwrlhZFOiys7cvryircYB97AjElL1UX15ybGl8eeRRiF_nslOy0XBlBJENHJtxPdold42gRc3z3YPk3hmSD5hoXLn=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 12:30 PM, Tuesday: 7 AM to 12:30 PM, Wednesday: 7 AM to 12:30 PM, Thursday: 7 AM to 12:30 PM, Friday: 7 AM to 12:30 PM, Saturday: 7 AM to 12:30 PM, Sunday: 7 AM to 12:30 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Quick bite",
+      "Breakfast",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ6V9Yi1hnyjYR7tEXt5rzN4w",
+    "name": "Hoa Viên Quán",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6J6+5CJ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.680463,
+      "lng": 106.2110311
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 868 595 900",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=8FKuiW9YcPA_cbY_sxi3Qg&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=124.66136&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Quiet",
+      "Groups",
+      "Accepts reservations",
+      "NFC mobile payments",
+      "Good for kids",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ6ccV7fNmyjYRj6bL_gcwsUo",
+    "name": "Ban QLDAXD Và PTĐT Sở XD Cao Bằng",
+    "category": "Condominium complex",
+    "city": "Cao Bằng",
+    "address": "Km4 QL3, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6782726,
+      "lng": 106.2241673
+    },
+    "rating": 3.7,
+    "reviewCount": 23,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 206 3955 311",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=XNtL1ssse1ZBVBZ--sI0CA&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=302.72812&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDBBAVXxHjt6fsVZI_Ojo0Fcn0PKmKZoI__q_wILzHyf6vEC4A-ERiboaivebZLwZq79ZTSNpL5KzrzGgnSMbE97iI4AO_nJiMZX-pWyTlKKx25kGNz55RV7m923N-2ogPmT5J=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDn22Yk6jzZZE4h-c_8t4rRfa0GimuxgHwKxmL8VWXjSo5Slh9YLHDLMI3A9DBJfD-smO9JSDxUIl3LCtRNFi5ArSGLzFKLlWF9Q_1pkwGM13HCf0vLNkOypJ_MbAg6NC3nsOjFg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 5:30 AM, Tuesday: 7 AM to 5:30 AM, Wednesday: 7 AM to 5:30 AM, Thursday: 7 AM to 5:30 AM, Friday: 7 AM to 5:30 AM, Saturday: Closed, Sunday: Closed",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Exterior",
+      "From visitors"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ4e7fIwBlyjYRurdRPzLJkQg",
+    "name": "Co Man Quan Pho Com",
+    "category": "Asian restaurant",
+    "city": "Nam Dinh",
+    "address": "M786+PMP, Thục Phán, Nam Dinh, Vietnam",
+    "location": {
+      "lat": 22.6668303,
+      "lng": 106.2616901
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsihWz0Q00XeNBkyfU4Wurrmmoit6Ke176MO7XbffvMkKiVei2B8eXRO9uGklvLarAJzq6SlXSOdHjSCNUFyeJTMWJKKK53hAs_7iAGZgarRUMqA5bIlfr82nblCmeoWHmcKDCO4o3qzE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmXq6PXK6inohVkWxCL9qRBLspp1EAO_oFFCoAC7EKWTFLQL5Bdm7OAEbo7f7d4TUE1lFmx7vU1qMpWqFi9tNwUmSVQCjgVqY_k1QkK-jhu2Tn-EIGX0Kl75maGM0ivaK3jZMOmBWJIgiL=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=H1mEYduI_wsEeAU6cP-Mug&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=159.98727&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: 6 AM to 3 PM, Tuesday: 6 AM to 3 PM, Wednesday: 6 AM to 3 PM, Thursday: 6 AM to 3 PM, Friday: 6 AM to 3 PM, Saturday: 6 AM to 3 PM, Sunday: 6 AM to 3 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Vibe",
+      "Soup"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJfSMctAhnyjYRSRlb9JfjAZo",
+    "name": "Quán game TNT Gaming",
+    "category": "Internet cafe",
+    "city": "Cao Bằng",
+    "address": "M6MF+7WH, Thâm Hoáng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6831776,
+      "lng": 106.2248604
+    },
+    "rating": 5,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 374 655 182",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zGhUQqmlDo-nIlXf6W291w&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=187.56561&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZa0AYPZ9sEG-ul-PcFascNfHFE6W4Rl4QqSS7-mb6mFNhXcHSBNHcQXEwYX8ltaRArvZZDemwHT8DR_xm5Raa-URjUeoEnoR3eg9pCw33vtxXMBbEr5LuMekP1y_zx23UOp1q=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ2fSJGgBnyjYR_MCydOzve2U",
+    "name": "Mộc Liên Homestay",
+    "category": "Holiday apartment rental",
+    "city": "Cao Bằng",
+    "address": "Cao Bình, bản Thảnh, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6963265,
+      "lng": 106.1837122
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 846 896 888",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3jPpCNyHhYiEQm-JcVpEi8g4VsK5ldGXrt6ENXJjMAyc8pVqZlSLi5-zMYkHqzqsVTOYKQ4Dzx8neA_a47bXhvmSX04iT8g2oDjUZRCKXzBJ4sRzsrIcXe_HtaAOdcrGogd0wcksbTV8=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJf3qL6PVmyjYRP5QEN-h6nZU",
+    "name": "Nhà Hàng Tĩnh Phương",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6MF+FC3, QL3, Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6836276,
+      "lng": 106.2235614
+    },
+    "rating": 4.5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkMPT_JGstrBFGIgtpQsqjX1ZfYH5vNphcYw3uNjBPn0sQu7h9GVFdUcly8_b64vFT-nBlGjuxNlow6I7ggnrIMVBBhu0pSIs2iV4Vti7JhMclvPQN8bha6q5ePK5TkTtCqWVg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJwppUFsoBdmPIc3GARlk2nqBTJvNrGWuJNFifnE4cAKEzsuEOnGlsSMAVchbmTYhKW7YKCY5N-OKjVDoMzSfpmvteR8xNoLvQyN6itPjAXEG1MajKHdkIJm-TNgw2M2SuKt9sZA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFL0IPe_FvvOLMcko05lhdOYV9wlPqwmYtrEUFPhDhh8FmR-VW1CLT7xSUcUCn9e3_cksu72DukQ2yK5bbHhNQR4Waz5L5xrfdpzk03VxoWoq5lcjnn0Jr_zibnQRKfEAqGZooE=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJR2cQFkxmyjYRE8-U81mR6xI",
+    "name": "Đền Kỳ Sầm",
+    "category": "Place of worship",
+    "city": "Cao Bang",
+    "address": "Thành phố, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6922689,
+      "lng": 106.2343373
+    },
+    "rating": 4.7,
+    "reviewCount": 107,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlfeY6a8efSdOaleMElUcVUUcbzrrozYrAQlnkROiGZlzneO-BdnSuTshOVlGAEftdx2_8Eq0tqAtZWIDQc8xMm3_TN3i8Se4jRlsv-_aFs8ikxh7DNCSCL6ZYTFMRjOL6jfLTqPld8ShA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4QTI04pLCNnsNVsHtHXYWo79Lt-B0ligzPr7u43ozj1uCUdEcN9uSXepzkeu3myrn1gj83n40CIL0dtksgcn6yGo0kULwEpCuOuK16pQj_pxcsNLdvj7OyYvXuo55nvIQqEFi=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6ND53FwQA4uJZrgAqYynXKC4RBbuwlCCLwsbEVp6hBIsFJ1IN5u-ItBSTBSbq3PdYkP73XS3NsMm4ye4_j8oWDETr1x9kMfU3CeJ8zRWOmpEoal5c1D_ZcQjkPjfCI2sNwztdhQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Videos",
+      "Wheelchair accessible restroom",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ3zayBABnyjYRcqiQi9jUsgA",
+    "name": "Di tích thảm sát Tổng Chúp",
+    "category": "Place of worship",
+    "city": "Cao Bằng",
+    "address": "M6V2+JJC, Nà Luông, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6948373,
+      "lng": 106.2006916
+    },
+    "rating": 5,
+    "reviewCount": 8,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4hNydrlDM_fdGTgvZTGHgvUFRrJCpdoRZepHGFjY6Csi550O1Taz32uoje7iaLsNsF02uGzCCdUBsFt2xwDqc6_msRR1zTyxvKTdWjPm19oQZNZRQ53UgsFgPuCRrjb-RTppN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3OZQBrUQ-JlGTqqWwRjX-h02HnmKkC6sTkJQBLAi0U13hFj9oCnhXihNFvvR1tL9Yiy1VQhoyXbv-Ba_UDE3E0d_SUtasnpPKjq4FCqHhuJqnAjal4u21O4BJ_fyeiIO76W1u=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF6rT7tnfJTkQeawo-DsWrE0cf6sOaqUEN1nb6qnQNOxrcU_2j86ug-D3JJFHqHebjbKRQRleQp05C28kDKfCfm5RHwyMgL4X7n44K5sHHOz3a_e8tfsNGe9nWo9CAMNjPasajtsrk1jHk=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJq_48YQBnyjYRctBEyAe-Tk0",
+    "name": "Minh Tuấn guide Cao Bằng",
+    "category": "Tourist attraction",
+    "city": "Cao Bang",
+    "address": "Nà Cáp, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.676021,
+      "lng": 106.242353
+    },
+    "rating": 5,
+    "reviewCount": 247,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 906 537 888",
+    "website": "https://www.facebook.com/tuancbmobile?mibextid=LQQJ4d",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHn6P1K2dMuD8FJHivLl27bG_5HJipet7BlJKfD1HH5vpz85O8R3RCA0rr6a1o5rNLnZtPXaavvqYbU2MYuKT0HiNf_7-jWzWrVIRIB1_dxzMhK52TBtlO2Ok36WqjVZ6kcTcHJHYGYM-fK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbitwMXZB4ZIYLTAls8KYr4K4cRE0Kdo0SLwyc7mdq-E35oFXkCNylaqtHu9WBIW4tfZh6fbNePqTIegvNbY8GkFksF_K-SwRgSg9a9ZHemPhKD9wyfU5zKa6UyQ3ZZ1gOhgHbY5pGKoK_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCJamw1RNREC3IAJEySltbFUeABU3Cp0Y_wrjlo_v9cy4olgASJmUVZg0LZtm5J6kwNA8aHRfhb4Wr26WFImcI8z8q8MQEaIZUSnEAt4-jk5vuL8p8zDjXXezPQ9doPOJMmd_6OGGQ5O4=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 6 AM to 11 PM, Tuesday: 6 AM to 11 PM, Wednesday: 6 AM to 11 PM, Thursday: 6 AM to 11 PM, Friday: 6 AM to 11 PM, Saturday: 6 AM to 11 PM, Sunday: 6 AM to 11 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Mountain",
+      "By owner",
+      "Restroom",
+      "Getting tickets in advance recommended",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJD_IzTYtnyjYROENduB68lss",
+    "name": "Nam Hưng Quán Km4, Đề Thám, Cao Bằng",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "057 Quốc lộ 3 Cũ, Thâm Hoáng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6815933,
+      "lng": 106.2306721
+    },
+    "rating": 3.9,
+    "reviewCount": 7,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 839 923 510",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXesnbraR0yAjKQUc4AdVIMvBwH8I31BSTF6lgRpvKBvcLBFm-ygqJSeVWQ1xwOxlVhFmWGzPltK6mgTHCWiSynC8rKhL76_nqgyPtbcOptsnZCR7IZrQyk0ZAp2hie-p8lI8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_laguj2vmb1M-ab6TX3kvsj7wUJWhtpWzMLbJnvGefE4IhuL3Ij_FU7oTpi-Rz3VWCNF0BLrHb5C_DAz2uBicVDCTnNw1ST5qeJAZuAX4Aoib68nWb5pcHEx6k3giLmmHCMyn=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=2k01czNbJuI9PRbp0BfXEQ&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=128.08012&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Catering",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Accepts reservations"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJJVEIAoRnyjYR82vlbN7EKiE",
+    "name": "Hoài Nam",
+    "category": "Holiday apartment rental",
+    "city": "Cao Bang",
+    "address": "Tổ 03, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6753842,
+      "lng": 106.2355973
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 843 660 688",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=SGmtX60FgG5jHxlIhxw0MQ&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=3.6971517&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0DK-iPWqCnpTPhOKfOYj1dFIOXDl6sgJmsqe6onBSqhGNKmzz9RwIGnOVxhz4OzMGrZ_PMQ_vccLWIhZ2vTPJW2WOk71fRYw5Vnl_luN9JD74VpoL5UrYWcmn-o1lHZyYqz3z3-CTfvZo=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Inside",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJIyIiexNnyjYRTW03hdb4Y1U",
+    "name": "Thuận Phòng Quản",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6JC+7M7, QL3, Vò Nhạn, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6807099,
+      "lng": 106.2216985
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-5ebE2mGA6WoKeRVW9AZNg&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=38.506485&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Restroom",
+      "Casual",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJMZguaI9nyjYRcClcUH5MYM0",
+    "name": "Chị Em quán",
+    "category": "Brewpub",
+    "city": "Cao Bằng",
+    "address": "QL3/Km5 Tổ 4, Vò Nhạn, Thục Phán, Cao Bằng 27000, Vietnam",
+    "location": {
+      "lat": 22.6812406,
+      "lng": 106.2207071
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 967 146 386",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpLr6acDFQojM2Rc8i0t1p8zM-Cx16h5d4CGSVnAyblnwHYPXqnRVGc0Xa2qy6Ea_AXgcCGCrKlh4XVa3SKYhmGhVr6Kgx2wKsrVixWs8fvcwFN2kdWX1Oo3w_kAa6AZIzQxp3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENgvIWquInZhb9QlOSDz3znnStojplXxq0wvBGqK7ItMnwVvy2RnZEJq5uBpMDSYVwvHtyEp-jXpNvlu0eXXRpsLSRo6mcxlVJ5cYINUegtpAvu0BikqbHQiUkDvA0eC-jBHQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlICXZpJyyCW_8aMqbyMPMeGE40aFXHOlLiUJdmCR5hq0dxboyFGO03RotZApCvxehd_WjhJt03Hvt-73wt4PXEgAGVlMUjEQvv4jEEhb_muw4-msvDmYZa8GHfCgNJLHkJk4=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 12 AM, Tuesday: 8 AM to 12 AM, Wednesday: 8 AM to 12 AM, Thursday: 8 AM to 12 AM, Friday: 8 AM to 12 AM, Saturday: 8 AM to 12 AM, Sunday: 8 AM to 12 AM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "No-contact delivery",
+      "Delivery",
+      "Drive-through",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Food",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJJQE5cABnyjYRMkcMEunSgrU",
+    "name": "Nhà Văn Hóa Tổ 3 Đề Thám Phường Đề Thám TP Cao Bằng",
+    "category": "Condominium complex",
+    "city": "Cao Bằng",
+    "address": "M6JF+VGQ, Thâm Hoáng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6822152,
+      "lng": 106.2238683
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJfxw5NQBnyjYRoUsHHwB5BGA",
+    "name": "TP Cao Bằng",
+    "category": "Condominium complex",
+    "city": "Cao Bằng",
+    "address": "M6JH+V36, Quốc lộ 3 Cũ, Thâm Hoáng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.68217,
+      "lng": 106.2276283
+    },
+    "rating": 4.8,
+    "reviewCount": 17,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbVL1uD36z7c4iniBJrDxfTMAGdVKNw4YUoT4WIYXxdgWOArt0yWEblYz6r2LMwOHcJ594zaqHLBDeeiywvUI-C9qkFZakz7UGT0tW2ojgVAD0Hi_544_O0tKlJhjHxdzyeZHLy4DPQhRS=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZpkQkaGWbsy0Se3IJ8XYQetD5fTd90v9f14MMaU839WpAKG4Rht5UYbycZm3u81ZhKWzNy3y2cqf2e2fiy0wTF1GNe43yOZb1JFEb7QxtRitkR1hKb8g8B_vBjr7cH9Sv6b5slOmHB6I=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=g6ah5BmPfS7CvY5BQghQRQ&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=235.4944&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Exterior",
+      "Videos",
+      "Food & drink",
+      "From visitors"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJy70z1DJnyjYRUC_pUJu0vNw",
+    "name": "Nhà hàng Thái Bảo",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6GG+PRX, QL3, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.676688,
+      "lng": 106.2272197
+    },
+    "rating": 3.8,
+    "reviewCount": 76,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 985 962 888",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_LEM_gC8X5o9b28W9hIHliSBBQS0CECMDYQ37_ZxNtYyxdRpqxwTqp298VVoTd8v_3I5-8bB5KAJMZCpL5zgn6UKPz-4FZIiZeNdGBnlTYEVsLBRQkMEiJGba9SNMpV2JhsHG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGS9h3UyBThvNx20f0O3LppydFxic8MwybTG5zyaSKrKDL-mSXNErpuoAlwCQOS2XXzm9e47YAlbQtl2tdoFn0mge0cQtqqCOWpBXWsYwoKwy55DwzpfxMjQ3BcxCemPo5kjtXT=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEeRY6TB9pQzTMbQFa3bEfZkqRMTTgbRMgdfJRq3jZzX7KhRCTj6q8V45o1FQQld4Efy5xDRns-ksllfbMO_saGkVzQzI4662xu32iz4HHqJgfuGN8sm_P9Ntr7bjOdYEVA8vrS=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great wine list",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Private dining room",
+      "Small plates",
+      "Bữa trưa"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ1Qy1mSpkyjYROoLRr6FGuiY",
+    "name": "Nhà Hàng Khách Sạn 34 Nga Lượng",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "5 Phai Khắt Nà Ngần, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6732014,
+      "lng": 106.2465726
+    },
+    "rating": 4.1,
+    "reviewCount": 181,
+    "price": "$$",
+    "phoneNumber": "+84 396 836 389",
+    "website": "https://www.facebook.com/pages/Nh%C3%A0-H%C3%A0ng-34-Nga-L%C6%B0%C6%A1ngtp-Cao-B%E1%BA%B1ng/756745631035097?fref=ts",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQh-7SINXgI4KFEpPcrIF4yywrcileMtivwEmV3VybgRqVUGLpCKTEbrMIAtaQoK7zwkbl83E9h8p9jGtJuFmvXktj60XW7OvNAJ8XhB4Q_RR0wHnbepndvV-NzpkldLwvh-4tc5hNoBE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-lqtEesgCApNZlbF5x9FhdFL8MWEBB_yrGVBrBkIdO8PNJQwXasQQrt9FWmkFyv-e7BBL5XSoynQRGs-vgxsysVgzKLguomMKqhAOSOxF-2ID9F3VvfxNxIqTZbE3fTlKzYMrKYUiWpzu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE87vA-Zk-DeUecPY5NABPosRDI3c_ejVUew9v4eRQqw_AtXaG3Svi90UcvkZ9_U6T8phr-wiuJEdqP27G24mxNvL_j0DwytrxtUhvCkWAASWij1JQkgSyrc7xcQRKylSLfFU04888rGnRZ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 9 AM to 10:33 PM, Tuesday: 9 AM to 10:33 PM, Wednesday: 9 AM to 10:33 PM, Thursday: 9 AM to 10:33 PM, Friday: 9 AM to 10:33 PM, Saturday: 9 AM to 11 PM, Sunday: 9 AM to 11 PM",
+    "cuisineTags": [
+      "Cà phê",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Vibe",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner",
+      "Wheelchair accessible restroom",
+      "Alcohol"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ_2xfYwBnyjYRmD30BdPEfWM",
+    "name": "Hansik mons ngon hàn quốc",
+    "category": "Korean restaurant",
+    "city": "Cao Bằng",
+    "address": "M67J+HPM, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6639561,
+      "lng": 106.2317932
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 812 540 555",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6cgC8xUY29WqedxNtDFzzGOuCf6YVeC296RRFAHlcSCkiVMOCEEpJ29vtDDlCRprgmPjtnKkREJo0XhnQ-a0hP-T5DarIRy52VFAIj8xbAPuhx4fptid9e3-za92m7AdG_w9d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmKbKCOlGR-mwq5F7ogX6Ct_3QNabKw4KDRqi8SaeV_IZJpym4X6zN6dYiBqMfVPEtFD7Dl1d2TE893NcXI4YyP8C_rzqpF_8jq0kO9FNbzzYYuB55CIZzZDhiFYgL1QSs9-o4KEWPFyeR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAErksTRZNj5HDWpX_UdVla7HBnkB1LGIY151ST-GAmaM7sCC4HSeR2vdT2nwPG_zKn_EULBOYIWsF80vZB5doOVdJeLjoccG7GGVLrleUUzCDb2zaJbfXGNVbH7VbIZt8CnqY83WB5xefPP=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Món Hàn"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "No-contact delivery",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Dinner",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJR9U9YI1nyjYRiLwqV3CP-fw",
+    "name": "Quán thái béo",
+    "category": "Family restaurant",
+    "city": "Cao Bằng",
+    "address": "P54P+M2Q, An Phú, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6805924,
+      "lng": 106.2217966
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4Sil3PLB_y1kSFFCHTAbAgyrxh2R0ZrGtCykhYc-Vs04BW-GiQKXh63r5O2J34FJR6WTF5WYsfsY4O5WBacwep7gkbbybllyLmhWtjwlrwVEX3x-7pH9HiJ6DoedlRtMGT2X2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGu1PWvWJv_MdNQs7g6ITGjSL9Q6WUg2IXRGytPPI_5E34bwCpCJ0ddeWNYgJf_kxYajC5YJnpDNQ-pFjaAACVIVH-9jR4c0gCVVU4A2UA7tKdnN-OZs-OIPByUUIAbMcJd1ceT-Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoqyAyib_E3tRuXr882UBvX4ti0dnAosFaiefrnsiO7aFZFy2Nge3or461FTdrhPYzlek82J-RMRJpnh0aN60niE0iAQMm7Rqy4V2peeSaSnnwpnFiRqiFt-iR8G2iuOzAfValFw=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Takeout",
+      "Dine-in",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Accepts reservations",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ013jontnyjYR2liWfoowhyk",
+    "name": "Cơm Ngon vị nhà làm",
+    "category": "Rice restaurant",
+    "city": "Cao Bằng",
+    "address": "Tổ 5 đề thám, Thục Phán, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.6836519,
+      "lng": 106.2178027
+    },
+    "rating": 5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 888 918 833",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE4zTWNAefBrLqQ7h_Cd5AuWqqoM60xLNJ2_i6f4_nVZ14hmtARNn6ZET_PEmI6_VGR8RGt11NuBC_qGUxpN89vrTui9frTm0HhNvdCG-Hyw1B_00iywTZa8XcDa1DSR8-k5oUWEs2fittZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9-UixCP8zG7EP6BQlCT1UCq7DE7DpO4k9t09ILYdRb4eaFlpfCxEXDdmz8TOh5ViBPkLmtV1W_LK-jhwTfcGd1ntFR_LhWHVe6_OT6ocZ5SvUtKu_mrRKua78T_kTd-8-0GojVx8Q5TbF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5dlMNaGEieLNLtBvE9BHw5AgXcD6r2sZbobuB-902rU_EUxzNm4SheZohpnrtqusAWOGWaz8RSHIyP4I2f6NhdnsvZU-BdbCBq8lGFlNqhqzfDm-HHV2ao2qM02tb4QapEuy37Hqw26ln=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 10 AM to 9 PM, Tuesday: 10 AM to 9 PM, Wednesday: 10 AM to 9 PM, Thursday: 10 AM to 9 PM, Friday: 10 AM to 9 PM, Saturday: 10 AM to 9 PM, Sunday: 10 AM to 9 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "By owner",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Tourists"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJy9G6bCdkyjYRjQbpKjJcP0o",
+    "name": "Than Hoa BBQ",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M783+GFW, Tổ 19, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6663731,
+      "lng": 106.2537179
+    },
+    "rating": 4,
+    "reviewCount": 167,
+    "price": "₫100–200K",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEyt5xD0fHosMv1UXhTlkTK4TWELQclbn6tYeRatNaP_X09Kjd0Vf_Meowp_Lvmy9UW5PvQhrsXoOmwzfNQjf4qJxAIYiYYRoX0p1-KZ3FHp-k6QEwC_wbJPsHqa32joJDQ3StafA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFjC8E8vrPuBUSj1ziV72Cn54D3jT_SaaxoJP4ON6zIy6hcaXHcuBRJpVBTK0_K6J61v9F47YiSUrhnAOe9mASB_P2bYf3opQQ2Np0ntdiQYZnnjYab37YI5oU49tmHf-NBOnVW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECENCF4VnREMMDvSQLpJ3E0hrc1ILx1qpllEUAplvUECDdurR8IYREOEoXKxic34d3EzNjSOhWkthvBzwcdV4MaUF7zWUMH0h9JnD2Y1Iss-r29Pghm-xANVNzeKQflA-AoZ5k=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 10 PM, Tuesday: 8 AM to 10 PM, Wednesday: 8 AM to 10 PM, Thursday: 8 AM to 10 PM, Friday: 8 AM to 10 PM, Saturday: 8 AM to 11 PM, Sunday: 8 AM to 11 PM",
+    "cuisineTags": [
+      "Đồ nướng",
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Korean barbecue",
+      "Hot pot",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Bữa trưa",
+      "Dinner",
+      "Alcohol"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJgfe_CABlyjYRbdZPUuRzf4Q",
+    "name": "Nhà Quang Minh",
+    "category": "Asian restaurant",
+    "city": "Cao Bằng",
+    "address": "M7G4+3QG, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6751888,
+      "lng": 106.2569599
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "Takeout",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJz5FpkoBnyjYRIQuZTSrWboY",
+    "name": "Nhà Hàng Điểm Hẹn 11",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Đầu, Cầu Gia Cung, Thục Phán, Cao Bằng 100000, Vietnam",
+    "location": {
+      "lat": 22.6733045,
+      "lng": 106.2494284
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 948 559 866",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIaWsJgGzeLJAJIqfBOm8ocr7drYJNSw9i9MPX0pdPTxawYsrAKSNllAyMJA6aebwtHscB343e4e-vM5FEhAy0N6GS4nBY-HNIYcPZy4S-aAyx_6VK0hxjScybe6xSve8rnecwpg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE81CqZX-A7dIe2z0TiMQi41XXULm6E12259FgiqxNKV8OrdchH_2AWRexHJ6ucnf2rAuBGVzMCfD9awieP3nF3typO7qiyQRe-f-J8L9-PW1bK6yAaLOdshSkW-tp9aSjmM07P=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhOjBpiQ55xSA_4uL5UOdVyC3qADc2pbjT9-n0GfaKF0wDlUSrSTYWJTIv9y8PouLZT6FA5iwaRoFhZfKZrg1sDxa_BfZ1CsHvgrNEPTyhBPN2QopKfVjke3RqWa_l2LwHEOEJ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJCSl84U5lyjYRr6YDRHHtdII",
+    "name": "VỊT QUAY GIÒN O THOA",
+    "category": "Deli",
+    "city": "Cao Bằng",
+    "address": "121 Phố Kim Đồng, Phường, Thục Phán, Cao Bằng 21100, Vietnam",
+    "location": {
+      "lat": 22.6620482,
+      "lng": 106.2599234
+    },
+    "rating": 4.7,
+    "reviewCount": 43,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 915 686 234",
+    "website": "https://www.facebook.com/othoafnb/?locale=vi_VN",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFrTrwRJj-hg7I3_gmKpYolsfAtBAZZwZ-gm9kMJeNzCVwM2NHE_XHyxfzwTDV3BjuoqNWr8W8rAq8ueSt0fOdEHmlNMSfyN7CHrquCwWrGmDK9yjjEovTGCDDOBwvxQklODRbTmKazDAer=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo_VxCVK1S63W0y5bQsWFRUj5J6_RlGDngjjEKyQi-83gzuXUWIy7dAOD4mD4rbIXxiL9-3rOwErFRp4aFLdGAz4aGSibn3tnjbLArze2fVfdy1ec3J-Cv-p8h-yWLfrdqgqqVlEqN1DBA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUdVawJw_1qPzhoNiZcRLlpxX0mU-FmlAopZ5pVcEXCBP4RYwd5eEZNp0WhNLD4-miI_3rBjlg1gNAHZjvNAGaPT90D_b4b430UQASpt320YukjNvHBURwydgAlwMAHRxTEEK7DalLobhY=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "Meat",
+      "By owner",
+      "Delivery",
+      "Onsite services",
+      "Takeout",
+      "Dine-in",
+      "Free parking lot"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJX2sDQRhnyjYRMUkBpV9uOo8",
+    "name": "Nhà hàng Nguyên Vũ",
+    "category": "Asian restaurant",
+    "city": "Cao Bằng",
+    "address": "M6GG+XJV, QL3, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6775032,
+      "lng": 106.226589
+    },
+    "rating": 4.8,
+    "reviewCount": 4,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 974 555 183",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7u5Hylb9t9i8ZLxL-Wi6maQupKF0QZBe5YUKmMo9XMpvSwJE0cotglRONu9tBwLxdfnpDfxbJ5xg9uSSVu3B0K-EkJuI20n7EhXIvFuIwbYRp-FfeK00TNTHtBvxwhSDqNMy4XA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH5SNl5nOvtcLef75jrHxbIIGhSwplAg7NuRfJ0lccfLEUOCWb2zCb_zFxWrCx7IOUcP3egtObin1tntFf2ctbuF8CYjRHsz_HmAPEKnUDQE-KehG4rsRnfPyYUJ19w_cu20dLiKg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXB5-O_PJSC1iSTc8rZBaSWftna__t1dwHR5k66XWhbvFttIAwn1GSbbQuo8JtKOOMHRmZyOM7jglXhvnPMrEYHmlr55Ospex0bP-P0M7HReZX-5WE6OEWBpk7SmU-9ONWXbEnDRNv3N0g=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 8 AM to 11 PM, Tuesday: 8 AM to 11 PM, Wednesday: 8 AM to 11 PM, Thursday: 8 AM to 11 PM, Friday: 8 AM to 11 PM, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Soup",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "Beer",
+      "Hard liquor",
+      "Small plates",
+      "Bữa trưa",
+      "Dinner",
+      "Catering",
+      "Table service"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJWaarUABnyjYRl5LVy_zfAcU",
+    "name": "Quán Phủi Độc Lập",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6GF+2V2, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6757569,
+      "lng": 106.2221965
+    },
+    "rating": 5,
+    "reviewCount": 10,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 813 323 663",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF32WWqEBp1oZ8ufh18evzo7JkMJn9e2T1SD83WmGGendjYzfEm5a7gMFYRDTYkN3uUZ0O-cTLue-nGw4Wma5_v_Or2Hmqcanlw-83ifiA_Upy3Ilt5napgV1hVCCx2znVCzaePJyWnPEU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEaahoEcC1V8k6LweCtK3yOQ6S-nABiXezTEZ5WjW35bP1w2ZhhBeJJ2BfL9h7lP9F3s3zZKCw4LrgGa_tU5IzhA6U14D1ab1LlmutPD_nouMuqozdssUW5iDAUvJPxGy6RiSGkQiL9xWvP=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 10 AM to 11 PM, Tuesday: 10 AM to 11 PM, Wednesday: 10 AM to 11 PM, Thursday: 10 AM to 11 PM, Friday: 10 AM to 11 PM, Saturday: 10 AM to 11 PM, Sunday: 10 AM to 11 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJH-gbIABlyjYRRGCrdy9PNAg",
+    "name": "PHỞ NHÀ ĐỔ",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Tổ 2 đề thám, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.679376,
+      "lng": 106.2181974
+    },
+    "rating": 4.6,
+    "reviewCount": 16,
+    "price": "₫1–100,000",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFeo8kTmJddtOH37JLv_AOqpuB4SXM9jRMhyAZnYfZGmJhSk9fFGN8opHhrB-h9-wmKiCFjSi20wziqhni5Zxuex1JN-wf-DbTXa5LnHYo7SOPiLq0Kzh7LmYnH38yNJxq4SkocE3NGyYI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGg4ZHfIhaxKq4ct6PeKZsk3pYz2zRRp2dVUhAHnfd1NkzZziEZDsQDJZxBBv6aIolNpy0KGOcduMHX2itSgB8r4fMTxdLoeUy2XZH67LbcGU2ffnyfVGC9_84o-jAGcEp03Wil=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdZRNx6M_elQj_l95T-c178Ft3kWhRJpcN0Jcj87qVh3nj_dm7H9GFlgyhBtK8ZaYkXkBdbloOLjmfm44a6F2NmJYR-AkiF2T43Xoda9LS1Mu39EHELbMygmAy6KxaaoI2MqWg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Food & drink",
+      "Vibe",
+      "Takeout",
+      "Dine-in",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Tourists",
+      "Accepts reservations",
+      "Good for kids",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJdaAUSq5nyjYRA6ROdFi6Plk",
+    "name": "Nhà Hàng Huy Linh Cao Bằng - Vua Vịt Trời",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "08 tổ 5, Nùng Trí Cao, Cao Bằng 21000, Vietnam",
+    "location": {
+      "lat": 22.6809346,
+      "lng": 106.2590313
+    },
+    "rating": 4.4,
+    "reviewCount": 142,
+    "price": "₫100–200K",
+    "phoneNumber": "+84 919 555 186",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFyDD5gnDqRLSQosslyUoI2xJfqvRchgeNdFLGLiDspti3sfna5nzsyzmvU2nydxXyUU2YGLC3yohGqd9400s2Q6JkpIsw9dZ2cXqNTAZZYposUioQzkv8YS2qKhqs6dNf0KA-EJA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1drtRhCXGVQOSC-rAqnox4mIZIAQ7ee6KWMVBTEM_RYiGBQyCJEO7PVcIpJFcP3sx--Fg6MZ4L1ckBNazjEWJHtRFG4IkB2KEMijGyatPNPYONhF_bSqgjxBnplSO0yTCiN1g=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1U5USvd7qFMfExSJ0uKJvUDwngb9loabIDOjqbK-y-OtaJa5zQJpdjGZeMwbOm38PZvtFa9oCPlKH_vGjNBtM32f-YpbM8RZH0is7R_ovoT-KcLmRiNZw1RzCtPcLg_HILCyuxSlJSmKQ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 7 AM to 10:30 PM, Tuesday: 7 AM to 10:30 PM, Wednesday: 7 AM to 10:30 PM, Thursday: 7 AM to 10:30 PM, Friday: 7 AM to 10:30 PM, Saturday: 7 AM to 10:30 PM, Sunday: 7 AM to 10:30 PM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Latest",
+      "Videos",
+      "Menu",
+      "Food & drink",
+      "Vibe",
+      "By owner",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great beer selection",
+      "Great dessert",
+      "Great wine list",
+      "Bữa trưa",
+      "Dinner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJlwnKPABlyjYRdXD9NH3mBGA",
+    "name": "Cơm Ngon",
+    "category": "Vietnamese restaurant",
+    "city": "Cao Bằng",
+    "address": "121 Vườn Cam, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6676348,
+      "lng": 106.2606797
+    },
+    "rating": 5,
+    "reviewCount": 4,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 888 080 708",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJhsYM6qH_1fXH6KyrQ8l58ftaY0X1SU4Da2Z9SAJeO9UQFhuPdmgF_Yz2_8PPZ6AvsD4N4EIdYIBsfKNu36_qP9PVxeBc8xcdJk3Jq4ZEUHCba5QBhXsvNI1_8FVbYtP59oUDoE23R9Xh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuR0jQVrOrNz4vckAPPPiN6ulSBxeBfWz1bytQBm8XhuUoGygU0qP3UHTwB82fe7ZE_ED9qf_LnBZXd4XnU88pSGAi6MX4wKHl5WANUVCx12Iyc32hTkVyzHyxs8ossSLm4CI94A3w6VrN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPf7O3HTrR2EtEvX5UgaWi-Klbq_XM0POExHamj9HJphPRk22cxz6vBVg0QcOcrKF0HXhEvueEh8QArOBGd3PlOyPWAikgBorok_e8ylm2rF2TsdIPdqnbhm6vRn-5PkGO4Qk_oG3LvMVL=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Dine-in",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Tourists",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJRz3njnBlyjYRgj7oDqUxKhw",
+    "name": "Vũ homestay Cao Bằng",
+    "category": "Holiday apartment rental",
+    "city": "Cao Bang",
+    "address": "Phố Cũ, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6650994,
+      "lng": 106.2544479
+    },
+    "rating": 3.5,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 888 828 195",
+    "website": "https://www.booking.com/Share-9iPbnD",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyllGJOd7Aqwr7Lp68auwXN7j2WvKUgkyzrgkJQXPFto-RZtW4kvf5p3IHCWuSOIvaqKTN9sPjr4IBmUKYeyA-Xj2-ZTySSMHZugLn0HizF6mfcV6jdy1a7MmMjTVdrZITqE2F=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNqM4SbAHt4bCqTEkNc0urMQIHGbplvIRpt4p1Znnjqrsa2HhKTaHU1Zw6H5gItmBiJs0qOBfenhf93qdjp6cI3FGVjH1_zRmbtVK5w8Hdkga5zrjL0Z0m7ok17hW3vAqQwycz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFs2rO6Z-Y7nYnL1OArObsxMK4izLeTLhlPvubL5PW8SUkJXMXCJg6qYIv9pKsouzzFsYRr33R4bDl_WWHq8FBqJ2XJwJVd17_XSKbPY9uIyMtsdBRgiVJ_qbI-ih6HsIHsQ7fD=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Inside",
+      "Interior design",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ0cIoXFdmyjYRlKnFMLs7T3w",
+    "name": "Nà Toàn",
+    "category": "Nhà hàng",
+    "city": "Cao Bang",
+    "address": "Đề Thám, Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6903825,
+      "lng": 106.2165462
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ1-656vhmyjYR-KrldmSyoRA",
+    "name": "Chi Nhánh Lưới Điện Cao Thế Cao Bằng. Công Ty Lứơi Điện Cao Thế Miền Bắc",
+    "category": "Social security office",
+    "city": "Cao Bằng",
+    "address": "M6M7+H5M, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6839656,
+      "lng": 106.2129107
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=GCSJRbDeKh4BwUi0uhPebA&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=162.22313&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJH9BElPVmyjYR84_OIOC9Y30",
+    "name": "Dịch Vụ Tang Lễ Bằng Đào",
+    "category": "Funeral home",
+    "city": "Cao Bằng",
+    "address": "M6MF+CQH, Tổ 3, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6835637,
+      "lng": 106.2244971
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 948 099 063",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBZHL57b5Gu5ThLcDIiVcJ3On905-3_kq9Xw7AoWM0vn50Fg95K4-9objQFSvRDPB98yxGG6rFDKnv7JTRcdWlvZIHFupCdfLJJPdagU3gNOXDrBBcCtXg87pCt4eJuUrZumwYUcNxsDkJ=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=P5p543rlpikSzb8SWUqYng&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=359.88364&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWZHWMnD4giQ0_c3uqW9URcN2h6dJXvKpCAU_hos61U9yWje-c-KSBYJ8BfO7S_h22Qc0d-HXBeE0FAG0Qhj6Vt-LouwRXJGpLAv3UQb8vb51Ru_ZjP7jR-hSV_TU-4dTxrPN_s2G7FMhP=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Latest"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJP4LF8GBnyjYRHzBe0ucVK6Q",
+    "name": "Ta xi",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "Đ. Hồ Chí Minh, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6842813,
+      "lng": 106.215766
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 977 168 108",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=d0rYJVWdWIdzZrJOQX0mew&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=47.469395&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Wheelchair accessible restroom",
+      "Alcohol",
+      "Beer",
+      "Catering",
+      "Restroom",
+      "Casual",
+      "Accepts reservations"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJP2JxNvpnyjYR74JJ5wht2fQ",
+    "name": "Quản Hằng 68 ( Chuyên Vịt Quay Lẩu Nướng)",
+    "category": "Food court",
+    "city": "Cao Bằng",
+    "address": "M6M6+MVQ, QL3, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6842021,
+      "lng": 106.2122192
+    },
+    "rating": 4.1,
+    "reviewCount": 22,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 898 999 166",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYRHCeBWnqO6_8XA4cBq03Nr1KA_AFB1CNQJM0RGkno6B2xALE7vPg2yp66XzYpdLilMxpwN197ueU5rtsjpRe9hU1YN26Zid3QaDz8AsLKaBokc9XySQD_esb4SrQZ9Fo7opVPQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-RQugScNpO88cq2Jg7pYboGTXXVl2WmoYnz0zsz6xp3_ONSD-_eBhqvRea2MFjoyQj0rbtKcvS1TkIDvSMG6rexH8V4qVyqpPGCSLCteaUHGxqunps4bdrwVvI1WMA3OrB2Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFhOtfcqFShsuHJMN7XYhmeg9kVHJBSkGfa-eLlRNCtyRE08rjCnFpeG6j-nU1oepCzg5RTA4FvLBGggjdMRa6wWJp4JOm_-DnTREjMWp92kPbprjgngygklcANjCZyZchHlf_Xg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Lẩu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Videos",
+      "Food & drink",
+      "Vibe",
+      "Restaurant",
+      "Restroom"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJe8UBuWBnyjYRram0jnHugOU",
+    "name": "Cháo đêm Lợi Hạnh cháo,miến lươn nhậu bình dân",
+    "category": "Bistro",
+    "city": "Cao Bằng",
+    "address": "Đ. Hồ Chí Minh, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6844356,
+      "lng": 106.2155256
+    },
+    "rating": 4.6,
+    "reviewCount": 20,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 911 058 591",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFcjR7jgLgcS9YNmZSdhJ-YP5Cc9OOYw51AwrKJkfeXZ54tbV8ia76iHBm625httT7Hi581O4C7D9hfqTMMPfVlmUTLAdSK98NCpnRPoDvBEqMH3iINJduda9grXtDGMbe-KvGFQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVCO6hI8rL3ab4ZxuMpIwbprJfaQuMVgPn4OKHAwGNu_GNE3BKnBZzzit_riQfK6gkMh6OpXwesC9pKEyo8CPXmYSVBlTrK1or533zm2w8KT7jR4ZDsqOAi7DasqvpebB8oJ0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaeNROKOlOhuINoccnHgLSlaqLGNmYShct6UsLylbTLY8xQgtW5Iliy9kYdRszH8ABCNDmzqSXXr4Py2hrF52JnfV-aubp3LEBMYQILQcllGY7h6yLwpLLXaNAudC0NuHWbUfVdg=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 4 PM to 5 AM, Tuesday: 4 PM to 5 AM, Wednesday: 4 PM to 5 AM, Thursday: 4 PM to 5 AM, Friday: 4 PM to 5 AM, Saturday: 4 PM to 5 AM, Sunday: 4 PM to 5 AM",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Videos",
+      "Meat",
+      "By owner",
+      "Outdoor seating",
+      "Dine-in",
+      "Great beer selection",
+      "Alcohol",
+      "All you can eat",
+      "Beer",
+      "Hard liquor",
+      "Late-night food",
+      "Quick bite",
+      "Small plates"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJz6W8F6xnyjYRa78AKPl3-6E",
+    "name": "Phở Cô Thía",
+    "category": "Pho restaurant",
+    "city": "Cao Bằng",
+    "address": "M6R7+958, Bằng Lằng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6909082,
+      "lng": 106.2129658
+    },
+    "rating": 4.6,
+    "reviewCount": 10,
+    "price": "₫1–100,000",
+    "phoneNumber": "+84 974 087 458",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2gzFQDs1GHdx5FR3ZjMlVmtfzoYtcXYwS8HuOqYV0Y7OM6_sCIvkS_LpbebKix07bev38KFgJyZM6U-ISfiPZZZnImQ523upBqLPK08PHtkESQPzjTfWirQJUeufxQczDthGwIw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_FeiWr5ZI51CtMPnoJD2Jb_uKEA2RZKIfHR_ZdDk0fL6IQVrvfq2Pt2U3EzPHnwZ_zksWsXtypbFecfWc__551RrTXc4cZA7z9QE8VGPwqdxe71V7h-emFjMYjDnO9Ne-vA0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHM8g-Kh8LnJHw4QPCldzlP6E5119OL9XCDFEAKJAO-aNzzJl3SLiQ1IkB-NimNmNtujXvsMUxeq3ZTS05rv603DeHxRTe8y8DODA5iNtePLf7koX_pUDLAHAvA4dA-rOWWIMcZ=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 5:30 to 10:30 AM, Tuesday: 5:30 to 10:30 AM, Wednesday: 5:30 to 10:30 AM, Thursday: 5:30 to 10:30 AM, Friday: 5:30 to 10:30 AM, Saturday: 5:30 to 10:30 AM, Sunday: 5:30 to 10:30 AM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Food & drink",
+      "Soup",
+      "Takeout",
+      "Dine-in",
+      "Quick bite",
+      "Bữa trưa",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "Good for kids"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ9Re6bI9lyjYRHf_p39TQlU0",
+    "name": "Tạng Nặm",
+    "category": "Balloon ride tour agency",
+    "city": "Cao Bằng",
+    "address": "Cốc phường, bản cắn xã, Nùng Trí Cao, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6666369,
+      "lng": 106.2639852
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYhfCxsSTQhQqu84oEYl-owYT3HCPTg2Ipd3uP1MV2_F5wLaMfvawF0-Lt0ygmBZtvuTZrbXj1eEeqOCzb3DyvWhLMOfHXVZ1oI1wihDi8KJY9eNQM8QBxDZEJXiwRErDsWeUcG37JGyGX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGU7rdzrk6-VE--uj0syzyvtxpJEw3dur1Zsg13-krYbkkBoUOyVWcOqxtm15oUTZ8j_PQL9GvxglZEHPTVR4gyn52v0FOfsIqapo0zo7yJvnIdCt3-oHJ-4JGBJFad4eAMZ7hqHjcLKJEs=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=an_-w0J6-tkGIVcilbFwbw&cb_client=lu.gallery.gps&w=1920&h=1272&yaw=78.63209&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "By owner",
+      "Videos"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJQY1UTABnyjYRl6v5IExDGdA",
+    "name": "Trà Đá An Hữu",
+    "category": "Tiffin center",
+    "city": "Cao Bằng",
+    "address": "M6HC+77G, Đ. Quảng Trường, bản Mới, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6781907,
+      "lng": 106.2206974
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "Không có",
+    "website": "",
+    "images": [],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "Breakfast",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJxV9SCQBnyjYRLE0_QIyaBKg",
+    "name": "Quán Yến Lượng",
+    "category": "Family restaurant",
+    "city": "Cao Bang",
+    "address": "Thuc Phan, Cao Bang, Vietnam",
+    "location": {
+      "lat": 22.6838544,
+      "lng": 106.2117252
+    },
+    "rating": 4.8,
+    "reviewCount": 5,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 968 332 408",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0rEwlFgr8tADqIfWL4bAtg&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=163.29979&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [
+      "Quán nhậu"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Takeout",
+      "Dine-in",
+      "Alcohol",
+      "Beer",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Cozy",
+      "Groups",
+      "Accepts reservations",
+      "NFC mobile payments",
+      "Free parking lot",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJA_VURB9nyjYRvBVHZOUTYDs",
+    "name": "Xăm Hình Nghệ Thuật 999",
+    "category": "Tattoo shop",
+    "city": "Cao Bang",
+    "address": "Thâm Hoáng, Thuc Phan, Cao Bang 270000, Vietnam",
+    "location": {
+      "lat": 22.6833637,
+      "lng": 106.22547
+    },
+    "rating": 3,
+    "reviewCount": 2,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 818 668 818",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRAUakFuTJtjp_tIj1BG4a1TKn6Cosa3KkCr3qeqm6fytJLK1PDMNSSaQFciiyEsqS3_jCf0DEhOvyMNhuBxmTTBg_wEdijTDpMJFf0p1v8190wa5zo3L_x4gK8s2s3C1IcznmAg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHM_SUUmEtmJOsLgPW37ztWRlL4Gu8WH7jE-ba8Ma4K2oWj8PBda7ZOmuyawzkoo0-b21op3OmeKbAqBW0HdgwIvZD39hIs8FrxGf1Cr_iiJyaKw0ytjTuU86TXU-90oOeTFyw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDO3RK0YTRilKzObOfQSWHMuB9eCNEFdSJe2GYINHGASJ9TzuYHCdwsucaOs78dBpRTfdivKRnst7MY5Do79ZJzgLTNtbZ8qiKC-FoECYbfgtC8lwiDteEhuJN5JKT7pCt3BiXog=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Exterior",
+      "Videos",
+      "Tattoo",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJFTqwIT1kyjYR_9PiU8BqTWk",
+    "name": "Quảng Cáo Quân Duy",
+    "category": "Advertising agency",
+    "city": "Cao Bằng",
+    "address": "Đối diện tỉnh đoàn, ngã 3 NH Thái Bảo, Tổ 2, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6765068,
+      "lng": 106.2276513
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 967 149 888",
+    "website": "http://www.facebook.com/duytieucb",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcYj8pYm6ufqyMs7e2UCssz3EATVfn_pBLStgJCvlS7oOoRFWP7Fcc7nziNv3SOxa15FKawbshtpQ97I-9-nUW4h7ts06_NEkLoUr6n7zI0JRm4aPvMWVaHhepUF7CByUBkeznVA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPjK0ifFztAGquedqTZf1uufMpphjd1I-F5WEY73UGzb_NUbi9riSYfEgK5RuSgBrv76RAOqu4Gt9sJH3UI1bv2jsNJee3S0i9JGx1Y9zctSgVso8E2rUolrNKvTTFbpHMo-ZW3A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0fGVSabOiEj1KxYUqbjV7tHb0AeO4WS3ri6nl60pgMtMmzUocZ38xT8w0cPTe1wGg7inaiYD9_JAnfp2tjnHGbgO1OuOrca_qbAQsMOak3ro6RzfTIKR4xzDe6J9ThhhyzThDSA=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Exterior",
+      "By owner"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJE5ICC_VmyjYRai_IiDyO7TE",
+    "name": "Tiệm Sửa Chữa Điện Nước Long Quân",
+    "category": "Store",
+    "city": "Cao Bằng",
+    "address": "M6MG+79M, QL3, Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6832036,
+      "lng": 106.2259369
+    },
+    "rating": 5,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 914 890 311",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Zv5dzBe5aDqlosf-NeEsfA&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=1.3361269&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJe7IA6fVmyjYRmzXqGPk2h2s",
+    "name": "Tiệm Rửa Xe 24/24 Tuyên",
+    "category": "Car wash",
+    "city": "Cao Bằng",
+    "address": "M6MF+FF9, Quốc lộ 3 Cũ, Thâm Hoáng, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6836725,
+      "lng": 106.2237382
+    },
+    "rating": 3,
+    "reviewCount": 1,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 856 406 667",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=fdlnFXmn2-KGa1rr1daSxQ&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=349.6096&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJHTcw3opmyjYR1LJWLm6a8FE",
+    "name": "Quán Trà Sữa G-tea",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6JH+MXF, Tổ 2, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6816801,
+      "lng": 106.2299269
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 1657957101",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=YfhafXY56Phgs76k5wBh_g&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=11.120963&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [
+      "Cà phê"
+    ],
+    "detailedPreferences": [
+      "All",
+      "Delivery",
+      "Takeout",
+      "Dine-in",
+      "Great tea selection",
+      "Wheelchair accessible restroom",
+      "Coffee",
+      "Catering",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Good for kids",
+      "Kids' menu",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJ4S5gr4tmyjYRFRWCdet5Lr4",
+    "name": "Quán Cơm Tâm Tài",
+    "category": "Restaurant",
+    "city": "Cao Bằng",
+    "address": "M6JJ+6MC, Quốc lộ 3 Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6805565,
+      "lng": 106.2316409
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 346 019 665",
+    "website": "",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VfgVS_shzQX4SI-iw2W5yw&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=263.03305&pitch=0&thumbfov=100"
+    ],
+    "openingHours": "Liên hệ",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Takeout",
+      "Dine-in",
+      "Catering",
+      "Restroom",
+      "Casual",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  },
+  {
+    "placeId": "ChIJazXuYgBnyjYRGciobnorLVA",
+    "name": "Ốc Mây",
+    "category": "Bistro",
+    "city": "Cao Bằng",
+    "address": "M6JH+QC8, QL3, Cũ, Thục Phán, Cao Bằng, Vietnam",
+    "location": {
+      "lat": 22.6819136,
+      "lng": 106.2285751
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "price": "Liên hệ",
+    "phoneNumber": "+84 988 276 248",
+    "website": "",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGM3JEi4Se43SODeo6qS5upGubYRVuYPPq8JmA3KDqc7dGdfq6t_ZR5MVhfBUsCCyOAUBSRaY-QZpIvaYckpxMGJWa9VrWPhCZJuUZHRVbSGN9EaHJ1Nrg9zQm9Bz61LYAHj0V0wQvoztmW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiwx5VIz-qTk5TK5VJP0M6PvJyKpbECp1UfXCQYtvFh75jnyhvGO951xGXKABZCL2HlInuAAafZP-UxbNqcDKFNSkz5_HdH3Y5LM6RRPaXD0MgOlThjCi4Fj1Ww_ROi7YWSsGV_nEGc8x5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGAVCD0X_eww1xpG9Ngdzovi48Y_sdVKCZ5sKSISSuCUhmnPrSWUP5FpTP7umT3ZkhFSHwuGyeoZlV3MkavzCSUvfOeiyMJFi3B5jodzrVv5aGSafL9i4LjZmC1JHqFLX6Ke-FT6bTYEqGS=w1920-h1080-k-no"
+    ],
+    "openingHours": "Monday: 2 to 10 PM, Tuesday: 2 to 10 PM, Wednesday: 2 to 10 PM, Thursday: 2 to 10 PM, Friday: 2 to 10 PM, Saturday: 2 to 10 PM, Sunday: 2 to 10 PM",
+    "cuisineTags": [],
+    "detailedPreferences": [
+      "All",
+      "Menu",
+      "Food & drink",
+      "Seafood",
+      "French fries",
+      "By owner",
+      "No-contact delivery",
+      "Delivery",
+      "Dine-in",
+      "Table service",
+      "Restroom",
+      "Casual",
+      "Groups",
+      "Free street parking"
+    ],
+    "source": "Google Maps via Apify"
+  }
+]
