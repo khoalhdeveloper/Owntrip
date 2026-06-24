@@ -19,7 +19,9 @@ import {
 	getTripSalesStats,
 	submitItineraryReview,
 	getMyItineraryReview,
-	deleteItineraryReview
+	deleteItineraryReview,
+  enableTripSharing,
+  getSharedTrip
 } from "../controllers/trip.controller";
 import {
 	getTripChecklist,
@@ -61,5 +63,7 @@ router.patch("/:tripId", verifyToken, updateTrip);
 router.patch("/:tripId/publish", verifyToken, updateTripPublishStatus);
 router.delete("/:tripId", verifyToken, deleteTripById);
 router.get("/:tripId", getTripDetail);
+router.post("/:tripId/share", verifyToken, enableTripSharing);
+router.get("/shared/:shareToken", getSharedTrip);
 
 module.exports = router;

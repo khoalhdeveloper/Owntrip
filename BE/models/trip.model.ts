@@ -56,6 +56,11 @@ const tripSchema = new Schema<ITrip>(
       activities: { type: Number, default: 0 }
     },
 
+    members: {
+      type: [String],
+      default: []
+    },
+
     isPublished: {
       type: Boolean,
       default: false
@@ -106,6 +111,11 @@ const tripSchema = new Schema<ITrip>(
     originalCreatorId: {
       type: String,
       ref: 'User'
+    },
+    shareToken: {
+      type: String,
+      sparse: true,
+      unique: true
     }
   },
   { timestamps: true }

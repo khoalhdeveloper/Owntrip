@@ -30,7 +30,34 @@ export const getTripExpenses = async (req: AuthRequest, res: Response) => {
     }
 
     const expenses = await TripExpense.find({ tripId, userId }).sort({ date: -1, createdAt: -1 });
-    return res.json({ success: true, total: expenses.length, expenses });
+
+    const trip = await Trip.findById(tripId);
+    let balances: any = [];
+    if (trip && trip.members && trip.members.length > 0) {
+      const members = trip.members;
+      const memberCount = members.length;
+      const balancesMap: Record<string, number> = {};
+      members.forEach(m => balancesMap[m] = 0);
+      
+      let totalSharedAmount = 0;
+      
+      expenses.forEach((expense: any) => {
+        if (expense.isShared && expense.payer && members.includes(expense.payer)) {
+          totalSharedAmount += expense.amount;
+          balancesMap[expense.payer] += expense.amount;
+        }
+      });
+      
+      const avgAmount = totalSharedAmount / memberCount;
+      
+      balances = members.map(member => ({
+        member,
+        paid: balancesMap[member],
+        balance: balancesMap[member] - avgAmount
+      }));
+    }
+
+    return res.json({ success: true, total: expenses.length, expenses, balances });
   } catch (error) {
     console.error("Get expenses error:", error);
     return res.status(500).json({ success: false, message: "Không thể tải danh sách chi phí" });
@@ -41,7 +68,7 @@ export const createTripExpense = async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.userId;
     const tripId = String(req.params.tripId);
-    const { category, title, amount, date } = req.body;
+    const { category, title, amount, date, payer, isShared } = req.body;
 
     if (!userId) {
       return res.status(401).json({ success: false, message: "Bạn cần đăng nhập" });
@@ -68,6 +95,8 @@ export const createTripExpense = async (req: AuthRequest, res: Response) => {
       category: category || "other",
       title,
       amount: parsedAmount,
+      payer,
+      isShared: Boolean(isShared),
       date: date ? new Date(date) : undefined
     });
 
@@ -102,6 +131,8 @@ export const updateTripExpense = async (req: AuthRequest, res: Response) => {
 
     if (req.body.category !== undefined) updateData.category = req.body.category;
     if (req.body.title !== undefined) updateData.title = req.body.title;
+    if (req.body.payer !== undefined) updateData.payer = req.body.payer;
+    if (req.body.isShared !== undefined) updateData.isShared = Boolean(req.body.isShared);
     if (req.body.date !== undefined) updateData.date = req.body.date ? new Date(req.body.date) : undefined;
     if (req.body.amount !== undefined) {
       const parsedAmount = parseAmount(req.body.amount);
