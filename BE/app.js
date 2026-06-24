@@ -25,6 +25,7 @@ const checkinRoutes = require('./routes/checkin.route');
 const withdrawalRoutes = require('./routes/withdrawal.route');
 const frameRoutes = require('./routes/frame.route');
 const aiRoutes = require('./routes/ai.route');
+const weatherRoutes = require('./routes/weather.routes');
 var app = express();
 connectDB();
 
@@ -77,6 +78,7 @@ app.use('/api/checkins', checkinRoutes);
 app.use('/api/withdrawals', withdrawalRoutes);
 app.use('/api/frames', frameRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/weather', weatherRoutes);
 
 app.use(function(req, res, next) {
   res.status(404).json({ success: false, message: 'Route not found' });
