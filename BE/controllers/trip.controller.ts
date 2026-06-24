@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import crypto from "crypto";
 import Trip from "../models/trip.model";
 import PlanDay from "../models/planDay.model";
 import PlanPlace from "../models/planPlace.model";
@@ -356,7 +357,7 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.userId;
     const tripId = req.params.tripId as any;
-    const { title, destination, startDate, endDate, description, isPublished, notes, budget, provinceImage } = req.body;
+    const { title, destination, startDate, endDate, description, isPublished, notes, budget, provinceImage, members } = req.body;
 
     if (!userId) {
       return res.status(401).json({
@@ -411,6 +412,11 @@ export const updateTrip = async (req: AuthRequest, res: Response) => {
     if (budget !== undefined) {
       (trip as any).budget = budget;
       trip.markModified('budget');
+    }
+
+    if (members !== undefined && Array.isArray(members)) {
+      (trip as any).members = members;
+      trip.markModified('members');
     }
 
     const nextStartDate = startDate ? new Date(startDate) : new Date(trip.startDate);
@@ -1507,5 +1513,89 @@ export const deleteItineraryReview = async (req: AuthRequest, res: Response) => 
   } catch (error) {
     console.error("Delete itinerary review error:", error);
     return res.status(500).json({ success: false, message: "Không thể xóa feedback" });
+  }
+};
+
+export const enableTripSharing = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    const tripId = req.params.tripId;
+
+    if (!userId) {
+      return res.status(401).json({ success: false, message: "Unauthorized" });
+    }
+
+    const trip = await Trip.findOne({ _id: tripId, userId });
+
+    if (!trip) {
+      return res.status(404).json({ success: false, message: "Trip not found or you do not have permission" });
+    }
+
+    if (!trip.shareToken) {
+      trip.shareToken = crypto.randomBytes(16).toString("hex");
+      await trip.save();
+    }
+
+    return res.json({
+      success: true,
+      shareToken: trip.shareToken,
+      message: "Sharing enabled successfully"
+    });
+  } catch (error) {
+    console.error("Enable trip sharing error:", error);
+    return res.status(500).json({ success: false, message: "Enable trip sharing failed" });
+  }
+};
+
+export const getSharedTrip = async (req: Request, res: Response) => {
+  try {
+    const { shareToken } = req.params;
+
+    const trip = await Trip.findOne({ shareToken });
+
+    if (!trip) {
+      return res.status(404).json({ success: false, message: "Shared trip not found" });
+    }
+
+    const days = await PlanDay.find({ tripId: trip._id }).sort({ dayNumber: 1 });
+    const result = [];
+
+    for (const day of days) {
+      const places = await PlanPlace.find({ dayId: day._id }).sort({ order: 1 });
+      result.push({
+        dayId: day._id,
+        day: day.dayNumber,
+        date: day.date,
+        places,
+      });
+    }
+
+    const reviewTargetId = resolveReviewTargetTripId(trip);
+    const reviewDocs = await Review.find({ targetId: reviewTargetId, targetType: 'itinerary' })
+      .sort({ createdAt: -1 })
+      .lean();
+
+    const userIds = reviewDocs.map(r => r.userId);
+    const users = await User.find({ userId: { $in: userIds } }).select('userId displayName image').lean();
+    
+    const userMap = new Map();
+    for (const u of users) {
+      userMap.set(u.userId, { _id: u._id, displayName: u.displayName, image: u.image });
+    }
+
+    const reviews = reviewDocs.map(r => ({
+      ...r,
+      userId: userMap.get(r.userId) || { displayName: "Người dùng ẩn danh", image: "" }
+    }));
+
+    res.json({
+      success: true,
+      trip,
+      days: result,
+      reviews
+    });
+  } catch (error) {
+    console.error("Get shared trip failed:", error);
+    res.status(500).json({ success: false, message: "Get shared trip failed" });
   }
 };

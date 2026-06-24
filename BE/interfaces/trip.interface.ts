@@ -17,6 +17,7 @@ export interface ITrip extends Document {
     transport: number
     activities: number
   }
+  members?: string[]
   isPublished: boolean
   accommodation?: {
     hotelId: string
@@ -36,4 +37,5 @@ export interface ITrip extends Document {
   isPurchasedClone?: boolean
   originalTripId?: Types.ObjectId
   originalCreatorId?: string
+  shareToken?: string
 }

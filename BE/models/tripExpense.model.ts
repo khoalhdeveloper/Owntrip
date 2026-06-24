@@ -26,6 +26,13 @@ const tripExpenseSchema = new Schema(
       required: true,
       min: 0
     },
+    payer: {
+      type: String
+    },
+    isShared: {
+      type: Boolean,
+      default: false
+    },
     date: Date
   },
   { timestamps: true }
