@@ -26,6 +26,7 @@ const withdrawalRoutes = require('./routes/withdrawal.route');
 const frameRoutes = require('./routes/frame.route');
 const missionRoutes = require('./routes/mission.route');
 const aiRoutes = require('./routes/ai.route');
+const weatherRoutes = require('./routes/weather.routes');
 const memoryRoutes = require('./routes/memory.route');
 var app = express();
 connectDB();
@@ -80,6 +81,7 @@ app.use('/api/withdrawals', withdrawalRoutes);
 app.use('/api/frames', frameRoutes);
 app.use('/api/missions', missionRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/weather', weatherRoutes);
 app.use('/api/memories', memoryRoutes);
 
 app.use(function(req, res, next) {
