@@ -265,11 +265,15 @@ export const searchPlace = async (req: Request, res: Response) => {
 
     // 1. Tìm kiếm trong database local trước (Ưu tiên tuyệt đối nếu có dữ liệu)
     const localPlaces = await Place.find({
-      $or: searchTerms.flatMap((term) => [
-        { name: { $regex: term, $options: "i" } },
-        { address: { $regex: term, $options: "i" } },
-        { city: { $regex: term, $options: "i" } }
-      ])
+      $or: [
+        { placeId: rawQuery },
+        ...searchTerms.flatMap((term) => [
+          { name: { $regex: term, $options: "i" } },
+          { address: { $regex: term, $options: "i" } },
+          { city: { $regex: term, $options: "i" } },
+          { placeId: { $regex: term, $options: "i" } }
+        ])
+      ]
     }).sort({ addedCount: -1 }).limit(20);
 
     if (localPlaces.length > 0) {
@@ -289,7 +293,8 @@ export const searchPlace = async (req: Request, res: Response) => {
           userRatingCount: p.reviewCount,
           types: p.category ? [p.category] : [],
           photos: p.images?.map(img => ({ name: img })),
-          addedCount: p.addedCount || 0
+          addedCount: p.addedCount || 0,
+          isCheckinEnabled: p.isCheckinEnabled !== false
         }))
       });
     }
@@ -420,11 +425,24 @@ export const searchPlace = async (req: Request, res: Response) => {
       })
     );
 
+    // Query local DB for check-in status of these returned Goong places
+    const placeIds = formattedPlaces.map(p => p.placeId);
+    const existingPlaces = await Place.find({ placeId: { $in: placeIds } });
+    const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+
+    const finalPlaces = formattedPlaces.map(p => {
+      const existing = existingMap.get(p.placeId);
+      return {
+        ...p,
+        isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+      };
+    });
+
     res.json({
       success: true,
       source: "goong",
       predictions: predictions,
-      places: formattedPlaces
+      places: finalPlaces
     });
   } catch (error: any) {
     res.status(500).json({
@@ -487,7 +505,8 @@ export const searchNearby = async (req: Request, res: Response) => {
           : null,
         photo: p.images?.[0] || null,
         photos: p.images || [],
-        addedCount: p.addedCount || 0
+        addedCount: p.addedCount || 0,
+        isCheckinEnabled: p.isCheckinEnabled !== false
       }));
 
       return res.json({
@@ -570,13 +589,28 @@ export const searchNearby = async (req: Request, res: Response) => {
             photos: [finalPhoto]
           };
         })
-    )).filter(Boolean);
+    )).filter(Boolean) as any[];
+
+    const filteredPlaces = places;
+
+    // Query local DB for check-in status of these returned Goong places
+    const placeIds = filteredPlaces.map(p => p.placeId);
+    const existingPlaces = await Place.find({ placeId: { $in: placeIds } });
+    const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+
+    const finalPlaces = filteredPlaces.map(p => {
+      const existing = existingMap.get(p.placeId);
+      return {
+        ...p,
+        isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+      };
+    });
 
     res.json({
       success: true,
       source: "goong",
-      total: places.length,
-      places
+      total: finalPlaces.length,
+      places: finalPlaces
     });
   } catch (error: any) {
     console.error("Goong searchNearby error:", error?.response?.data || error?.message || error);
@@ -615,11 +649,15 @@ export const searchText = async (req: Request, res: Response) => {
 
     // 1. Thử tìm kiếm trong database local trước
     const dbResults = await Place.find({
-      $or: expandedQueryList.flatMap((queryText) => [
-        { name: { $regex: queryText, $options: "i" } },
-        { address: { $regex: queryText, $options: "i" } },
-        { city: { $regex: queryText, $options: "i" } }
-      ])
+      $or: [
+        ...queryList.map(qText => ({ placeId: qText })),
+        ...expandedQueryList.flatMap((queryText) => [
+          { name: { $regex: queryText, $options: "i" } },
+          { address: { $regex: queryText, $options: "i" } },
+          { city: { $regex: queryText, $options: "i" } },
+          { placeId: { $regex: queryText, $options: "i" } }
+        ])
+      ]
     }).sort({ addedCount: -1 }).limit(maxResultCount);
 
     if (dbResults.length > 0) {
@@ -780,13 +818,26 @@ export const searchText = async (req: Request, res: Response) => {
         })
     );
 
-    const filteredPlaces = places.filter(Boolean);
+    const filteredPlaces = places.filter(Boolean) as any[];
+
+    // Query local DB for check-in status of these returned Goong places
+    const placeIds = filteredPlaces.map(p => p.placeId);
+    const existingPlaces = await Place.find({ placeId: { $in: placeIds } });
+    const existingMap = new Map(existingPlaces.map(p => [p.placeId, p]));
+
+    const finalPlaces = filteredPlaces.map(p => {
+      const existing = existingMap.get(p.placeId);
+      return {
+        ...p,
+        isCheckinEnabled: existing ? existing.isCheckinEnabled !== false : true
+      };
+    });
 
     res.json({
       success: true,
       source: "goong",
-      total: filteredPlaces.length,
-      places: filteredPlaces
+      total: finalPlaces.length,
+      places: finalPlaces
     });
   } catch (error: any) {
     console.error("Goong searchText failed:", error.message);
@@ -834,12 +885,12 @@ export const getPlaceChildren = async (req: Request, res: Response) => {
  */
 export const getTopAddedPlaces = async (req: Request, res: Response) => {
   try {
-    const { minAddedCount = "1", limit = "10" } = req.query;
-    const min = Math.max(0, Number(minAddedCount) || 1);
-    const lim = Math.min(50, Math.max(1, Number(limit) || 10));
+    const { minAddedCount, limit = "50" } = req.query;
+    const min = minAddedCount !== undefined ? Math.max(0, Number(minAddedCount)) : 0;
+    const lim = Math.min(100, Math.max(1, Number(limit) || 50));
 
     const results = await Place.find({ addedCount: { $gte: min } })
-      .sort({ addedCount: -1 })
+      .sort({ addedCount: -1, createdAt: -1 })
       .limit(lim);
 
     const places = results.map((p) => ({
@@ -853,12 +904,68 @@ export const getTopAddedPlaces = async (req: Request, res: Response) => {
       types: p.category ? [p.category] : [],
       photo: p.images?.[0],
       photos: p.images,
-      addedCount: p.addedCount || 0
+      addedCount: p.addedCount || 0,
+      isCheckinEnabled: p.isCheckinEnabled !== false
     }));
 
     return res.json({ success: true, total: places.length, places });
   } catch (error: any) {
     console.error("Get top added places failed:", error?.message || error);
     return res.status(500).json({ success: false, message: "Get top added places failed" });
+  }
+};
+
+export const togglePlaceCheckin = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const { isCheckinEnabled } = req.body;
+
+    let place = await Place.findOne({ placeId: id });
+    if (!place) {
+      // Fetch details from Goong to create it in our database
+      const detailRes = await axios.get(`${GOONG_API_BASE_URL}/v2/place/detail`, {
+        params: {
+          api_key: getGoongKey(),
+          place_id: id
+        }
+      });
+      const d = detailRes.data?.result;
+      if (!d) {
+        return res.status(404).json({ success: false, message: "Không tìm thấy địa điểm trên Goong" });
+      }
+
+      // Create new local place
+      place = new Place({
+        placeId: id,
+        name: d.name,
+        address: d.formatted_address,
+        location: {
+          lat: d.geometry?.location?.lat,
+          lng: d.geometry?.location?.lng
+        },
+        category: (d.types && d.types[0]) || "",
+        rating: d.rating || 0,
+        reviewCount: d.user_ratings_total || 0,
+        isCheckinEnabled: isCheckinEnabled !== false
+      });
+      await place.save();
+    } else {
+      place.isCheckinEnabled = isCheckinEnabled !== false;
+      await place.save();
+    }
+
+    return res.json({
+      success: true,
+      message: place.isCheckinEnabled ? "Đã bật check-in cho địa điểm" : "Đã tắt check-in cho địa điểm",
+      place: {
+        placeId: place.placeId,
+        name: place.name,
+        address: place.address,
+        isCheckinEnabled: place.isCheckinEnabled
+      }
+    });
+  } catch (error: any) {
+    console.error("Toggle place checkin failed:", error?.message || error);
+    return res.status(500).json({ success: false, message: "Không thể cập nhật trạng thái check-in" });
   }
 };

@@ -3,8 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reorderFrames = exports.toggleFrameActive = exports.deleteFrame = exports.updateFrame = exports.createFrame = exports.getAllFramesAdmin = exports.getFrames = void 0;
+exports.reorderFrames = exports.toggleFrameActive = exports.deleteFrame = exports.updateFrame = exports.createFrame = exports.getAllFramesAdmin = exports.getMyUnlockedFrames = exports.getFrames = void 0;
 const frame_model_1 = __importDefault(require("../models/frame.model"));
+const user_model_1 = __importDefault(require("../models/user.model"));
 const cloudinary_1 = __importDefault(require("../config/cloudinary"));
 // ─── Helper: Tạo thumbnail URL từ Cloudinary imageUrl ────────────────────────
 // Cloudinary hỗ trợ transformation qua URL — chèn "w_200,c_scale" vào path
@@ -22,6 +23,39 @@ const extractPublicId = (imageUrl) => {
     const withoutExt = withoutVersion.replace(/\.[^/.]+$/, ''); // "frames/abc"
     return withoutExt;
 };
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const normalizeTags = (value) => {
+    if (Array.isArray(value)) {
+        return value.map((item) => String(item).trim()).filter(Boolean);
+    }
+    if (typeof value === "string") {
+        return value.split(",").map((item) => item.trim()).filter(Boolean);
+    }
+    return [];
+};
+const buildFrameFilter = (query) => {
+    const { province, destination, category } = query;
+    const targetedFilter = {};
+    if (province) {
+        targetedFilter.province = { $regex: escapeRegExp(String(province)), $options: "i" };
+    }
+    if (destination) {
+        targetedFilter.destinationTags = { $regex: escapeRegExp(String(destination)), $options: "i" };
+    }
+    if (category) {
+        targetedFilter.category = String(category);
+    }
+    if (Object.keys(targetedFilter).length === 0) {
+        return { isActive: true };
+    }
+    return {
+        isActive: true,
+        $or: [
+            targetedFilter,
+            { isDefault: true }
+        ]
+    };
+};
 // ─────────────────────────────────────────────
 // PUBLIC
 // ─────────────────────────────────────────────
@@ -31,7 +65,7 @@ const extractPublicId = (imageUrl) => {
  */
 const getFrames = async (req, res) => {
     try {
-        const frames = await frame_model_1.default.find({ isActive: true }).sort({ order: 1 });
+        const frames = await frame_model_1.default.find(buildFrameFilter(req.query)).sort({ order: 1 });
         return res.json({
             success: true,
             total: frames.length,
@@ -48,6 +82,55 @@ const getFrames = async (req, res) => {
     }
 };
 exports.getFrames = getFrames;
+/**
+ * [USER] Get active frames available to the current user.
+ * Includes all free frames and mission frames already unlocked by rewards.
+ */
+const getMyUnlockedFrames = async (req, res) => {
+    try {
+        const userId = req.user?.userId;
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: "Unauthorized"
+            });
+        }
+        const user = await user_model_1.default.findOne({ userId }).select("unlockedCheckinFrameIds");
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Khong tim thay nguoi dung"
+            });
+        }
+        const unlockedFrameIds = user.unlockedCheckinFrameIds || [];
+        const frames = await frame_model_1.default.find({
+            isActive: true,
+            $or: [
+                { unlockType: "free" },
+                { _id: { $in: unlockedFrameIds } }
+            ]
+        }).sort({ order: 1 });
+        const unlockedIdSet = new Set(unlockedFrameIds.map((id) => id.toString()));
+        const framesWithUnlockStatus = frames.map((frame) => ({
+            ...frame.toObject(),
+            isUnlocked: frame.unlockType === "free" || unlockedIdSet.has(frame._id.toString())
+        }));
+        return res.json({
+            success: true,
+            total: framesWithUnlockStatus.length,
+            frames: framesWithUnlockStatus
+        });
+    }
+    catch (error) {
+        console.error("Get unlocked frames error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Khong the lay danh sach frame da mo khoa",
+            error: error instanceof Error ? error.message : "Unknown error"
+        });
+    }
+};
+exports.getMyUnlockedFrames = getMyUnlockedFrames;
 // ─────────────────────────────────────────────
 // ADMIN
 // ─────────────────────────────────────────────
@@ -81,7 +164,7 @@ exports.getAllFramesAdmin = getAllFramesAdmin;
  */
 const createFrame = async (req, res) => {
     try {
-        const { name, category, layoutType, slotsCount, order } = req.body;
+        const { name, category, province, destinationTags, isDefault, unlockCondition, unlockType, layoutType, slotsCount, order } = req.body;
         // Kiểm tra tên frame
         if (!name) {
             return res.status(400).json({
@@ -105,6 +188,11 @@ const createFrame = async (req, res) => {
             imageUrl,
             thumbnailUrl,
             category: category || "general",
+            province,
+            destinationTags: normalizeTags(destinationTags),
+            isDefault: isDefault === true || isDefault === "true",
+            unlockCondition: unlockCondition || "none",
+            unlockType: unlockType || "free",
             layoutType: layoutType || "single",
             slotsCount: slotsCount || 1,
             order: order || 0,
@@ -143,6 +231,12 @@ const updateFrame = async (req, res) => {
             });
         }
         const updateData = { ...req.body };
+        if (req.body.destinationTags !== undefined) {
+            updateData.destinationTags = normalizeTags(req.body.destinationTags);
+        }
+        if (req.body.isDefault !== undefined) {
+            updateData.isDefault = req.body.isDefault === true || req.body.isDefault === "true";
+        }
         // Nếu có file upload mới → cập nhật URL và xóa ảnh cũ trên Cloudinary
         if (req.file) {
             const newImageUrl = req.file.path;

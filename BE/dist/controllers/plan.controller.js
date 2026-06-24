@@ -7,9 +7,31 @@ exports.reorderPlacesInDay = exports.deletePlaceFromDay = exports.reorderPlaces 
 const mongoose_1 = __importDefault(require("mongoose"));
 const planPlace_model_1 = __importDefault(require("../models/planPlace.model"));
 const place_model_1 = __importDefault(require("../models/place.model"));
+const planDay_model_1 = __importDefault(require("../models/planDay.model"));
+const trip_model_1 = __importDefault(require("../models/trip.model"));
+const forbiddenItineraryMessage = "You do not have permission to edit this itinerary";
+async function assertDayOwner(dayId, userId) {
+    const day = await planDay_model_1.default.findById(dayId);
+    if (!day) {
+        return null;
+    }
+    const trip = await trip_model_1.default.findOne({ _id: day.tripId, userId });
+    if (!trip) {
+        return null;
+    }
+    return { day, trip };
+}
+const getRequesterId = (req) => req.user?.userId;
 const addPlaceToDay = async (req, res) => {
     try {
-        const { dayId } = req.params;
+        const dayId = String(req.params.dayId);
+        const userId = getRequesterId(req);
+        if (!userId || !(await assertDayOwner(dayId, userId))) {
+            return res.status(403).json({
+                success: false,
+                message: forbiddenItineraryMessage
+            });
+        }
         const { placeId, name, address, latitude, longitude, rating, photo, mapUrl, timeOfDay } = req.body;
         const count = await planPlace_model_1.default.countDocuments({ dayId: dayId });
         // Cập nhật bộ đếm độ phổ biến của địa điểm
@@ -45,8 +67,15 @@ const addPlaceToDay = async (req, res) => {
 exports.addPlaceToDay = addPlaceToDay;
 const reorderPlaces = async (req, res) => {
     try {
-        const { dayId } = req.params;
+        const dayId = String(req.params.dayId);
         const { placeIds } = req.body;
+        const userId = getRequesterId(req);
+        if (!userId || !(await assertDayOwner(dayId, userId))) {
+            return res.status(403).json({
+                success: false,
+                message: forbiddenItineraryMessage
+            });
+        }
         if (!Array.isArray(placeIds)) {
             return res.status(400).json({ success: false, message: "Invalid data" });
         }
@@ -61,7 +90,15 @@ const reorderPlaces = async (req, res) => {
 exports.reorderPlaces = reorderPlaces;
 const deletePlaceFromDay = async (req, res) => {
     try {
-        const { dayId, planPlaceId } = req.params;
+        const dayId = String(req.params.dayId);
+        const planPlaceId = String(req.params.planPlaceId);
+        const userId = getRequesterId(req);
+        if (!userId || !(await assertDayOwner(dayId, userId))) {
+            return res.status(403).json({
+                success: false,
+                message: forbiddenItineraryMessage
+            });
+        }
         const place = await planPlace_model_1.default.findOne({ _id: planPlaceId, dayId: dayId });
         if (!place) {
             return res.status(404).json({
@@ -97,6 +134,13 @@ const reorderPlacesInDay = async (req, res) => {
             return res.status(400).json({
                 success: false,
                 message: "dayId is required"
+            });
+        }
+        const userId = getRequesterId(req);
+        if (!userId || !(await assertDayOwner(String(targetDayId), userId))) {
+            return res.status(403).json({
+                success: false,
+                message: forbiddenItineraryMessage
             });
         }
         if (!Array.isArray(orderedIds) || orderedIds.length === 0) {

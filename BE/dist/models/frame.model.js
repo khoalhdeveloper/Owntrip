@@ -58,6 +58,28 @@ const frameSchema = new mongoose_1.Schema({
         default: "general",
         trim: true
     },
+    province: {
+        type: String,
+        trim: true
+    },
+    destinationTags: {
+        type: [String],
+        default: []
+    },
+    isDefault: {
+        type: Boolean,
+        default: false
+    },
+    unlockCondition: {
+        type: String,
+        enum: ["none", "checkin_at_location", "mission_reward", "purchase"],
+        default: "none"
+    },
+    unlockType: {
+        type: String,
+        enum: ["free", "mission"],
+        default: "free"
+    },
     // Kiểu bố cục: 'single' (1 ô) hoặc 'filmstrip-4' (4 ô dạng dải film)
     layoutType: {
         type: String,

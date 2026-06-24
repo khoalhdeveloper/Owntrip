@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const trip_controller_1 = require("../controllers/trip.controller");
+const tripChecklist_controller_1 = require("../controllers/tripChecklist.controller");
+const tripExpense_controller_1 = require("../controllers/tripExpense.controller");
 const auth_middleware_1 = require("../middlewares/auth.middleware");
 const router = (0, express_1.Router)();
 router.post("/", auth_middleware_1.verifyToken, trip_controller_1.createTrip);
@@ -11,9 +13,18 @@ router.get("/published", trip_controller_1.getPublishedTrips);
 router.get("/marketplace", trip_controller_1.getMarketplaceTrips);
 router.get("/marketplace/:tripId/preview", trip_controller_1.getTripPreview);
 router.post("/marketplace/:tripId/purchase", auth_middleware_1.verifyToken, trip_controller_1.createPaymentUrl);
+router.get("/payment-sandbox/:orderCode", trip_controller_1.renderSandboxPayment);
+router.post("/payment-webhook", trip_controller_1.handlePaymentWebhook);
 router.post("/:tripId/review", auth_middleware_1.verifyToken, trip_controller_1.submitItineraryReview);
 router.get("/:tripId/my-review", auth_middleware_1.verifyToken, trip_controller_1.getMyItineraryReview);
 router.delete("/:tripId/review", auth_middleware_1.verifyToken, trip_controller_1.deleteItineraryReview);
+router.get("/:tripId/offline-package", auth_middleware_1.verifyToken, trip_controller_1.getOfflineTripPackage);
+router.get("/:tripId/checklist", auth_middleware_1.verifyToken, tripChecklist_controller_1.getTripChecklist);
+router.put("/:tripId/checklist", auth_middleware_1.verifyToken, tripChecklist_controller_1.updateTripChecklist);
+router.get("/:tripId/expenses", auth_middleware_1.verifyToken, tripExpense_controller_1.getTripExpenses);
+router.post("/:tripId/expenses", auth_middleware_1.verifyToken, tripExpense_controller_1.createTripExpense);
+router.patch("/:tripId/expenses/:expenseId", auth_middleware_1.verifyToken, tripExpense_controller_1.updateTripExpense);
+router.delete("/:tripId/expenses/:expenseId", auth_middleware_1.verifyToken, tripExpense_controller_1.deleteTripExpense);
 router.patch("/:tripId/marketplace", auth_middleware_1.verifyToken, trip_controller_1.publishToMarketplace);
 router.get("/:tripId/destinations", trip_controller_1.getTripDestinations);
 router.get("/:tripId/sales-stats", auth_middleware_1.verifyToken, trip_controller_1.getTripSalesStats);
@@ -21,7 +32,4 @@ router.patch("/:tripId", auth_middleware_1.verifyToken, trip_controller_1.update
 router.patch("/:tripId/publish", auth_middleware_1.verifyToken, trip_controller_1.updateTripPublishStatus);
 router.delete("/:tripId", auth_middleware_1.verifyToken, trip_controller_1.deleteTripById);
 router.get("/:tripId", trip_controller_1.getTripDetail);
-// Payment Sandbox Routes
-router.get("/payment-sandbox/:orderCode", trip_controller_1.renderSandboxPayment);
-router.post("/payment-webhook", trip_controller_1.handlePaymentWebhook);
 module.exports = router;

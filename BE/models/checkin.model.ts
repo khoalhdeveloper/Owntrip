@@ -8,9 +8,12 @@ const checkinSchema = new Schema<ICheckin>(
       ref: "User",
       required: true
     },
+    placeId: {
+      type: String
+    },
     imageUri: {
       type: String,
-      required: true
+      default: ""
     },
     title: {
       type: String,
@@ -20,6 +23,21 @@ const checkinSchema = new Schema<ICheckin>(
     date: {
       type: String,
       required: true
+    },
+    userLocation: {
+      latitude: Number,
+      longitude: Number
+    },
+    distanceMeters: {
+      type: Number
+    },
+    source: {
+      type: String,
+      enum: ["location", "photo_booth"],
+      default: "photo_booth"
+    },
+    checkedInAt: {
+      type: Date
     },
     isFavorite: {
       type: Boolean,

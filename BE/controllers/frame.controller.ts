@@ -1,5 +1,6 @@
 import { Response, Request } from "express";
 import Frame from "../models/frame.model";
+import User from "../models/user.model";
 import { AuthRequest } from "../middlewares/auth.middleware";
 import cloudinary from "../config/cloudinary";
 
@@ -20,6 +21,49 @@ const extractPublicId = (imageUrl: string): string => {
   return withoutExt;
 };
 
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const normalizeTags = (value: unknown): string[] => {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  if (typeof value === "string") {
+    return value.split(",").map((item) => item.trim()).filter(Boolean);
+  }
+
+  return [];
+};
+
+const buildFrameFilter = (query: Request["query"]) => {
+  const { province, destination, category } = query;
+  const targetedFilter: Record<string, any> = {};
+
+  if (province) {
+    targetedFilter.province = { $regex: escapeRegExp(String(province)), $options: "i" };
+  }
+
+  if (destination) {
+    targetedFilter.destinationTags = { $regex: escapeRegExp(String(destination)), $options: "i" };
+  }
+
+  if (category) {
+    targetedFilter.category = String(category);
+  }
+
+  if (Object.keys(targetedFilter).length === 0) {
+    return { isActive: true };
+  }
+
+  return {
+    isActive: true,
+    $or: [
+      targetedFilter,
+      { isDefault: true }
+    ]
+  };
+};
+
 // ─────────────────────────────────────────────
 // PUBLIC
 // ─────────────────────────────────────────────
@@ -30,7 +74,7 @@ const extractPublicId = (imageUrl: string): string => {
  */
 export const getFrames = async (req: Request, res: Response) => {
   try {
-    const frames = await Frame.find({ isActive: true }).sort({ order: 1 });
+    const frames = await Frame.find(buildFrameFilter(req.query)).sort({ order: 1 });
 
     return res.json({
       success: true,
@@ -42,6 +86,58 @@ export const getFrames = async (req: Request, res: Response) => {
     return res.status(500).json({
       success: false,
       message: "Không thể lấy danh sách frame",
+      error: error instanceof Error ? error.message : "Unknown error"
+    });
+  }
+};
+
+/**
+ * [USER] Get active frames available to the current user.
+ * Includes all free frames and mission frames already unlocked by rewards.
+ */
+export const getMyUnlockedFrames = async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized"
+      });
+    }
+
+    const user = await User.findOne({ userId }).select("unlockedCheckinFrameIds");
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Khong tim thay nguoi dung"
+      });
+    }
+
+    const unlockedFrameIds = user.unlockedCheckinFrameIds || [];
+    const frames = await Frame.find({
+      isActive: true,
+      $or: [
+        { unlockType: "free" },
+        { _id: { $in: unlockedFrameIds } }
+      ]
+    }).sort({ order: 1 });
+
+    const unlockedIdSet = new Set(unlockedFrameIds.map((id) => id.toString()));
+    const framesWithUnlockStatus = frames.map((frame) => ({
+      ...frame.toObject(),
+      isUnlocked: frame.unlockType === "free" || unlockedIdSet.has(frame._id.toString())
+    }));
+
+    return res.json({
+      success: true,
+      total: framesWithUnlockStatus.length,
+      frames: framesWithUnlockStatus
+    });
+  } catch (error) {
+    console.error("Get unlocked frames error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Khong the lay danh sach frame da mo khoa",
       error: error instanceof Error ? error.message : "Unknown error"
     });
   }
@@ -81,7 +177,18 @@ export const getAllFramesAdmin = async (req: AuthRequest, res: Response) => {
  */
 export const createFrame = async (req: AuthRequest, res: Response) => {
   try {
-    const { name, category, layoutType, slotsCount, order } = req.body;
+    const {
+      name,
+      category,
+      province,
+      destinationTags,
+      isDefault,
+      unlockCondition,
+      unlockType,
+      layoutType,
+      slotsCount,
+      order
+    } = req.body;
 
     // Kiểm tra tên frame
     if (!name) {
@@ -110,6 +217,11 @@ export const createFrame = async (req: AuthRequest, res: Response) => {
       imageUrl,
       thumbnailUrl,
       category:   category   || "general",
+      province,
+      destinationTags: normalizeTags(destinationTags),
+      isDefault: isDefault === true || isDefault === "true",
+      unlockCondition: unlockCondition || "none",
+      unlockType: unlockType || "free",
       layoutType: layoutType || "single",
       slotsCount: slotsCount || 1,
       order:      order      || 0,
@@ -150,6 +262,12 @@ export const updateFrame = async (req: AuthRequest, res: Response) => {
     }
 
     const updateData: Record<string, any> = { ...req.body };
+    if (req.body.destinationTags !== undefined) {
+      updateData.destinationTags = normalizeTags(req.body.destinationTags);
+    }
+    if (req.body.isDefault !== undefined) {
+      updateData.isDefault = req.body.isDefault === true || req.body.isDefault === "true";
+    }
 
     // Nếu có file upload mới → cập nhật URL và xóa ảnh cũ trên Cloudinary
     if (req.file) {

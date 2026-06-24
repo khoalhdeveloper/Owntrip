@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteItineraryReview = exports.getMyItineraryReview = exports.submitItineraryReview = exports.getTripSalesStats = exports.renderSandboxPayment = exports.processTripOrder = exports.handlePaymentWebhook = exports.createPaymentUrl = exports.publishToMarketplace = exports.getTripPreview = exports.getMarketplaceTrips = exports.deleteTripById = exports.updateTripPublishStatus = exports.getPublishedTrips = exports.updateTrip = exports.getProvinceImageCatalog = exports.getMyTrips = exports.getTripDestinations = exports.getTripDetail = exports.createTrip = void 0;
+exports.deleteItineraryReview = exports.getMyItineraryReview = exports.submitItineraryReview = exports.getTripSalesStats = exports.renderSandboxPayment = exports.processTripOrder = exports.handlePaymentWebhook = exports.createPaymentUrl = exports.publishToMarketplace = exports.getTripPreview = exports.getMarketplaceTrips = exports.deleteTripById = exports.updateTripPublishStatus = exports.getPublishedTrips = exports.updateTrip = exports.getProvinceImageCatalog = exports.getMyTrips = exports.getOfflineTripPackage = exports.getTripDestinations = exports.getTripDetail = exports.createTrip = void 0;
 const trip_model_1 = __importDefault(require("../models/trip.model"));
 const planDay_model_1 = __importDefault(require("../models/planDay.model"));
 const planPlace_model_1 = __importDefault(require("../models/planPlace.model"));
@@ -11,6 +11,8 @@ const provinceImages_1 = require("../utils/provinceImages");
 const notification_model_1 = __importDefault(require("../models/notification.model"));
 const review_model_1 = __importDefault(require("../models/review.model"));
 const user_model_1 = __importDefault(require("../models/user.model"));
+const checkin_model_1 = __importDefault(require("../models/checkin.model"));
+const frame_model_1 = __importDefault(require("../models/frame.model"));
 const createTrip = async (req, res) => {
     try {
         const userId = req.user?.userId;
@@ -168,6 +170,69 @@ const getTripDestinations = async (req, res) => {
     }
 };
 exports.getTripDestinations = getTripDestinations;
+const getOfflineTripPackage = async (req, res) => {
+    try {
+        const userId = req.user?.userId;
+        const tripId = req.params.tripId;
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: "Bạn cần đăng nhập"
+            });
+        }
+        const trip = await trip_model_1.default.findById(tripId);
+        if (!trip) {
+            return res.status(404).json({
+                success: false,
+                message: "Không tìm thấy chuyến đi"
+            });
+        }
+        const canAccess = trip.userId === userId || trip.isPublished || (trip.isPurchasedClone && trip.userId === userId);
+        if (!canAccess) {
+            return res.status(403).json({
+                success: false,
+                message: "Bạn không có quyền tải gói offline của chuyến đi này"
+            });
+        }
+        const days = await planDay_model_1.default.find({ tripId }).sort({ dayNumber: 1 });
+        const dayIds = days.map((day) => day._id);
+        const places = dayIds.length > 0
+            ? await planPlace_model_1.default.find({ dayId: { $in: dayIds } }).sort({ dayId: 1, order: 1 })
+            : [];
+        const placeIds = Array.from(new Set(places.map((place) => place.placeId).filter(Boolean)));
+        const checkins = placeIds.length > 0
+            ? await checkin_model_1.default.find({ userId, placeId: { $in: placeIds } }).sort({ createdAt: -1 })
+            : [];
+        const frameFilters = [{ isDefault: true }];
+        if (trip.province) {
+            frameFilters.push({ province: { $regex: trip.province, $options: "i" } });
+        }
+        if (trip.destination) {
+            frameFilters.push({ destinationTags: { $regex: trip.destination, $options: "i" } });
+        }
+        const frames = await frame_model_1.default.find({
+            isActive: true,
+            $or: frameFilters
+        }).sort({ order: 1 });
+        return res.json({
+            success: true,
+            trip,
+            days,
+            places,
+            checkins,
+            frames,
+            updatedAt: new Date(Math.max(new Date(trip.updatedAt || trip.startDate).getTime(), ...days.map((day) => new Date(day.updatedAt || day.date).getTime()), ...places.map((place) => new Date(place.updatedAt || place.createdAt).getTime()))).toISOString()
+        });
+    }
+    catch (error) {
+        console.error("Get offline package error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Không thể tải gói offline của chuyến đi"
+        });
+    }
+};
+exports.getOfflineTripPackage = getOfflineTripPackage;
 const getMyTrips = async (req, res) => {
     try {
         const userId = req.user?.userId;
@@ -223,7 +288,7 @@ const updateTrip = async (req, res) => {
     try {
         const userId = req.user?.userId;
         const tripId = req.params.tripId;
-        const { title, destination, startDate, endDate, description, isPublished, notes, budget } = req.body;
+        const { title, destination, startDate, endDate, description, isPublished, notes, budget, provinceImage } = req.body;
         if (!userId) {
             return res.status(401).json({
                 success: false,
@@ -251,6 +316,9 @@ const updateTrip = async (req, res) => {
             const matchedProvince = (0, provinceImages_1.findProvinceImageByDestination)(destination);
             trip.province = matchedProvince?.province;
             trip.provinceImage = matchedProvince?.imageUrl;
+        }
+        if (provinceImage !== undefined) {
+            trip.provinceImage = provinceImage;
         }
         if (req.body.accommodation !== undefined) {
             trip.accommodation = req.body.accommodation;
@@ -660,11 +728,18 @@ const createPaymentUrl = async (req, res) => {
         const buyerId = req.user?.userId;
         const { tripId } = req.params;
         if (!buyerId)
-            return res.status(401).json({ success: false, message: "Unauthorized" });
+            return res.status(401).json({ success: false, message: "Bạn cần đăng nhập" });
         const templateTrip = await trip_model_1.default.findById(tripId);
         if (!templateTrip)
             return res.status(404).json({ success: false, message: "Trip template not found" });
         if (templateTrip.userId === buyerId) {
+            return res.json({
+                success: true,
+                message: "Bạn đã sở hữu lịch trình này",
+                tripId: templateTrip._id,
+                alreadyOwned: true,
+                paymentRequired: false
+            });
             return res.json({ success: true, message: "Bạn đã sở hữu lịch trình này!", tripId: templateTrip._id });
         }
         // Check if buyer has already purchased a clone of this trip
@@ -674,6 +749,13 @@ const createPaymentUrl = async (req, res) => {
             isPurchasedClone: true
         });
         if (existingPurchase) {
+            return res.json({
+                success: true,
+                message: "Bạn đã sở hữu lịch trình này",
+                tripId: existingPurchase._id,
+                alreadyOwned: true,
+                paymentRequired: false
+            });
             return res.json({
                 success: true,
                 message: "Bạn đã sở hữu lịch trình này!",
@@ -705,7 +787,10 @@ const createPaymentUrl = async (req, res) => {
                 success: true,
                 message: "Lịch trình miễn phí. Mở khoá thành công!",
                 paymentMethod: 'free',
-                newTripId: clonedTrip?._id
+                tripId: clonedTrip?._id,
+                newTripId: clonedTrip?._id,
+                alreadyOwned: false,
+                paymentRequired: false
             });
         }
         // ── ƯU TIÊN: Kiểm tra số dư ví của buyer ──
@@ -795,7 +880,10 @@ const createPaymentUrl = async (req, res) => {
                     success: true,
                     message: "Mua lịch trình thành công bằng số dư ví!",
                     paymentMethod: 'balance',
+                    tripId: clonedTripId,
                     newTripId: clonedTripId,
+                    alreadyOwned: false,
+                    paymentRequired: false,
                     orderCode
                 });
             }
@@ -829,6 +917,8 @@ const createPaymentUrl = async (req, res) => {
             success: true,
             message: "Số dư không đủ. Đang chuyển hướng tới cổng thanh toán...",
             paymentMethod: 'payos',
+            paymentRequired: true,
+            checkoutUrl: paymentLinkRes.checkoutUrl,
             paymentUrl: paymentLinkRes.checkoutUrl,
             orderCode
         });

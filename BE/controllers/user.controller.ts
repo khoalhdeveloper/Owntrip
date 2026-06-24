@@ -7,6 +7,7 @@ import { buildVNPayUrl, verifyVNPayReturn, parseVNPayAmount, isVNPaySuccess } fr
 import crypto from 'crypto';
 import { generateOTP, getOTPExpiration } from '../utils/otpGenerator';
 import { sendEmailTemplate } from '../utils/emailService';
+import { verifyGoogleIdToken } from '../utils/googleAuth';
 
 
 
@@ -35,10 +36,9 @@ export const UserController = {
         }
       );
       
-      res.status(201).json({ 
+      res.status(201).json({
         success: true, 
-        message: "User registered successfully. Please verify your email with the OTP sent.",
-        otp 
+        message: "User registered successfully. Please verify your email with the OTP sent."
       });
     } catch (error: any) {
       res.status(400).json({ success: false, message: error.message });
@@ -217,12 +217,9 @@ export const UserController = {
     if (!idToken) {
       return res.status(400).json({ success: false, message: "Missing idToken" });
     }
-    const decoded: any = jwt.decode(idToken);
-    if (!decoded || !decoded.email) {
-      return res.status(400).json({ success: false, message: "Invalid idToken" });
-    }
+    const decoded = await verifyGoogleIdToken(idToken);
     
-    const email = decoded.email;
+    const email = decoded.email!;
     const displayName = decoded.name || email.split('@')[0];
     const profileImage = decoded.picture;
     let user = await User.findOne({ email });
@@ -250,13 +247,28 @@ export const UserController = {
     
     res.json({ success: true, token, userId: user.userId, image: user.image });
   } catch (error: any) {
-    res.status(500).json({ success: false, message: error.message });
+    const statusCode = error.message?.startsWith('Invalid Google token') ? 401 : 500;
+    res.status(statusCode).json({ success: false, message: error.message });
   }
 },
-  updateProfile: async (req: Request, res: Response) => {
+  updateProfile: async (req: AuthRequest, res: Response) => {
     try {
+      const requester = req.user;
+      if (!requester || (requester.userId !== req.params.id && requester.role !== 'admin')) {
+        return res.status(403).json({ success: false, message: 'Forbidden' });
+      }
       
-      const { password, balance, points, ...allowedUpdates } = req.body;
+      const {
+        password,
+        balance,
+        points,
+        role,
+        userId,
+        isVerified,
+        otp,
+        otpExpires,
+        ...allowedUpdates
+      } = req.body;
       
       const user = await User.findOneAndUpdate(
         { userId: req.params.id },
@@ -269,14 +281,21 @@ export const UserController = {
       res.status(500).json({ success: false, message: error.message });
     }
   },
-  updatePassword: async (req: Request, res: Response) => {
+  updatePassword: async (req: AuthRequest, res: Response) => {
     try {
+      const requester = req.user;
+      if (!requester || (requester.userId !== req.params.id && requester.role !== 'admin')) {
+        return res.status(403).json({ success: false, message: 'Forbidden' });
+      }
+
       const { oldPassword, newPassword } = req.body;
       const user = await User.findOne({ userId: req.params.id });
       if (!user) return res.status(404).json({ message: "User not found" });
-      const isMatch = await bcrypt.compare(oldPassword, user.password!);
-      if (!isMatch) {
-        return res.status(400).json({ success: false, message: "Old password is incorrect" });
+      if (requester.role !== 'admin' || requester.userId === req.params.id) {
+        const isMatch = await bcrypt.compare(oldPassword, user.password!);
+        if (!isMatch) {
+          return res.status(400).json({ success: false, message: "Old password is incorrect" });
+        }
       }
       const hashedPassword = await bcrypt.hash(newPassword, 10);
       user.password = hashedPassword;
@@ -525,6 +544,10 @@ export const UserController = {
    */
   testTopUpBalance: async (req: AuthRequest, res: Response) => {
     try {
+      if (process.env.NODE_ENV === 'production') {
+        return res.status(404).json({ success: false, message: 'Route not found' });
+      }
+
       const userId = req.user?.userId;
       if (!userId) {
         return res.status(401).json({ success: false, message: "Bạn cần đăng nhập" });

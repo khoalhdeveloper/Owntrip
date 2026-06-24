@@ -20,4 +20,5 @@ export interface IPlace extends Document {
   preferences: string[];
   source: string;
   addedCount: number;
+  isCheckinEnabled?: boolean;
 }
