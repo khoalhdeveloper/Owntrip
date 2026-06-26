@@ -84,7 +84,7 @@ const getFrames = async (req, res) => {
 exports.getFrames = getFrames;
 /**
  * [USER] Get active frames available to the current user.
- * Includes all free frames and mission frames already unlocked by rewards.
+ * Includes only frames explicitly unlocked by rewards/purchases for the current user.
  */
 const getMyUnlockedFrames = async (req, res) => {
     try {
@@ -103,17 +103,21 @@ const getMyUnlockedFrames = async (req, res) => {
             });
         }
         const unlockedFrameIds = user.unlockedCheckinFrameIds || [];
+        if (unlockedFrameIds.length === 0) {
+            return res.json({
+                success: true,
+                total: 0,
+                frames: []
+            });
+        }
         const frames = await frame_model_1.default.find({
             isActive: true,
-            $or: [
-                { unlockType: "free" },
-                { _id: { $in: unlockedFrameIds } }
-            ]
+            _id: { $in: unlockedFrameIds }
         }).sort({ order: 1 });
         const unlockedIdSet = new Set(unlockedFrameIds.map((id) => id.toString()));
         const framesWithUnlockStatus = frames.map((frame) => ({
             ...frame.toObject(),
-            isUnlocked: frame.unlockType === "free" || unlockedIdSet.has(frame._id.toString())
+            isUnlocked: unlockedIdSet.has(frame._id.toString())
         }));
         return res.json({
             success: true,
