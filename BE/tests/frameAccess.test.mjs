@@ -18,8 +18,15 @@ const getMyUnlockedFramesSource = controllerSource.slice(
   getMyUnlockedFramesEnd,
 );
 
-test('my unlocked frames only come from user.unlockedCheckinFrameIds', () => {
+test('my unlocked frames include default frames for every user', () => {
+  assert.match(getMyUnlockedFramesSource, /isDefault:\s*true/);
+});
+
+test('my unlocked frames include user.unlockedCheckinFrameIds', () => {
+  assert.match(getMyUnlockedFramesSource, /_id:\s*{\s*\$in:\s*unlockedFrameIds\s*}/);
+});
+
+test('my unlocked frames do not include every free frame', () => {
   assert.doesNotMatch(getMyUnlockedFramesSource, /unlockType:\s*["']free["']/);
   assert.doesNotMatch(getMyUnlockedFramesSource, /frame\.unlockType\s*===\s*["']free["']/);
-  assert.match(getMyUnlockedFramesSource, /_id:\s*{\s*\$in:\s*unlockedFrameIds\s*}/);
 });
