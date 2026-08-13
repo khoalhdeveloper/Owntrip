@@ -79,6 +79,78 @@ export const SystemController = {
     }
   },
 
+  // GET /api/system/paid-customers
+  getPaidCustomers: async (req: Request, res: Response) => {
+    try {
+      const User = require('../models/user.model').default;
+      const Order = require('../models/order.model').default;
+      const CreatorSubscriptionTransaction = require('../models/creatorSubscriptionTransaction.model').default;
+
+      const [creatorTransactions, planTransactions] = await Promise.all([
+        CreatorSubscriptionTransaction.find({ status: 'success' })
+          .populate('packageId', 'name price')
+          .sort({ createdAt: -1 })
+          .lean(),
+        Order.find({ status: 'SUCCESS' })
+          .populate('tripTemplateId', 'title name')
+          .sort({ createdAt: -1 })
+          .lean(),
+      ]);
+
+      const transactions = [
+        ...creatorTransactions.map((transaction: any) => ({
+          id: String(transaction._id),
+          userId: transaction.userId,
+          type: 'Creator',
+          itemName: transaction.packageId?.name || 'Gói Creator',
+          amount: transaction.amount,
+          orderCode: transaction.orderCode,
+          status: 'success',
+          createdAt: transaction.createdAt,
+        })),
+        ...planTransactions.map((transaction: any) => ({
+          id: String(transaction._id),
+          userId: transaction.buyerId,
+          type: 'Plan',
+          itemName: transaction.tripTemplateId?.title || transaction.tripTemplateId?.name || 'Plan du lịch',
+          amount: transaction.amount,
+          orderCode: transaction.orderCode,
+          status: 'success',
+          createdAt: transaction.createdAt,
+        })),
+      ].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+      const userIds = [...new Set(transactions.map((transaction) => transaction.userId))];
+      const users = await User.find({ userId: { $in: userIds } })
+        .select('userId displayName email image')
+        .lean();
+      const userMap = new Map(users.map((user: any) => [user.userId, user]));
+
+      const enrichedTransactions = transactions.map((transaction) => {
+        const user = userMap.get(transaction.userId) as any;
+        return {
+          ...transaction,
+          displayName: user?.displayName || 'N/A',
+          email: user?.email || 'N/A',
+          image: user?.image || null,
+        };
+      });
+
+      return res.json({
+        success: true,
+        data: {
+          paidCustomerCount: userIds.length,
+          transactionCount: enrichedTransactions.length,
+          totalRevenue: enrichedTransactions.reduce((sum, transaction) => sum + transaction.amount, 0),
+          transactions: enrichedTransactions,
+        },
+      });
+    } catch (error: any) {
+      console.error('[PaidCustomers] Error:', error);
+      return res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
   // GET /api/system/dashboard-stats
   getDashboardStats: async (req: Request, res: Response) => {
     try {
