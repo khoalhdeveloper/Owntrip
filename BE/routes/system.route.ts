@@ -10,6 +10,7 @@ router.get('/info', verifyToken, authorizeRole(['admin']), SystemController.getS
 router.get('/config', verifyToken, authorizeRole(['admin']), SystemController.getConfig);
 router.post('/config', verifyToken, authorizeRole(['admin']), SystemController.updateConfig);
 router.get('/dashboard-stats', verifyToken, authorizeRole(['admin']), SystemController.getDashboardStats);
+router.get('/paid-customers', verifyToken, authorizeRole(['admin']), SystemController.getPaidCustomers);
 router.get('/hotel-owners', verifyToken, authorizeRole(['admin']), SystemController.getHotelOwners);
 router.get('/point-topups', verifyToken, authorizeRole(['admin']), SystemController.getPointTopups);
 
