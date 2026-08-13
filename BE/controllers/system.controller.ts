@@ -86,12 +86,16 @@ export const SystemController = {
       const Order = require('../models/order.model').default;
       const CreatorSubscriptionTransaction = require('../models/creatorSubscriptionTransaction.model').default;
 
+      const now = new Date();
+      const startOfPreviousMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const transactionFilter = { createdAt: { $gte: startOfPreviousMonth, $lte: now } };
+
       const [creatorTransactions, planTransactions] = await Promise.all([
-        CreatorSubscriptionTransaction.find({ status: 'success' })
+        CreatorSubscriptionTransaction.find({ status: 'success', ...transactionFilter })
           .populate('packageId', 'name price')
           .sort({ createdAt: -1 })
           .lean(),
-        Order.find({ status: 'SUCCESS' })
+        Order.find({ status: 'SUCCESS', ...transactionFilter })
           .populate('tripTemplateId', 'title name')
           .sort({ createdAt: -1 })
           .lean(),
@@ -142,6 +146,10 @@ export const SystemController = {
           paidCustomerCount: userIds.length,
           transactionCount: enrichedTransactions.length,
           totalRevenue: enrichedTransactions.reduce((sum, transaction) => sum + transaction.amount, 0),
+          period: {
+            from: startOfPreviousMonth,
+            to: now,
+          },
           transactions: enrichedTransactions,
         },
       });
