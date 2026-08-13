@@ -84,19 +84,23 @@ export const SystemController = {
     try {
       const User = require('../models/user.model').default;
       const Order = require('../models/order.model').default;
+      const Topup = require('../models/topup.model').default;
       const CreatorSubscriptionTransaction = require('../models/creatorSubscriptionTransaction.model').default;
 
       const now = new Date();
       const startOfPreviousMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
       const transactionFilter = { createdAt: { $gte: startOfPreviousMonth, $lte: now } };
 
-      const [creatorTransactions, planTransactions] = await Promise.all([
+      const [creatorTransactions, planTransactions, topupTransactions] = await Promise.all([
         CreatorSubscriptionTransaction.find({ status: 'success', ...transactionFilter })
           .populate('packageId', 'name price')
           .sort({ createdAt: -1 })
           .lean(),
         Order.find({ status: 'SUCCESS', ...transactionFilter })
           .populate('tripTemplateId', 'title name')
+          .sort({ createdAt: -1 })
+          .lean(),
+        Topup.find({ status: 'paid', ...transactionFilter })
           .sort({ createdAt: -1 })
           .lean(),
       ]);
@@ -117,6 +121,16 @@ export const SystemController = {
           userId: transaction.buyerId,
           type: 'Plan',
           itemName: transaction.tripTemplateId?.title || transaction.tripTemplateId?.name || 'Plan du lịch',
+          amount: transaction.amount,
+          orderCode: transaction.orderCode,
+          status: 'success',
+          createdAt: transaction.createdAt,
+        })),
+        ...topupTransactions.map((transaction: any) => ({
+          id: String(transaction._id),
+          userId: transaction.userId,
+          type: 'Topup',
+          itemName: String(transaction.bookingId).startsWith('topup_points_') ? 'Nạp điểm' : 'Nạp số dư',
           amount: transaction.amount,
           orderCode: transaction.orderCode,
           status: 'success',
